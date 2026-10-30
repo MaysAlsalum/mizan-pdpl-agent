@@ -1,0 +1,1 @@
+{"text": "{\n  \"ok\": true,\n  \"word\": \"مرحباً\"\n}", "data": {"ok": true, "word": "مرحباً"}, "model": "gemini/gemini-3.5-flash-lite", "prompt_tokens": 21, "completion_tokens": 20, "cost_usd": 5.63e-05, "latency_s": 3.647, "cached": false}
