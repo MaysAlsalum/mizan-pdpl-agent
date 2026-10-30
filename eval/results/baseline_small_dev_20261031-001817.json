@@ -1,0 +1,1719 @@
+{
+  "system": "baseline_small",
+  "split": "dev",
+  "include_hidden": false,
+  "limit": null,
+  "models": {
+    "small": "gemini/gemini-3.5-flash-lite",
+    "large": "gemini/gemini-3.5-flash-lite",
+    "generator": "gemini/gemini-3.5-flash-lite",
+    "judge_eval": "gemini/gemini-3.5-flash-lite"
+  },
+  "metrics": {
+    "precision": 0.943,
+    "recall": 0.943,
+    "f1": 0.943,
+    "tp": 50,
+    "fp": 3,
+    "fn": 3,
+    "subtle_recall": 0.964,
+    "trap_fp_rate": 0.05,
+    "grounding_rate": 1.0,
+    "ambiguous_escalation_rate": 0.0,
+    "escalations_per_doc": 0.0,
+    "cost_per_doc_usd": 0.00115,
+    "latency_per_doc_s": 13.64,
+    "llm_calls_per_doc": 0.9,
+    "docs": 30,
+    "per_rule_f1": {
+      "R01": 0.889,
+      "R02": 1.0,
+      "R03": 1.0,
+      "R04": 0.909,
+      "R05": 0.933,
+      "R06": 0.947,
+      "R07": 0.8,
+      "R09": 1.0,
+      "R10": 0.923,
+      "R11": 1.0
+    }
+  },
+  "errors": 2,
+  "wall_time_s": 236.8,
+  "llm_totals": {
+    "calls": 28,
+    "cache_hits": 3,
+    "prompt_tokens": 47112,
+    "completion_tokens": 8989,
+    "cost_usd": 0.03439
+  },
+  "per_doc": [
+    {
+      "doc_id": "dev_001",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R05": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R01": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R10": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 2,
+        "subtle_found": 2,
+        "unverified": 0,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.0,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_001",
+        "findings": [
+          {
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "requests for individual data inspection, record modification, or file expungement fall outside standard administrative review channels and cannot be accommodated.",
+            "fix": null
+          },
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "with such authorization remaining binding and not subject to subsequent revocation.",
+            "fix": null
+          },
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "The company reserves the right to process all applicant disclosures, including medical history, health conditions, and religious affiliations where provided, under the framework of legitimate human resources interest to support targeted corporate wellness initiatives, internal profiling, and promotional communications.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0,
+        "latency_s": 0.0,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_002",
+      "score": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R09": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 0,
+        "findings": 2,
+        "grounded": 2,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_002",
+        "findings": [
+          {
+            "rule_id": "R09",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "(1) The Vendor reserves the right to engage third-party subcontractors for data processing activities at its sole discretion without prior notice to the Client, and the Client shall have no right to conduct on-site audits or compliance reviews of the Vendor's operational facilities.",
+            "fix": null
+          },
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "(2) Upon termination of this Agreement, the Vendor shall archive all operational data and records in a secure repository for indefinite historical analysis and business intelligence purposes, maintaining such records permanently unless otherwise agreed in a separate commercial amendment.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_003",
+      "score": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R05": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R10": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 2,
+        "subtle_found": 2,
+        "unverified": 1,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_003",
+        "findings": [
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "The applicant explicitly waives any standing right to inspect, review, or obtain copies of stored evaluation files, and acknowledges that requests for the permanent removal of submitted records shall not be entertained under any circumstances following submission.",
+            "fix": null
+          },
+          {
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "The applicant explicitly waives any standing right to inspect, review, or obtain copies of stored evaluation files, and acknowledges that requests for the permanent removal of submitted records shall not be entertained under any circumstances following submission.",
+            "fix": null
+          },
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "The applicant acknowledges and agrees that all disclosed sensitive categories, including health status, religious affiliation, and background details, may be processed under our legitimate operational interest framework to optimize targeted promotional communications and enhance profile-based candidate engagement across all corporate divisions.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_004",
+      "score": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R03": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R04": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 0,
+        "findings": 2,
+        "grounded": 2,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0006602,
+        "latency_s": 2.96,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_004",
+        "findings": [
+          {
+            "rule_id": "R03",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "To subscribe to our daily digital newsletter and updates bulletin, users are required to complete their profile by providing their full national identity card number, marital status, exact number of household dependents, and current employer details alongside their preferred email address.",
+            "fix": null
+          },
+          {
+            "rule_id": "R04",
+            "verdict": "violation",
+            "confidence": 0.9,
+            "evidence": "While specific technical details concerning our data categorization, exact collection vectors, and internal retention schedules are proprietary and generally remain confidential, registered users may submit a formal written inquiry to our administrative office to request a summary of these parameters following the completion of their account creation.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0006602,
+        "latency_s": 2.96,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_005",
+      "score": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R10": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 0,
+        "findings": 1,
+        "grounded": 1,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.00043210000000000004,
+        "latency_s": 7.48,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_005",
+        "findings": [
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "To ensure tailored commercial engagement and comprehensive service delivery, sensitive categories including health metrics, religious affiliations, and biometric indicators may be processed under our broader operational interests and made accessible across all internal business units for cross-departmental campaign optimization.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.00043210000000000004,
+        "latency_s": 7.48,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_006",
+      "score": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 1,
+        "grounded": 1,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0005683999999999999,
+        "latency_s": 12.99,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_006",
+        "findings": [
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "تحتفظ الشركة بجميع السجلات والمعلومات المقدمة في قواعد البيانات إلى الأبد ودون أي قيد زمني، مع الاحتفاظ بحق عدم حذفها نهائياً لضمان استمرارية الخدمات والرجوع إليها عند الحاجة المستقبلية.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0005683999999999999,
+        "latency_s": 12.99,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_007",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R07": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R01": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 3,
+        "subtle_found": 3,
+        "unverified": 0,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0098553,
+        "latency_s": 33.55,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_007",
+        "findings": [
+          {
+            "rule_id": "R07",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "المادة (١): في حال وقوع أي حادث أمني أو وصول غير مصرح به للبياناتڬ تقوم الجهة المعنية بالتعامل مع الأر داخلياً وفقاً لتقديرها التشغيلي المحذڬ مع إمكانية إخطار الأطراف المتضررة خلال زمني مدمج يناسب طبيعة العمليات ودون الالتزام بأطر زمنية ضيقة.",
+            "fix": null
+          },
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "المادة (٥): يُعتبر مجرد تصفح المنصة أو الاستمرار في استخدام الخدمات بمثابة موافقة ضمنية ونهائية على كافة سياسات المعالجة الحالية والمستقبليةڬ ولا يُتاح للمستخدم التراجع عن هذه الموافقة أو تقييدها طالما كان الحساب نشطاً.",
+            "fix": null
+          },
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "المادة (٦): تحتفظ الشركة بسجلات البيانات والملفات الرقمية للمستخدمين لفترات زمنية ممتدة وغير محدودة بغرض استمرارية تحسين جودة الخدمة والأرشفة التاريخيةڬ ودون وجود التزام زمني محدد لّإتلافها أو محوها نهائياً.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0098553,
+        "latency_s": 33.55,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_008",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R02": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R09": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 1,
+        "findings": 4,
+        "grounded": 4,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0023849,
+        "latency_s": 25.81,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_008",
+        "findings": [
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "٢- يحق للمستفيد استخدام كافة البيانات والمعلومات المجمعة والمقدمة במסגרة هذه الاتفاقية لأي غراض تشغيلية أو تجارية تراه الشركة مناسباً لتطوير أعمالها المستقبلية",
+            "fix": null
+          },
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "٢- يحق للمستفيد استخدام كافة البيانات والمعلومات المجمعة والمقدمة במסגרة هذه الاتفاقية لأي غراض تشغيلية أو تجارية تراه الشركة مناسباً لتطوير أعمالها المستقبلية، بما في ذلك الأغراض التي لم تكن محددة بانتهاء نطاق الخدمات الأصلي.",
+            "fix": null
+          },
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "٦- تستمر الجهة مقدمة الخدمة في الاحتفاظ بجميع السجلات والبيانات لفترات غير محدودة زمنياً تضمن استدامة السجلات التاريخية للمشروع، مع احتفاظها بالحق في حفظها دون التزام بإتلافها نهائياً.",
+            "fix": null
+          },
+          {
+            "rule_id": "R09",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "٩- يُفوض المورد بموجب هذه الاتفاقية بتفويض أي أطراف ثالثة أو مقاولين من الباطن لتقديم الخدمات ومعالجة البيانات دون الحاجة لإشعار مسبق، وتعفى جهة الإدارة من أي التزام بإجراء عمليات تدقيق أو مراجعة ميدانية على أنظمة المورد.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0023849,
+        "latency_s": 25.81,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_009",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R04": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R03": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 2,
+        "subtle_found": 2,
+        "unverified": 0,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0008998999999999999,
+        "latency_s": 6.83,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_009",
+        "findings": [
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "2. تحتفظ الشركة بسجلات كافة بيانات المستخدمين ضمن أرشيفها الرقمي لأغراض تطوير الأداء والجودة بشكل دائم، ودون الالتزام بإجراء عمليات إتلاف دورية لها حتى بعد انتهاء العلاقة التعاقدية.",
+            "fix": null
+          },
+          {
+            "rule_id": "R04",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "3. لا تفصح هذه الوثيقة عن تفاصيل أنواع البيانات التي يتم جمعها أو الأغراض المحددة لمعالجتها، ويمكن للمستخدمين الاستفسار عن طبيعة البيانات المخزنة بعد إتمام عملية التسجيل حصراً.",
+            "fix": null
+          },
+          {
+            "rule_id": "R03",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "8. لإتمام التسجيل في خدمة النشرة البريدية الإخبارية، يشترط على المستخدم تقديم صورة طبق الأصل من بطاقة الهوية الوطنية، وتحديد الحالة الاجتماعية، وعدد أفراد الأسرة، واسم جهة العمل الحالية.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0008998999999999999,
+        "latency_s": 6.83,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_010",
+      "score": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R05": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 0,
+        "findings": 1,
+        "grounded": 1,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0004786,
+        "latency_s": 26.12,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_010",
+        "findings": [
+          {
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "ولا يلتزم النظام بإتاحة استعراض الملفات الشخصية للمستخدمين أو الاستجابة لدعاوى الحذف الإداري.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0004786,
+        "latency_s": 26.12,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_011",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R05": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R07": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R04": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 0,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0019814,
+        "latency_s": 27.18,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_011",
+        "findings": [
+          {
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "١- لا يحق للمستخدم المطالبة بالاطلاع على سجلات بياناته الشخصية المحفوظة لدى المنصة، كما لا يمتلك الحق في طلب تعديلها أو تحديثها أو محوها نهائياً تحت أي ظرف من الظروف التشغيلية.",
+            "fix": null
+          },
+          {
+            "rule_id": "R07",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "٤- في حال وقوع أي حادث أمني أو وصول غير مصرح به إلى قواعد البيانات، تقوم الشركة بتقييم الموقف داخلياً واتخاذ ما تراه مناسباً وفقاً لتقديرها الإداري المطلق، ودون وجود أي التزام زمني محدد لإبلاغ الجهات المعنية أو المستخدمين المتضررين.",
+            "fix": null
+          },
+          {
+            "rule_id": "R04",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "٥- تحتفظ شركة الأفق الرقمي بحرية عدم الإفصاح عن تفاصيل البيانات الشخصية التي تجمعها أو الأغراض المحددة لجمعها ضمن هذه الوثيقة، على أن يتم تزويد المستخدم بتلك التفاصيل حصراً بناءً على طلب خطي يقدمه بعد إتمام عملية التسجيل بنجاح.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0019814,
+        "latency_s": 27.18,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_012",
+      "score": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R04": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R03": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 0,
+        "findings": 2,
+        "grounded": 2,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0007886,
+        "latency_s": 13.21,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_012",
+        "findings": [
+          {
+            "rule_id": "R04",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "تحتفظ الشركة بحق عدم الإفصاح عن تفاصيل البيانات الشخصية التي يتم جمعها أو الأغراض المحددة لمعالجتها في هذه الوثيقة، ويمكن للمستخدمين تقديم طلب رسمي للاستعلام عن هذه التفاصيل بعد إتمام عملية إنشاء الحساب.",
+            "fix": null
+          },
+          {
+            "rule_id": "R03",
+            "verdict": "violation",
+            "confidence": 0.9,
+            "evidence": "لضمان تجربة مستخدم شاملة ومخصصة، يتطلب التسجيل في النشرة البريدية الإخبارية تقديم صورة الهوية الوطنية، والحالة الاجتماعية، وعدد أفراد الأسرة، ومكان العمل الحالي.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0007886,
+        "latency_s": 13.21,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_013",
+      "score": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R01": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 2,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 1,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0011387,
+        "latency_s": 13.34,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_013",
+        "findings": [
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "يُعد مجرد تصفح المنصة أو استخدام الخدمات بمثابة موافقة ضمنية ومسبقة على جمع كافة البيانات ومعالجتها واستخدامها لأغراض الشركة التشغيلية والتسويقية، ولا يحق للمستخدم طلب تعديل هذه الموافقة أو سحبها بأي شكل من الأشكال طالما كان حسابه نشطاً.",
+            "fix": null
+          },
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "يُعد مجرد تصفح المنصة أو استخدام الخدمات بمثابة موافقة ضمنية ومسبقة على جمع كافة البيانات ومعالجتها واستخدامها لأغراض الشركة التشغيلية والتسويقية، ولا يحق للمستخدم طلب تعديل هذه الموافقة أو سحبها بأي شكل من الأشكال طالما كان حسابه نشطاً.",
+            "fix": null
+          },
+          {
+            "rule_id": "R03",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "يُعد مجرد تصفح المنصة أو استخدام الخدمات بمثابة موافقة ضمنية ومسبقة على جمع كافة البيانات ومعالجتها واستخدامها لأغراض الشركة التشغيلية والتسويقية، ولا يحق للمستخدم طلب تعديل هذه الموافقة أو سحبها بأي شكل من الأشكال طالما كان حسابه نشطاً.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0011387,
+        "latency_s": 13.34,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_014",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R02": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R05": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 0,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0008343000000000001,
+        "latency_s": 13.19,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_014",
+        "findings": [
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "Al-Faris Digital Services reserves the right to utilize all collected information for any business purpose deemed appropriate by the management, including unforeseen future initiatives and operational adaptations not explicitly detailed herein.",
+            "fix": null
+          },
+          {
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 0.9,
+            "evidence": "Users acknowledge that review of internal system records or modification of archived profile configurations remains strictly restricted to administrative discretion, and requests for profile purging or record adjustments are subject to administrative review without guarantee of execution.",
+            "fix": null
+          },
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "All user records and transaction histories are retained indefinitely within our archival databases following account deactivation to support long-term trend analysis and historical continuity.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0008343000000000001,
+        "latency_s": 13.19,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_015",
+      "score": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "per_rule": {
+          "R04": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0
+          },
+          "R11": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 1,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0009422,
+        "latency_s": 13.01,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_015",
+        "findings": [
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "يوافق المستخدم بمجرد إتمام عملية التسجيل وإنشاء الحساب على استلام الإشعارات والمواد الإعلانية والعروض الترويجية عبر البريد الإلكتروني ورسائل الهواتف المحمولة بشكل افتراضي، مع الاحتفاظ بملفات الارتباط التسويقية المرتبطة بأنشطة شركاء الشركة دون توفير خيار مباشر لإلغاء الاشتراك.",
+            "fix": null
+          },
+          {
+            "rule_id": "R04",
+            "verdict": "violation",
+            "confidence": 0.9,
+            "evidence": "سياسة الاستخدام والخصوصية لخدمات شركة المسار الرقمي",
+            "fix": null
+          },
+          {
+            "rule_id": "R11",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "يوافق المستخدم بمجرد إتمام عملية التسجيل وإنشاء الحساب على استلام الإشعارات والمواد الإعلانية والعروض الترويجية عبر البريد الإلكتروني ورسائل الهواتف المحمولة بشكل افتراضي، مع الاحتفاظ بملفات الارتباط التسويقية المرتبطة بأنشطة شركاء الشركة دون توفير خيار مباشر لإلغاء الاشتراك.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0009422,
+        "latency_s": 13.01,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_016",
+      "score": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 1,
+        "grounded": 1,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.00046980000000000004,
+        "latency_s": 13.69,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_016",
+        "findings": [
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "The Vendor shall retain all collected user records and associated datasets indefinitely following the termination of this Agreement, reserving the absolute right to maintain such information permanently without implementing data purging or destruction schedules.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.00046980000000000004,
+        "latency_s": 13.69,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_017",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R04": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R10": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R02": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 1,
+        "findings": 4,
+        "grounded": 4,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0021864000000000002,
+        "latency_s": 26.63,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_017",
+        "findings": [
+          {
+            "rule_id": "R04",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "تكتفي الشركة بنشر الخطوط العريضة لخدماتها دون تفصيل أنواع البيانات المصنفة أو آليات معالجتها وحفظها",
+            "fix": null
+          },
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "تُستخدم البيانات الصحية والمعلومات الحساسة الخاصة بالمستخدمين ضمن الحملات التسويقية المخصصة، وتتيح الشركة لكافة فرق العمل والإدارات التجارية صلاحية الاطلاع عليها لتحسين جودة المنتجات المعروضة.",
+            "fix": null
+          },
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "تحتفظ الشركة بحق استخدام البيانات الشخصية المجمعة من المستخدمين في أي أغراض تجارية تراها مناسبة لتطوير أعمالها، بما في ذلك الأغراض المستقبلية الجديدة التي يتم تحديدها لاحقاً دون الحاجة لإشعار مسبق أو الحصول على موافقة إضافية.",
+            "fix": null
+          },
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "تحتفظ الشركة بحق استخدام البيانات الشخصية المجمعة من المستخدمين في أي أغراض تجارية تراها مناسبة لتطوير أعمالها، بما في ذلك الأغراض المستقبلية الجديدة التي يتم تحديدها لاحقاً",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0021864000000000002,
+        "latency_s": 26.63,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_018",
+      "score": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R02": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R03": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 2,
+        "subtle_found": 2,
+        "unverified": 1,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0008639,
+        "latency_s": 13.73,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_018",
+        "findings": [
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "توافق على منح الشركة حق الاستفادة من كافة البيانات والمعلومات المقدمة وتوظيفها ضمن أي نطاق تنظيمي أو تجاري تراه مناسباً لدعم عملياتها الحالية أو التطويرية المستقبلية وفقاً لما تقره الإدارة.",
+            "fix": null
+          },
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "توافق على منح الشركة حق الاستفادة من كافة البيانات والمعلومات المقدمة وتوظيفها ضمن أي نطاق تنظيمي أو تجاري تراه مناسباً لدعم عملياتها الحالية أو التطويرية المستقبلية وفقاً لما تقره الإدارة.",
+            "fix": null
+          },
+          {
+            "rule_id": "R03",
+            "verdict": "violation",
+            "confidence": 0.9,
+            "evidence": "لضمان تقديم تجربة مخصصة ومستمرة عند الاشتراك في النشرة الإخبارية الدورية، يتطلب التسجيل تقديم الاسم الكامل، والبريد الإلكتروني، وتاريخ الميلاد، والحالة الاجتماعية، وعدد أفراد الأسرة.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0008639,
+        "latency_s": 13.73,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_019",
+      "score": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {},
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 0,
+        "grounded": 0,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0002804,
+        "latency_s": 12.77,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_019",
+        "findings": [],
+        "escalations": [],
+        "cost_usd": 0.0002804,
+        "latency_s": 12.77,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_020",
+      "score": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R09": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 0,
+        "findings": 2,
+        "grounded": 2,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0008403,
+        "latency_s": 13.25,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_020",
+        "findings": [
+          {
+            "rule_id": "R09",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "يُصرح للمورد بموجب هذه الاتفاقية الاستعانة بأي مقاول فرعي لتنفيذ أعمال معالجة البيانات دون الحاجة لتقديم إشعار مسبق للشركة، كما تُعفى أنشطة المورد التشغيلية من أي عمليات تدقيق أو تفتيش دوري تجريها الشركة.",
+            "fix": null
+          },
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "توافق الأطراف على حفظ سجلات البيانات والمعلومات المتعلقة بالخدمة في أرشيف المورد لأجل غير مسمى بغرض استمرارية العمل وتحسين الجودة في المستقبل، دون التزام بإزالتها أو التخلص منها نهائياً.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0008403,
+        "latency_s": 13.25,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_021",
+      "score": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "per_rule": {
+          "R10": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 1,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 1,
+        "grounded": 1,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0027823,
+        "latency_s": 28.21,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_021",
+        "findings": [
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "٥- نطلب تقارير الفحص الطبي الشامل والبيانات الجنائية حصرياً لتقييم الملاءمة المهنية للوظائف الحساسة، ولا نستخدم البيانات الحساسة إلا للأغراض التشغيلية المرتبطة بالوظيفة.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0027823,
+        "latency_s": 28.21,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_022",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R10": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R05": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R02": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 2,
+        "findings": 5,
+        "grounded": 5,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0014493000000000002,
+        "latency_s": 13.56,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_022",
+        "findings": [
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "تعتمد الشركة على سند المصالح المشروعة لمعالجة البيانات الحساسة والبيانات الصحية والبيانات الحيوية للمستخدمين، وتستيـد من هذه الفئات لتحليل السلوك الاستهلاكي وتوجيه الحملات الترويجية المخصصة ومشاركة تلك الملفات مع الشركاء التجاريين لضمان فعالية الخدمات المقدمة.",
+            "fix": null
+          },
+          {
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "فإنه لا يحق للمستخدم طلب الاطلاع على السجلات الرقمية الخاصة به أو تعديلها، كما لا تقبل الشركة أي طلبات لحذف أو إتلاف البيانات المحفوظة في خوادمها مهما كانت الظروف.",
+            "fix": null
+          },
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "كما لا تقبل الشركة أي طلبات لحذف أو إتلاف البيانات المحفوظة في خوادمها مهما كانت الظروف.",
+            "fix": null
+          },
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "تحتفظ شركة الأفق الرقمي بحق استخدام البيانات والمعلومات المجمعة من المستخدمين لأي غرض تراه الإدارة مناسباً لدعم نمو العمل وتحسين تجربة المستخدمين، بما في ذلك الأغراض التشغيلية المستقبلية التي قد يتم استحداثها لاحقاً دون الحاجة لتقديم إشعار مسبق أو الحصول على موافقة إضافية.",
+            "fix": null
+          },
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "تحتفظ شركة الأفق الرقمي بحق استخدام البيانات والمعلومات المجمعة من المستخدمين لأي غرض تراه الإدارة مناسباً لدعم نمو العمل وتحسين تجربة المستخدمين، بما في ذلك الأغراض التشغيلية المستقبلية التي قد يتم استحداثها لاحقاً دون الحاجة لتقديم إشعار مسبق أو الحصول على موافقة إضافية.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0014493000000000002,
+        "latency_s": 13.56,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_023",
+      "score": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {},
+        "traps": 0,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 0,
+        "grounded": 0,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.00025519999999999997,
+        "latency_s": 13.48,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_023",
+        "findings": [],
+        "escalations": [],
+        "cost_usd": 0.00025519999999999997,
+        "latency_s": 13.48,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_024",
+      "score": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R09": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 0,
+        "findings": 2,
+        "grounded": 2,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0006755,
+        "latency_s": 11.84,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_024",
+        "findings": [
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "Upon termination of this Agreement, the Vendor shall retain all processed information and records within its active archives for an indefinite operational duration to support historical business analytics, trend forecasting, and future commercial reference.",
+            "fix": null
+          },
+          {
+            "rule_id": "R09",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "The Vendor reserves the right to engage any third-party subcontractors for data processing activities without prior notification or approval from the Client, and the Client shall have no right to conduct on-site audits or compliance reviews of the Vendor's operational facilities.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0006755,
+        "latency_s": 11.84,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_025",
+      "score": {
+        "tp": 3,
+        "fp": 1,
+        "fn": 0,
+        "per_rule": {
+          "R01": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0
+          },
+          "R05": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R03": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R10": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 2,
+        "trap_hits": 1,
+        "subtle": 2,
+        "subtle_found": 2,
+        "unverified": 1,
+        "findings": 5,
+        "grounded": 5,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0009306,
+        "latency_s": 13.42,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_025",
+        "findings": [
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "certain verification procedures may be executed independently of active consent where required by overarching administrative mandates.",
+            "fix": null
+          },
+          {
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "records once submitted become a permanent part of the corporate database and are not subject to subsequent retrieval requests, manual modifications, or administrative erasure.",
+            "fix": null
+          },
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 0.9,
+            "evidence": "records once submitted become a permanent part of the corporate database and are not subject to subsequent retrieval requests, manual modifications, or administrative erasure.",
+            "fix": null
+          },
+          {
+            "rule_id": "R03",
+            "verdict": "violation",
+            "confidence": 0.9,
+            "evidence": "applicants are kindly requested to provide supplementary background details, including current marital status, household size, and comprehensive familial lineage records.",
+            "fix": null
+          },
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "Any disclosed health conditions, medical histories, or religious affiliation details shall be integrated into our internal profiling algorithms to optimize targeted staff engagement campaigns and will be made accessible across all operational divisions for strategic workforce deployment.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0009306,
+        "latency_s": 13.42,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_026",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R01": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R02": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R11": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 2,
+        "subtle_found": 2,
+        "unverified": 0,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 1,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0020555,
+        "latency_s": 27.16,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_026",
+        "findings": [
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "المادة (١): يعتبر استمرار العميل في تصفح المنصة أو الاستفادة من مزاياها بمثابة موافقة تامة ونهائية على آليات معالجة البيانات المعتمدة، ولا تقبل طلبات سحب هذه الموافقة طالما كان الحساب نشطاً وقائماً.",
+            "fix": null
+          },
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.9,
+            "evidence": "المادة (٧): تحتفظ الشركة بحق الاستفادة من كافة المعلومات والبيانات التي يتم جمعها خلال استخدام الخدمة لأغراض تطوير الأعمال، وتحسين جودة التجربة، وتلبية المتطلبات التشغيلية المستقبلية التي قد تظهر تباعاً دون الحاجة لإشعار مسبق.",
+            "fix": null
+          },
+          {
+            "rule_id": "R11",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "المادة (١٣): يفترض النظام بخصوص القنوات الشخصية أن استخدام المنصة يشكل تفويضاً ضمنياً لتلقي العروض الترويجية والإشعارات الإعلانية من الشركة والجهات المرتبطة بها، مع توفير خيارات إعدادات الحساب التي تتيح للمستخدم تحديث تفضيلات الاتصال بحسب ما ترتاه الإدارة ملائماً.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0020555,
+        "latency_s": 27.16,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_027",
+      "score": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {},
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 0,
+        "grounded": 0,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.00032569999999999995,
+        "latency_s": 12.18,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_027",
+        "findings": [],
+        "escalations": [],
+        "cost_usd": 0.00032569999999999995,
+        "latency_s": 12.18,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_028",
+      "score": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {},
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 0,
+        "grounded": 0,
+        "ambiguous": 1,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.00031039999999999996,
+        "latency_s": 13.61,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_028",
+        "findings": [],
+        "escalations": [],
+        "cost_usd": 0.00031039999999999996,
+        "latency_s": 13.61,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_029",
+      "score": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "per_rule": {
+          "R07": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 0,
+        "grounded": 0,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.0,
+        "llm_calls": 0
+      },
+      "output": {
+        "doc_id": "dev_029",
+        "findings": [],
+        "escalations": [],
+        "error": "ValueError: Model did not return valid JSON: '{\"findings\": [{\"rule_id\": \"R07\", \"confidence\": 0.95, \"evidence\": \"\\\\u0666- \\\\u0641\\\\u064a \\\\u062d\\\\u0627\\\\u0644 \\\\u0648\\\\u0642\\\\u0648\\\\u0639 \\\\u0623\\\\u064a \\\\u0627\\\\u"
+      }
+    },
+    {
+      "doc_id": "dev_030",
+      "score": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "per_rule": {
+          "R05": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "R06": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 0,
+        "grounded": 0,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.0,
+        "llm_calls": 0
+      },
+      "output": {
+        "doc_id": "dev_030",
+        "findings": [],
+        "escalations": [],
+        "error": "ValueError: Model did not return valid JSON: '{\"findings\": [{\"rule_id\": \"R05\", \"confidence\": 0.95, \"evidence\": \"\\\\u0648\\\\u0644\\\\u0627 \\\\u064a\\\\u062d\\\\u0642 \\\\u0644\\\\u0644\\\\u0645\\\\u062a\\\\u0642\\\\u062f\\\\u0645 \\\\u062"
+      }
+    }
+  ]
+}

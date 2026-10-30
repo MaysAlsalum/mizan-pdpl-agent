@@ -1,0 +1,1 @@
+{"text": "{\"findings\": []}", "data": {"findings": []}, "model": "gemini/gemini-3.5-flash-lite", "prompt_tokens": 893, "completion_tokens": 5, "cost_usd": 0.0002804, "latency_s": 1.145, "cached": false}
