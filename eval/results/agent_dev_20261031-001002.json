@@ -1,0 +1,267 @@
+{
+  "system": "agent",
+  "split": "dev",
+  "include_hidden": false,
+  "limit": 3,
+  "models": {
+    "small": "gemini/gemini-3.5-flash-lite",
+    "large": "gemini/gemini-3.5-flash-lite",
+    "generator": "gemini/gemini-3.5-flash-lite",
+    "judge_eval": "gemini/gemini-3.5-flash-lite"
+  },
+  "metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "tp": 7,
+    "fp": 0,
+    "fn": 0,
+    "subtle_recall": 1.0,
+    "trap_fp_rate": 0.0,
+    "grounding_rate": 1.0,
+    "ambiguous_escalation_rate": null,
+    "escalations_per_doc": 0.0,
+    "cost_per_doc_usd": 0.01043,
+    "latency_per_doc_s": 78.87,
+    "llm_calls_per_doc": 7.3,
+    "docs": 3,
+    "per_rule_f1": {
+      "R01": 1.0,
+      "R05": 1.0,
+      "R06": 1.0,
+      "R09": 1.0,
+      "R10": 1.0
+    }
+  },
+  "errors": 0,
+  "wall_time_s": 141.4,
+  "llm_totals": {
+    "calls": 22,
+    "cache_hits": 0,
+    "prompt_tokens": 26532,
+    "completion_tokens": 9328,
+    "cost_usd": 0.03128
+  },
+  "per_doc": [
+    {
+      "doc_id": "dev_001",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R05": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R01": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R10": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 2,
+        "subtle_found": 2,
+        "unverified": 0,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.007184,
+        "latency_s": 95.25,
+        "llm_calls": 8
+      },
+      "output": {
+        "doc_id": "dev_001",
+        "doc_type_guess": "mobile_app_terms",
+        "findings": [
+          {
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "requests for individual data inspection, record modification, or file expungement fall outside standard administrative review channels and cannot be accommodated.",
+            "reason": "The clause explicitly denies data subjects their statutory rights to access, correct, and delete their personal data.",
+            "source": "PDPL Art. 4",
+            "clause": "To ensure operational stability and administrative efficiency, records and applicant files compiled during the recruitment cycle are maintained exclusively within internal archives, and requests for individual data inspection, record modification, or file expungement fall outside standard administrative review channels and cannot be accommodated.",
+            "fix": "To ensure operational stability and administrative efficiency, records and applicant files compiled during the recruitment cycle are maintained exclusively within internal archives, while data subjects retain their rights to be informed of the legal basis and purpose of collection, to access their personal data, to request correction, completion, or update, and to request destruction of data no longer needed.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.85,
+            "evidence": "Submission of this employment application and participation in the preliminary evaluation stages constitutes the applicant's irrevocable authorization for the company to process, retain, and continuously utilize all submitted information across current and future internal business operations, with such authorization remaining binding and not subject to subsequent revocation.",
+            "reason": "The clause unlawfully restricts the data subject's right to withdraw consent at any time.",
+            "source": "PDPL Art. 5",
+            "clause": "Submission of this employment application and participation in the preliminary evaluation stages constitutes the applicant's irrevocable authorization for the company to process, retain, and continuously utilize all submitted information across current and future internal business operations, with such authorization remaining binding and not subject to subsequent revocation.",
+            "fix": "Submission of this employment application and participation in the preliminary evaluation stages constitutes the applicant's authorization for the company to process, retain, and utilize all submitted information across current and future internal business operations, in accordance with applicable law and subject to the applicant's right to withdraw consent at any time.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 0.99,
+            "evidence": "process all applicant disclosures, including medical history, health conditions, and religious affiliations where provided, under the framework of legitimate human resources interest",
+            "reason": "Sensitive data such as health and religious beliefs cannot be processed under the legitimate-interest basis under PDPL.",
+            "source": "PDPL Art. 1(11), 1(13), 6(4), 23, 26",
+            "clause": "The company reserves the right to process all applicant disclosures, including medical history, health conditions, and religious affiliations where provided, under the framework of legitimate human resources interest to support targeted corporate wellness initiatives, internal profiling, and promotional communications.",
+            "fix": "The company reserves the right to process all applicant disclosures, including medical history, health conditions, and religious affiliations where provided, in accordance with applicable legal bases to support corporate wellness initiatives and internal operations, while ensuring that sensitive data is never processed on the basis of legitimate interest or used for marketing, and that health data access is strictly limited to those who need it.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=mobile_app_terms clauses=9 with_candidates=7"
+        ],
+        "cost_usd": 0.007184,
+        "latency_s": 95.25,
+        "llm_calls": 8
+      }
+    },
+    {
+      "doc_id": "dev_002",
+      "score": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R09": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 0,
+        "findings": 2,
+        "grounded": 2,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.005998,
+        "latency_s": 74.55,
+        "llm_calls": 6
+      },
+      "output": {
+        "doc_id": "dev_002",
+        "doc_type_guess": "vendor_contract",
+        "findings": [
+          {
+            "rule_id": "R09",
+            "verdict": "violation",
+            "confidence": 0.9,
+            "evidence": "The Vendor reserves the right to engage third-party subcontractors for data processing activities at its sole discretion without prior notice to the Client, and the Client shall have no right to conduct on-site audits or compliance reviews of the Vendor's operational facilities.",
+            "reason": "The clause permits unrestricted subcontracting and prohibits the client from conducting on-site audits, violating processor guarantee requirements.",
+            "source": "PDPL Art. 8",
+            "clause": "The Vendor reserves the right to engage third-party subcontractors for data processing activities at its sole discretion without prior notice to the Client, and the Client shall have no right to conduct on-site audits or compliance reviews of the Vendor's operational facilities.",
+            "fix": "The Vendor may engage third-party subcontractors for data processing activities, provided it ensures they offer sufficient guarantees to implement applicable data protection law, and the Client shall have the right to conduct reasonable on-site audits and compliance reviews of the Vendor's operational facilities to monitor such compliance.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "maintaining such records permanently",
+            "reason": "The clause mandates keeping records permanently without a legitimate retention limit or connection to collection purposes, violating data destruction rules.",
+            "source": "PDPL Art. 18",
+            "clause": "Upon termination of this Agreement, the Vendor shall archive all operational data and records in a secure repository for indefinite historical analysis and business intelligence purposes, maintaining such records permanently unless otherwise agreed in a separate commercial amendment.",
+            "fix": "Upon termination of this Agreement, the Vendor shall archive all operational data and records in a secure repository for historical analysis and business intelligence purposes, maintaining such records only for as long as necessary for those purposes or as required by applicable legal retention requirements, unless otherwise agreed in a separate commercial amendment.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=vendor_contract clauses=8 with_candidates=8"
+        ],
+        "cost_usd": 0.005998,
+        "latency_s": 74.55,
+        "llm_calls": 6
+      }
+    },
+    {
+      "doc_id": "dev_003",
+      "score": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R10": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R05": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 2,
+        "subtle_found": 2,
+        "unverified": 0,
+        "findings": 2,
+        "grounded": 2,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.018098,
+        "latency_s": 66.8,
+        "llm_calls": 8
+      },
+      "output": {
+        "doc_id": "dev_003",
+        "doc_type_guess": "mobile_app_terms",
+        "findings": [
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "all disclosed sensitive categories, including health status, religious affiliation, and background details, may be processed under our legitimate operational interest framework to optimize targeted promotional communications",
+            "reason": "Sensitive data (health status and religious affiliation) cannot be processed on a legitimate-interest basis nor used for marketing/promotional communications under PDPL.",
+            "source": "PDPL Art. 1(11), 1(13), 6(4), 23, 26",
+            "clause": "The applicant acknowledges and agrees that all disclosed sensitive categories, including health status, religious affiliation, and background details, may be processed under our legitimate operational interest framework to optimize targeted promotional communications and enhance profile-based candidate engagement across all corporate divisions.",
+            "fix": "The applicant acknowledges and agrees that all disclosed sensitive categories, including background details, may be processed under our legitimate operational interest framework to enhance profile-based candidate engagement across all corporate divisions, provided that health status and religious affiliation are strictly excluded from legitimate-interest processing, promotional communications, and marketing.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "The applicant explicitly waives any standing right to inspect, review, or obtain copies of stored evaluation files, and acknowledges that requests for the permanent removal of submitted records shall not be entertained",
+            "reason": "The clause explicitly denies data subject rights to access and request destruction of stored personal records.",
+            "source": "PDPL Art. 4",
+            "clause": "The applicant explicitly waives any standing right to inspect, review, or obtain copies of stored evaluation files, and acknowledges that requests for the permanent removal of submitted records shall not be entertained under any circumstances following submission.",
+            "fix": "The applicant acknowledges that evaluation files are processed based on legitimate interests and legal requirements for evaluation purposes, and that requests for access, correction, completion, update, or destruction of submitted records will be handled in accordance with applicable data protection laws.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=mobile_app_terms clauses=10 with_candidates=9"
+        ],
+        "cost_usd": 0.018098,
+        "latency_s": 66.8,
+        "llm_calls": 8
+      }
+    }
+  ]
+}

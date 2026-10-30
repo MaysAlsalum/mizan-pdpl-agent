@@ -1,0 +1,74 @@
+{
+  "doc_id": "dev_014",
+  "split": "dev",
+  "doc_type": "privacy_policy",
+  "language": "en",
+  "title": "Al-Faris Digital Services Privacy and User Agreement",
+  "noisy": false,
+  "clauses": [
+    {
+      "clause_id": "c1",
+      "text": "All user records and transaction histories are retained indefinitely within our archival databases following account deactivation to support long-term trend analysis and historical continuity.",
+      "label": "violation",
+      "rule_id": "R06",
+      "subtle": false
+    },
+    {
+      "clause_id": "c2",
+      "text": "All trademarks, logos, interface designs, and proprietary software code displayed on the platform remain the exclusive intellectual property of Al-Faris Digital Services and may not be reproduced without prior written authorization.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c3",
+      "text": "Users acknowledge that review of internal system records or modification of archived profile configurations remains strictly restricted to administrative discretion, and requests for profile purging or record adjustments are subject to administrative review without guarantee of execution.",
+      "label": "violation",
+      "rule_id": "R05",
+      "subtle": true
+    },
+    {
+      "clause_id": "c4",
+      "text": "This agreement shall be governed by and construed in accordance with the substantive laws applicable within the jurisdiction of the company's primary headquarters, excluding conflict of law principles.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c5",
+      "text": "Users may terminate their account agreement at any time by submitting a formal closure request through the designated support portal, subject to the settlement of any outstanding financial balances.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c6",
+      "text": "Certain operational activities may be executed without explicit user authorization where such processing is strictly necessary to fulfill pre-existing contractual obligations or administrative duties, and users retain the ability to rescind their authorization for discretionary processing at any time through account settings.",
+      "label": "trap",
+      "rule_id": "R01"
+    },
+    {
+      "clause_id": "c7",
+      "text": "All service fees are billed in the local currency and must be settled in full prior to the activation of any recurring subscription tier or digital product delivery.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c8",
+      "text": "Al-Faris Digital Services reserves the right to utilize all collected information for any business purpose deemed appropriate by the management, including unforeseen future initiatives and operational adaptations not explicitly detailed herein.",
+      "label": "violation",
+      "rule_id": "R02",
+      "subtle": false
+    },
+    {
+      "clause_id": "c9",
+      "text": "Al-Faris Digital Services shall not be held liable for any indirect, incidental, or consequential damages arising from service interruptions caused by third-party telecommunication providers or unforeseen technical maintenance.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c10",
+      "text": "Official notices directed to the company must be transmitted via certified electronic mail to the designated corporate address listed on our contact page, and shall be deemed received upon successful delivery confirmation.",
+      "label": "neutral",
+      "rule_id": null
+    }
+  ],
+  "full_text": "Al-Faris Digital Services Privacy and User Agreement\n\n(1) All user records and transaction histories are retained indefinitely within our archival databases following account deactivation to support long-term trend analysis and historical continuity.\n\n(2) All trademarks, logos, interface designs, and proprietary software code displayed on the platform remain the exclusive intellectual property of Al-Faris Digital Services and may not be reproduced without prior written authorization.\n\n(3) Users acknowledge that review of internal system records or modification of archived profile configurations remains strictly restricted to administrative discretion, and requests for profile purging or record adjustments are subject to administrative review without guarantee of execution.\n\n(4) This agreement shall be governed by and construed in accordance with the substantive laws applicable within the jurisdiction of the company's primary headquarters, excluding conflict of law principles.\n\n(5) Users may terminate their account agreement at any time by submitting a formal closure request through the designated support portal, subject to the settlement of any outstanding financial balances.\n\n(6) Certain operational activities may be executed without explicit user authorization where such processing is strictly necessary to fulfill pre-existing contractual obligations or administrative duties, and users retain the ability to rescind their authorization for discretionary processing at any time through account settings.\n\n(7) All service fees are billed in the local currency and must be settled in full prior to the activation of any recurring subscription tier or digital product delivery.\n\n(8) Al-Faris Digital Services reserves the right to utilize all collected information for any business purpose deemed appropriate by the management, including unforeseen future initiatives and operational adaptations not explicitly detailed herein.\n\n(9) Al-Faris Digital Services shall not be held liable for any indirect, incidental, or consequential damages arising from service interruptions caused by third-party telecommunication providers or unforeseen technical maintenance.\n\n(10) Official notices directed to the company must be transmitted via certified electronic mail to the designated corporate address listed on our contact page, and shall be deemed received upon successful delivery confirmation."
+}

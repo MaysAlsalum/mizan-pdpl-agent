@@ -1,0 +1,5 @@
+{"doc_id": "robust_newtype_001", "attempts": 1, "dropped": []}
+{"doc_id": "robust_newtype_002", "attempts": 1, "dropped": []}
+{"doc_id": "robust_newtype_004", "attempts": 2, "dropped": [{"slot": "p5", "kind": "ambiguous", "rule_id": "R01"}]}
+{"doc_id": "robust_newtype_003", "attempts": 2, "dropped": [{"slot": "p6", "kind": "ambiguous", "rule_id": "R03"}]}
+{"doc_id": "robust_newtype_005", "attempts": 1, "dropped": []}

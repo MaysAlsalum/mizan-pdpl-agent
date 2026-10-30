@@ -1,0 +1,65 @@
+{
+  "doc_id": "dev_019",
+  "split": "dev",
+  "doc_type": "privacy_policy",
+  "language": "en",
+  "title": "Al-Noor Digital Services Privacy and Operating Terms",
+  "noisy": false,
+  "clauses": [
+    {
+      "clause_id": "c1",
+      "text": "This agreement shall be governed by and construed in accordance with the substantive laws applicable within the jurisdiction of our principal headquarters.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c2",
+      "text": "Accepted payment methods include major credit cards, direct bank transfers, and approved regional digital wallets processed through secure financial gateways.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c3",
+      "text": "All intellectual property rights, including trademarks, source code, graphics, and proprietary software, remain the sole and exclusive property of Al-Noor Digital Services.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c4",
+      "text": "For the purposes of this document, the term Service shall refer exclusively to the software platform, digital tools, and associated web interfaces provided by the company.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c5",
+      "text": "All applicable service fees and subscription charges are displayed transparently at the checkout interface prior to the finalization of any transaction.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c6",
+      "text": "Al-Noor Digital Services shall not be held liable for any indirect, incidental, or consequential damages arising from the temporary unavailability of the platform due to scheduled maintenance.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c7",
+      "text": "Either party may terminate the service agreement with thirty days written notice, provided that all outstanding financial balances have been settled in full.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c8",
+      "text": "Promotional offers and awareness materials are transmitted to personal contact channels solely upon receiving the explicit prior consent of the recipient, and every such communication shall incorporate an unambiguous, easily accessible mechanism to instantly opt out of future mailings.",
+      "label": "trap",
+      "rule_id": "R11"
+    },
+    {
+      "clause_id": "c9",
+      "text": "Before any personal data is gathered through our platform, users are provided with this comprehensive privacy policy outlining the exact purposes of collection, the specific categories of data obtained, the methods of processing and secure storage, the eventual destruction protocols, and the statutory rights of data subjects alongside the designated procedures to exercise them.",
+      "label": "trap",
+      "rule_id": "R04"
+    }
+  ],
+  "full_text": "Al-Noor Digital Services Privacy and Operating Terms\n\n(1) This agreement shall be governed by and construed in accordance with the substantive laws applicable within the jurisdiction of our principal headquarters.\n\n(2) Accepted payment methods include major credit cards, direct bank transfers, and approved regional digital wallets processed through secure financial gateways.\n\n(3) All intellectual property rights, including trademarks, source code, graphics, and proprietary software, remain the sole and exclusive property of Al-Noor Digital Services.\n\n(4) For the purposes of this document, the term Service shall refer exclusively to the software platform, digital tools, and associated web interfaces provided by the company.\n\n(5) All applicable service fees and subscription charges are displayed transparently at the checkout interface prior to the finalization of any transaction.\n\n(6) Al-Noor Digital Services shall not be held liable for any indirect, incidental, or consequential damages arising from the temporary unavailability of the platform due to scheduled maintenance.\n\n(7) Either party may terminate the service agreement with thirty days written notice, provided that all outstanding financial balances have been settled in full.\n\n(8) Promotional offers and awareness materials are transmitted to personal contact channels solely upon receiving the explicit prior consent of the recipient, and every such communication shall incorporate an unambiguous, easily accessible mechanism to instantly opt out of future mailings.\n\n(9) Before any personal data is gathered through our platform, users are provided with this comprehensive privacy policy outlining the exact purposes of collection, the specific categories of data obtained, the methods of processing and secure storage, the eventual destruction protocols, and the statutory rights of data subjects alongside the designated procedures to exercise them."
+}

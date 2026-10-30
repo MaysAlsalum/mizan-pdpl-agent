@@ -1,0 +1,61 @@
+{
+  "doc_id": "dev_002",
+  "split": "dev",
+  "doc_type": "vendor_contract",
+  "language": "en",
+  "title": "Services and Data Processing Agreement",
+  "noisy": false,
+  "clauses": [
+    {
+      "clause_id": "c1",
+      "text": "The Vendor reserves the right to engage third-party subcontractors for data processing activities at its sole discretion without prior notice to the Client, and the Client shall have no right to conduct on-site audits or compliance reviews of the Vendor's operational facilities.",
+      "label": "violation",
+      "rule_id": "R09",
+      "subtle": false
+    },
+    {
+      "clause_id": "c2",
+      "text": "Upon termination of this Agreement, the Vendor shall archive all operational data and records in a secure repository for indefinite historical analysis and business intelligence purposes, maintaining such records permanently unless otherwise agreed in a separate commercial amendment.",
+      "label": "violation",
+      "rule_id": "R06",
+      "subtle": true
+    },
+    {
+      "clause_id": "c3",
+      "text": "This Agreement shall commence on the Effective Date and shall continue for an initial period of two years, automatically renewing for successive one-year terms unless either party provides written notice of non-renewal at least sixty days prior to the expiration of the current term.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c4",
+      "text": "The Client shall pay the Vendor the fees set forth in the applicable Statement of Work within thirty days following the receipt of a valid and undisputed invoice.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c5",
+      "text": "Each party retains all right, title, and interest in and to its respective pre-existing intellectual property, and any new intellectual property developed jointly during the provision of services shall be jointly owned unless specified otherwise in writing.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c6",
+      "text": "In the event of any security incident, unauthorized access, or breach affecting stored information, the Vendor shall notify the Client within twenty-four hours of discovery, and the Client shall subsequently coordinate all formal communications with the relevant regulatory authorities.",
+      "label": "trap",
+      "rule_id": "R07"
+    },
+    {
+      "clause_id": "c7",
+      "text": "Either party may terminate this Agreement immediately upon written notice if the other party material breaches any of its core obligations and fails to cure such breach within thirty days following receipt of detailed written notice.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c8",
+      "text": "This Agreement shall be governed by, and construed in accordance with, the laws of the Kingdom of Saudi Arabia, without regard to its conflict of law principles.",
+      "label": "neutral",
+      "rule_id": null
+    }
+  ],
+  "full_text": "Services and Data Processing Agreement\n\n(1) The Vendor reserves the right to engage third-party subcontractors for data processing activities at its sole discretion without prior notice to the Client, and the Client shall have no right to conduct on-site audits or compliance reviews of the Vendor's operational facilities.\n\n(2) Upon termination of this Agreement, the Vendor shall archive all operational data and records in a secure repository for indefinite historical analysis and business intelligence purposes, maintaining such records permanently unless otherwise agreed in a separate commercial amendment.\n\n(3) This Agreement shall commence on the Effective Date and shall continue for an initial period of two years, automatically renewing for successive one-year terms unless either party provides written notice of non-renewal at least sixty days prior to the expiration of the current term.\n\n(4) The Client shall pay the Vendor the fees set forth in the applicable Statement of Work within thirty days following the receipt of a valid and undisputed invoice.\n\n(5) Each party retains all right, title, and interest in and to its respective pre-existing intellectual property, and any new intellectual property developed jointly during the provision of services shall be jointly owned unless specified otherwise in writing.\n\n(6) In the event of any security incident, unauthorized access, or breach affecting stored information, the Vendor shall notify the Client within twenty-four hours of discovery, and the Client shall subsequently coordinate all formal communications with the relevant regulatory authorities.\n\n(7) Either party may terminate this Agreement immediately upon written notice if the other party material breaches any of its core obligations and fails to cure such breach within thirty days following receipt of detailed written notice.\n\n(8) This Agreement shall be governed by, and construed in accordance with, the laws of the Kingdom of Saudi Arabia, without regard to its conflict of law principles."
+}

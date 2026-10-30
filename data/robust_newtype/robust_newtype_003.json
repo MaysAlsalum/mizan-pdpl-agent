@@ -1,0 +1,74 @@
+{
+  "doc_id": "robust_newtype_003",
+  "split": "robust_newtype",
+  "doc_type": "mobile_app_terms",
+  "language": "en",
+  "title": "Terms of Use for Zahran Mobile Application",
+  "noisy": false,
+  "clauses": [
+    {
+      "clause_id": "c1",
+      "text": "The company shall not be held liable for any indirect, incidental, or consequential damages arising from service interruptions caused by third-party telecommunications network failures.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c2",
+      "text": "By continuing to access and navigate the application after the publication of these terms, the user grants irrevocable consent to all data processing activities, and consent withdrawal is disabled for the entire duration of the active subscription period.",
+      "label": "violation",
+      "rule_id": "R01",
+      "subtle": false
+    },
+    {
+      "clause_id": "c3",
+      "text": "These terms and any related disputes shall be governed by and construed in accordance with the commercial regulations applicable in the jurisdiction where the company is registered.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c4",
+      "text": "All software, user interfaces, trademarks, and proprietary graphics integrated within the application remain the exclusive intellectual property of Zahran Technologies.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c5",
+      "text": "All subscription fees for premium features are billed in advance on a monthly or annual basis and are strictly non-refundable once the billing cycle has commenced.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c6",
+      "text": "Prior to final account creation and data submission, users are provided with a comprehensive privacy policy detailing the exact categories of collected data, processing methods, storage durations, destruction protocols, and user rights.",
+      "label": "trap",
+      "rule_id": "R04"
+    },
+    {
+      "clause_id": "c7",
+      "text": "The company processes users' health records and religious preferences under legitimate commercial interest to tailor targeted marketing campaigns and enhance cross-departmental service delivery across all internal business units.",
+      "label": "violation",
+      "rule_id": "R10",
+      "subtle": false
+    },
+    {
+      "clause_id": "c8",
+      "text": "Users maintain the right to request access to their stored information, demand corrections or updates to inaccurate records, and petition for the destruction of data that is no longer required for the original purpose.",
+      "label": "trap",
+      "rule_id": "R05"
+    },
+    {
+      "clause_id": "c9",
+      "text": "The platform reserves the right to utilize all collected user information for any business purpose deemed necessary, now or in the future, including unstated commercial initiatives that may emerge during ongoing operational development.",
+      "label": "violation",
+      "rule_id": "R02",
+      "subtle": true
+    },
+    {
+      "clause_id": "c10",
+      "text": "Users may terminate their account at any time through the application settings menu, which will take effect immediately upon confirmation of the cancellation request.",
+      "label": "neutral",
+      "rule_id": null
+    }
+  ],
+  "full_text": "Terms of Use for Zahran Mobile Application\n\n(1) The company shall not be held liable for any indirect, incidental, or consequential damages arising from service interruptions caused by third-party telecommunications network failures.\n\n(2) By continuing to access and navigate the application after the publication of these terms, the user grants irrevocable consent to all data processing activities, and consent withdrawal is disabled for the entire duration of the active subscription period.\n\n(3) These terms and any related disputes shall be governed by and construed in accordance with the commercial regulations applicable in the jurisdiction where the company is registered.\n\n(4) All software, user interfaces, trademarks, and proprietary graphics integrated within the application remain the exclusive intellectual property of Zahran Technologies.\n\n(5) All subscription fees for premium features are billed in advance on a monthly or annual basis and are strictly non-refundable once the billing cycle has commenced.\n\n(6) Prior to final account creation and data submission, users are provided with a comprehensive privacy policy detailing the exact categories of collected data, processing methods, storage durations, destruction protocols, and user rights.\n\n(7) The company processes users' health records and religious preferences under legitimate commercial interest to tailor targeted marketing campaigns and enhance cross-departmental service delivery across all internal business units.\n\n(8) Users maintain the right to request access to their stored information, demand corrections or updates to inaccurate records, and petition for the destruction of data that is no longer required for the original purpose.\n\n(9) The platform reserves the right to utilize all collected user information for any business purpose deemed necessary, now or in the future, including unstated commercial initiatives that may emerge during ongoing operational development.\n\n(10) Users may terminate their account at any time through the application settings menu, which will take effect immediately upon confirmation of the cancellation request."
+}

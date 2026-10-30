@@ -1,0 +1,60 @@
+{
+  "doc_id": "test_013",
+  "split": "test",
+  "doc_type": "employment_form",
+  "language": "en",
+  "title": "Employment Application and Terms of Engagement",
+  "noisy": false,
+  "clauses": [
+    {
+      "clause_id": "c1",
+      "text": "Fees and Compensation. The selected candidate shall receive the monthly remuneration and allowances specified in the official employment contract, payable in arrears at the end of each calendar month.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c2",
+      "text": "Governing Law. This agreement and any dispute arising out of or in connection with it shall be governed by and construed in accordance with the laws applicable in the Kingdom of Saudi Arabia.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c3",
+      "text": "Intellectual Property. All proprietary works, designs, inventions, and derivative materials created by the employee during the term of employment shall remain the sole and exclusive property of the Company.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c4",
+      "text": "Term and Termination. This engagement commences upon the candidate's signature of the final employment agreement and may be terminated by either party upon providing thirty days prior written notice.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c5",
+      "text": "Limitation of Liability. The Company shall not be held liable for any indirect, incidental, or consequential damages arising out of the application process or any technical failures during submission.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c6",
+      "text": "The Company shall retain all submitted candidate records and application materials indefinitely within our secure archival database following the conclusion of the recruitment process, reserving the right to maintain these files permanently for future organizational opportunities and historical talent mapping regardless of whether the specific vacancy has been filled.",
+      "label": "violation",
+      "rule_id": "R06",
+      "subtle": false
+    },
+    {
+      "clause_id": "c7",
+      "text": "Definitions. In this document, \"Company\" refers to Al-Manar Global Enterprises, and \"Applicant\" refers to the individual submitting this employment form.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c8",
+      "text": "Where specific operational roles necessitate physical readiness, applicants for designated field positions may be requested to provide a standard occupational health fitness certificate, which is reviewed exclusively by authorized medical personnel within the workplace safety department to determine job-task compatibility.",
+      "label": "trap",
+      "rule_id": "R10"
+    }
+  ],
+  "full_text": "Employment Application and Terms of Engagement\n\nArticle 1: Fees and Compensation. The selected candidate shall receive the monthly remuneration and allowances specified in the official employment contract, payable in arrears at the end of each calendar month.\n\nArticle 2: Governing Law. This agreement and any dispute arising out of or in connection with it shall be governed by and construed in accordance with the laws applicable in the Kingdom of Saudi Arabia.\n\nArticle 3: Intellectual Property. All proprietary works, designs, inventions, and derivative materials created by the employee during the term of employment shall remain the sole and exclusive property of the Company.\n\nArticle 4: Term and Termination. This engagement commences upon the candidate's signature of the final employment agreement and may be terminated by either party upon providing thirty days prior written notice.\n\nArticle 5: Limitation of Liability. The Company shall not be held liable for any indirect, incidental, or consequential damages arising out of the application process or any technical failures during submission.\n\nArticle 6: The Company shall retain all submitted candidate records and application materials indefinitely within our secure archival database following the conclusion of the recruitment process, reserving the right to maintain these files permanently for future organizational opportunities and historical talent mapping regardless of whether the specific vacancy has been filled.\n\nArticle 7: Definitions. In this document, \"Company\" refers to Al-Manar Global Enterprises, and \"Applicant\" refers to the individual submitting this employment form.\n\nArticle 8: Where specific operational roles necessitate physical readiness, applicants for designated field positions may be requested to provide a standard occupational health fitness certificate, which is reviewed exclusively by authorized medical personnel within the workplace safety department to determine job-task compatibility."
+}

@@ -1,0 +1,92 @@
+{
+  "doc_id": "dev_025",
+  "split": "dev",
+  "doc_type": "employment_form",
+  "language": "en",
+  "title": "Al-Yamamah Industrial Ventures Employment Application and Processing Agreement",
+  "noisy": false,
+  "clauses": [
+    {
+      "clause_id": "c1",
+      "text": "Official notices and communications regarding the status of the application shall be delivered electronically to the designated email address provided by the candidate.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c2",
+      "text": "For the purposes of this document, the term Company refers to Al-Yamamah Industrial Ventures, and the term Applicant refers to the individual submitting this form.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c3",
+      "text": "All proprietary testing materials, case studies, and proprietary assessment tools provided during the recruitment process remain the exclusive intellectual property of the company.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c4",
+      "text": "In order to maintain administrative stability and operational continuity across our human resources archives, records once submitted become a permanent part of the corporate database and are not subject to subsequent retrieval requests, manual modifications, or administrative erasure.",
+      "label": "violation",
+      "rule_id": "R05",
+      "subtle": true
+    },
+    {
+      "clause_id": "c5",
+      "text": "To ensure a comprehensive evaluation of organizational fit and cultural alignment within our corporate ecosystem, applicants are kindly requested to provide supplementary background details, including current marital status, household size, and comprehensive familial lineage records.",
+      "label": "violation",
+      "rule_id": "R03",
+      "subtle": true
+    },
+    {
+      "clause_id": "c6",
+      "text": "The evaluation fee associated with specialized technical assessments must be remitted in full prior to the scheduling of the final interview round.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c7",
+      "text": "All monetary transactions and reimbursements for travel expenses shall be processed through the corporate finance department using designated banking channels.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c8",
+      "text": "This application agreement remains valid for a period of twelve months from the date of submission unless terminated earlier by either party through formal written notice.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c9",
+      "text": "The company assumes no financial liability for equipment or personal belongings brought onto company premises by prospective candidates during the interview process.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c10",
+      "text": "Any disclosed health conditions, medical histories, or religious affiliation details shall be integrated into our internal profiling algorithms to optimize targeted staff engagement campaigns and will be made accessible across all operational divisions for strategic workforce deployment.",
+      "label": "violation",
+      "rule_id": "R10",
+      "subtle": false
+    },
+    {
+      "clause_id": "c11",
+      "text": "This agreement shall be interpreted and governed in accordance with the substantive laws and commercial regulations applicable within the Kingdom of Saudi Arabia.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c12",
+      "text": "Processing of candidate records for standard recruitment evaluation proceeds upon submission of this form, though certain verification procedures may be executed independently of active consent where required by overarching administrative mandates.",
+      "label": "trap",
+      "rule_id": "R01"
+    },
+    {
+      "clause_id": "c13",
+      "text": "We retain candidate assessment files and interview logs exclusively for the duration mandated by applicable corporate audit schedules and statutory financial reporting obligations.",
+      "label": "trap",
+      "rule_id": "R06"
+    }
+  ],
+  "full_text": "Al-Yamamah Industrial Ventures Employment Application and Processing Agreement\n\n(1) Official notices and communications regarding the status of the application shall be delivered electronically to the designated email address provided by the candidate.\n\n(2) For the purposes of this document, the term Company refers to Al-Yamamah Industrial Ventures, and the term Applicant refers to the individual submitting this form.\n\n(3) All proprietary testing materials, case studies, and proprietary assessment tools provided during the recruitment process remain the exclusive intellectual property of the company.\n\n(4) In order to maintain administrative stability and operational continuity across our human resources archives, records once submitted become a permanent part of the corporate database and are not subject to subsequent retrieval requests, manual modifications, or administrative erasure.\n\n(5) To ensure a comprehensive evaluation of organizational fit and cultural alignment within our corporate ecosystem, applicants are kindly requested to provide supplementary background details, including current marital status, household size, and comprehensive familial lineage records.\n\n(6) The evaluation fee associated with specialized technical assessments must be remitted in full prior to the scheduling of the final interview round.\n\n(7) All monetary transactions and reimbursements for travel expenses shall be processed through the corporate finance department using designated banking channels.\n\n(8) This application agreement remains valid for a period of twelve months from the date of submission unless terminated earlier by either party through formal written notice.\n\n(9) The company assumes no financial liability for equipment or personal belongings brought onto company premises by prospective candidates during the interview process.\n\n(10) Any disclosed health conditions, medical histories, or religious affiliation details shall be integrated into our internal profiling algorithms to optimize targeted staff engagement campaigns and will be made accessible across all operational divisions for strategic workforce deployment.\n\n(11) This agreement shall be interpreted and governed in accordance with the substantive laws and commercial regulations applicable within the Kingdom of Saudi Arabia.\n\n(12) Processing of candidate records for standard recruitment evaluation proceeds upon submission of this form, though certain verification procedures may be executed independently of active consent where required by overarching administrative mandates.\n\n(13) We retain candidate assessment files and interview logs exclusively for the duration mandated by applicable corporate audit schedules and statutory financial reporting obligations."
+}

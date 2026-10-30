@@ -1,14 +1,10 @@
   # كل الإعدادات هنا. لتبديل النماذج عدّل قسم models فقط.
 
 models:
-  small: gemini/gemini-3.5-flash-lite   # التقسيم والحكم (أغلب الاستدعاءات)
-  large: gemini/gemini-3.5-flash        # التعديلات والحالات المترددة
-  generator: gemini/gemini-3.5-flash    # توليد البيانات
-  judge_eval: gemini/gemini-3.5-flash   # حكم مستقل لتقييم التعديلات
-  # بعد شحن OpenAI بدّل مثلاً:
-  # small: openai/gpt-4o-mini
-  # generator: openai/gpt-4o
-  # judge_eval: openai/gpt-4o
+  small: gemini/gemini-3.5-flash-lite
+  large: gemini/gemini-3.5-flash-lite
+  generator: gemini/gemini-3.5-flash-lite
+  judge_eval: gemini/gemini-3.5-flash-lite
 
 # حد الطلبات في الدقيقة لكل مزود (المجاني في Gemini ضيق)
 rate_limits_rpm:

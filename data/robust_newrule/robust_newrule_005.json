@@ -1,0 +1,60 @@
+{
+  "doc_id": "robust_newrule_005",
+  "split": "robust_newrule",
+  "doc_type": "privacy_policy",
+  "language": "en",
+  "title": "Al-Yamamah Digital Services Privacy Policy",
+  "noisy": false,
+  "clauses": [
+    {
+      "clause_id": "c1",
+      "text": "We collect only the specific data fields strictly necessary for the fulfillment of the requested digital service, which comprise your full legal name, active email address, and verified telephone number.",
+      "label": "trap",
+      "rule_id": "R03"
+    },
+    {
+      "clause_id": "c2",
+      "text": "All service fees are billed in Saudi Riyals on a recurring monthly basis and must be settled within fifteen days of the invoice date.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c3",
+      "text": "The total aggregate liability of the company for any direct claims arising out of or related to the platform shall not exceed the total fees paid by the user during the preceding three months.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c4",
+      "text": "All software, user interfaces, trademarks, and proprietary documentation made available through the service remain the exclusive intellectual property of the company and its licensors.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c5",
+      "text": "This agreement shall commence upon successful account activation and shall remain in full force until terminated by either party with thirty days written notice.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c6",
+      "text": "Personal data may be stored or transferred to any foreign jurisdiction selected by our cloud infrastructure vendor, without prior notice to the user and without conducting any preliminary adequacy assessments or implementing additional cross-border safeguards.",
+      "label": "violation",
+      "rule_id": "R08",
+      "subtle": false
+    },
+    {
+      "clause_id": "c7",
+      "text": "Collected personal data shall be utilized exclusively for the specific operational objectives for which it was originally gathered, except in those limited circumstances where prior written authorization has been obtained from the user.",
+      "label": "trap",
+      "rule_id": "R02"
+    },
+    {
+      "clause_id": "c8",
+      "text": "This agreement shall be governed by and construed in accordance with the substantive laws applicable within the Kingdom of Saudi Arabia, excluding its conflict of laws principles.",
+      "label": "neutral",
+      "rule_id": null
+    }
+  ],
+  "full_text": "Al-Yamamah Digital Services Privacy Policy\n\n(1) We collect only the specific data fields strictly necessary for the fulfillment of the requested digital service, which comprise your full legal name, active email address, and verified telephone number.\n\n(2) All service fees are billed in Saudi Riyals on a recurring monthly basis and must be settled within fifteen days of the invoice date.\n\n(3) The total aggregate liability of the company for any direct claims arising out of or related to the platform shall not exceed the total fees paid by the user during the preceding three months.\n\n(4) All software, user interfaces, trademarks, and proprietary documentation made available through the service remain the exclusive intellectual property of the company and its licensors.\n\n(5) This agreement shall commence upon successful account activation and shall remain in full force until terminated by either party with thirty days written notice.\n\n(6) Personal data may be stored or transferred to any foreign jurisdiction selected by our cloud infrastructure vendor, without prior notice to the user and without conducting any preliminary adequacy assessments or implementing additional cross-border safeguards.\n\n(7) Collected personal data shall be utilized exclusively for the specific operational objectives for which it was originally gathered, except in those limited circumstances where prior written authorization has been obtained from the user.\n\n(8) This agreement shall be governed by and construed in accordance with the substantive laws applicable within the Kingdom of Saudi Arabia, excluding its conflict of laws principles."
+}

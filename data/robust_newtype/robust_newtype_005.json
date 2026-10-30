@@ -1,0 +1,67 @@
+{
+  "doc_id": "robust_newtype_005",
+  "split": "robust_newtype",
+  "doc_type": "mobile_app_terms",
+  "language": "en",
+  "title": "Nafith Mobile Application Terms of Use",
+  "noisy": false,
+  "clauses": [
+    {
+      "clause_id": "c1",
+      "text": "The company shall not be held liable for any direct, indirect, incidental, or consequential damages arising from service interruptions, technical malfunctions, or unauthorized access to user devices caused by external factors beyond our reasonable control.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c2",
+      "text": "Upon successful account registration and profile creation, the user is automatically enrolled to receive commercial communications, promotional offers, and updates originating from the application administration as well as our designated corporate partners. Communication preferences are pre-configured by default to maintain continuous outreach, and direct opt-out functionalities are intentionally omitted from user notification settings.",
+      "label": "violation",
+      "rule_id": "R11",
+      "subtle": false
+    },
+    {
+      "clause_id": "c3",
+      "text": "All intellectual property rights, trademarks, source code, graphical designs, and associated software assets within the application remain the exclusive property of the operating company and are protected under applicable property rights.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c4",
+      "text": "For the purposes of this agreement, the term \"Application\" refers exclusively to the Nafith mobile software interface, while \"User\" denotes any individual who downloads, installs, or accesses the platform.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c5",
+      "text": "These terms of use and any operational disputes arising from the utilization of the application shall be governed by and construed in accordance with the substantive laws applicable in the Kingdom of Saudi Arabia.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c6",
+      "text": "Either party may terminate this agreement at any time by providing written notice of termination through the designated account settings interface or via official support communication channels.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c7",
+      "text": "Users maintain the prerogative to request full transparency regarding the operational justifications and specific objectives governing information collection, alongside the ability to review, amend, rectify, or complete stored details. Furthermore, individuals may submit formal requests for the permanent erasure of records that are no longer necessary for fulfilling the primary operational purpose of the application.",
+      "label": "trap",
+      "rule_id": "R05"
+    },
+    {
+      "clause_id": "c8",
+      "text": "By accessing, browsing, or continuing to utilize the application and its associated features, the user acknowledges and provides definitive assent to all current and future operational processing methodologies applied to their information. Given the continuous nature of the digital services provided, recorded preferences and permissions remain binding for the active duration of the registered account profile and cannot be rescinded retrospectively.",
+      "label": "violation",
+      "rule_id": "R01",
+      "subtle": true
+    },
+    {
+      "clause_id": "c9",
+      "text": "Certain premium features and enhanced functionalities may require the payment of specific subscription fees, which are billed in advance on a recurring monthly or annual basis through authorized payment gateways.",
+      "label": "neutral",
+      "rule_id": null
+    }
+  ],
+  "full_text": "Nafith Mobile Application Terms of Use\n\n(1) The company shall not be held liable for any direct, indirect, incidental, or consequential damages arising from service interruptions, technical malfunctions, or unauthorized access to user devices caused by external factors beyond our reasonable control.\n\n(2) Upon successful account registration and profile creation, the user is automatically enrolled to receive commercial communications, promotional offers, and updates originating from the application administration as well as our designated corporate partners. Communication preferences are pre-configured by default to maintain continuous outreach, and direct opt-out functionalities are intentionally omitted from user notification settings.\n\n(3) All intellectual property rights, trademarks, source code, graphical designs, and associated software assets within the application remain the exclusive property of the operating company and are protected under applicable property rights.\n\n(4) For the purposes of this agreement, the term \"Application\" refers exclusively to the Nafith mobile software interface, while \"User\" denotes any individual who downloads, installs, or accesses the platform.\n\n(5) These terms of use and any operational disputes arising from the utilization of the application shall be governed by and construed in accordance with the substantive laws applicable in the Kingdom of Saudi Arabia.\n\n(6) Either party may terminate this agreement at any time by providing written notice of termination through the designated account settings interface or via official support communication channels.\n\n(7) Users maintain the prerogative to request full transparency regarding the operational justifications and specific objectives governing information collection, alongside the ability to review, amend, rectify, or complete stored details. Furthermore, individuals may submit formal requests for the permanent erasure of records that are no longer necessary for fulfilling the primary operational purpose of the application.\n\n(8) By accessing, browsing, or continuing to utilize the application and its associated features, the user acknowledges and provides definitive assent to all current and future operational processing methodologies applied to their information. Given the continuous nature of the digital services provided, recorded preferences and permissions remain binding for the active duration of the registered account profile and cannot be rescinded retrospectively.\n\n(9) Certain premium features and enhanced functionalities may require the payment of specific subscription fees, which are billed in advance on a recurring monthly or annual basis through authorized payment gateways."
+}

@@ -1,0 +1,73 @@
+{
+  "doc_id": "robust_noisy_002",
+  "split": "robust_noisy",
+  "doc_type": "employment_form",
+  "language": "en",
+  "title": "Al-Yamamah Enterprise Employment Application and Terms",
+  "noisy": true,
+  "clauses": [
+    {
+      "clause_id": "c1",
+      "text": "The company retains all submitted candidate records and application files indefinitely in our archival database following the conclusion of the recruitment cycle, and reserves the right to store this information permanently for future operational reference.",
+      "label": "violation",
+      "rule_id": "R06",
+      "subtle": false
+    },
+    {
+      "clause_id": "c2",
+      "text": "To evaluate candidacy for the applied position, applicants are strictly required to submit their full national identification card copy, religious affiliation, marital status, exact number of family dependents, and current employer details alongside the standard resume.",
+      "label": "violation",
+      "rule_id": "R03",
+      "subtle": false
+    },
+    {
+      "clause_id": "c3",
+      "text": "This application procedure and all associated evaluation terms shall be governed by and construed in accordance with the commercial laws applicable within the Kingdom of Saudi Arabia.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c4",
+      "text": "All formal notices, interview schedules, and official communications related to this application shall be delivered electronically to the primary email address provided by the candidate.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c5",
+      "text": "All proprietary assessment materials, employer tests, and proprietary evaluation frameworks provided during the application process remain the exclusive intellectual property of the company.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c6",
+      "text": "For the purposes of this document, Company refers to Al-Yamamah Enterprise, and Applicant refers to the individual submitting their credentials for employment consideration.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c7",
+      "text": "The company assumes no financial or operational liability for any technical disruptions, transmission delays, or data interception occurrences during the online submission process.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c8",
+      "text": "All application review fees are strictly non-refundable and must be settled prior to the initial candidate assessment phase through our designated corporate payment gateway.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c9",
+      "text": "This application agreement shall commence upon electronic submission by the candidate and shall remain in effect for the duration of the active recruitment window unless terminated earlier by the company.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c10",
+      "text": "Applicants maintain the right to be informed of the specific operational purpose for data collection, to access their stored records upon written request, to petition for the correction or update of inaccurate information, and to request the destruction of files that are no longer required for evaluation.",
+      "label": "trap",
+      "rule_id": "R05"
+    }
+  ],
+  "full_text": "Al-Yamamah Enterprise  Employment Application and Terms\n\nArticle 1: The company retains all submitted\ncandidate records and application files  indefinitely in our archival\ndatabase following the conclusion of the recruitment cycle, and reserves the right to  store this information permanently\nfor future operational reference.\n\nArticle  2: To evaluate candidacy for the applied position,\napplicants are\nstrictly required to  submit  their  full national identification card copy, religious affiliation, marital status, exact number of family dependents, and current employer\n- 2 -\ndetails alongside the  standard  resume.\n\nArticle 3: This application procedure and all associated evaluation terms shall be  governed by  and construed in accordance with  the commercial laws applicable within the  Kingdom of Saudi Arabia.\n\nArticle 4: All formal notices, interview  schedules,\nand official communications related to this application shall be delivered electronically to the primary email address provided by the candidate.\n\nArticle 5: All proprietary assessment  materials, employer tests, and\nproprietary evaluation frameworks\n- 3 -\nprovided during the\napplication process remain the exclusive intellectual property of the\ncompany.\n\nArticle 6: For  the purposes  of  this document,  Company refers to Al-Yamamah Enterprise, and Applicant refers to the individual submitting their  credentials for employment consideration.\n\nArticle 7: The company assumes no financial or operational liability for any technical disruptions, transmission delays,  or data interception\noccurrences during the online submission process.\n\nArticle 8: All  application review fees are strictly non-refundable and must be settled prior\nto  the initial\ncandidate assessment phase\n- 4 -\nthrough our designated  corporate payment gateway.\n\nArticle 9: This application agreement shall  commence upon electronic submission by the candidate and shall remain in effect for the duration of the active recruitment window unless terminated earlier by the company.\n\nArticle 10: Applicants maintain the right to be informed of\nthe  specific operational purpose for data collection, to access their stored records upon written request, to petition for the correction or  update of inaccurate information,  and to\n- 5 -\nrequest the destruction of files that  are no longer required for evaluation."
+}

@@ -1,0 +1,84 @@
+{
+  "doc_id": "dev_016",
+  "split": "dev",
+  "doc_type": "vendor_contract",
+  "language": "en",
+  "title": "Services and Data Processing Agreement",
+  "noisy": false,
+  "clauses": [
+    {
+      "clause_id": "c1",
+      "text": "The Vendor shall retain all collected user records and associated datasets indefinitely following the termination of this Agreement, reserving the absolute right to maintain such information permanently without implementing data purging or destruction schedules.",
+      "label": "violation",
+      "rule_id": "R06",
+      "subtle": false
+    },
+    {
+      "clause_id": "c2",
+      "text": "The Vendor shall notify the Customer within twenty-four hours of discovering any security incident, breach, or unauthorized access involving the database, and the Customer shall subsequently notify the competent authority within seventy-two hours where required.",
+      "label": "trap",
+      "rule_id": "R07"
+    },
+    {
+      "clause_id": "c3",
+      "text": "For the purposes of this Agreement, 'Business Day' means any day other than a Friday, Saturday, or official public holiday recognized in the Kingdom of Saudi Arabia.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c4",
+      "text": "The Vendor shall deliver the software and related deliverables in accordance with the milestones and specifications set forth in the project schedule agreed upon by both parties.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c5",
+      "text": "This Agreement shall commence on the effective date and shall continue for an initial period of twelve months, automatically renewing for successive one-year terms unless either party provides written notice of non-renewal at least sixty days prior to the expiration of the then-current term.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c6",
+      "text": "This Agreement shall be governed by and construed in accordance with the laws of the Kingdom of Saudi Arabia, without regard to its conflict of laws principles.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c7",
+      "text": "Any formal notice required under this Agreement shall be sent in writing via certified mail or recognized courier service to the designated corporate address of the receiving party.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c8",
+      "text": "The Customer shall conduct annual on-site audits of the Vendor's technical infrastructure with thirty days prior written notice, except in the event of an active security incident which shall trigger an immediate inspection protocol.",
+      "label": "trap",
+      "rule_id": "R09"
+    },
+    {
+      "clause_id": "c9",
+      "text": "Either party may terminate this Agreement immediately upon written notice if the other party commits a material breach of any obligation and fails to remedy such breach within thirty days of receiving written notice specifying the default.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c10",
+      "text": "All intellectual property rights existing prior to the effective date or developed independently of this Agreement shall remain the exclusive property of the originating party, and no transfer of ownership is granted hereunder.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c11",
+      "text": "Except for indemnification obligations and breaches of confidentiality, the aggregate liability of either party arising out of or relating to this Agreement shall not exceed the total fees paid by the Customer to the Vendor in the twelve months preceding the event giving rise to liability.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c12",
+      "text": "The Customer shall pay the Vendor the total service fees outlined in the applicable statement of work within thirty days following the receipt of a valid and accurate invoice.",
+      "label": "neutral",
+      "rule_id": null
+    }
+  ],
+  "full_text": "Services and Data Processing Agreement\n\n1. The Vendor shall retain all collected user records and associated datasets indefinitely following the termination of this Agreement, reserving the absolute right to maintain such information permanently without implementing data purging or destruction schedules.\n\n2. The Vendor shall notify the Customer within twenty-four hours of discovering any security incident, breach, or unauthorized access involving the database, and the Customer shall subsequently notify the competent authority within seventy-two hours where required.\n\n3. For the purposes of this Agreement, 'Business Day' means any day other than a Friday, Saturday, or official public holiday recognized in the Kingdom of Saudi Arabia.\n\n4. The Vendor shall deliver the software and related deliverables in accordance with the milestones and specifications set forth in the project schedule agreed upon by both parties.\n\n5. This Agreement shall commence on the effective date and shall continue for an initial period of twelve months, automatically renewing for successive one-year terms unless either party provides written notice of non-renewal at least sixty days prior to the expiration of the then-current term.\n\n6. This Agreement shall be governed by and construed in accordance with the laws of the Kingdom of Saudi Arabia, without regard to its conflict of laws principles.\n\n7. Any formal notice required under this Agreement shall be sent in writing via certified mail or recognized courier service to the designated corporate address of the receiving party.\n\n8. The Customer shall conduct annual on-site audits of the Vendor's technical infrastructure with thirty days prior written notice, except in the event of an active security incident which shall trigger an immediate inspection protocol.\n\n9. Either party may terminate this Agreement immediately upon written notice if the other party commits a material breach of any obligation and fails to remedy such breach within thirty days of receiving written notice specifying the default.\n\n10. All intellectual property rights existing prior to the effective date or developed independently of this Agreement shall remain the exclusive property of the originating party, and no transfer of ownership is granted hereunder.\n\n11. Except for indemnification obligations and breaches of confidentiality, the aggregate liability of either party arising out of or relating to this Agreement shall not exceed the total fees paid by the Customer to the Vendor in the twelve months preceding the event giving rise to liability.\n\n12. The Customer shall pay the Vendor the total service fees outlined in the applicable statement of work within thirty days following the receipt of a valid and accurate invoice."
+}

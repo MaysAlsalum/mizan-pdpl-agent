@@ -1,0 +1,73 @@
+{
+  "doc_id": "dev_003",
+  "split": "dev",
+  "doc_type": "employment_form",
+  "language": "en",
+  "title": "Al-Yamamah Enterprise Employment Application and Data Processing Terms",
+  "noisy": false,
+  "clauses": [
+    {
+      "clause_id": "c1",
+      "text": "The information gathered through this portal is strictly restricted to the essential credentials, identification documents, and verified employment history required for initial candidacy assessment.",
+      "label": "trap",
+      "rule_id": "R03"
+    },
+    {
+      "clause_id": "c2",
+      "text": "Either party may terminate this application process at any time by providing written notice to the designated corporate representative.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c3",
+      "text": "All proprietary trademarks, logos, and assessment materials provided via this portal remain the exclusive intellectual property of Al-Yamamah Enterprise.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c4",
+      "text": "Application records and related assessment files are systematically purged upon the conclusion of the active recruitment cycle, except where specific statutory auditing mandates or active legal proceedings necessitate extended archiving.",
+      "label": "trap",
+      "rule_id": "R06"
+    },
+    {
+      "clause_id": "c5",
+      "text": "This agreement shall be governed by and construed in accordance with the laws applicable in the Kingdom of Saudi Arabia, without regard to conflict of law principles.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c6",
+      "text": "For the purposes of this document, the term Company refers to Al-Yamamah Enterprise and its designated subsidiaries, while Applicant refers to the individual submitting employment credentials.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c7",
+      "text": "The applicant acknowledges and agrees that all disclosed sensitive categories, including health status, religious affiliation, and background details, may be processed under our legitimate operational interest framework to optimize targeted promotional communications and enhance profile-based candidate engagement across all corporate divisions.",
+      "label": "violation",
+      "rule_id": "R10",
+      "subtle": true
+    },
+    {
+      "clause_id": "c8",
+      "text": "The company shall not be held liable for any indirect, incidental, or consequential damages arising from technical interruptions or system downtime during the submission process.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c9",
+      "text": "The applicant explicitly waives any standing right to inspect, review, or obtain copies of stored evaluation files, and acknowledges that requests for the permanent removal of submitted records shall not be entertained under any circumstances following submission.",
+      "label": "violation",
+      "rule_id": "R05",
+      "subtle": true
+    },
+    {
+      "clause_id": "c10",
+      "text": "Any formal notices required under these terms must be delivered in writing to the primary corporate headquarters address specified on the official company website.",
+      "label": "neutral",
+      "rule_id": null
+    }
+  ],
+  "full_text": "Al-Yamamah Enterprise Employment Application and Data Processing Terms\n\n(1) The information gathered through this portal is strictly restricted to the essential credentials, identification documents, and verified employment history required for initial candidacy assessment.\n\n(2) Either party may terminate this application process at any time by providing written notice to the designated corporate representative.\n\n(3) All proprietary trademarks, logos, and assessment materials provided via this portal remain the exclusive intellectual property of Al-Yamamah Enterprise.\n\n(4) Application records and related assessment files are systematically purged upon the conclusion of the active recruitment cycle, except where specific statutory auditing mandates or active legal proceedings necessitate extended archiving.\n\n(5) This agreement shall be governed by and construed in accordance with the laws applicable in the Kingdom of Saudi Arabia, without regard to conflict of law principles.\n\n(6) For the purposes of this document, the term Company refers to Al-Yamamah Enterprise and its designated subsidiaries, while Applicant refers to the individual submitting employment credentials.\n\n(7) The applicant acknowledges and agrees that all disclosed sensitive categories, including health status, religious affiliation, and background details, may be processed under our legitimate operational interest framework to optimize targeted promotional communications and enhance profile-based candidate engagement across all corporate divisions.\n\n(8) The company shall not be held liable for any indirect, incidental, or consequential damages arising from technical interruptions or system downtime during the submission process.\n\n(9) The applicant explicitly waives any standing right to inspect, review, or obtain copies of stored evaluation files, and acknowledges that requests for the permanent removal of submitted records shall not be entertained under any circumstances following submission.\n\n(10) Any formal notices required under these terms must be delivered in writing to the primary corporate headquarters address specified on the official company website."
+}

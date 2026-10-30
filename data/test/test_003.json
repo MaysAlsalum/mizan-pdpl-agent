@@ -1,0 +1,72 @@
+{
+  "doc_id": "test_003",
+  "split": "test",
+  "doc_type": "privacy_policy",
+  "language": "en",
+  "title": "Al-Misk Digital Services Privacy and Operational Agreement",
+  "noisy": false,
+  "clauses": [
+    {
+      "clause_id": "c1",
+      "text": "The service provider shall not be held liable for any indirect, incidental, or consequential damages arising from the temporary unavailability or technical interruption of the platform.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c2",
+      "text": "This agreement and all related commercial transactions shall be governed exclusively by and construed in accordance with the laws applicable within the jurisdiction of the company headquarters.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c3",
+      "text": "Accepted payment methods include major credit cards, direct bank transfers, and authorized electronic payment gateways as displayed at the checkout interface.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c4",
+      "text": "This agreement shall remain in full force and effect for an initial term of one year from the date of acceptance, automatically renewing unless terminated by either party with thirty days written notice.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c5",
+      "text": "To ensure comprehensive service optimization and personalized member profiling for our periodic digital newsletter and update dispatches, subscribers are kindly requested to provide their full national identification document copy, current marital status, total number of household dependents, and primary workplace address alongside standard contact details.",
+      "label": "violation",
+      "rule_id": "R03",
+      "subtle": true
+    },
+    {
+      "clause_id": "c6",
+      "text": "Prior to the finalization of any registration or data submission, users are provided with full access to this complete privacy policy detailing the exact purposes of collection, the categories of data gathered, processing methodologies, secure storage protocols, final destruction procedures, and explicit instructions regarding the exercise of data subject rights.",
+      "label": "trap",
+      "rule_id": "R04"
+    },
+    {
+      "clause_id": "c7",
+      "text": "Digital deliverables and service activation codes shall be transmitted electronically to the designated user account or registered email address immediately following payment confirmation.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c8",
+      "text": "For the purposes of this document, the term platform refers strictly to the web interface and mobile applications operated by Al-Misk Digital Services, while user refers to any registered account holder.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c9",
+      "text": "All applicable service fees and subscription charges are explicitly detailed on the official platform pricing schedule and are due in full prior to the activation of any requested digital features.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c10",
+      "text": "All intellectual property rights, trademarks, software code, graphic designs, and proprietary content made available through the service remain the exclusive property of Al-Misk Digital Services.",
+      "label": "neutral",
+      "rule_id": null
+    }
+  ],
+  "full_text": "Al-Misk Digital Services Privacy and Operational Agreement\n\nArticle 1: The service provider shall not be held liable for any indirect, incidental, or consequential damages arising from the temporary unavailability or technical interruption of the platform.\n\nArticle 2: This agreement and all related commercial transactions shall be governed exclusively by and construed in accordance with the laws applicable within the jurisdiction of the company headquarters.\n\nArticle 3: Accepted payment methods include major credit cards, direct bank transfers, and authorized electronic payment gateways as displayed at the checkout interface.\n\nArticle 4: This agreement shall remain in full force and effect for an initial term of one year from the date of acceptance, automatically renewing unless terminated by either party with thirty days written notice.\n\nArticle 5: To ensure comprehensive service optimization and personalized member profiling for our periodic digital newsletter and update dispatches, subscribers are kindly requested to provide their full national identification document copy, current marital status, total number of household dependents, and primary workplace address alongside standard contact details.\n\nArticle 6: Prior to the finalization of any registration or data submission, users are provided with full access to this complete privacy policy detailing the exact purposes of collection, the categories of data gathered, processing methodologies, secure storage protocols, final destruction procedures, and explicit instructions regarding the exercise of data subject rights.\n\nArticle 7: Digital deliverables and service activation codes shall be transmitted electronically to the designated user account or registered email address immediately following payment confirmation.\n\nArticle 8: For the purposes of this document, the term platform refers strictly to the web interface and mobile applications operated by Al-Misk Digital Services, while user refers to any registered account holder.\n\nArticle 9: All applicable service fees and subscription charges are explicitly detailed on the official platform pricing schedule and are due in full prior to the activation of any requested digital features.\n\nArticle 10: All intellectual property rights, trademarks, software code, graphic designs, and proprietary content made available through the service remain the exclusive property of Al-Misk Digital Services."
+}

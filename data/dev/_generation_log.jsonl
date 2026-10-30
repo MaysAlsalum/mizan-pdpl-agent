@@ -1,0 +1,30 @@
+{"doc_id": "dev_001", "attempts": 1, "dropped": []}
+{"doc_id": "dev_002", "attempts": 1, "dropped": []}
+{"doc_id": "dev_003", "attempts": 1, "dropped": []}
+{"doc_id": "dev_004", "attempts": 1, "dropped": []}
+{"doc_id": "dev_005", "attempts": 1, "dropped": []}
+{"doc_id": "dev_006", "attempts": 1, "dropped": []}
+{"doc_id": "dev_008", "attempts": 1, "dropped": []}
+{"doc_id": "dev_007", "attempts": 2, "dropped": [{"slot": "p5", "kind": "ambiguous", "rule_id": "R05"}]}
+{"doc_id": "dev_009", "attempts": 1, "dropped": []}
+{"doc_id": "dev_010", "attempts": 2, "dropped": [{"slot": "p3", "kind": "ambiguous", "rule_id": "R01"}]}
+{"doc_id": "dev_011", "attempts": 2, "dropped": [{"slot": "p5", "kind": "ambiguous", "rule_id": "R02"}]}
+{"doc_id": "dev_012", "attempts": 1, "dropped": []}
+{"doc_id": "dev_014", "attempts": 1, "dropped": []}
+{"doc_id": "dev_015", "attempts": 1, "dropped": []}
+{"doc_id": "dev_013", "attempts": 2, "dropped": []}
+{"doc_id": "dev_017", "attempts": 2, "dropped": [{"slot": "p5", "kind": "ambiguous", "rule_id": "R11"}]}
+{"doc_id": "dev_016", "attempts": 2, "dropped": [{"slot": "p4", "kind": "ambiguous", "rule_id": "R02"}]}
+{"doc_id": "dev_018", "attempts": 1, "dropped": []}
+{"doc_id": "dev_019", "attempts": 1, "dropped": []}
+{"doc_id": "dev_020", "attempts": 1, "dropped": []}
+{"doc_id": "dev_022", "attempts": 1, "dropped": []}
+{"doc_id": "dev_021", "attempts": 2, "dropped": [{"slot": "p2", "kind": "trap", "rule_id": "R06"}, {"slot": "p3", "kind": "ambiguous", "rule_id": "R01"}]}
+{"doc_id": "dev_023", "attempts": 2, "dropped": [{"slot": "p1", "kind": "trap", "rule_id": "R01"}]}
+{"doc_id": "dev_024", "attempts": 1, "dropped": []}
+{"doc_id": "dev_025", "attempts": 1, "dropped": []}
+{"doc_id": "dev_026", "attempts": 1, "dropped": []}
+{"doc_id": "dev_028", "attempts": 1, "dropped": []}
+{"doc_id": "dev_027", "attempts": 2, "dropped": [{"slot": "p3", "kind": "ambiguous", "rule_id": "R01"}]}
+{"doc_id": "dev_030", "attempts": 1, "dropped": []}
+{"doc_id": "dev_029", "attempts": 2, "dropped": [{"slot": "p3", "kind": "ambiguous", "rule_id": "R06"}]}

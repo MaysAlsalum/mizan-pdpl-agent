@@ -1,0 +1,1 @@
+{"text": "{\"results\": [{\"slot\": \"p1\", \"verdict\": \"compliant\"}, {\"slot\": \"p2\", \"verdict\": \"violation\"}]}", "data": {"results": [{"slot": "p1", "verdict": "compliant"}, {"slot": "p2", "verdict": "violation"}]}, "model": "gemini/gemini-3.5-flash-lite", "prompt_tokens": 296, "completion_tokens": 33, "cost_usd": 0.0001713, "latency_s": 57.277, "cached": false}

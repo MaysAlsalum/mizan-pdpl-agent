@@ -1,0 +1,236 @@
+{
+  "system": "baseline_small",
+  "split": "dev",
+  "include_hidden": false,
+  "limit": 3,
+  "models": {
+    "small": "gemini/gemini-3.5-flash-lite",
+    "large": "gemini/gemini-3.5-flash-lite",
+    "generator": "gemini/gemini-3.5-flash-lite",
+    "judge_eval": "gemini/gemini-3.5-flash-lite"
+  },
+  "metrics": {
+    "precision": 0.875,
+    "recall": 1.0,
+    "f1": 0.933,
+    "tp": 7,
+    "fp": 1,
+    "fn": 0,
+    "subtle_recall": 1.0,
+    "trap_fp_rate": 0.0,
+    "grounding_rate": 1.0,
+    "ambiguous_escalation_rate": null,
+    "escalations_per_doc": 0.0,
+    "cost_per_doc_usd": 0.00074,
+    "latency_per_doc_s": 8.29,
+    "llm_calls_per_doc": 1.0,
+    "docs": 3,
+    "per_rule_f1": {
+      "R01": 0.667,
+      "R05": 1.0,
+      "R06": 1.0,
+      "R09": 1.0,
+      "R10": 1.0
+    }
+  },
+  "errors": 0,
+  "wall_time_s": 15.4,
+  "llm_totals": {
+    "calls": 3,
+    "cache_hits": 0,
+    "prompt_tokens": 2804,
+    "completion_tokens": 550,
+    "cost_usd": 0.002216
+  },
+  "per_doc": [
+    {
+      "doc_id": "dev_001",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R05": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R01": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R10": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 2,
+        "subtle_found": 2,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.000791,
+        "latency_s": 5.07,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_001",
+        "findings": [
+          {
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "requests for individual data inspection, record modification, or file expungement fall outside standard administrative review channels and cannot be accommodated.",
+            "fix": null
+          },
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "with such authorization remaining binding and not subject to subsequent revocation.",
+            "fix": null
+          },
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "The company reserves the right to process all applicant disclosures, including medical history, health conditions, and religious affiliations where provided, under the framework of legitimate human resources interest to support targeted corporate wellness initiatives, internal profiling, and promotional communications.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.000791,
+        "latency_s": 5.07,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_002",
+      "score": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R09": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "findings": 2,
+        "grounded": 2,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0006382,
+        "latency_s": 9.49,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_002",
+        "findings": [
+          {
+            "rule_id": "R09",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "(1) The Vendor reserves the right to engage third-party subcontractors for data processing activities at its sole discretion without prior notice to the Client, and the Client shall have no right to conduct on-site audits or compliance reviews of the Vendor's operational facilities.",
+            "fix": null
+          },
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "(2) Upon termination of this Agreement, the Vendor shall archive all operational data and records in a secure repository for indefinite historical analysis and business intelligence purposes, maintaining such records permanently unless otherwise agreed in a separate commercial amendment.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0006382,
+        "latency_s": 9.49,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_003",
+      "score": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 0,
+        "per_rule": {
+          "R01": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0
+          },
+          "R05": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R10": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 2,
+        "subtle_found": 2,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.000787,
+        "latency_s": 10.3,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_003",
+        "findings": [
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "The applicant explicitly waives any standing right to inspect, review, or obtain copies of stored evaluation files, and acknowledges that requests for the permanent removal of submitted records shall not be entertained under any circumstances following submission.",
+            "fix": null
+          },
+          {
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "The applicant explicitly waives any standing right to inspect, review, or obtain copies of stored evaluation files, and acknowledges that requests for the permanent removal of submitted records shall not be entertained under any circumstances following submission.",
+            "fix": null
+          },
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "The applicant acknowledges and agrees that all disclosed sensitive categories, including health status, religious affiliation, and background details, may be processed under our legitimate operational interest framework to optimize targeted promotional communications and enhance profile-based candidate engagement across all corporate divisions.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.000787,
+        "latency_s": 10.3,
+        "llm_calls": 1
+      }
+    }
+  ]
+}

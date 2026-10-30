@@ -1,0 +1,66 @@
+{
+  "doc_id": "test_008",
+  "split": "test",
+  "doc_type": "privacy_policy",
+  "language": "en",
+  "title": "Data Privacy and Service Terms Agreement",
+  "noisy": false,
+  "clauses": [
+    {
+      "clause_id": "c1",
+      "text": "This contract and all operational disputes arising therefrom shall be interpreted and governed exclusively by the applicable commercial laws and regulations of the jurisdiction in which the company is registered.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c2",
+      "text": "This agreement shall commence upon the successful creation of an account and shall remain in full force until terminated by either party with a mandatory written notice of thirty days.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c3",
+      "text": "The company shall not be held liable for any indirect, incidental, or consequential damages arising out of or in connection with the utilization or inability to utilize the provided services.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c4",
+      "text": "For the purposes of this document, the term 'Company' refers to Horizon Digital Solutions, while 'User' refers to any individual or corporate entity accessing the technological platform.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c5",
+      "text": "All software, interface designs, trademarks, and proprietary documentation made available through the platform remain the exclusive intellectual property of the company and may not be reproduced without prior authorization.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c6",
+      "text": "For the purpose of enhancing user experience and delivering tailored promotional campaigns, our platform processes sensitive categories of information including religious beliefs, ethnic origin, and comprehensive health records, granting full access to all operational departments and commercial partners for targeted advertising initiatives.",
+      "label": "violation",
+      "rule_id": "R10",
+      "subtle": false
+    },
+    {
+      "clause_id": "c7",
+      "text": "Accepted payment methods include major credit cards and direct bank transfers, and failure to settle outstanding balances by the designated due date will result in an immediate suspension of access.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c8",
+      "text": "Users retain the absolute right to request the complete destruction or permanent removal of their stored records at any time, provided, however, that the company reserves the right to retain such information indefinitely if it becomes relevant to any ongoing internal administrative review or pending legal dispute.",
+      "label": "trap",
+      "rule_id": "R05"
+    },
+    {
+      "clause_id": "c9",
+      "text": "All service fees are billed in advance on a recurring monthly basis and remain strictly non-refundable under any circumstances following the successful processing of the transaction.",
+      "label": "neutral",
+      "rule_id": null
+    }
+  ],
+  "full_text": "Data Privacy and Service Terms Agreement\n\n(1) This contract and all operational disputes arising therefrom shall be interpreted and governed exclusively by the applicable commercial laws and regulations of the jurisdiction in which the company is registered.\n\n(2) This agreement shall commence upon the successful creation of an account and shall remain in full force until terminated by either party with a mandatory written notice of thirty days.\n\n(3) The company shall not be held liable for any indirect, incidental, or consequential damages arising out of or in connection with the utilization or inability to utilize the provided services.\n\n(4) For the purposes of this document, the term 'Company' refers to Horizon Digital Solutions, while 'User' refers to any individual or corporate entity accessing the technological platform.\n\n(5) All software, interface designs, trademarks, and proprietary documentation made available through the platform remain the exclusive intellectual property of the company and may not be reproduced without prior authorization.\n\n(6) For the purpose of enhancing user experience and delivering tailored promotional campaigns, our platform processes sensitive categories of information including religious beliefs, ethnic origin, and comprehensive health records, granting full access to all operational departments and commercial partners for targeted advertising initiatives.\n\n(7) Accepted payment methods include major credit cards and direct bank transfers, and failure to settle outstanding balances by the designated due date will result in an immediate suspension of access.\n\n(8) Users retain the absolute right to request the complete destruction or permanent removal of their stored records at any time, provided, however, that the company reserves the right to retain such information indefinitely if it becomes relevant to any ongoing internal administrative review or pending legal dispute.\n\n(9) All service fees are billed in advance on a recurring monthly basis and remain strictly non-refundable under any circumstances following the successful processing of the transaction."
+}

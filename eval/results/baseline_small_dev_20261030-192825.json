@@ -1,0 +1,169 @@
+{
+  "system": "baseline_small",
+  "split": "dev",
+  "include_hidden": false,
+  "limit": 3,
+  "models": {
+    "small": "gemini/gemini-3.5-flash-lite",
+    "large": "gemini/gemini-3.5-flash",
+    "generator": "gemini/gemini-3.5-flash",
+    "judge_eval": "gemini/gemini-3.5-flash"
+  },
+  "metrics": {
+    "precision": 0.8,
+    "recall": 1.0,
+    "f1": 0.889,
+    "tp": 4,
+    "fp": 1,
+    "fn": 0,
+    "subtle_recall": null,
+    "trap_fp_rate": 0.0,
+    "grounding_rate": 1.0,
+    "ambiguous_escalation_rate": null,
+    "escalations_per_doc": 0.0,
+    "cost_per_doc_usd": 0.00086,
+    "latency_per_doc_s": 5.0,
+    "llm_calls_per_doc": 1.0,
+    "docs": 2,
+    "per_rule_f1": {
+      "R01": 0.0,
+      "R05": 1.0,
+      "R06": 1.0,
+      "R09": 1.0,
+      "R10": 1.0
+    }
+  },
+  "errors": 0,
+  "wall_time_s": 8.2,
+  "llm_totals": {
+    "calls": 2,
+    "cache_hits": 0,
+    "prompt_tokens": 1980,
+    "completion_tokens": 451,
+    "cost_usd": 0.001722
+  },
+  "per_doc": [
+    {
+      "doc_id": "dev_002",
+      "score": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R09": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "findings": 2,
+        "grounded": 2,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0007106,
+        "latency_s": 1.81,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_002",
+        "findings": [
+          {
+            "rule_id": "R09",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "The Vendor is hereby authorized to engage any third-party subcontractors for data processing activities at its sole discretion without prior notice to the Company, and the Company expressly waives all rights to conduct audits, inspect operations, or monitor the Vendor's data handling practices.",
+            "fix": null
+          },
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "The Company shall retain all processed customer data indefinitely in its central archives, and reserves the unconditional right to maintain such records permanently regardless of whether the original processing purpose has expired or the user account has been terminated.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0007106,
+        "latency_s": 1.81,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_003",
+      "score": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 0,
+        "per_rule": {
+          "R01": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0
+          },
+          "R05": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R10": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0010109000000000001,
+        "latency_s": 8.2,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_003",
+        "findings": [
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "Applicants acknowledge and agree that sensitive personal details, including health conditions, genetic profiles, and religious beliefs, shall be processed under the company's legitimate business interests and utilized to customize internal commercial promotions and marketing offers.",
+            "fix": null
+          },
+          {
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "Under no circumstances shall the applicant possess the right to request access to, review of, or correction of any personal records maintained by the company following submission. Furthermore, all requests for the deletion, restriction, or destruction of stored applicant records are strictly prohibited and shall be unconditionally denied.",
+            "fix": null
+          },
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "Applicants acknowledge and agree that sensitive personal details, including health conditions, genetic profiles, and religious beliefs, shall be processed under the company's legitimate business interests and utilized to customize internal commercial promotions and marketing offers. Access to such sensitive and health records shall be made available broadly to all administrative and departmental personnel across the organization.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0010109000000000001,
+        "latency_s": 8.2,
+        "llm_calls": 1
+      }
+    }
+  ]
+}

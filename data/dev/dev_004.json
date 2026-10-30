@@ -1,0 +1,67 @@
+{
+  "doc_id": "dev_004",
+  "split": "dev",
+  "doc_type": "privacy_policy",
+  "language": "en",
+  "title": "Al-Faris Digital Services Privacy and Operational Policy",
+  "noisy": false,
+  "clauses": [
+    {
+      "clause_id": "c1",
+      "text": "These terms and conditions are governed by and construed in accordance with the laws applicable in the Kingdom of Saudi Arabia, and any disputes shall be subject to the exclusive jurisdiction of the competent courts.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c2",
+      "text": "All service fees are billed in Saudi Riyals and must be settled in full prior to the activation of any digital subscription tier or the dispatch of ordered physical merchandise.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c3",
+      "text": "To subscribe to our daily digital newsletter and updates bulletin, users are required to complete their profile by providing their full national identity card number, marital status, exact number of household dependents, and current employer details alongside their preferred email address.",
+      "label": "violation",
+      "rule_id": "R03",
+      "subtle": false
+    },
+    {
+      "clause_id": "c4",
+      "text": "For the purposes of this document, Platform refers to the official website and mobile applications operated by Al-Faris Digital Services, and User refers to any individual or corporate entity accessing the system.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c5",
+      "text": "Users maintain the continuous right to be informed of the specific legal grounds and business purposes underlying any information collection, to access their stored records upon request, to demand the correction, completion, or updating of inaccurate entries, and to request the destruction of records that are no longer necessary for our operational objectives, subject to retention obligations arising from ongoing judicial proceedings or mandatory statutory archives.",
+      "label": "trap",
+      "rule_id": "R05"
+    },
+    {
+      "clause_id": "c6",
+      "text": "This agreement shall remain in effect for an initial term of one year from the date of account activation and shall automatically renew unless terminated by either party with thirty days prior written notice.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c7",
+      "text": "Accepted payment methods include major credit cards, direct bank transfers, and approved digital wallets as displayed on the platform checkout interface at the time of purchase.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c8",
+      "text": "Al-Faris Digital Services is committed to maintaining transparency regarding our operational frameworks. While specific technical details concerning our data categorization, exact collection vectors, and internal retention schedules are proprietary and generally remain confidential, registered users may submit a formal written inquiry to our administrative office to request a summary of these parameters following the completion of their account creation.",
+      "label": "violation",
+      "rule_id": "R04",
+      "subtle": true
+    },
+    {
+      "clause_id": "c9",
+      "text": "Al-Faris Digital Services shall not be held liable for any indirect, incidental, or consequential damages arising from service interruptions caused by telecommunication network failures or force majeure events.",
+      "label": "neutral",
+      "rule_id": null
+    }
+  ],
+  "full_text": "Al-Faris Digital Services Privacy and Operational Policy\n\n1. These terms and conditions are governed by and construed in accordance with the laws applicable in the Kingdom of Saudi Arabia, and any disputes shall be subject to the exclusive jurisdiction of the competent courts.\n\n2. All service fees are billed in Saudi Riyals and must be settled in full prior to the activation of any digital subscription tier or the dispatch of ordered physical merchandise.\n\n3. To subscribe to our daily digital newsletter and updates bulletin, users are required to complete their profile by providing their full national identity card number, marital status, exact number of household dependents, and current employer details alongside their preferred email address.\n\n4. For the purposes of this document, Platform refers to the official website and mobile applications operated by Al-Faris Digital Services, and User refers to any individual or corporate entity accessing the system.\n\n5. Users maintain the continuous right to be informed of the specific legal grounds and business purposes underlying any information collection, to access their stored records upon request, to demand the correction, completion, or updating of inaccurate entries, and to request the destruction of records that are no longer necessary for our operational objectives, subject to retention obligations arising from ongoing judicial proceedings or mandatory statutory archives.\n\n6. This agreement shall remain in effect for an initial term of one year from the date of account activation and shall automatically renew unless terminated by either party with thirty days prior written notice.\n\n7. Accepted payment methods include major credit cards, direct bank transfers, and approved digital wallets as displayed on the platform checkout interface at the time of purchase.\n\n8. Al-Faris Digital Services is committed to maintaining transparency regarding our operational frameworks. While specific technical details concerning our data categorization, exact collection vectors, and internal retention schedules are proprietary and generally remain confidential, registered users may submit a formal written inquiry to our administrative office to request a summary of these parameters following the completion of their account creation.\n\n9. Al-Faris Digital Services shall not be held liable for any indirect, incidental, or consequential damages arising from service interruptions caused by telecommunication network failures or force majeure events."
+}

@@ -1,0 +1,278 @@
+{
+  "system": "agent",
+  "split": "dev",
+  "include_hidden": false,
+  "limit": 3,
+  "models": {
+    "small": "gemini/gemini-3.5-flash-lite",
+    "large": "gemini/gemini-3.5-flash-lite",
+    "generator": "gemini/gemini-3.5-flash-lite",
+    "judge_eval": "gemini/gemini-3.5-flash-lite"
+  },
+  "metrics": {
+    "precision": 1.0,
+    "recall": 0.571,
+    "f1": 0.727,
+    "tp": 4,
+    "fp": 0,
+    "fn": 3,
+    "subtle_recall": 0.4,
+    "trap_fp_rate": 0.0,
+    "grounding_rate": 1.0,
+    "ambiguous_escalation_rate": null,
+    "escalations_per_doc": 0.0,
+    "cost_per_doc_usd": 0.0045,
+    "latency_per_doc_s": 67.36,
+    "llm_calls_per_doc": 6.3,
+    "docs": 3,
+    "per_rule_f1": {
+      "R01": 0.0,
+      "R05": 0.667,
+      "R06": 0.0,
+      "R09": 1.0,
+      "R10": 1.0
+    }
+  },
+  "errors": 0,
+  "wall_time_s": 121.2,
+  "llm_totals": {
+    "calls": 19,
+    "cache_hits": 0,
+    "prompt_tokens": 9927,
+    "completion_tokens": 4203,
+    "cost_usd": 0.013486
+  },
+  "per_doc": [
+    {
+      "doc_id": "dev_001",
+      "score": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "per_rule": {
+          "R10": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R05": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "R01": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 2,
+        "subtle_found": 0,
+        "unverified": 2,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.004618,
+        "latency_s": 80.85,
+        "llm_calls": 7
+      },
+      "output": {
+        "doc_id": "dev_001",
+        "doc_type_guess": "mobile_app_terms",
+        "findings": [
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "across current and future internal business operations, with such authorization remaining binding and not subject to subsequent revocation",
+            "reason": "It permits the use of personal data for unrelated future business operations without limitation.",
+            "source": "PDPL Art. 10",
+            "clause": "Submission of this employment application and participation in the preliminary evaluation stages constitutes the applicant's irrevocable authorization for the company to process, retain, and continuously utilize all submitted information across current and future internal business operations, with such authorization remaining binding and not subject to subsequent revocation.",
+            "fix": "Submission of this employment application and participation in the preliminary evaluation stages constitutes the applicant's authorization for the company to process, retain, and utilize all submitted information for the purposes of the application and evaluation process, except in specific cases set out in the Law.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "process all applicant disclosures, including medical history, health conditions, and religious affiliations where provided, under the framework of legitimate human resources interest to support targeted corporate wellness initiatives, internal profiling, and promotional communications",
+            "reason": "It processes sensitive and health data under legitimate interest and for promotional communications.",
+            "source": "PDPL Art. 1(11), 1(13), 6(4), 23, 26",
+            "clause": "The company reserves the right to process all applicant disclosures, including medical history, health conditions, and religious affiliations where provided, under the framework of legitimate human resources interest to support targeted corporate wellness initiatives, internal profiling, and promotional communications.",
+            "fix": "The company reserves the right to process applicant disclosures, including medical history, health conditions, and religious affiliations where provided, with access strictly limited to authorized personnel who need it to support corporate wellness initiatives and internal HR operations, excluding processing on a legitimate-interest basis or for promotional communications.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R11",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "promotional communications",
+            "reason": "It allows promotional communications using sensitive data without prior proper marketing consent mechanisms.",
+            "source": "PDPL Art. 25",
+            "clause": "The company reserves the right to process all applicant disclosures, including medical history, health conditions, and religious affiliations where provided, under the framework of legitimate human resources interest to support targeted corporate wellness initiatives, internal profiling, and promotional communications.",
+            "fix": "The company reserves the right to process all applicant disclosures, including medical history, health conditions, and religious affiliations where provided, under the framework of legitimate human resources interest to support targeted corporate wellness initiatives and internal profiling, provided that promotional communications are sent to personal contact channels only with the recipient's prior consent and include a clear way to stop receiving them.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=mobile_app_terms clauses=9 with_candidates=5"
+        ],
+        "cost_usd": 0.004618,
+        "latency_s": 80.85,
+        "llm_calls": 7
+      }
+    },
+    {
+      "doc_id": "dev_002",
+      "score": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "per_rule": {
+          "R09": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R06": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 0,
+        "unverified": 1,
+        "findings": 2,
+        "grounded": 2,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.003769,
+        "latency_s": 61.08,
+        "llm_calls": 5
+      },
+      "output": {
+        "doc_id": "dev_002",
+        "doc_type_guess": "vendor_contract",
+        "findings": [
+          {
+            "rule_id": "R09",
+            "verdict": "violation",
+            "confidence": 0.99,
+            "evidence": "the Client shall have no right to conduct on-site audits or compliance reviews of the Vendor's operational facilities.",
+            "reason": "The clause explicitly forbids the controller from auditing the processor, which violates processor governance rules.",
+            "source": "PDPL Art. 8",
+            "clause": "The Vendor reserves the right to engage third-party subcontractors for data processing activities at its sole discretion without prior notice to the Client, and the Client shall have no right to conduct on-site audits or compliance reviews of the Vendor's operational facilities.",
+            "fix": "The Vendor may engage third-party subcontractors for data processing activities, provided the Vendor ensures they offer sufficient guarantees to implement applicable data protection law, and the Client reserves the right to conduct compliance reviews and monitor the Vendor's adherence to these obligations.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "archive all operational data and records in a secure repository for indefinite historical analysis and business intelligence purposes",
+            "reason": "Data is retained and repurposed indefinitely for unrelated business intelligence purposes beyond the original collection purpose.",
+            "source": "PDPL Art. 10",
+            "clause": "Upon termination of this Agreement, the Vendor shall archive all operational data and records in a secure repository for indefinite historical analysis and business intelligence purposes, maintaining such records permanently unless otherwise agreed in a separate commercial amendment.",
+            "fix": "Upon termination of this Agreement, the Vendor shall archive all operational data and records in a secure repository for historical analysis and business intelligence purposes strictly as permitted under applicable law, maintaining such records only for as long as necessary for those lawful purposes unless otherwise agreed in a separate commercial amendment.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=vendor_contract clauses=8 with_candidates=7"
+        ],
+        "cost_usd": 0.003769,
+        "latency_s": 61.08,
+        "llm_calls": 5
+      }
+    },
+    {
+      "doc_id": "dev_003",
+      "score": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R10": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R05": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 2,
+        "subtle_found": 2,
+        "unverified": 1,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.005099,
+        "latency_s": 60.14,
+        "llm_calls": 7
+      },
+      "output": {
+        "doc_id": "dev_003",
+        "doc_type_guess": "mobile_app_terms",
+        "findings": [
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "sensitive categories, including health status, religious affiliation, and background details, may be processed under our legitimate operational interest framework to optimize targeted promotional communications",
+            "reason": "Sensitive data such as health status and religion cannot be processed under legitimate interest or used for marketing/promotional communications.",
+            "source": "PDPL Art. 1(11), 1(13), 6(4), 23, 26",
+            "clause": "The applicant acknowledges and agrees that all disclosed sensitive categories, including health status, religious affiliation, and background details, may be processed under our legitimate operational interest framework to optimize targeted promotional communications and enhance profile-based candidate engagement across all corporate divisions.",
+            "fix": "The applicant acknowledges and agrees that all disclosed sensitive categories, including health status, religious affiliation, and background details, may not be processed under our legitimate operational interest framework or used to optimize targeted promotional communications and enhance profile-based candidate engagement across all corporate divisions.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.9,
+            "evidence": "sensitive categories, including health status, religious affiliation, and background details, may be processed under our legitimate operational interest framework",
+            "reason": "It processes sensitive data based on legitimate interest rather than valid lawful consent where required.",
+            "source": "PDPL Art. 5",
+            "clause": "The applicant acknowledges and agrees that all disclosed sensitive categories, including health status, religious affiliation, and background details, may be processed under our legitimate operational interest framework to optimize targeted promotional communications and enhance profile-based candidate engagement across all corporate divisions.",
+            "fix": "The applicant acknowledges and agrees that all disclosed sensitive categories, including health status, religious affiliation, and background details, may be processed based on their consent to optimize targeted promotional communications and enhance profile-based candidate engagement across all corporate divisions, and that such consent may be withdrawn at any time.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 0.99,
+            "evidence": "The applicant explicitly waives any standing right to inspect, review, or obtain copies of stored evaluation files, and acknowledges that requests for the permanent removal of submitted records shall not be entertained",
+            "reason": "The clause explicitly denies the data subject's statutory rights to access and request destruction of their personal data.",
+            "source": "PDPL Art. 4",
+            "clause": "The applicant explicitly waives any standing right to inspect, review, or obtain copies of stored evaluation files, and acknowledges that requests for the permanent removal of submitted records shall not be entertained under any circumstances following submission.",
+            "fix": "The applicant acknowledges that evaluation files are processed based on legitimate legal grounds and specified purposes, and that requests to access personal data, request correction, completion, update, or request destruction of data no longer needed will be handled in accordance with applicable statutory rights.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=mobile_app_terms clauses=10 with_candidates=7"
+        ],
+        "cost_usd": 0.005099,
+        "latency_s": 60.14,
+        "llm_calls": 7
+      }
+    }
+  ]
+}

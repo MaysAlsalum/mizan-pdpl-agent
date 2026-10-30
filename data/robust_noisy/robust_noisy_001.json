@@ -1,0 +1,65 @@
+{
+  "doc_id": "robust_noisy_001",
+  "split": "robust_noisy",
+  "doc_type": "employment_form",
+  "language": "en",
+  "title": "Al-Yamamah Enterprise Employment Application and Terms of Agreement",
+  "noisy": true,
+  "clauses": [
+    {
+      "clause_id": "c1",
+      "text": "This application agreement and any ensuing professional engagement shall be governed by and construed in accordance with the laws applicable within the jurisdiction of the corporate headquarters.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c2",
+      "text": "Financial remuneration for the position shall be disbursed via electronic bank transfer on the final business day of each Gregorian month.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c3",
+      "text": "To process your employment candidacy effectively, we collect only the applicant's national identification card copy, highest academic degree certificate, and banking account coordinates required strictly for monthly payroll disbursement.",
+      "label": "trap",
+      "rule_id": "R03"
+    },
+    {
+      "clause_id": "c4",
+      "text": "For the purposes of this document, the term Employer shall designate Al-Yamamah Enterprise, and the term Candidate shall designate the individual submitting this employment application form.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c5",
+      "text": "The employer assumes no liability for any indirect, incidental, or consequential damages arising from the candidate's use of third-party interview preparation materials.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c6",
+      "text": "Applicants maintain the right to be informed regarding the legal basis and purpose of collection, to access their personal records, to request correction or updates, and to request destruction of data no longer needed, except where we may refuse such destruction requests if the information remains necessary for ongoing litigation before a judicial authority.",
+      "label": "trap",
+      "rule_id": "R05"
+    },
+    {
+      "clause_id": "c7",
+      "text": "All application review fees submitted by candidates during specialized technical assessments are strictly non-refundable.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c8",
+      "text": "This agreement shall remain in effect for an initial term of twelve months and may be terminated by either party upon providing thirty days prior written notice.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c9",
+      "text": "All intellectual property rights, proprietary designs, and operational methodologies developed by the candidate during the interview presentation phase remain the exclusive property of the company.",
+      "label": "neutral",
+      "rule_id": null
+    }
+  ],
+  "full_text": "Al-Yamamah Enterprise Employment\nApplication and Terms of Agreement\n\nArticle 1: This application agreement and any  ensuing professional\nengagement shall be governed by and construed in accordance with  the laws applicable  within the jurisdiction of the corporate headquarters.\n\nArticle 2:  Financial  remuneration for the  position shall be disbursed\nvia electronic bank transfer on the  final business day of each Gregorian\nmonth.\n\nArticle 3:  To process your\nemployment  candidacy\neffectively, we collect  only the applicant's national\nidentification card copy, highest academic degree certificate, and banking account  coordinates required strictly for  monthly payroll  disbursement.\n\nArticle 4: For  the\n- 2 -\npurposes of this document, the term Employer shall designate  Al-Yamamah Enterprise, and the  term Candidate shall designate the individual submitting this employment application\nform.\n\nArticle 5: The employer assumes no liability for any indirect, incidental, or consequential  damages arising from the candidate's  use of third-party interview preparation\nmaterials.\n\nArticle 6: Applicants\nmaintain the right to be  informed regarding  the legal basis and purpose of collection, to access their personal records,  to request correction or  updates, and to request destruction of data no\n- 3 -\nlonger needed, except where we may refuse such destruction requests if the information remains necessary  for ongoing litigation before a judicial authority.\n\nArticle 7: All application review fees submitted by\ncandidates during specialized technical  assessments are strictly non-refundable.\n\nArticle 8:\nThis agreement shall remain  in effect for  an initial term of twelve  months\nand may be terminated by either\nparty upon providing thirty days\nprior  written notice.\n\nArticle  9: All intellectual property\nrights, proprietary designs,\nand operational methodologies developed by\n- 4 -\nthe candidate during the  interview presentation phase remain the\nexclusive property\nof the  company."
+}

@@ -1,0 +1,54 @@
+{
+  "doc_id": "dev_005",
+  "split": "dev",
+  "doc_type": "privacy_policy",
+  "language": "en",
+  "title": "AstraCloud Services Privacy and Operational Terms",
+  "noisy": false,
+  "clauses": [
+    {
+      "clause_id": "c1",
+      "text": "All applicable service fees shall be billed in accordance with the pricing schedule selected by the user at the time of subscription and remain strictly non-refundable.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c2",
+      "text": "Information gathered through your use of the platform is strictly utilized for the operational objectives established at the time of collection, except where subsequent processing steps involve aggregated statistical analysis or anonymous benchmarking that cannot be linked back to any individual user.",
+      "label": "trap",
+      "rule_id": "R02"
+    },
+    {
+      "clause_id": "c3",
+      "text": "To ensure tailored commercial engagement and comprehensive service delivery, sensitive categories including health metrics, religious affiliations, and biometric indicators may be processed under our broader operational interests and made accessible across all internal business units for cross-departmental campaign optimization.",
+      "label": "violation",
+      "rule_id": "R10",
+      "subtle": true
+    },
+    {
+      "clause_id": "c4",
+      "text": "Payments must be settled promptly using the authorized electronic gateways provided on the platform, and failure to complete a transaction may result in immediate suspension of access.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c5",
+      "text": "This agreement shall remain in effect for an initial term of twelve months and will automatically renew unless either party provides written notice of termination at least thirty days prior to the expiration date.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c6",
+      "text": "The company shall not be held liable for any indirect, incidental, or consequential damages arising from system interruptions, network failures, or events beyond our reasonable control.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c7",
+      "text": "These terms shall be governed by and construed in accordance with the laws applicable in the jurisdiction where the company maintains its primary commercial registration, without regard to conflict of law principles.",
+      "label": "neutral",
+      "rule_id": null
+    }
+  ],
+  "full_text": "AstraCloud Services Privacy and Operational Terms\n\n1. All applicable service fees shall be billed in accordance with the pricing schedule selected by the user at the time of subscription and remain strictly non-refundable.\n\n2. Information gathered through your use of the platform is strictly utilized for the operational objectives established at the time of collection, except where subsequent processing steps involve aggregated statistical analysis or anonymous benchmarking that cannot be linked back to any individual user.\n\n3. To ensure tailored commercial engagement and comprehensive service delivery, sensitive categories including health metrics, religious affiliations, and biometric indicators may be processed under our broader operational interests and made accessible across all internal business units for cross-departmental campaign optimization.\n\n4. Payments must be settled promptly using the authorized electronic gateways provided on the platform, and failure to complete a transaction may result in immediate suspension of access.\n\n5. This agreement shall remain in effect for an initial term of twelve months and will automatically renew unless either party provides written notice of termination at least thirty days prior to the expiration date.\n\n6. The company shall not be held liable for any indirect, incidental, or consequential damages arising from system interruptions, network failures, or events beyond our reasonable control.\n\n7. These terms shall be governed by and construed in accordance with the laws applicable in the jurisdiction where the company maintains its primary commercial registration, without regard to conflict of law principles."
+}

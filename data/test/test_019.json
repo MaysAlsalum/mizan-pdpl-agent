@@ -1,0 +1,54 @@
+{
+  "doc_id": "test_019",
+  "split": "test",
+  "doc_type": "vendor_contract",
+  "language": "en",
+  "title": "Services and Data Processing Agreement",
+  "noisy": false,
+  "clauses": [
+    {
+      "clause_id": "c1",
+      "text": "The term of this Agreement shall commence on the effective date and shall continue for an initial period of twelve months, automatically renewing for successive one-year terms unless either party provides written notice of non-renewal at least thirty days prior to the expiration of the current term.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c2",
+      "text": "Each party shall retain exclusive ownership of all intellectual property rights, software, trademarks, and proprietary methodologies developed independently prior to or outside the scope of this Agreement.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c3",
+      "text": "Neither party shall be held liable to the other for any indirect, incidental, consequential, or special damages arising out of or in connection with the performance of services under this Agreement, regardless of the theory of liability.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c4",
+      "text": "All fees for the services rendered shall be invoiced on a monthly basis in accordance with the pricing schedule set forth in the statement of work, and the Customer shall remit payment in full within thirty days following the receipt of each applicable invoice.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c5",
+      "text": "The Vendor may process personal data strictly for the performance of the operational tasks for which it was originally collected, provided that aggregated datasets from which all individual identifiers have been permanently removed may be utilized for broader internal operational analysis.",
+      "label": "trap",
+      "rule_id": "R02"
+    },
+    {
+      "clause_id": "c6",
+      "text": "In the event of any security incident or unauthorized access involving personal data, the Vendor reserves the right to determine at its sole discretion whether to notify the Customer, and any such notification may be provided within a reasonable timeframe not to exceed thirty business days, without any strict obligation to provide prompt interim updates.",
+      "label": "violation",
+      "rule_id": "R07",
+      "subtle": false
+    },
+    {
+      "clause_id": "c7",
+      "text": "This Agreement shall be governed by and construed in accordance with the laws applicable in the Kingdom of Saudi Arabia, without regard to its conflict of laws principles.",
+      "label": "neutral",
+      "rule_id": null
+    }
+  ],
+  "full_text": "Services and Data Processing Agreement\n\n1. The term of this Agreement shall commence on the effective date and shall continue for an initial period of twelve months, automatically renewing for successive one-year terms unless either party provides written notice of non-renewal at least thirty days prior to the expiration of the current term.\n\n2. Each party shall retain exclusive ownership of all intellectual property rights, software, trademarks, and proprietary methodologies developed independently prior to or outside the scope of this Agreement.\n\n3. Neither party shall be held liable to the other for any indirect, incidental, consequential, or special damages arising out of or in connection with the performance of services under this Agreement, regardless of the theory of liability.\n\n4. All fees for the services rendered shall be invoiced on a monthly basis in accordance with the pricing schedule set forth in the statement of work, and the Customer shall remit payment in full within thirty days following the receipt of each applicable invoice.\n\n5. The Vendor may process personal data strictly for the performance of the operational tasks for which it was originally collected, provided that aggregated datasets from which all individual identifiers have been permanently removed may be utilized for broader internal operational analysis.\n\n6. In the event of any security incident or unauthorized access involving personal data, the Vendor reserves the right to determine at its sole discretion whether to notify the Customer, and any such notification may be provided within a reasonable timeframe not to exceed thirty business days, without any strict obligation to provide prompt interim updates.\n\n7. This Agreement shall be governed by and construed in accordance with the laws applicable in the Kingdom of Saudi Arabia, without regard to its conflict of laws principles."
+}

@@ -1,0 +1,79 @@
+{
+  "doc_id": "dev_024",
+  "split": "dev",
+  "doc_type": "vendor_contract",
+  "language": "en",
+  "title": "Master Services and Data Processing Agreement",
+  "noisy": false,
+  "clauses": [
+    {
+      "clause_id": "c1",
+      "text": "The Vendor shall process personal data strictly in accordance with the documented instructions of the Client and exclusively for the specific service delivery purposes agreed upon, with any derivative statistical analysis performed solely on fully anonymized datasets from which individual identities are permanently irrecoverable.",
+      "label": "trap",
+      "rule_id": "R02"
+    },
+    {
+      "clause_id": "c2",
+      "text": "Definitions: In this Agreement, \"Services\" means the technology implementation and operational support services provided by the Vendor to Al-Safwa Digital Solutions, and \"Fees\" means the total compensation payable for such Services as outlined in the applicable statement of work.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c3",
+      "text": "Upon termination of this Agreement, the Vendor shall retain all processed information and records within its active archives for an indefinite operational duration to support historical business analytics, trend forecasting, and future commercial reference.",
+      "label": "violation",
+      "rule_id": "R06",
+      "subtle": true
+    },
+    {
+      "clause_id": "c4",
+      "text": "Limitation of Liability: Except for breaches of confidentiality obligations, neither party shall be liable to the other for any indirect, incidental, or consequential damages, and the total aggregate liability of either party under this Agreement shall not exceed the total fees paid by the Client in the preceding twelve months.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c5",
+      "text": "Governing Law: This Agreement shall be governed by and construed in accordance with the substantive laws of the Kingdom of Saudi Arabia, without regard to its conflict of laws principles.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c6",
+      "text": "Delivery and Acceptance: The Vendor shall deliver the technological modules according to the project milestones specified in the implementation schedule, and the Client shall have ten business days from delivery to review and issue a formal notice of acceptance.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c7",
+      "text": "Term and Termination: This Agreement shall commence on the effective date and shall continue for an initial period of three years, renewable automatically unless either party provides written notice of non-renewal at least sixty days prior to the expiration of the current term.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c8",
+      "text": "Notices: All formal communications and legal notices required under this Agreement shall be sent via certified courier or delivered by hand to the registered corporate addresses of the respective parties as set forth in the preamble.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c9",
+      "text": "Intellectual Property: All proprietary software, documentation, methodologies, and pre-existing intellectual property developed independently by the Vendor remain the exclusive property of the Vendor, while the Client retains all rights to its proprietary corporate branding and input materials.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c10",
+      "text": "Fees and Payment: The Client shall pay all undisputed invoices within thirty days of issuance via electronic wire transfer to the Vendor's designated bank account, failing which a late payment interest charge of one percent per month shall apply.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c11",
+      "text": "The Vendor reserves the right to engage any third-party subcontractors for data processing activities without prior notification or approval from the Client, and the Client shall have no right to conduct on-site audits or compliance reviews of the Vendor's operational facilities.",
+      "label": "violation",
+      "rule_id": "R09",
+      "subtle": false
+    }
+  ],
+  "full_text": "Master Services and Data Processing Agreement\n\nArticle 1: The Vendor shall process personal data strictly in accordance with the documented instructions of the Client and exclusively for the specific service delivery purposes agreed upon, with any derivative statistical analysis performed solely on fully anonymized datasets from which individual identities are permanently irrecoverable.\n\nArticle 2: Definitions: In this Agreement, \"Services\" means the technology implementation and operational support services provided by the Vendor to Al-Safwa Digital Solutions, and \"Fees\" means the total compensation payable for such Services as outlined in the applicable statement of work.\n\nArticle 3: Upon termination of this Agreement, the Vendor shall retain all processed information and records within its active archives for an indefinite operational duration to support historical business analytics, trend forecasting, and future commercial reference.\n\nArticle 4: Limitation of Liability: Except for breaches of confidentiality obligations, neither party shall be liable to the other for any indirect, incidental, or consequential damages, and the total aggregate liability of either party under this Agreement shall not exceed the total fees paid by the Client in the preceding twelve months.\n\nArticle 5: Governing Law: This Agreement shall be governed by and construed in accordance with the substantive laws of the Kingdom of Saudi Arabia, without regard to its conflict of laws principles.\n\nArticle 6: Delivery and Acceptance: The Vendor shall deliver the technological modules according to the project milestones specified in the implementation schedule, and the Client shall have ten business days from delivery to review and issue a formal notice of acceptance.\n\nArticle 7: Term and Termination: This Agreement shall commence on the effective date and shall continue for an initial period of three years, renewable automatically unless either party provides written notice of non-renewal at least sixty days prior to the expiration of the current term.\n\nArticle 8: Notices: All formal communications and legal notices required under this Agreement shall be sent via certified courier or delivered by hand to the registered corporate addresses of the respective parties as set forth in the preamble.\n\nArticle 9: Intellectual Property: All proprietary software, documentation, methodologies, and pre-existing intellectual property developed independently by the Vendor remain the exclusive property of the Vendor, while the Client retains all rights to its proprietary corporate branding and input materials.\n\nArticle 10: Fees and Payment: The Client shall pay all undisputed invoices within thirty days of issuance via electronic wire transfer to the Vendor's designated bank account, failing which a late payment interest charge of one percent per month shall apply.\n\nArticle 11: The Vendor reserves the right to engage any third-party subcontractors for data processing activities without prior notification or approval from the Client, and the Client shall have no right to conduct on-site audits or compliance reviews of the Vendor's operational facilities."
+}

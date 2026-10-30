@@ -1,0 +1,78 @@
+{
+  "doc_id": "test_001",
+  "split": "test",
+  "doc_type": "employment_form",
+  "language": "en",
+  "title": "Al-Yamamah Professional Services Employment Application and Terms",
+  "noisy": false,
+  "clauses": [
+    {
+      "clause_id": "c1",
+      "text": "This Agreement shall commence on the date of final signature by both parties and shall remain in full force and effect for an initial period of twelve months, subject to standard termination procedures.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c2",
+      "text": "All proprietary methodologies, software, trademarks, and written materials developed by the company prior to or during the engagement shall remain the exclusive intellectual property of the company.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c3",
+      "text": "Any formal notices required under this agreement shall be delivered via certified courier or electronic mail to the official addresses registered by the respective parties.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c4",
+      "text": "This agreement shall be governed by and construed in accordance with the laws applicable in the jurisdiction of the corporate headquarters, without regard to conflict of law principles.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c5",
+      "text": "To maintain a comprehensive historical talent pool for future organizational needs, all submitted application files, supporting documents, and assessment records shall be retained indefinitely by the company without scheduled deletion, ensuring historical profiles remain accessible to internal human resources personnel across all future operational cycles.",
+      "label": "violation",
+      "rule_id": "R06",
+      "subtle": false
+    },
+    {
+      "clause_id": "c6",
+      "text": "Payments shall be transferred via wire transfer to the designated corporate bank account within fifteen business days following the issuance of a valid invoice.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c7",
+      "text": "The total aggregate liability of the company arising out of or in connection with this contract shall in no circumstances exceed the total fees paid by the client under this agreement.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c8",
+      "text": "Submission of this application constitutes the candidate's acknowledgment that their professional credentials and background information will be processed as necessary for evaluation purposes, and candidates may communicate regarding their participation status through standard administrative channels.",
+      "label": "ambiguous",
+      "rule_id": "R01"
+    },
+    {
+      "clause_id": "c9",
+      "text": "Applicants retain the absolute right to inquire regarding the specific operational purposes and justification bases for collecting their details, to review their stored records upon formal written request, to submit amendments for any inaccurate entries, and to demand the permanent erasure of their application files in the event that the vacancy is filled or closed, subject only to ongoing legal disputes or mandatory statutory archiving obligations.",
+      "label": "trap",
+      "rule_id": "R05"
+    },
+    {
+      "clause_id": "c10",
+      "text": "Either party may terminate this contractual relationship by providing a thirty-day written notice to the designated representative without incurring any penalty.",
+      "label": "neutral",
+      "rule_id": null
+    },
+    {
+      "clause_id": "c11",
+      "text": "All service fees and payment schedules shall be strictly adhered to as outlined in the separate commercial addendum provided prior to project execution.",
+      "label": "neutral",
+      "rule_id": null
+    }
+  ],
+  "full_text": "Al-Yamamah Professional Services Employment Application and Terms\n\nArticle 1: This Agreement shall commence on the date of final signature by both parties and shall remain in full force and effect for an initial period of twelve months, subject to standard termination procedures.\n\nArticle 2: All proprietary methodologies, software, trademarks, and written materials developed by the company prior to or during the engagement shall remain the exclusive intellectual property of the company.\n\nArticle 3: Any formal notices required under this agreement shall be delivered via certified courier or electronic mail to the official addresses registered by the respective parties.\n\nArticle 4: This agreement shall be governed by and construed in accordance with the laws applicable in the jurisdiction of the corporate headquarters, without regard to conflict of law principles.\n\nArticle 5: To maintain a comprehensive historical talent pool for future organizational needs, all submitted application files, supporting documents, and assessment records shall be retained indefinitely by the company without scheduled deletion, ensuring historical profiles remain accessible to internal human resources personnel across all future operational cycles.\n\nArticle 6: Payments shall be transferred via wire transfer to the designated corporate bank account within fifteen business days following the issuance of a valid invoice.\n\nArticle 7: The total aggregate liability of the company arising out of or in connection with this contract shall in no circumstances exceed the total fees paid by the client under this agreement.\n\nArticle 8: Submission of this application constitutes the candidate's acknowledgment that their professional credentials and background information will be processed as necessary for evaluation purposes, and candidates may communicate regarding their participation status through standard administrative channels.\n\nArticle 9: Applicants retain the absolute right to inquire regarding the specific operational purposes and justification bases for collecting their details, to review their stored records upon formal written request, to submit amendments for any inaccurate entries, and to demand the permanent erasure of their application files in the event that the vacancy is filled or closed, subject only to ongoing legal disputes or mandatory statutory archiving obligations.\n\nArticle 10: Either party may terminate this contractual relationship by providing a thirty-day written notice to the designated representative without incurring any penalty.\n\nArticle 11: All service fees and payment schedules shall be strictly adhered to as outlined in the separate commercial addendum provided prior to project execution."
+}

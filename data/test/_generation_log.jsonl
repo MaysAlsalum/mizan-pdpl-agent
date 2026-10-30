@@ -1,0 +1,20 @@
+{"doc_id": "test_001", "attempts": 2, "dropped": []}
+{"doc_id": "test_003", "attempts": 1, "dropped": []}
+{"doc_id": "test_004", "attempts": 2, "dropped": [{"slot": "p4", "kind": "ambiguous", "rule_id": "R03"}]}
+{"doc_id": "test_005", "attempts": 2, "dropped": [{"slot": "p2", "kind": "trap", "rule_id": "R06"}, {"slot": "p3", "kind": "ambiguous", "rule_id": "R01"}]}
+{"doc_id": "test_007", "attempts": 1, "dropped": []}
+{"doc_id": "test_006", "attempts": 1, "dropped": []}
+{"doc_id": "test_008", "attempts": 1, "dropped": []}
+{"doc_id": "test_010", "attempts": 1, "dropped": []}
+{"doc_id": "test_011", "attempts": 1, "dropped": []}
+{"doc_id": "test_013", "attempts": 1, "dropped": []}
+{"doc_id": "test_012", "attempts": 2, "dropped": []}
+{"doc_id": "test_015", "attempts": 1, "dropped": []}
+{"doc_id": "test_014", "attempts": 2, "dropped": []}
+{"doc_id": "test_016", "attempts": 1, "dropped": []}
+{"doc_id": "test_018", "attempts": 1, "dropped": []}
+{"doc_id": "test_017", "attempts": 2, "dropped": [{"slot": "p3", "kind": "violation", "rule_id": "R10"}]}
+{"doc_id": "test_019", "attempts": 2, "dropped": [{"slot": "p3", "kind": "ambiguous", "rule_id": "R09"}]}
+{"doc_id": "test_020", "attempts": 2, "dropped": [{"slot": "p3", "kind": "ambiguous", "rule_id": "R03"}]}
+{"doc_id": "test_009", "attempts": 1, "dropped": []}
+{"doc_id": "test_002", "attempts": 2, "dropped": [{"slot": "p2", "kind": "ambiguous", "rule_id": "R07"}]}
