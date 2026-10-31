@@ -1,4 +1,4 @@
-<p align="center"><img src="app/assets/mizan-mark.png" width="96" alt="Mizan"></p>
+<p align="center"><img src="app/assets/mizan-banner.png" width="96" alt="Mizan"></p>
 
 # Mizan | ميزان: PDPL Compliance Agent
 
