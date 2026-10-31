@@ -2,6 +2,10 @@
 
 # Mizan | ميزان: PDPL Compliance Agent
 
+**🎬 Demo video (3 min):** [Watch on Google Drive](https://drive.google.com/file/d/1f4iCfIge6U_NrvPn4X-HnOyDfh5Xkf7V/view?usp=sharing)
+
+**📊 Slides:** [Mizan presentation (PDF)](docs/Mizan_presentation.pdf)
+
 **An autonomous agent that reviews contracts, privacy policies and forms against Saudi Arabia's Personal Data Protection Law (PDPL), clause by clause.** It cites the article behind every verdict, backs it with an exact quote, drafts a fix and re-checks it, and sends low-confidence verdicts to a human specialist.
 
 Built by **Mays Alsalum** for the HUMAIN × Misk *Future AI Builders* hackathon, **Challenge 3: Autonomous Enterprise**.
