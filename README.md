@@ -6,6 +6,11 @@
 
 **📊 Slides:** [Mizan presentation (PDF)](docs/Mizan_presentation.pdf)
 
+<p align="center">
+  <img src="docs/images/ui-review.png" width="900" alt="Mizan flags each violation with its rule, article and confidence, next to a verified fix">
+  <br><sub>Each violation with its rule, article and confidence, and a suggested fix that was re-checked before it is shown.</sub>
+</p>
+
 **An autonomous agent that reviews contracts, privacy policies and forms against Saudi Arabia's Personal Data Protection Law (PDPL), clause by clause.** It cites the article behind every verdict, backs it with an exact quote, drafts a fix and re-checks it, and sends low-confidence verdicts to a human specialist.
 
 Built by **Mays Alsalum** for the HUMAIN × Misk *Future AI Builders* hackathon, **Challenge 3: Autonomous Enterprise**.
@@ -44,6 +49,11 @@ Built by **Mays Alsalum** for the HUMAIN × Misk *Future AI Builders* hackathon,
 
 **Adaptation:** rule R08 was hidden from the catalog during all development. With it absent, Mizan found 17% of the violations in those documents (R08 recall 0). Adding R08 is a single JSON entry in `rules/catalog.json`; with it, F1 rose to 1.0 and R08 recall to 1.0, with no change to the code.
 
+<p align="center">
+  <img src="docs/images/ui-r08.png" width="900" alt="With R08 switched on, Mizan flags a cross-border transfer clause in an Arabic vendor contract it had never seen">
+  <br><sub>R08 switched on, on an Arabic vendor contract written after development: the cross-border transfer clause is flagged, and the compliant breach-notification clause (a trap) is not.</sub>
+</p>
+
 ---
 
 ## How it works
@@ -71,6 +81,11 @@ The **rule catalog** (`rules/catalog.json`) holds 11 PDPL obligations, each with
 | v3 | Gate knows personal-data fields; all rules; document context; second review off | **0.990** | **0.981** | Frozen. Then run once on test |
 
 \* v1 was measured on 3 documents.
+
+<p align="center">
+  <img src="docs/images/ui-results.png" width="900" alt="Version history from v0 to v3 in the demo app">
+  <br><sub>The version history as shown in the demo app's Results tab.</sub>
+</p>
 
 **Ablation that changed the design:** a second review of borderline verdicts sounded safer, but with the same model as the judge it *added* false alarms (dev F1 0.913 with it, 0.931 without). It is now off by default (`agent:with_recheck` turns it back on).
 
@@ -132,7 +147,9 @@ src/llm.py              every model call: cache, rate limit, retries, cost
 eval/evaluate.py        run a system on a split, save every prediction
 eval/metrics.py         scoring
 eval/analyze.py         error analysis: why each violation was missed
-app/streamlit_app.py    demo UI
+app/streamlit_app.py    demo UI (English/Arabic, light/dark)
+demo/                   two unseen documents for trying the app
+docs/                   slides (PDF) and screenshots
 tests/                  unit tests for scoring and the agent's non-model steps
 ```
 
