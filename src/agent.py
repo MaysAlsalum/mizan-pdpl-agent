@@ -5,7 +5,10 @@ Every stage can be switched off for ablations via `ablate`:
     no_retrieval send every rule with every clause
     no_traps     drop the trap examples from the judge prompt
     no_grounding accept the model's evidence quote without checking it
-    no_recheck   accept the first verdict whatever its confidence
+    with_recheck add a second review of borderline verdicts (off by default since v3:
+                 with the same model as the judge it added false alarms, see results_log)
+    doc_type_filter only send rules listed for the guessed document type (off since v3:
+                 a wrong guess hid whole rules)
     no_fix       skip the fix-and-verify loop
 """
 from __future__ import annotations
@@ -78,21 +81,30 @@ def guess_doc_type(text: str) -> str:
     return best if scores[best] else "unknown"
 
 
-GENERIC_DATA_WORDS = ["data", "information", "personal", "record", "file", "details", "applicant",
-                      "بيانات", "معلومات", "شخصي", "سجل", "ملف", "تفاصيل"]
+# v3: the gate also knows the personal-data FIELDS people write instead of the word "data"
+GENERIC_DATA_WORDS = [
+    "data", "information", "personal", "record", "file", "details", "applicant", "user", "customer",
+    "client", "employee", "candidate", "profile", "account", "identity", "national id", "id card", "name",
+    "email", "e-mail", "phone", "address", "date of birth", "marital", "family", "location", "health",
+    "بيانات", "معلومات", "شخصي", "سجل", "ملف", "تفاصيل", "المستخدم", "العميل", "الموظف", "المتقدم",
+    "هوية", "الهوية", "الاسم", "البريد", "الجوال", "الهاتف", "العنوان", "تاريخ الميلاد", "الحالة الاجتماعية",
+    "أفراد الأسرة", "الأسرة", "جهة العمل", "مكان العمل", "الموقع", "الصحية", "التسجيل", "حساب",
+]
 
 
-def candidate_rules(clause: str, rules: list[dict], doc_type: str, use_retrieval: bool) -> list[dict]:
-    """Gate, then filter: a clause that never touches personal data goes to no rule at all;
-    one that does is checked against every rule that applies to this document type.
-    (v1 kept only the top-3 keyword matches; subtle wording slipped past it and recall dropped.)"""
+def candidate_rules(clause: str, rules: list[dict], doc_type: str, use_retrieval: bool,
+                    use_doc_type: bool = False) -> list[dict]:
+    """Gate: a clause that never touches personal data goes to no rule at all; one that does is
+    checked against every rule (ranked by keyword overlap).
+    v1 kept only the top-3 keyword matches: subtle wording slipped past it.
+    v2 kept only the rules for the guessed document type: a wrong guess hid whole rules."""
     if not use_retrieval:
         return rules
     low = clause.lower()
     words = GENERIC_DATA_WORDS + [k for r in rules for k in r["keywords_ar"] + r["keywords_en"]]
     if not any(w.lower() in low for w in words):
         return []
-    pool = [r for r in rules if doc_type in r["applies_to"]] if doc_type != "unknown" else rules
+    pool = [r for r in rules if doc_type in r["applies_to"]] if use_doc_type and doc_type != "unknown" else rules
     score = lambda r: sum(k.lower() in low for k in r["keywords_ar"] + r["keywords_en"])  # noqa: E731
     return sorted(pool, key=score, reverse=True)
 
@@ -108,7 +120,9 @@ def _rule_block(r: dict, with_traps: bool) -> str:
 
 
 JUDGE_PROMPT = """You are a careful data protection compliance reviewer (Saudi Personal Data Protection Law).
-For every clause, assess it ONLY against the rules listed under it.
+For every clause, assess it ONLY against the rules listed under it. The clauses come from this
+document, so judge each one in its context (what is collected, from whom, and for what):
+Document: {title}
 
 verdict: "violation" if the clause breaks the rule, "compliant" if it respects it or does not really
 concern it, "unclear" if a careful lawyer could not decide from the text.
@@ -173,7 +187,9 @@ def run(doc: dict, include_hidden: bool = False, ablate: str | None = None) -> d
     # 1-2. segment and pick rules
     clauses = [{"id": "k1", "text": re.sub(r"\s+", " ", text)}] if "no_segment" in flags else segment(text)
     doc_type = guess_doc_type(text)
-    pairs = {c["id"]: candidate_rules(c["text"], rules, doc_type, "no_retrieval" not in flags) for c in clauses}
+    title = text.strip().splitlines()[0][:200] if text.strip() else ""
+    pairs = {c["id"]: candidate_rules(c["text"], rules, doc_type, "no_retrieval" not in flags,
+                                      "doc_type_filter" in flags) for c in clauses}
     todo = [c for c in clauses if pairs[c["id"]]]
     trace.append(f"doc_type={doc_type} clauses={len(clauses)} with_candidates={len(todo)}")
 
@@ -185,7 +201,7 @@ def run(doc: dict, include_hidden: bool = False, ablate: str | None = None) -> d
             f"Clause {c['id']}: {c['text']}\nRules to check:\n"
             + "\n".join(_rule_block(r, "no_traps" not in flags) for r in pairs[c["id"]])
             for c in batch)
-        res = meter(call(JUDGE_PROMPT.format(blocks=blocks), role="small", json_mode=True))
+        res = meter(call(JUDGE_PROMPT.format(title=title, blocks=blocks), role="small", json_mode=True))
         assessments += _as_list(res.data, "assessments")
 
     text_of = {c["id"]: c["text"] for c in clauses}
@@ -212,7 +228,7 @@ def run(doc: dict, include_hidden: bool = False, ablate: str | None = None) -> d
                 continue
 
         # 4. confident -> accept; borderline -> recheck with the larger model; weak -> escalate
-        if "no_recheck" not in flags and not (verdict == "violation" and conf >= HIGH):
+        if "with_recheck" in flags and not (verdict == "violation" and conf >= HIGH):
             if conf < LOW and verdict != "unclear":
                 escalations.append({"rule_id": rid, "evidence": evidence, "reason": f"low confidence ({conf:.2f})"})
                 continue
@@ -234,8 +250,9 @@ def run(doc: dict, include_hidden: bool = False, ablate: str | None = None) -> d
                                     "reason": f"reviewers disagree or unsure ({verdict} {conf:.2f} / {v2} {c2:.2f})"})
                 continue
             conf, reason = c2, r2.get("reason", reason)
-        elif verdict != "violation":
-            escalations.append({"rule_id": rid, "evidence": evidence, "reason": "judged unclear"})
+        elif verdict != "violation" or conf < LOW:
+            reason_esc = "judged unclear" if verdict != "violation" else f"low confidence ({conf:.2f})"
+            escalations.append({"rule_id": rid, "evidence": evidence, "reason": reason_esc})
             continue
 
         finding = {"rule_id": rid, "verdict": "violation", "confidence": round(conf, 2),
@@ -253,7 +270,7 @@ def run(doc: dict, include_hidden: bool = False, ablate: str | None = None) -> d
                 fixed = (fx.data or {}).get("fixed_clause", "") if isinstance(fx.data, dict) else ""
                 if not fixed:
                     break
-                chk = meter(call(JUDGE_PROMPT.format(
+                chk = meter(call(JUDGE_PROMPT.format(title=title,
                     blocks=f"Clause k1: {fixed}\nRules to check:\n{_rule_block(rule, True)}"),
                     role="small", json_mode=True))
                 verdicts = [str(x.get("verdict", "")).lower() for x in _as_list(chk.data, "assessments")]
@@ -269,5 +286,7 @@ def run(doc: dict, include_hidden: bool = False, ablate: str | None = None) -> d
         findings.append(finding)
 
     return {"doc_id": doc["doc_id"], "doc_type_guess": doc_type, "findings": findings,
-            "escalations": escalations, "trace": trace, "cost_usd": round(meter.cost, 6),
+            "escalations": escalations, "trace": trace, "assessments": assessments,
+            "clauses": [{"id": c["id"], "text": c["text"], "rules": [r["id"] for r in pairs[c["id"]]]} for c in clauses],
+            "cost_usd": round(meter.cost, 6),
             "latency_s": round(time.perf_counter() - start, 2), "llm_calls": meter.calls}

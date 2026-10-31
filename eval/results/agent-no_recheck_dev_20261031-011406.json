@@ -1,0 +1,2110 @@
+{
+  "system": "agent:no_recheck",
+  "split": "dev",
+  "include_hidden": false,
+  "limit": null,
+  "models": {
+    "small": "gemini/gemini-3.5-flash-lite",
+    "large": "gemini/gemini-3.5-flash-lite",
+    "generator": "gemini/gemini-3.5-flash-lite",
+    "judge_eval": "gemini/gemini-3.5-flash-lite"
+  },
+  "metrics": {
+    "precision": 0.979,
+    "recall": 0.887,
+    "f1": 0.931,
+    "tp": 47,
+    "fp": 1,
+    "fn": 6,
+    "subtle_recall": 0.857,
+    "trap_fp_rate": 0.025,
+    "grounding_rate": 1.0,
+    "ambiguous_escalation_rate": 0.0,
+    "escalations_per_doc": 0.2,
+    "cost_per_doc_usd": 0.0,
+    "latency_per_doc_s": 0.01,
+    "llm_calls_per_doc": 6.0,
+    "docs": 30,
+    "per_rule_f1": {
+      "R01": 1.0,
+      "R02": 1.0,
+      "R03": 0.571,
+      "R04": 0.889,
+      "R05": 0.933,
+      "R06": 1.0,
+      "R07": 0.857,
+      "R09": 1.0,
+      "R10": 0.909,
+      "R11": 1.0
+    }
+  },
+  "errors": 0,
+  "wall_time_s": 0.3,
+  "llm_totals": {
+    "calls": 180,
+    "cache_hits": 180,
+    "prompt_tokens": 253789,
+    "completion_tokens": 111385,
+    "cost_usd": 0.0
+  },
+  "per_doc": [
+    {
+      "doc_id": "dev_001",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R05": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R01": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R10": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 2,
+        "subtle_found": 2,
+        "unverified": 0,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.02,
+        "llm_calls": 8
+      },
+      "output": {
+        "doc_id": "dev_001",
+        "doc_type_guess": "mobile_app_terms",
+        "findings": [
+          {
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "requests for individual data inspection, record modification, or file expungement fall outside standard administrative review channels and cannot be accommodated.",
+            "reason": "The clause explicitly denies data subjects their statutory rights to access, correct, and delete their personal data.",
+            "source": "PDPL Art. 4",
+            "clause": "To ensure operational stability and administrative efficiency, records and applicant files compiled during the recruitment cycle are maintained exclusively within internal archives, and requests for individual data inspection, record modification, or file expungement fall outside standard administrative review channels and cannot be accommodated.",
+            "fix": "To ensure operational stability and administrative efficiency, records and applicant files compiled during the recruitment cycle are maintained exclusively within internal archives, while data subjects retain their rights to be informed of the legal basis and purpose of collection, to access their personal data, to request correction, completion, or update, and to request destruction of data no longer needed.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.85,
+            "evidence": "Submission of this employment application and participation in the preliminary evaluation stages constitutes the applicant's irrevocable authorization for the company to process, retain, and continuously utilize all submitted information across current and future internal business operations, with such authorization remaining binding and not subject to subsequent revocation.",
+            "reason": "The clause unlawfully restricts the data subject's right to withdraw consent at any time.",
+            "source": "PDPL Art. 5",
+            "clause": "Submission of this employment application and participation in the preliminary evaluation stages constitutes the applicant's irrevocable authorization for the company to process, retain, and continuously utilize all submitted information across current and future internal business operations, with such authorization remaining binding and not subject to subsequent revocation.",
+            "fix": "Submission of this employment application and participation in the preliminary evaluation stages constitutes the applicant's authorization for the company to process, retain, and utilize all submitted information across current and future internal business operations, in accordance with applicable law and subject to the applicant's right to withdraw consent at any time.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 0.99,
+            "evidence": "process all applicant disclosures, including medical history, health conditions, and religious affiliations where provided, under the framework of legitimate human resources interest",
+            "reason": "Sensitive data such as health and religious beliefs cannot be processed under the legitimate-interest basis under PDPL.",
+            "source": "PDPL Art. 1(11), 1(13), 6(4), 23, 26",
+            "clause": "The company reserves the right to process all applicant disclosures, including medical history, health conditions, and religious affiliations where provided, under the framework of legitimate human resources interest to support targeted corporate wellness initiatives, internal profiling, and promotional communications.",
+            "fix": "The company reserves the right to process all applicant disclosures, including medical history, health conditions, and religious affiliations where provided, in accordance with applicable legal bases to support corporate wellness initiatives and internal operations, while ensuring that sensitive data is never processed on the basis of legitimate interest or used for marketing, and that health data access is strictly limited to those who need it.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=mobile_app_terms clauses=9 with_candidates=7"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.02,
+        "llm_calls": 8
+      }
+    },
+    {
+      "doc_id": "dev_002",
+      "score": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R09": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 0,
+        "findings": 2,
+        "grounded": 2,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.02,
+        "llm_calls": 6
+      },
+      "output": {
+        "doc_id": "dev_002",
+        "doc_type_guess": "vendor_contract",
+        "findings": [
+          {
+            "rule_id": "R09",
+            "verdict": "violation",
+            "confidence": 0.9,
+            "evidence": "The Vendor reserves the right to engage third-party subcontractors for data processing activities at its sole discretion without prior notice to the Client, and the Client shall have no right to conduct on-site audits or compliance reviews of the Vendor's operational facilities.",
+            "reason": "The clause permits unrestricted subcontracting and prohibits the client from conducting on-site audits, violating processor guarantee requirements.",
+            "source": "PDPL Art. 8",
+            "clause": "The Vendor reserves the right to engage third-party subcontractors for data processing activities at its sole discretion without prior notice to the Client, and the Client shall have no right to conduct on-site audits or compliance reviews of the Vendor's operational facilities.",
+            "fix": "The Vendor may engage third-party subcontractors for data processing activities, provided it ensures they offer sufficient guarantees to implement applicable data protection law, and the Client shall have the right to conduct reasonable on-site audits and compliance reviews of the Vendor's operational facilities to monitor such compliance.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "maintaining such records permanently",
+            "reason": "The clause mandates keeping records permanently without a legitimate retention limit or connection to collection purposes, violating data destruction rules.",
+            "source": "PDPL Art. 18",
+            "clause": "Upon termination of this Agreement, the Vendor shall archive all operational data and records in a secure repository for indefinite historical analysis and business intelligence purposes, maintaining such records permanently unless otherwise agreed in a separate commercial amendment.",
+            "fix": "Upon termination of this Agreement, the Vendor shall archive all operational data and records in a secure repository for historical analysis and business intelligence purposes, maintaining such records only for as long as necessary for those purposes or as required by applicable legal retention requirements, unless otherwise agreed in a separate commercial amendment.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=vendor_contract clauses=8 with_candidates=8"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.02,
+        "llm_calls": 6
+      }
+    },
+    {
+      "doc_id": "dev_003",
+      "score": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R10": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R05": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 2,
+        "subtle_found": 2,
+        "unverified": 0,
+        "findings": 2,
+        "grounded": 2,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.02,
+        "llm_calls": 8
+      },
+      "output": {
+        "doc_id": "dev_003",
+        "doc_type_guess": "mobile_app_terms",
+        "findings": [
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "all disclosed sensitive categories, including health status, religious affiliation, and background details, may be processed under our legitimate operational interest framework to optimize targeted promotional communications",
+            "reason": "Sensitive data (health status and religious affiliation) cannot be processed on a legitimate-interest basis nor used for marketing/promotional communications under PDPL.",
+            "source": "PDPL Art. 1(11), 1(13), 6(4), 23, 26",
+            "clause": "The applicant acknowledges and agrees that all disclosed sensitive categories, including health status, religious affiliation, and background details, may be processed under our legitimate operational interest framework to optimize targeted promotional communications and enhance profile-based candidate engagement across all corporate divisions.",
+            "fix": "The applicant acknowledges and agrees that all disclosed sensitive categories, including background details, may be processed under our legitimate operational interest framework to enhance profile-based candidate engagement across all corporate divisions, provided that health status and religious affiliation are strictly excluded from legitimate-interest processing, promotional communications, and marketing.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "The applicant explicitly waives any standing right to inspect, review, or obtain copies of stored evaluation files, and acknowledges that requests for the permanent removal of submitted records shall not be entertained",
+            "reason": "The clause explicitly denies data subject rights to access and request destruction of stored personal records.",
+            "source": "PDPL Art. 4",
+            "clause": "The applicant explicitly waives any standing right to inspect, review, or obtain copies of stored evaluation files, and acknowledges that requests for the permanent removal of submitted records shall not be entertained under any circumstances following submission.",
+            "fix": "The applicant acknowledges that evaluation files are processed based on legitimate interests and legal requirements for evaluation purposes, and that requests for access, correction, completion, update, or destruction of submitted records will be handled in accordance with applicable data protection laws.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=mobile_app_terms clauses=10 with_candidates=9"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.02,
+        "llm_calls": 8
+      }
+    },
+    {
+      "doc_id": "dev_004",
+      "score": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R03": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R04": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 0,
+        "findings": 2,
+        "grounded": 2,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 5
+      },
+      "output": {
+        "doc_id": "dev_004",
+        "doc_type_guess": "mobile_app_terms",
+        "findings": [
+          {
+            "rule_id": "R03",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "full national identity card number, marital status, exact number of household dependents, and current employer details alongside their preferred email address",
+            "reason": "The clause requires excessive personal data clearly unrelated to the simple purpose of subscribing to a digital newsletter.",
+            "source": "PDPL Art. 11(3)",
+            "clause": "To subscribe to our daily digital newsletter and updates bulletin, users are required to complete their profile by providing their full national identity card number, marital status, exact number of household dependents, and current employer details alongside their preferred email address.",
+            "fix": "To subscribe to our daily digital newsletter and updates bulletin, users are required to provide their preferred email address.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R04",
+            "verdict": "violation",
+            "confidence": 0.9,
+            "evidence": "specific technical details concerning our data categorization, exact collection vectors, and internal retention schedules are proprietary and generally remain confidential, registered users may submit a formal written inquiry to our administrative office to request a summary of these parameters",
+            "reason": "The policy withholds mandatory privacy disclosures, making them available only upon request rather than proactively before collection.",
+            "source": "PDPL Art. 12; Art. 13",
+            "clause": "Al-Faris Digital Services is committed to maintaining transparency regarding our operational frameworks. While specific technical details concerning our data categorization, exact collection vectors, and internal retention schedules are proprietary and generally remain confidential, registered users may submit a formal written inquiry to our administrative office to request a summary of these parameters following the completion of their account creation.",
+            "fix": "Before collecting personal data, Al-Faris Digital Services makes available a privacy policy specifying the purpose of collection, the data collected, how it is processed, stored and destroyed, and the data subject's rights and how to exercise them.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=mobile_app_terms clauses=9 with_candidates=6"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 5
+      }
+    },
+    {
+      "doc_id": "dev_005",
+      "score": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R10": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 0,
+        "findings": 1,
+        "grounded": 1,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 2,
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 3
+      },
+      "output": {
+        "doc_id": "dev_005",
+        "doc_type_guess": "mobile_app_terms",
+        "findings": [
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "sensitive categories including health metrics, religious affiliations, and biometric indicators may be processed under our broader operational interests and made accessible across all internal business units for cross-departmental campaign optimization.",
+            "reason": "Sensitive data (health, religion, biometrics) cannot be processed on the basis of legitimate/operational interest or used for marketing/campaign optimization.",
+            "source": "PDPL Art. 1(11), 1(13), 6(4), 23, 26",
+            "clause": "To ensure tailored commercial engagement and comprehensive service delivery, sensitive categories including health metrics, religious affiliations, and biometric indicators may be processed under our broader operational interests and made accessible across all internal business units for cross-departmental campaign optimization.",
+            "fix": "To ensure comprehensive service delivery, sensitive categories including health metrics, religious affiliations, and biometric indicators may be processed when strictly necessary and made accessible only to authorized personnel who need it for service delivery, excluding any processing based on legitimate interests or for marketing or campaign optimization.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [
+          {
+            "rule_id": "R01",
+            "evidence": "sensitive categories including health metrics, religious affiliations, and biometric indicators may be processed under our broader operational interests",
+            "reason": "judged unclear"
+          },
+          {
+            "rule_id": "R11",
+            "evidence": "cross-departmental campaign optimization",
+            "reason": "judged unclear"
+          }
+        ],
+        "trace": [
+          "doc_type=mobile_app_terms clauses=7 with_candidates=6"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 3
+      }
+    },
+    {
+      "doc_id": "dev_006",
+      "score": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 1,
+        "grounded": 1,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 3
+      },
+      "output": {
+        "doc_id": "dev_006",
+        "doc_type_guess": "vendor_contract",
+        "findings": [
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 0.99,
+            "evidence": "تحتفظ الشركة بجميع السجلات والمعلومات المقدمة في قواعد البيانات إلى الأبد ودون أي قيد زمني، مع الاحتفاظ بحق عدم حذفها نهائياً",
+            "reason": "The clause mandates keeping data forever and explicitly reserves the right never to delete it, violating the retention and destruction requirements.",
+            "source": "PDPL Art. 18",
+            "clause": "تحتفظ الشركة بجميع السجلات والمعلومات المقدمة في قواعد البيانات إلى الأبد ودون أي قيد زمني، مع الاحتفاظ بحق عدم حذفها نهائياً لضمان استمرارية الخدمات والرجوع إليها عند الحاجة المستقبلية.",
+            "fix": "تحتفظ الشركة بالسجلات والمعلومات المقدمة في قواعد البيانات طالما كان ذلك ضرورياً لغرض جمعها، وتلتزم بحذفها دون تأخير غير مبرر بمجرد انتفاء هذه الحاجة، ما لم يفرض متطلبات احتفاظ قانوني أو توجد قضية قضائية قائمة.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=vendor_contract clauses=10 with_candidates=6"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 3
+      }
+    },
+    {
+      "doc_id": "dev_007",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R07": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R01": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 3,
+        "subtle_found": 3,
+        "unverified": 0,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.02,
+        "llm_calls": 8
+      },
+      "output": {
+        "doc_id": "dev_007",
+        "doc_type_guess": "privacy_policy",
+        "findings": [
+          {
+            "rule_id": "R07",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "مع إمكانية إخطار الأطراف المتضررة خلال زمني مدمج يناسب طبيعة العمليات ودون الالتزام بأطر زمنية ضيقة",
+            "reason": "The clause makes notifying affected parties optional and explicitly avoids strict statutory timeframes like the mandatory 72-hour breach notification requirement.",
+            "source": "PDPL Art. 20; Implementing Regulations (72-hour notification, verify article)",
+            "clause": "في حال وقوع أي حادث أمني أو وصول غير مصرح به للبيانات، تقوم الجهة المعنية بالتعامل مع الأمر داخلياً وفقاً لتقديرها التشغيلي المحض، مع إمكانية إخطار الأطراف المتضررة خلال زمني مدمج يناسب طبيعة العمليات ودون الالتزام بأطر زمنية ضيقة.",
+            "fix": "في حال وقوع أي خرق أو وصول غير مصرح به للبيانات الشخصية، تلتزم الجهة المسؤولة بإخطار الجهة المختصة فور علمها بالحادث، وإخطار أصحاب البيانات المتضررة في حال ترتب على الخرق ضرر بحقوقهم أو بياناتهم، وذلك خلال مدة لا تتجاوز 72 ساعة.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.89,
+            "evidence": "يُعتبر مجرد تصفح المنصة أو الاستمرار في استخدام الخدمات بمثابة موافقة ضمنية ونهائية على كافة سياسات المعالجة الحالية والمستقبلية، ولا يُتاح للمستخدم التراجع عن هذه الموافقة أو تقييدها طالما كان الحساب نشطاً.",
+            "reason": "The clause presumes consent from continued use and restricts the user's right to withdraw consent, directly violating PDPL Article 5.",
+            "source": "PDPL Art. 5",
+            "clause": "يُعتبر مجرد تصفح المنصة أو الاستمرار في استخدام الخدمات بمثابة موافقة ضمنية ونهائية على كافة سياسات المعالجة الحالية والمستقبلية، ولا يُتاح للمستخدم التراجع عن هذه الموافقة أو تقييدها طالما كان الحساب نشطاً.",
+            "fix": "يُرجى تقديم موافقتكم الصريحة على معالجة بياناتكم الشخصية للاستفادة من الخدمات، ويحق لكم سحب هذه الموافقة في أي وقت.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "تحتفظ الشركة بسجلات البيانات والملفات الرقمية للمستخدمين لفترات زمنية ممتدة وغير محدودة",
+            "reason": "The clause mandates keeping user data for unlimited and extended periods without a lawful justification, violating data destruction and retention limits.",
+            "source": "PDPL Art. 18",
+            "clause": "تحتفظ الشركة بسجلات البيانات والملفات الرقمية للمستخدمين لفترات زمنية ممتدة وغير محدودة بغرض استمرارية تحسين جودة الخدمة والأرشفة التاريخية، ودون وجود التزام زمني محدد لإتلافها أو محوها نهائياً.",
+            "fix": "تحتفظ الشركة بسجلات البيانات والملفات الرقمية للمستخدمين للغرض الذي جمعت من أجله، وتقوم بإتلافها دون تأخير غير مبرر متى انتفت الحاجة لذلك، ما لم يفرض متطلبات الاحتفاظ القانوني أو توقفت على قضية قضائية معلقة.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=privacy_policy clauses=10 with_candidates=7"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.02,
+        "llm_calls": 8
+      }
+    },
+    {
+      "doc_id": "dev_008",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R02": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R09": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 0,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 1,
+        "cost_usd": 0.0,
+        "latency_s": 0.02,
+        "llm_calls": 10
+      },
+      "output": {
+        "doc_id": "dev_008",
+        "doc_type_guess": "vendor_contract",
+        "findings": [
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.99,
+            "evidence": "لأي غراض تشغيلية أو تجارية تراه الشركة مناسباً لتطوير أعمالها المستقبلية، بما في ذلك الأغراض التي لم تكن محددة بانتهاء نطاق الخدمات الأصلي",
+            "reason": "The clause permits the use of personal data for undefined future purposes and purposes beyond the original collection scope, violating purpose limitation rules.",
+            "source": "PDPL Art. 10",
+            "clause": "يحق للمستفيد استخدام كافة البيانات والمعلومات المجمعة والمقدمة במסגרة هذه الاتفاقية لأي غراض تشغيلية أو تجارية تراه الشركة مناسباً لتطوير أعمالها المستقبلية، بما في ذلك الأغراض التي لم تكن محددة بانتهاء نطاق الخدمات الأصلي.",
+            "fix": "يحق للمستفيد استخدام البيانات والمعلومات المجمعة والمقدمة במסگرة هذه الاتفاقية للأغراض التي جمعت من أجلها، أو وفقاً للحالات المحددة في النظام.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 0.89,
+            "evidence": "تستمر الجهة مقدمة الخدمة في الاحتفاظ بجميع السجلات والبيانات لفترات غير محدودة زمنياً تضمن استدامة السجلات التاريخية للمشروع، مع احتفاظها بالحق في حفظها دون التزام بإتلافها نهائياً.",
+            "reason": "The clause explicitly mandates keeping data for an unlimited period without any obligation to delete it, violating data retention and destruction rules.",
+            "source": "PDPL Art. 18",
+            "clause": "تستمر الجهة مقدمة الخدمة في الاحتفاظ بجميع السجلات والبيانات لفترات غير محدودة زمنياً تضمن استدامة السجلات التاريخية للمشروع، مع احتفاظها بالحق في حفظها دون التزام بإتلافها نهائياً.",
+            "fix": "تلتزم الجهة مقدمة الخدمة بالاحتفاظ بالسجلات والبيانات للمدة اللازمة لتحقيق الغرض من جمعها، ما لم يوجد متطلبات احتفظ قانونية أو قضائية تقتضي خلاف ذلك، وتلتزم بإتلافها دون تأخير مبرر متى انتفت الحاجة إليها.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R09",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "وتعفى جهة الإدارة من أي التزام بإجراء عمليات تدقيق أو مراجعة ميدانية على أنظمة المورد.",
+            "reason": "The clause explicitly forbids the controller from conducting audits or field reviews on the processor's systems, violating the requirement to monitor processor compliance.",
+            "source": "PDPL Art. 8",
+            "clause": "يُفوض المورد بموجب هذه الاتفاقية بتفويض أي أطراف ثالثة أو مقاولين من الباطن لتقديم الخدمات ومعالجة البيانات دون الحاجة لإشعار مسبق، وتعفى جهة الإدارة من أي التزام بإجراء عمليات تدقيق أو مراجعة ميدانية على أنظمة المورد.",
+            "fix": "يُفوض المورد بموجب هذه الاتفاقية بتفويض أي أطراف ثالثة أو مقاولين من الباطن لتقديم الخدمات ومعالجة البيانات دون الحاجة لإشعار مسبق، مع إلتزام جهة الإدارة بإجراء عمليات التدقيق والمراجعة الميدانية اللازمة للتحقق من امتثال المورد.",
+            "fix_verified": false
+          }
+        ],
+        "escalations": [
+          {
+            "rule_id": "R09",
+            "evidence": "وتعفى جهة الإدارة من أي التزام بإجراء عمليات تدقيق أو مراجعة ميدانية على أنظمة المورد.",
+            "reason": "fix failed after 2 attempts",
+            "draft_fix": "يُفوض المورد بموجب هذه الاتفاقية بتفويض أي أطراف ثالثة أو مقاولين من الباطن لتقديم الخدمات ومعالجة البيانات دون الحاجة لإشعار مسبق، مع إلتزام جهة الإدارة بإجراء عمليات التدقيق والمراجعة الميدانية اللازمة للتحقق من امتثال المورد."
+          }
+        ],
+        "trace": [
+          "doc_type=vendor_contract clauses=9 with_candidates=8"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.02,
+        "llm_calls": 10
+      }
+    },
+    {
+      "doc_id": "dev_009",
+      "score": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "per_rule": {
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R04": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R03": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          }
+        },
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 2,
+        "subtle_found": 2,
+        "unverified": 0,
+        "findings": 2,
+        "grounded": 2,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 5
+      },
+      "output": {
+        "doc_id": "dev_009",
+        "doc_type_guess": "privacy_policy",
+        "findings": [
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "ودون الالتزام بإجراء عمليات إتلاف دورية لها حتى بعد انتهاء العلاقة التعاقدية.",
+            "reason": "The clause explicitly states that data will be retained indefinitely without periodic destruction, violating retention limits.",
+            "source": "PDPL Art. 18",
+            "clause": "تحتفظ الشركة بسجلات كافة بيانات المستخدمين ضمن أرشيفها الرقمي لأغراض تطوير الأداء والجودة بشكل دائم، ودون الالتزام بإجراء عمليات إتلاف دورية لها حتى بعد انتهاء العلاقة التعاقدية.",
+            "fix": "تحتفظ الشركة بسجلات كافة بيانات المستخدمين ضمن أرشيفها الرقمي لأغراض تطوير الأداء والجودة طالما كانت ضرورية لهذا الغرض، وتلتزم بإتلافها دون تأخير مالم تقتضِ متطلبات الاحتفاظ القانونية أو قضايا قضائية قائمة خلاف ذلك، حتى بعد انتهاء العلاقة التعاقدية.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R04",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "لا تفصح هذه الوثيقة عن تفاصيل أنواع البيانات التي يتم جمعها أو الأغراض المحددة لمعالجتها",
+            "reason": "The policy explicitly refuses to disclose data categories and processing purposes before collection.",
+            "source": "PDPL Art. 12; Art. 13",
+            "clause": "لا تفصح هذه الوثيقة عن تفاصيل أنواع البيانات التي يتم جمعها أو الأغراض المحددة لمعالجتها، ويمكن للمستخدمين الاستفسار عن طبيعة البيانات المخزنة بعد إتمام عملية التسجيل حصراً.",
+            "fix": "توضح هذه الوثيقة أنواع البيانات التي يتم جمعها، والأغراض المحددة لمعالجتها، وكيفية معالجتها وتخزينها وإتلافها، إضافة إلى حقوق أصحاب البيانات وكيفية ممارستها، وذلك قبل البدء في جمع أي بيانات شخصية.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=privacy_policy clauses=10 with_candidates=6"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 5
+      }
+    },
+    {
+      "doc_id": "dev_010",
+      "score": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R05": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 1,
+        "findings": 2,
+        "grounded": 2,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.02,
+        "llm_calls": 5
+      },
+      "output": {
+        "doc_id": "dev_010",
+        "doc_type_guess": "employment_form",
+        "findings": [
+          {
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "ولا يلتزم النظام بإتاحة استعراض الملفات الشخصية للمستخدمين أو الاستجابة لدعاوى الحذف الإداري.",
+            "reason": "The clause explicitly denies data subjects the right to access their personal files and request administrative deletion.",
+            "source": "PDPL Art. 4",
+            "clause": "حرصاً منا على استقرار العمليات وسرية السجلات التشغيلية، تحتفظ الشركة وحدها بالتقدير المطلق في تقييم طلبات المراجعة أو التعديل، ولا يلتزم النظام بإتاحة استعراض الملفات الشخصية للمستخدمين أو الاستجابة لدعاوى الحذف الإداري.",
+            "fix": "حرصاً منا على استقرار العمليات وسرية السجلات التشغيلية، ومع عدم الإخلال بحق صاحب البيانات في الإطلاع على الأساس القانوني والغرض من جمع البيانات، والوصول إليها، وطلب تصحيحها أو استكمالها أو تحديثها، أو طلب إتلافها متى انتفت الحاجة إليها، تحتفظ الشركة بالتقدير المطلق في تقييم طلبات المراجعة الإضافية بما يتوافق مع الأنظمة المعمول بها.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 0.8,
+            "evidence": "حرصاً منا على استقرار العمليات وسرية السجلات التشغيلية، تحتفظ الشركة وحدها بالتقدير المطلق في تقييم طلبات المراجعة أو التعديل، ولا يلتزم النظام بإتاحة استعراض الملفات الشخصية للمستخدمين أو الاستجابة لدعاوى الحذف الإداري.",
+            "reason": "Refusing deletion requests and keeping data based on absolute company discretion violates destruction requirements.",
+            "source": "PDPL Art. 18",
+            "clause": "حرصاً منا على استقرار العمليات وسرية السجلات التشغيلية، تحتفظ الشركة وحدها بالتقدير المطلق في تقييم طلبات المراجعة أو التعديل، ولا يلتزم النظام بإتاحة استعراض الملفات الشخصية للمستخدمين أو الاستجابة لدعاوى الحذف الإداري.",
+            "fix": "تلتزم الشركة بحذف البيانات الشخصية دون تأخير فور انتفاء الغرض من جمعها، ما لم تقتضِ متطلبات الاحتفاظ القانونية أو دعوى قضائية قائمة خلاف ذلك.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=employment_form clauses=9 with_candidates=6"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.02,
+        "llm_calls": 5
+      }
+    },
+    {
+      "doc_id": "dev_011",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R05": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R07": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R04": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 0,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.02,
+        "llm_calls": 8
+      },
+      "output": {
+        "doc_id": "dev_011",
+        "doc_type_guess": "privacy_policy",
+        "findings": [
+          {
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "لا يحق للمستخدم المطالبة بالاطلاع على سجلات بياناته الشخصية المحفوظة لدى المنصة، كما لا يمتلك الحق في طلب تعديلها أو تحديثها أو محوها نهائياً",
+            "reason": "The clause explicitly denies the data subject's statutory rights to access, correct, and delete personal data.",
+            "source": "PDPL Art. 4",
+            "clause": "لا يحق للمستخدم المطالبة بالاطلاع على سجلات بياناته الشخصية المحفوظة لدى المنصة، كما لا يمتلك الحق في طلب تعديلها أو تحديثها أو محوها نهائياً تحت أي ظرف من الظروف التشغيلية.",
+            "fix": "يحق للمستخدم الاطلاع على سجلات بياناته الشخصية المحفوظة لدى المنصة، ومعرفة الأساس القانوني والغرض من جمعها، كما يمتلك الحق في طلب تعديلها أو تحديثها أو إكمالها، وطلب محوها إذا لم تعد هناك حاجة إليها.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R07",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "دون وجود أي التزام زمني محدد لإبلاغ الجهات المعنية أو المستخدمين المتضررين",
+            "reason": "The clause violates breach notification requirements by refusing to set a timeline for reporting data breaches to authorities and data subjects.",
+            "source": "PDPL Art. 20; Implementing Regulations (72-hour notification, verify article)",
+            "clause": "في حال وقوع أي حادث أمني أو وصول غير مصرح به إلى قواعد البيانات، تقوم الشركة بتقييم الموقف داخلياً واتخاذ ما تراه مناسباً وفقاً لتقديرها الإداري المطلق، ودون وجود أي التزام زمني محدد لإبلاغ الجهات المعنية أو المستخدمين المتضررين.",
+            "fix": "في حال وقوع أي خرق أو إتلاف أو وصول غير مصرح به للبيانات الشخصية، تلتزم الشركة بإبلاغ الجهة المختصة فور العلم بذلك، وبإبلاغ صاحب البيانات في حال احتمالية إلحاق الضرر ببياناته أو حقوقه، وذلك خلال 72 ساعة.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R04",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "تحتفظ شركة الأفق الرقمي بحرية عدم الإفصاح عن تفاصيل البيانات الشخصية التي تجمعها أو الأغراض المحددة لجمعها ضمن هذه الوثيقة",
+            "reason": "The privacy policy fails to disclose collection purposes and data categories prior to collection as required by the law.",
+            "source": "PDPL Art. 12; Art. 13",
+            "clause": "تحتفظ شركة الأفق الرقمي بحرية عدم الإفصاح عن تفاصيل البيانات الشخصية التي تجمعها أو الأغراض المحددة لجمعها ضمن هذه الوثيقة، على أن يتم تزويد المستخدم بتلك التفاصيل حصراً بناءً على طلب خطي يقدمه بعد إتمام عملية التسجيل بنجاح.",
+            "fix": "تقوم شركة الأفق الرقمي بالإفصاح عن تفاصيل البيانات الشخصية التي تجمعها والأغراض المحددة لجمعها وكيفية معالجتها وتخزينها والتخلص منها وحقوق صاحب البيانات وكيفية ممارستها، وذلك قبل جمع تلك البيانات.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=privacy_policy clauses=11 with_candidates=7"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.02,
+        "llm_calls": 8
+      }
+    },
+    {
+      "doc_id": "dev_012",
+      "score": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "per_rule": {
+          "R04": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R03": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          }
+        },
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 0,
+        "unverified": 1,
+        "findings": 2,
+        "grounded": 2,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.02,
+        "llm_calls": 5
+      },
+      "output": {
+        "doc_id": "dev_012",
+        "doc_type_guess": "privacy_policy",
+        "findings": [
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "تحتفظ الشركة بحق عدم الإفصاح عن تفاصيل البيانات الشخصية التي يتم جمعها أو الأغراض المحددة لمعالجتها في هذه الوثيقة",
+            "reason": "The clause explicitly states that collection purposes and data details will not be disclosed in the policy, violating the requirement of purpose specification.",
+            "source": "PDPL Art. 10",
+            "clause": "تحتفظ الشركة بحق عدم الإفصاح عن تفاصيل البيانات الشخصية التي يتم جمعها أو الأغراض المحددة لمعالجتها في هذه الوثيقة، ويمكن للمستخدمين تقديم طلب رسمي للاستعلام عن هذه التفاصيل بعد إتمام عملية إنشاء الحساب.",
+            "fix": "تقوم الشركة بمعالجة البيانات الشخصية للأغراض التي جمعت من أجلها وفقاً للأحكام المنصوص عليها في النظام، ويمكن للمستخدمين تقديم طلب رسمي للاستعلام عن تفاصيل هذه البيانات وأغراض معالجتها بعد إتمام عملية إنشاء الحساب.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R04",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "تحتفظ الشركة بحق عدم الإفصاح عن تفاصيل البيانات الشخصية التي يتم جمعها أو الأغراض المحددة لمعالجتها في هذه الوثيقة",
+            "reason": "The controller fails to make available a transparent privacy policy specifying collection purposes and data categories prior to collection.",
+            "source": "PDPL Art. 12; Art. 13",
+            "clause": "تحتفظ الشركة بحق عدم الإفصاح عن تفاصيل البيانات الشخصية التي يتم جمعها أو الأغراض المحددة لمعالجتها في هذه الوثيقة، ويمكن للمستخدمين تقديم طلب رسمي للاستعلام عن هذه التفاصيل بعد إتمام عملية إنشاء الحساب.",
+            "fix": "تقوم الشركة بإتاحة سياسة خصوصية قبل جمع البيانات الشخصية، توضح أغراض الجمع، البيانات التي يتم جمعها، كيفية معالجتها وتخزينها وإتلافها، حقوق صاحب البيانات وكيفية ممارستها.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=privacy_policy clauses=9 with_candidates=6"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.02,
+        "llm_calls": 5
+      }
+    },
+    {
+      "doc_id": "dev_013",
+      "score": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R01": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 3,
+        "findings": 4,
+        "grounded": 4,
+        "ambiguous": 1,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.03,
+        "llm_calls": 10
+      },
+      "output": {
+        "doc_id": "dev_013",
+        "doc_type_guess": "unknown",
+        "findings": [
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.9,
+            "evidence": "يُعد مجرد تصفح المنصة أو استخدام الخدمات بمثابة موافقة ضمنية ومسبقة على جمع كافة البيانات ومعالجتها واستخدامها لأغراض الشركة التشغيلية والتسويقية، ولا يحق للمستخدم طلب تعديل هذه الموافقة أو سحبها بأي شكل من الأشكال طالما كان حسابه نشطاً.",
+            "reason": "The clause presumes consent from mere browsing and explicitly prohibits withdrawing consent, violating PDPL Art. 5.",
+            "source": "PDPL Art. 5",
+            "clause": "يُعد مجرد تصفح المنصة أو استخدام الخدمات بمثابة موافقة ضمنية ومسبقة على جمع كافة البيانات ومعالجتها واستخدامها لأغراض الشركة التشغيلية والتسويقية، ولا يحق للمستخدم طلب تعديل هذه الموافقة أو سحبها بأي شكل من الأشكال طالما كان حسابه نشطاً.",
+            "fix": "يُعد جمع البيانات ومعالجتها واستخدامها لأغراض الشركة التشغيلية والتسويقية بناءً على موافقة المستخدم الصريحة، ويحق للمستخدم سحب موافقته في أي وقت وفقاً لأحكام النظام.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "لأغراض الشركة التشغيلية والتسويقية",
+            "reason": "The clause bundles processing for unspecified or overly broad operational and marketing purposes based on forced consent.",
+            "source": "PDPL Art. 10",
+            "clause": "يُعد مجرد تصفح المنصة أو استخدام الخدمات بمثابة موافقة ضمنية ومسبقة على جمع كافة البيانات ومعالجتها واستخدامها لأغراض الشركة التشغيلية والتسويقية، ولا يحق للمستخدم طلب تعديل هذه الموافقة أو سحبها بأي شكل من الأشكال طالما كان حسابه نشطاً.",
+            "fix": "يجوز للمنصة معالجة البيانات الشخصية للأغراض التشغيلية والتسويقية المحددة التي جمعت من أجلها، وفقاً للحالات المنصوص عليها في النظام، مع احترام حقوق المستخدم في هذا الشأن.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R11",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "بمثابة موافقة ضمنية ومسبقة على جمع كافة البيانات ومعالجتها واستخدامها لأغراض الشركة التشغيلية والتسويقية",
+            "reason": "Direct marketing consent is bundled and presumed implicitly via browsing, violating PDPL Art. 25.",
+            "source": "PDPL Art. 25",
+            "clause": "يُعد مجرد تصفح المنصة أو استخدام الخدمات بمثابة موافقة ضمنية ومسبقة على جمع كافة البيانات ومعالجتها واستخدامها لأغراض الشركة التشغيلية والتسويقية، ولا يحق للمستخدم طلب تعديل هذه الموافقة أو سحبها بأي شكل من الأشكال طالما كان حسابه نشطاً.",
+            "fix": "يُعد تصفح المنصة أو استخدام الخدمات موافقة على جمع بياناتك ومعالجتها للأغراض التشغيلية، ولا يُرسل أي مواد إعلانية أو توعوية إلى قنوات الاتصال الشخصية إلا بعد الحصول على موافقتك المسبقة، مع توفير طريقة واضحة لإيقاف إرسالها.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "ولا يحق للمستخدم طلب تعديل هذه الموافقة أو سحبها بأي شكل من الأشكال طالما كان حسابه نشطاً.",
+            "reason": "The clause denies the data subject's right to withdraw or modify consent while their account is active.",
+            "source": "PDPL Art. 4",
+            "clause": "يُعد مجرد تصفح المنصة أو استخدام الخدمات بمثابة موافقة ضمنية ومسبقة على جمع كافة البيانات ومعالجتها واستخدامها لأغراض الشركة التشغيلية والتسويقية، ولا يحق للمستخدم طلب تعديل هذه الموافقة أو سحبها بأي شكل من الأشكال طالما كان حسابه نشطاً.",
+            "fix": "يُعد مجرد تصفح المنصة أو استخدام الخدمات بمثابة موافقة ضمنية ومسبقة على جمع البيانات ومعالجتها وفقاً للأساس القانوني لأغراض الشركة التشغيلية والتسويقية، ويحق للمستخدم الوصول إلى بياناته الشخصية وطلب تصحيحها أو استكمالها أو تحديثها، وطلب إتلاف البيانات التي لم تعد هناك حاجة إليها.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=unknown clauses=12 with_candidates=10"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.03,
+        "llm_calls": 10
+      }
+    },
+    {
+      "doc_id": "dev_014",
+      "score": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "per_rule": {
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R02": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R05": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 2,
+        "grounded": 2,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 8
+      },
+      "output": {
+        "doc_id": "dev_014",
+        "doc_type_guess": "vendor_contract",
+        "findings": [
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "retained indefinitely within our archival databases",
+            "reason": "The clause violates retention rules by keeping personal data indefinitely after account deactivation without a valid legal exception.",
+            "source": "PDPL Art. 18",
+            "clause": "All user records and transaction histories are retained indefinitely within our archival databases following account deactivation to support long-term trend analysis and historical continuity.",
+            "fix": "Following account deactivation, the controller must destroy all user records and transaction histories without undue delay once no longer necessary for the purpose of collection, unless a legal retention requirement or pending judicial case applies.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "utilize all collected information for any business purpose deemed appropriate by the management",
+            "reason": "The clause explicitly violates purpose limitation by allowing collected data to be used for any future purpose determined by management.",
+            "source": "PDPL Art. 10",
+            "clause": "Al-Faris Digital Services reserves the right to utilize all collected information for any business purpose deemed appropriate by the management, including unforeseen future initiatives and operational adaptations not explicitly detailed herein.",
+            "fix": "Al-Faris Digital Services may process collected information only for the purposes for which it was collected, except in specific cases set out in the Law.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=vendor_contract clauses=10 with_candidates=8"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 8
+      }
+    },
+    {
+      "doc_id": "dev_015",
+      "score": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R11": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 1,
+        "findings": 2,
+        "grounded": 2,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 5
+      },
+      "output": {
+        "doc_id": "dev_015",
+        "doc_type_guess": "unknown",
+        "findings": [
+          {
+            "rule_id": "R11",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "استلام الإشعارات والمواد الإعلانية والعروض الترويجية عبر البريد الإلكتروني ورسائل الهواتف المحمولة بشكل افتراضي، مع الاحتفاظ بملفات الارتباط التسويقية المرتبطة بأنشطة شركاء الشركة دون توفير خيار مباشر لإلغاء الاشتراك",
+            "reason": "The clause enforces marketing communications by default and fails to provide a direct option to unsubscribe, violating PDPL Art. 25.",
+            "source": "PDPL Art. 25",
+            "clause": "يوافق المستخدم بمجرد إتمام عملية التسجيل وإنشاء الحساب على استلام الإشعارات والمواد الإعلانية والعروض الترويجية عبر البريد الإلكتروني ورسائل الهواتف المحمولة بشكل افتراضي، مع الاحتفاظ بملفات الارتباط التسويقية المرتبطة بأنشطة شركاء الشركة دون توفير خيار مباشر لإلغاء الاشتراك.",
+            "fix": "يوافق المستخدم على استلام الإشعارات والمواد الإعلانية والعروض الترويجية عبر البريد الإلكتروني ورسائل الهواتف المحمولة بناءً على موافقته المسبقة، مع توفير خيار واضح وسهل لإلغاء الاشتراك في أي وقت.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "يوافق المستخدم بمجرد إتمام عملية التسجيل وإنشاء الحساب على استلام الإشعارات والمواد الإعلانية والعروض الترويجية عبر البريد الإلكتروني ورسائل الهواتف المحمولة بشكل افتراضي",
+            "reason": "Consent for marketing is presumed automatically by default upon registration rather than being freely and actively given.",
+            "source": "PDPL Art. 5",
+            "clause": "يوافق المستخدم بمجرد إتمام عملية التسجيل وإنشاء الحساب على استلام الإشعارات والمواد الإعلانية والعروض الترويجية عبر البريد الإلكتروني ورسائل الهواتف المحمولة بشكل افتراضي، مع الاحتفاظ بملفات الارتباط التسويقية المرتبطة بأنشطة شركاء الشركة دون توفير خيار مباشر لإلغاء الاشتراك.",
+            "fix": "يوافق المستخدم عند إتمام عملية التسجيل وإنشاء الحساب على استلام الإشعارات والمواد الإعلانية والعروض الترويجية عبر البريد الإلكتروني ورسائل الهواتف المحمولة وتفعيل ملفات الارتباط التسويقية بناءً على موافقته الحرة والصريحة، مع توفير خيار واضح وسهل لإلغاء الاشتراك أو سحب هذه الموافقة في أي وقت.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=unknown clauses=9 with_candidates=5"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 5
+      }
+    },
+    {
+      "doc_id": "dev_016",
+      "score": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 1,
+        "grounded": 1,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 4
+      },
+      "output": {
+        "doc_id": "dev_016",
+        "doc_type_guess": "vendor_contract",
+        "findings": [
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "retain all collected user records and associated datasets indefinitely",
+            "reason": "The clause explicitly mandates keeping personal data indefinitely without implementing destruction schedules.",
+            "source": "PDPL Art. 18",
+            "clause": "The Vendor shall retain all collected user records and associated datasets indefinitely following the termination of this Agreement, reserving the absolute right to maintain such information permanently without implementing data purging or destruction schedules.",
+            "fix": "The Vendor shall destroy all collected user records and associated datasets without undue delay once they are no longer necessary for the purpose of collection, unless a legal retention requirement or pending judicial case applies.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=vendor_contract clauses=12 with_candidates=12"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 4
+      }
+    },
+    {
+      "doc_id": "dev_017",
+      "score": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 2,
+        "per_rule": {
+          "R07": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0
+          },
+          "R02": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R04": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "R10": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          }
+        },
+        "traps": 1,
+        "trap_hits": 1,
+        "subtle": 1,
+        "subtle_found": 0,
+        "unverified": 1,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.02,
+        "llm_calls": 8
+      },
+      "output": {
+        "doc_id": "dev_017",
+        "doc_type_guess": "vendor_contract",
+        "findings": [
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "تُستخدم البيانات الصحية والمعلومات الحساسة الخاصة بالمستخدمين ضمن الحملات التسويقية المخصصة",
+            "reason": "Using sensitive health data for marketing campaigns directly breaches purpose limitation principles under PDPL.",
+            "source": "PDPL Art. 10",
+            "clause": "تُستخدم البيانات الصحية والمعلومات الحساسة الخاصة بالمستخدمين ضمن الحملات التسويقية المخصصة، وتتيح الشركة لكافة فرق العمل والإدارات التجارية صلاحية الاطلاع عليها لتحسين جودة المنتجات المعروضة.",
+            "fix": "يُحظر استخدام البيانات الصحية والمعلومات الحساسة الخاصة بالمستخدمين ضمن الحملات التسويقية المخصصة أو إتاحتها لفرق العمل والإدارات التجارية، إلا في الحالات المحددة وفقاً للنظام.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R07",
+            "verdict": "violation",
+            "confidence": 0.85,
+            "evidence": "تلتزم الشركة بإخطار الجهة المختصة خلال الإطار الزمني المتعارف عليه",
+            "reason": "Using vague phrasing like 'commonly accepted timeframe' instead of the mandated strict 72-hour deadline violates breach notification rules.",
+            "source": "PDPL Art. 20; Implementing Regulations (72-hour notification, verify article)",
+            "clause": "في حال وقوع أي اختراق أمني أو وصول غير مصرح به للبيانات، تلتزم الشركة بإخطار الجهة المختصة خلال الإطار الزمني المتعارف عليه، مع إشعار المتضررين إذا تبين أن الحادثة قد تمس بحقوقهم أو بياناتهم بشكل مباشر.",
+            "fix": "في حال وقوع أي اختراق أمني أو وصول غير مصرح به للبيانات، تلتزم الشركة بإخطار الجهة المختصة خلال 72 ساعة، مع إشعار المتضررين إذا تبين أن الحادثة قد تمس بحقوقهم أو بياناتهم بشكل مباشر.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "في أي أغراض تجارية تراها مناسبة لتطوير أعمالها، بما في ذلك الأغراض المستقبلية الجديدة التي يتم تحديدها لاحقاً دون الحاجة لإشعار مسبق أو الحصول على موافقة إضافية",
+            "reason": "The clause allows the use of personal data for unrelated future purposes and any commercial purpose determined later without consent, violating purpose limitation.",
+            "source": "PDPL Art. 10",
+            "clause": "تحتفظ الشركة بحق استخدام البيانات الشخصية المجمعة من المستخدمين في أي أغراض تجارية تراها مناسبة لتطوير أعمالها، بما في ذلك الأغراض المستقبلية الجديدة التي يتم تحديدها لاحقاً دون الحاجة لإشعار مسبق أو الحصول على موافقة إضافية.",
+            "fix": "يحق للشركة معالجة البيانات الشخصية المجمعة من المستخدمين فقط للأغراض التي جمعت من أجلها لتطوير أعمالها، باستثناء الحالات المحددة المنصوص عليها في النظام.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=vendor_contract clauses=10 with_candidates=9"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.02,
+        "llm_calls": 8
+      }
+    },
+    {
+      "doc_id": "dev_018",
+      "score": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "per_rule": {
+          "R02": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R03": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 2,
+        "subtle_found": 1,
+        "unverified": 1,
+        "findings": 2,
+        "grounded": 2,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 5
+      },
+      "output": {
+        "doc_id": "dev_018",
+        "doc_type_guess": "privacy_policy",
+        "findings": [
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "وتوظيفها ضمن أي نطاق تنظيمي أو تجاري تراه مناسباً",
+            "reason": "The clause attempts to secure blanket consent for any undefined future commercial purposes without specific consent for each purpose.",
+            "source": "PDPL Art. 5",
+            "clause": "توافق على منح الشركة حق الاستفادة من كافة البيانات والمعلومات المقدمة وتوظيفها ضمن أي نطاق تنظيمي أو تجاري تراه مناسباً لدعم عملياتها الحالية أو التطويرية المستقبلية وفقاً لما تقره الإدارة.",
+            "fix": "توافق على منح الشركة حق الاستفادة من بياناتك الشخصية وتوظيفها للأغراض التجارية المحددة ودعم عملياتها الحالية أو التطويرية المستقبلية بناءً على موافقتك المسبقة، مع حقك في سحب هذه الموافقة في أي وقت وفقاً لما تقره الإدارة.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "ضمن أي نطاق تنظيمي أو تجاري تراه مناسباً لدعم عملياتها الحالية أو التطويرية المستقبلية",
+            "reason": "It violates purpose limitation by allowing data to be used for any scope deemed appropriate by management, far beyond the original collection purpose.",
+            "source": "PDPL Art. 10",
+            "clause": "توافق على منح الشركة حق الاستفادة من كافة البيانات والمعلومات المقدمة وتوظيفها ضمن أي نطاق تنظيمي أو تجاري تراه مناسباً لدعم عملياتها الحالية أو التطويرية المستقبلية وفقاً لما تقره الإدارة.",
+            "fix": "توافق على منح الشركة حق الاستفادة من البيانات والمعلومات المقدمة وتوظيفها للأغراض التي جمعت من أجلها لدعم عملياتها الحالية أو التطويرية المستقبلية وفقاً لما تقره الإدارة وبما لا يخالف الأحكام المنصوص عليها في النظام.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=privacy_policy clauses=8 with_candidates=4"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 5
+      }
+    },
+    {
+      "doc_id": "dev_019",
+      "score": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {},
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 0,
+        "grounded": 0,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 2
+      },
+      "output": {
+        "doc_id": "dev_019",
+        "doc_type_guess": "mobile_app_terms",
+        "findings": [],
+        "escalations": [],
+        "trace": [
+          "doc_type=mobile_app_terms clauses=9 with_candidates=7"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 2
+      }
+    },
+    {
+      "doc_id": "dev_020",
+      "score": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R09": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 0,
+        "findings": 2,
+        "grounded": 2,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.02,
+        "llm_calls": 6
+      },
+      "output": {
+        "doc_id": "dev_020",
+        "doc_type_guess": "vendor_contract",
+        "findings": [
+          {
+            "rule_id": "R09",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "يُصرح للمورد بموجب هذه الاتفاقية الاستعانة بأي مقاول فرعي لتنفيذ أعمال معالجة البيانات دون الحاجة لتقديم إشعار مسبق للشركة، كما تُعفى أنشطة المورد التشغيلية من أي عمليات تدقيق أو تفتيش دوري تجريها الشركة.",
+            "reason": "The clause allows unrestricted subcontracting without notice and explicitly forbids auditing, violating processor guarantee and monitoring requirements.",
+            "source": "PDPL Art. 8",
+            "clause": "يُصرح للمورد بموجب هذه الاتفاقية الاستعانة بأي مقاول فرعي لتنفيذ أعمال معالجة البيانات دون الحاجة لتقديم إشعار مسبق للشركة، كما تُعفى أنشطة المورد التشغيلية من أي عمليات تدقيق أو تفتيش دوري تجريها الشركة.",
+            "fix": "يُصرح للمورد بموجب هذه الاتفاقية الاستعانة بمقاولين فرعيين بشرط تقديم إشعار مسبق للشركة وتقديم الضمانات اللازمة لتنفيذ القانون، كما يحق للشركة إجراء عمليات التدقيق والتفتيش الدوري لمراقبة امتثال المورد.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 0.99,
+            "evidence": "لأجل غير مسمى بغرض استمرارية العمل وتحسين الجودة في المستقبل، دون التزام بإزالتها أو التخلص منها نهائياً.",
+            "reason": "The clause mandates keeping data for an indefinite period and explicitly states no obligation to delete or dispose of it.",
+            "source": "PDPL Art. 18",
+            "clause": "توافق الأطراف على حفظ سجلات البيانات والمعلومات المتعلقة بالخدمة في أرشيف المورد لأجل غير مسمى بغرض استمرارية العمل وتحسين الجودة في المستقبل، دون التزام بإزالتها أو التخلص منها نهائياً.",
+            "fix": "توافق الأطراف على حفظ سجلات البيانات والمعلومات المتعلقة بالخدمة في أرشيف المورد بغرض استمرارية العمل وتحسين الجودة في المستقبل، مع إتلافها دون undue delay (دون تأخير غير مبرر) متى انتفت الحاجة إليها للغرض الذي جمعت من أجله، ما لم تقتضِ متطلبات الاحتفاظ القانونية أو وجود قضية قضائية قائمة خلاف ذلك.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=vendor_contract clauses=9 with_candidates=9"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.02,
+        "llm_calls": 6
+      }
+    },
+    {
+      "doc_id": "dev_021",
+      "score": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {},
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 0,
+        "grounded": 0,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 2,
+        "cost_usd": 0.0,
+        "latency_s": 0.0,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_021",
+        "doc_type_guess": "employment_form",
+        "findings": [],
+        "escalations": [
+          {
+            "rule_id": "R01",
+            "evidence": "تظل أحكام هذا المستند سارية المفعول طوال فترة دراسة الطلب وحتى إشعار آخر.",
+            "reason": "judged unclear"
+          },
+          {
+            "rule_id": "R06",
+            "evidence": "وحتى إشعار آخر",
+            "reason": "judged unclear"
+          }
+        ],
+        "trace": [
+          "doc_type=employment_form clauses=9 with_candidates=5"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.0,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_022",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R10": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R05": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R02": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 4,
+        "findings": 7,
+        "grounded": 7,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.03,
+        "llm_calls": 16
+      },
+      "output": {
+        "doc_id": "dev_022",
+        "doc_type_guess": "privacy_policy",
+        "findings": [
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 0.89,
+            "evidence": "تعتمد الشركة على سند المصالح المشروعة لمعالجة البيانات الحساسة والبيانات الصحية والبيانات الحيوية للمستخدمين، وتستიد من هذه الفئات لتحليل السلوك الاستهلاكي وتوجيه الحملات الترويجية المخصصة ومشاركة تلك الملفات مع الشركاء التجاريين لضمان فعالية الخدمات المقدمة.",
+            "reason": "The PDPL strictly prohibits processing sensitive, health, or biometric data based on legitimate interest or using them for marketing purposes.",
+            "source": "PDPL Art. 1(11), 1(13), 6(4), 23, 26",
+            "clause": "تعتمد الشركة على سند المصالح المشروعة لمعالجة البيانات الحساسة والبيانات الصحية والبيانات الحيوية للمستخدمين، وتستიد من هذه الفئات لتحليل السلوك الاستهلاكي وتوجيه الحملات الترويجية المخصصة ومشاركة تلك الملفات مع الشركاء التجاريين لضمان فعالية الخدمات المقدمة.",
+            "fix": "تعتمد الشركة على سند المصالح المشروعة لمعالجة بيانات المستخدمين العادية، وتستفيد من هذه الفئات لتحليل السلوك الاستهلاكي وتوجيه الحملات الترويجية المخصصة ومشاركة تلك الملفات مع الشركاء التجاريين لضمان فعالية الخدمات المقدمة، مع الالتزام بعدم معالجة البيانات الحساسة أو الصحية أو الحيوية بناءً على المصالح المشروعة أو لأغراض التسويق.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "تعتمد الشركة على سند المصالح المشروعة لمعالجة البيانات الحساسة والبيانات الصحية والبيانات الحيوية",
+            "reason": "Processing sensitive data based on legitimate interest bypasses the mandatory explicit consent requirements set by the Law.",
+            "source": "PDPL Art. 5",
+            "clause": "تعتمد الشركة على سند المصالح المشروعة لمعالجة البيانات الحساسة والبيانات الصحية والبيانات الحيوية للمستخدمين، وتستიد من هذه الفئات لتحليل السلوك الاستهلاكي وتوجيه الحملات الترويجية المخصصة ومشاركة تلك الملفات مع الشركاء التجاريين لضمان فعالية الخدمات المقدمة.",
+            "fix": "تحصل الشركة على موافقة المستخدم الصريحة لمعالجة البيانات الحساسة والبيانات الصحية والبيانات الحيوية، وتستفيد من هذه الفئات لتحليل السلوك الاستهلاكي وتوجيه الحملات الترويجية المخصصة ومشاركة تلك الملفات مع الشركاء التجاريين لضمان فعالية الخدمات المقدمة.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R11",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "توجيه الحملات الترويجية المخصصة ومشاركة تلك الملفات مع الشركاء التجاريين",
+            "reason": "Using sensitive and health data for marketing and sharing it with commercial partners violates the direct marketing and sensitive data provisions.",
+            "source": "PDPL Art. 25",
+            "clause": "تعتمد الشركة على سند المصالح المشروعة لمعالجة البيانات الحساسة والبيانات الصحية والبيانات الحيوية للمستخدمين، وتستიد من هذه الفئات لتحليل السلوك الاستهلاكي وتوجيه الحملات الترويجية المخصصة ومشاركة تلك الملفات مع الشركاء التجاريين لضمان فعالية الخدمات المقدمة.",
+            "fix": "تعتمد الشركة على موافقة المستخدمين المسبقة لمعالجة البيانات الحساسة والبيانات الصحية والبيانات الحيوية، وتستفيد من هذه الفئات لتوجيه المواد الإعلانية أو التوعوية المخصصة عبر قنوات الاتصال الشخصية مع توفير طريقة واضحة لإيقاف تلقيها.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 0.99,
+            "evidence": "لا يحق للمستخدم طلب الاطلاع على السجلات الرقمية الخاصة به أو تعديلها، كما لا تقبل الشركة أي طلبات لحذف أو إتلاف البيانات",
+            "reason": "The clause explicitly denies data subjects their statutory rights to access, correct, and request destruction of their personal data.",
+            "source": "PDPL Art. 4",
+            "clause": "باعتبار أن قواعد البيانات الخاصة بالمنصة تشكل أصلاً تجارياً مملوكاً بالكامل للشركة، فإنه لا يحق للمستخدم طلب الاطلاع على السجلات الرقمية الخاصة به أو تعديلها، كما لا تقبل الشركة أي طلبات لحذف أو إتلاف البيانات المحفوظة في خوادمها مهما كانت الظروف.",
+            "fix": "يحق للمستخدم الاطلاع على سجلساته الرقمية وتعديلها أو طلب إتلافها وفقاً للأنظمة ذات الصلة، مع الحفاظ على حقوق الملكية الفكرية والأصول التجارية للشركة.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 0.99,
+            "evidence": "لا تقبل الشركة أي طلبات لحذف أو إتلاف البيانات المحفوظة في خوادمها مهما كانت الظروف",
+            "reason": "The company unlawfully reserves the right never to delete or destroy personal data under any circumstances, violating retention rules.",
+            "source": "PDPL Art. 18",
+            "clause": "باعتبار أن قواعد البيانات الخاصة بالمنصة تشكل أصلاً تجارياً مملوكاً بالكامل للشركة، فإنه لا يحق للمستخدم طلب الاطلاع على السجلات الرقمية الخاصة به أو تعديلها، كما لا تقبل الشركة أي طلبات لحذف أو إتلاف البيانات المحفوظة في خوادمها مهما كانت الظروف.",
+            "fix": "باعتبار أن قواعد البيانات الخاصة بالمنصة تشكل أصلاً تجارياً مملوكاً بالكامل للشركة، فإنه لا يحق للمستخدم طلب الاطلاع على السجلات الرقمية الخاصة به أو تعديلها، وتلتزم الشركة بحذف أو إتلاف البيانات المحفوظة في خوادمها دون تأخير غير مبرر متى انتفت الحاجة إليها لغرض جمعها، ما لم يفرض متطلب احتفاظ قانوني أو دعوى قضائية قائمة خلاف ذلك.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "لأي غرض تراه الإدارة مناسباً",
+            "reason": "The clause allows processing personal data for any purpose determined by management, violating purpose limitation.",
+            "source": "PDPL Art. 10",
+            "clause": "تحتفظ شركة الأفق الرقمي بحق استخدام البيانات والمعلومات المجمعة من المستخدمين لأي غرض تراه الإدارة مناسباً لدعم نمو العمل وتحسين تجربة المستخدمين، بما في ذلك الأغراض التشغيلية المستقبلية التي قد يتم استحداثها لاحقاً دون الحاجة لتقديم إشعار مسبق أو الحصول على موافقة إضافية.",
+            "fix": "يحق لشركة الأفق الرقمي معالجة البيانات والمعلومات المجمعة من المستخدمين للأغراض التي جُمعت من أجلها لدعم نمو العمل وتحسين تجربة المستخدمين، باستثناء الحالات المحددة المنصوص عليها في النظام.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "دون الحاجة لتقديم إشعار مسبق أو الحصول على موافقة إضافية",
+            "reason": "The clause permits changing processing purposes or reusing data without obtaining additional consent.",
+            "source": "PDPL Art. 5",
+            "clause": "تحتفظ شركة الأفق الرقمي بحق استخدام البيانات والمعلومات المجمعة من المستخدمين لأي غرض تراه الإدارة مناسباً لدعم نمو العمل وتحسين تجربة المستخدمين، بما في ذلك الأغراض التشغيلية المستقبلية التي قد يتم استحداثها لاحقاً دون الحاجة لتقديم إشعار مسبق أو الحصول على موافقة إضافية.",
+            "fix": "تحتفظ شركة الأفق الرقمي بحق استخدام البيانات والمعلومات المجمعة من المستخدمين للأغراض التي تم جمع البيانات من أجلها لدعم نمو العمل وتحسين تجربة المستخدمين، وفقاً لما تسمح به الأنظمة والقوانين ذات الصلة، مع حق المستخدم في سحب موافقته في أي وقت.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=privacy_policy clauses=9 with_candidates=8"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.03,
+        "llm_calls": 16
+      }
+    },
+    {
+      "doc_id": "dev_023",
+      "score": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {},
+        "traps": 0,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 0,
+        "grounded": 0,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.0,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "dev_023",
+        "doc_type_guess": "unknown",
+        "findings": [],
+        "escalations": [],
+        "trace": [
+          "doc_type=unknown clauses=8 with_candidates=4"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.0,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "dev_024",
+      "score": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R09": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 1,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 1,
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 10
+      },
+      "output": {
+        "doc_id": "dev_024",
+        "doc_type_guess": "vendor_contract",
+        "findings": [
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "retain all processed information and records within its active archives for an indefinite operational duration to support historical business analytics, trend forecasting, and future commercial reference",
+            "reason": "Retaining personal data indefinitely for future commercial and analytical references violates the purpose limitation principle.",
+            "source": "PDPL Art. 10",
+            "clause": "Upon termination of this Agreement, the Vendor shall retain all processed information and records within its active archives for an indefinite operational duration to support historical business analytics, trend forecasting, and future commercial reference.",
+            "fix": "Upon termination of this Agreement, the Vendor shall only retain processed information and records within its active archives for historical business analytics, trend forecasting, and future commercial reference to the extent permitted by applicable law.",
+            "fix_verified": false
+          },
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "retain all processed information and records within its active archives for an indefinite operational duration",
+            "reason": "Indefinite retention of personal data after agreement termination violates the requirement to destroy data once no longer necessary.",
+            "source": "PDPL Art. 18",
+            "clause": "Upon termination of this Agreement, the Vendor shall retain all processed information and records within its active archives for an indefinite operational duration to support historical business analytics, trend forecasting, and future commercial reference.",
+            "fix": "Upon termination of this Agreement, the Vendor shall destroy all processed information and records without undue delay once no longer necessary for the purpose of collection, unless a legal retention requirement or pending judicial case applies.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R09",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "The Vendor reserves the right to engage any third-party subcontractors for data processing activities without prior notification or approval from the Client, and the Client shall have no right to conduct on-site audits or compliance reviews",
+            "reason": "The clause violates PDPL Art. 8 by allowing unrestricted subcontracting without approval and forbidding the controller from auditing or monitoring the processor.",
+            "source": "PDPL Art. 8",
+            "clause": "The Vendor reserves the right to engage any third-party subcontractors for data processing activities without prior notification or approval from the Client, and the Client shall have no right to conduct on-site audits or compliance reviews of the Vendor's operational facilities.",
+            "fix": "The Vendor may engage third-party subcontractors for data processing activities subject to prior notification and approval from the Client, and the Client shall have the right to conduct audits or compliance reviews of the Vendor's operational facilities to monitor compliance.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [
+          {
+            "rule_id": "R02",
+            "evidence": "retain all processed information and records within its active archives for an indefinite operational duration to support historical business analytics, trend forecasting, and future commercial reference",
+            "reason": "fix failed after 2 attempts",
+            "draft_fix": "Upon termination of this Agreement, the Vendor shall only retain processed information and records within its active archives for historical business analytics, trend forecasting, and future commercial reference to the extent permitted by applicable law."
+          }
+        ],
+        "trace": [
+          "doc_type=vendor_contract clauses=11 with_candidates=11"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 10
+      }
+    },
+    {
+      "doc_id": "dev_025",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R05": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R03": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R10": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 2,
+        "subtle_found": 2,
+        "unverified": 0,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.02,
+        "llm_calls": 8
+      },
+      "output": {
+        "doc_id": "dev_025",
+        "doc_type_guess": "mobile_app_terms",
+        "findings": [
+          {
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "records once submitted become a permanent part of the corporate database and are not subject to subsequent retrieval requests, manual modifications, or administrative erasure.",
+            "reason": "The clause explicitly denies the data subject's statutory rights to access, correct, and request destruction or erasure of their personal data.",
+            "source": "PDPL Art. 4",
+            "clause": "In order to maintain administrative stability and operational continuity across our human resources archives, records once submitted become a permanent part of the corporate database and are not subject to subsequent retrieval requests, manual modifications, or administrative erasure.",
+            "fix": "In order to maintain administrative stability and operational continuity across our human resources archives, records once submitted become a part of the corporate database, while remaining subject to the data subject's rights to be informed of the legal basis and purpose of collection, to access their personal data, to request correction, completion, or update, and to request destruction of data no longer needed.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R03",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "current marital status, household size, and comprehensive familial lineage records.",
+            "reason": "Collecting marital status, household size, and comprehensive familial lineage records for a standard job application violates data minimisation as these details are excessively intrusive and unnecessary for the purpose.",
+            "source": "PDPL Art. 11(3)",
+            "clause": "To ensure a comprehensive evaluation of organizational fit and cultural alignment within our corporate ecosystem, applicants are kindly requested to provide supplementary background details, including current marital status, household size, and comprehensive familial lineage records.",
+            "fix": "To ensure a comprehensive evaluation of organizational fit and cultural alignment within our corporate ecosystem, applicants are kindly requested to provide supplementary background details, including current professional certifications and relevant work history.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "Any disclosed health conditions, medical histories, or religious affiliation details shall be integrated into our internal profiling algorithms to optimize targeted staff engagement campaigns",
+            "reason": "Sensitive and health data cannot be used for profiling or marketing purposes under the Saudi PDPL.",
+            "source": "PDPL Art. 1(11), 1(13), 6(4), 23, 26",
+            "clause": "Any disclosed health conditions, medical histories, or religious affiliation details shall be integrated into our internal profiling algorithms to optimize targeted staff engagement campaigns and will be made accessible across all operational divisions for strategic workforce deployment.",
+            "fix": "Any disclosed health conditions, medical histories, or religious affiliation details shall not be integrated into our internal profiling algorithms or used for targeted staff engagement campaigns, and health data access shall be limited strictly to those within operational divisions who need it for strategic workforce deployment.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=mobile_app_terms clauses=13 with_candidates=10"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.02,
+        "llm_calls": 8
+      }
+    },
+    {
+      "doc_id": "dev_026",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R01": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R02": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R11": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 2,
+        "subtle_found": 2,
+        "unverified": 0,
+        "findings": 4,
+        "grounded": 4,
+        "ambiguous": 1,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.02,
+        "llm_calls": 10
+      },
+      "output": {
+        "doc_id": "dev_026",
+        "doc_type_guess": "privacy_policy",
+        "findings": [
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "ولا تقبل طلبات سحب هذه الموافقة طالما كان الحساب نشطاً وقائماً",
+            "reason": "The clause restricts the data subject's right to withdraw consent while the account remains active.",
+            "source": "PDPL Art. 5",
+            "clause": "يعتبر استمرار العميل في تصفح المنصة أو الاستفادة من مزاياها بمثابة موافقة تامة ونهائية على آليات معالجة البيانات المعتمدة، ولا تقبل طلبات سحب هذه الموافقة طالما كان الحساب نشطاً وقائماً.",
+            "fix": "يعتبر استمرار العميل في تصفح المنصة أو الاستفادة من مزاياها بمثابة موافقة تامة ونهائية على آليات معالجة البيانات المعتمدة، مع حق العميل في سحب هذه الموافقة في أي وقت.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "لتلبية المتطلبات التشغيلية المستقبلية التي قد تظهر تباعاً دون الحاجة لإشعار مسبق",
+            "reason": "The clause permits the use of collected data for unspecified future purposes without informing the data subject.",
+            "source": "PDPL Art. 10",
+            "clause": "تحتفظ الشركة بحق الاستفادة من كافة المعلومات والبيانات التي يتم جمعها خلال استخدام الخدمة لأغراض تطوير الأعمال، وتحسين جودة التجربة، وتلبية المتطلبات التشغيلية المستقبلية التي قد تظهر تباعاً دون الحاجة لإشعار مسبق.",
+            "fix": "تحتفظ الشركة بحق الاستفادة من كافة المعلومات والبيانات التي يتم جمعها خلال استخدام الخدمة لأغراض تطوير الأعمال، وتحسين جودة التجربة، وتلبية المتطلبات التشغيلية المحددة في النظام.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R07",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "وفقاً لما تقدره الإدارة وحسب ما تقتضيه الظروف الفنية للواقعة.",
+            "reason": "The clause makes breach notification subject to administrative discretion and technical circumstances rather than mandatory statutory timelines and requirements.",
+            "source": "PDPL Art. 20; Implementing Regulations (72-hour notification, verify article)",
+            "clause": "في حال وقوع أي حادثة تقنية تؤثر على سلامة الأنظمة أو البيانات، تتخذ الشركة الإجراءات اللازمة للتعامل مع الموقف وإبلاغ الجهات المعنية وذوي الشأن وفقاً لما تقدره الإدارة وحسب ما تقتضيه الظروف الفنية للواقعة.",
+            "fix": "في حال وقوع أي خرق أو إتلاف أو وصول غير قانوني للبيانات الشخصية، تلتزم الشركة بإبلاغ الجهة المختصة فور علمها بالواقعة خلال 72 ساعة، وإبلاغ صاحب البيانات في حال ترتب على ذلك ضرر ببياناته أو حقوقه.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R11",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "يفترض النظام بخصوص القنوات الشخصية أن استخدام المنصة يشكل تفويضاً ضمنياً لتلقي العروض الترويجية والإشعارات الإعلانية",
+            "reason": "The clause assumes implicit consent for promotional offers and direct marketing through platform use, violating the requirement for prior affirmative consent.",
+            "source": "PDPL Art. 25",
+            "clause": "يفترض النظام بخصوص القنوات الشخصية أن استخدام المنصة يشكل تفويضاً ضمنياً لتلقي العروض الترويجية والإشعارات الإعلانية من الشركة والجهات المرتبطة بها، مع توفير خيارات إعدادات الحساب التي تتيح للمستخدم تحديث تفضيلات الاتصال بحسب ما ترتاه الإدارة ملائماً.",
+            "fix": "تُرسل المواد الإعلانية أو الترويجية عبر القنوات الشخصية بناءً على موافقة مسبقة من المستخدم، مع توفير وسيلة واضحة لإيقاف تلقيها.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=privacy_policy clauses=14 with_candidates=10"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.02,
+        "llm_calls": 10
+      }
+    },
+    {
+      "doc_id": "dev_027",
+      "score": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {},
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 0,
+        "grounded": 0,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.0,
+        "llm_calls": 2
+      },
+      "output": {
+        "doc_id": "dev_027",
+        "doc_type_guess": "employment_form",
+        "findings": [],
+        "escalations": [],
+        "trace": [
+          "doc_type=employment_form clauses=8 with_candidates=7"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.0,
+        "llm_calls": 2
+      }
+    },
+    {
+      "doc_id": "dev_028",
+      "score": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {},
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 0,
+        "grounded": 0,
+        "ambiguous": 1,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 2
+      },
+      "output": {
+        "doc_id": "dev_028",
+        "doc_type_guess": "vendor_contract",
+        "findings": [],
+        "escalations": [],
+        "trace": [
+          "doc_type=vendor_contract clauses=9 with_candidates=7"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 2
+      }
+    },
+    {
+      "doc_id": "dev_029",
+      "score": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R07": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 1,
+        "grounded": 1,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 3
+      },
+      "output": {
+        "doc_id": "dev_029",
+        "doc_type_guess": "unknown",
+        "findings": [
+          {
+            "rule_id": "R07",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "تحتفظ الشركة بالحق المطلق والتقديري الكامل في تقييم الموقف وتحديد ما إذا كان إشعار الجهات المختصة أو المستخدمين المتضررين ملائماً للظروف، ودون الالتزام بأي أطر زمنية محددة؛ كما لا يحمل أي طرف معالج للبيانات التزاماً بالإبلاغ الفوري عن تلك الحوادث.",
+            "reason": "The clause makes breach notification entirely discretionary and ignores statutory deadlines and processor reporting obligations under PDPL Art. 20.",
+            "source": "PDPL Art. 20; Implementing Regulations (72-hour notification, verify article)",
+            "clause": "في حال وقوع أي اختراق أمني أو وصول غير مصرح به للبيانات، تحتفظ الشركة بالحق المطلق والتقديري الكامل في تقييم الموقف وتحديد ما إذا كان إشعار الجهات المختصة أو المستخدمين المتضررين ملائماً للظروف، ودون الالتزام بأي أطر زمنية محددة؛ كما لا يحمل أي طرف معالج للبيانات التزاماً بالإبلاغ الفوري عن تلك الحوادث.",
+            "fix": "في حال وقوع أي اختراق أمني أو وصول غير مصرح به للبيانات الشخصية أو تلفها، تلتزم الشركة بإشعار الجهة المختصة فور العلم بذلك، وبما لا يتجاوز 72 ساعة، وإشعار صاحب البيانات إذا كان من شأن الاختراق الإضرار ببياناته أو حقوقه، كما يلتزم أي معالج للبيانات بإبلاغ الشركة فور وقوع الحادث.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=unknown clauses=8 with_candidates=4"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 3
+      }
+    },
+    {
+      "doc_id": "dev_030",
+      "score": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R05": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 0,
+        "findings": 2,
+        "grounded": 2,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 5
+      },
+      "output": {
+        "doc_id": "dev_030",
+        "doc_type_guess": "employment_form",
+        "findings": [
+          {
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "ولا يحق للمتقدم المطالبة بالاطلاع على السجلات الخاصة بملفه الوظيفي أو طلب تعديلها أو استرجاع المستندات المقدمة",
+            "reason": "The clause explicitly denies data subjects their legal rights to access, correct, and request destruction of their personal data.",
+            "source": "PDPL Art. 4",
+            "clause": "تخضع كافة البيانات المقدمة من قبل المتقدم لتقدير الشركة المطلق، ولا يحق للمتقدم المطالبة بالاطلاع على السجلات الخاصة بملفه الوظيفي أو طلب تعديلها أو استرجاع المستندات المقدمة إلا وفقاً لما تقره الإدارة الداخلية وحدها.",
+            "fix": "يحق للمتقدم الاطلاع على بياناته الشخصية وطلب تصحيحها أو اكتمالها أو تحديثها أو طلب إتلافها إذا لم تعد مسرودة للغرض الذي جُمعت من أجله، وذلك وفقاً للأنظمة واللوائح الداخلية للشركة.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 0.99,
+            "evidence": "لفترات زمنية غير محدودة بغرض بناء قاعدة بيانات شاملة للكوادر المحتملة، دون التزام بإتلافها نهائياً",
+            "reason": "The clause mandates keeping personal data for an unlimited period without obligation to destroy it, violating retention limits.",
+            "source": "PDPL Art. 18",
+            "clause": "تحتفظ شركة ركائز التقنية بجميع مستندات وبیانات المتقدمين في أرشيفها الرقمي والورقي لفترات زمنية غير محدودة بغرض بناء قاعدة بيانات شاملة للكوادر المحتملة، دون التزام بإتلافها نهائياً.",
+            "fix": "تلتزم شركة ركائز التقنية بإتلاف مستندات وبيانات المتقدمين دون undue delay بمجرد انتفاء الغرض من جمعها، ما لم توجد متطلبات احتفاظ قانونية أو نزاع قضائي قائم.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=employment_form clauses=9 with_candidates=6"
+        ],
+        "cost_usd": 0.0,
+        "latency_s": 0.01,
+        "llm_calls": 5
+      }
+    }
+  ]
+}

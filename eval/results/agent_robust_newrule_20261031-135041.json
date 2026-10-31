@@ -1,0 +1,2855 @@
+{
+  "system": "agent",
+  "split": "robust_newrule",
+  "include_hidden": false,
+  "limit": null,
+  "models": {
+    "small": "gemini/gemini-3.5-flash-lite",
+    "large": "gemini/gemini-3.5-flash-lite",
+    "generator": "gemini/gemini-3.5-flash-lite",
+    "judge_eval": "gemini/gemini-3.5-flash-lite"
+  },
+  "metrics": {
+    "precision": 1.0,
+    "recall": 0.167,
+    "f1": 0.286,
+    "tp": 1,
+    "fp": 0,
+    "fn": 5,
+    "subtle_recall": 0.0,
+    "trap_fp_rate": 0.0,
+    "grounding_rate": 1.0,
+    "ambiguous_escalation_rate": 0.0,
+    "escalations_per_doc": 0.8,
+    "cost_per_doc_usd": 0.01574,
+    "latency_per_doc_s": 56.54,
+    "llm_calls_per_doc": 4.6,
+    "docs": 5,
+    "per_rule_f1": {
+      "R06": 1.0,
+      "R08": 0.0
+    }
+  },
+  "errors": 0,
+  "wall_time_s": 148.0,
+  "llm_totals": {
+    "calls": 23,
+    "cache_hits": 0,
+    "prompt_tokens": 57054,
+    "completion_tokens": 24629,
+    "cost_usd": 0.078689
+  },
+  "per_doc": [
+    {
+      "doc_id": "robust_newrule_001",
+      "score": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "per_rule": {
+          "R08": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 0,
+        "grounded": 0,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.019499,
+        "latency_s": 16.38,
+        "llm_calls": 2
+      },
+      "output": {
+        "doc_id": "robust_newrule_001",
+        "doc_type_guess": "vendor_contract",
+        "findings": [],
+        "escalations": [],
+        "trace": [
+          "doc_type=vendor_contract clauses=9 with_candidates=7"
+        ],
+        "assessments": [
+          {
+            "clause_id": "k1",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تعتبر كافة الإشعارات والمراسلات المتبادلة بين الطرفين صحيحة ونافذة",
+            "reason": "This clause deals with official notices and communications between parties, not privacy policy contents."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تعتبر كافة الإشعارات والمراسلات المتبادلة بين الطرفين صحيحة ونافذة",
+            "reason": "The clause does not govern personal data processing or consent mechanisms."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تعتبر كافة الإشعارات والمراسلات المتبادلة بين الطرفين صحيحة ونافذة",
+            "reason": "The clause does not address data processing purposes."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تعتبر كافة الإشعارات والمراسلات المتبادلة بين الطرفين صحيحة ونافذة",
+            "reason": "The clause does not specify data collection volumes or minimisation."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تعتبر كافة الإشعارات والمراسلات المتبادلة بين الطرفين صحيحة ونافذة",
+            "reason": "The clause is about communication channels and does not restrict data subject rights."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تعتبر كافة الإشعارات والمراسلات المتبادلة بين الطرفين صحيحة ونافذة",
+            "reason": "The clause does not concern data retention or destruction periods."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تعتبر كافة الإشعارات والمراسلات المتبادلة بين الطرفين صحيحة ونافذة",
+            "reason": "The clause does not address data breach notification requirements."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تعتبر كافة الإشعارات والمراسلات المتبادلة بين الطرفين صحيحة ونافذة",
+            "reason": "The clause relates to administrative correspondence rather than processor guarantees."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تعتبر كافة الإشعارات والمراسلات المتبادلة بين الطرفين صحيحة ونافذة",
+            "reason": "The clause does not involve sensitive or health data processing."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تعتبر كافة الإشعارات والمراسلات المتبادلة بين الطرفين صحيحة ونافذة",
+            "reason": "The clause concerns contractual notices rather than direct marketing."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يحق لمزود الخدمة تخزين ومعالجة ونقل البيانات",
+            "reason": "This clause deals with operational data storage and transfer rather than privacy policy disclosures."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يحق لمزود الخدمة تخزين ومعالجة ونقل البيانات",
+            "reason": "The clause does not explicitly deny data subject rights under Article 4."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.85,
+            "evidence": "دون الحاجة إلى إشعار مسبق للعميل ودون توفير أي ضمانات أو تقييمات إضافية",
+            "reason": "While lacking prior notice or extra assessments might touch on transparency, it falls under international data transfer governance rather than direct absence of consent."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تخزين ومعالجة ونقل البيانات المتعلقة بهذه الاتفاقية",
+            "reason": "Processing is explicitly tied to the agreement purposes."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تخزين ومعالجة ونقل البيانات المتعلقة بهذه الاتفاقية",
+            "reason": "The clause does not mandate excessive data collection."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تخزين ومعالجة ونقل البيانات",
+            "reason": "The clause does not address data retention limits or indefinite keeping."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تخزين ومعالجة ونقل البيانات",
+            "reason": "The clause does not govern security breach notifications."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "ودون توفير أي ضمانات أو تقييمات إضافية لمستوى الحماية في تلك الوجهات",
+            "reason": "Refers to protection levels in cross-border transfers rather than processor selection guarantees."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تخزين ومعالجة ونقل البيانات المتعلقة بهذه الاتفاقية",
+            "reason": "No mention or collection of sensitive or health data."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تخزين ومعالجة ونقل البيانات",
+            "reason": "The clause has no relation to direct marketing."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تظل كافة حقوق الملكية الفكرية والعلامات التجارية وبرمجيات النظم والتصميمات الخاصة بمزود الخدمة ملكاً خالصاً له",
+            "reason": "The clause governs intellectual property rights, not data subject rights."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تظل كافة حقوق الملكية الفكرية والعلامات التجارية وبرمجيات النظم والتصميمات الخاصة بمزود الخدمة ملكاً خالصاً له",
+            "reason": "The clause does not involve personal data processing purposes."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تظل كافة حقوق الملكية الفكرية والعلامات التجارية وبرمجيات النظم والتصميمات الخاصة بمزود الخدمة ملكاً خالصاً له",
+            "reason": "The clause is about software and IP, not data processing consent."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تظل كافة حقوق الملكية الفكرية والعلامات التجارية وبرمجيات النظم والتصميمات الخاصة بمزود الخدمة ملكاً خالصاً له",
+            "reason": "The clause does not relate to data minimisation."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تظل كافة حقوق الملكية الفكرية والعلامات التجارية وبرمجيات النظم والتصميمات الخاصة بمزود الخدمة ملكاً خالصاً له",
+            "reason": "The clause does not concern privacy policy contents."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تظل كافة حقوق الملكية الفكرية والعلامات التجارية وبرمجيات النظم والتصميمات الخاصة بمزود الخدمة ملكاً خالصاً له",
+            "reason": "The clause is unrelated to data retention and destruction."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تظل كافة حقوق الملكية الفكرية والعلامات التجارية وبرمجيات النظم والتصميمات الخاصة بمزود الخدمة ملكاً خالصاً له",
+            "reason": "The clause does not cover security breach reporting."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تظل كافة حقوق الملكية الفكرية والعلامات التجارية وبرمجيات النظم والتصميمات الخاصة بمزود الخدمة ملكاً خالصاً له",
+            "reason": "The clause addresses intellectual property, not processor guarantees."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تظل كافة حقوق الملكية الفكرية والعلامات التجارية وبرمجيات النظم والتصميمات الخاصة بمزود الخدمة ملكاً خالصاً له",
+            "reason": "No sensitive or health data is mentioned."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تظل كافة حقوق الملكية الفكرية والعلامات التجارية وبرمجيات النظم والتصميمات الخاصة بمزود الخدمة ملكاً خالصاً له",
+            "reason": "The clause has no connection to direct marketing."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "يلتزم مزود الخدمة بمعالجة البيانات حصراً للأغراض التشغيلية المتفق عليها مسبقاً",
+            "reason": "The clause correctly limits data processing to the agreed operational purposes."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يلتزم مزود الخدمة بمعالجة البيانات حصراً للأغراض التشغيلية المتفق عليها مسبقاً",
+            "reason": "The clause does not restrict data subject rights."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يلتزم مزود الخدمة بمعالجة البيانات حصراً للأغراض التشغيلية المتفق عليها مسبقاً",
+            "reason": "Processing is restricted to agreed purposes, aligning with consent."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يلتزم مزود الخدمة بمعالجة البيانات حصراً للأغراض التشغيلية المتفق عليها مسبقاً",
+            "reason": "Does not require excessive data."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يلتزم مزود الخدمة بمعالجة البيانات حصراً للأغراض التشغيلية المتفق عليها مسبقاً",
+            "reason": "Does not concern privacy policy disclosure contents."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يلتزم مزود الخدمة بمعالجة البيانات حصراً للأغراض التشغيلية المتفق عليها مسبقاً",
+            "reason": "Does not address data destruction timelines."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يلتزم مزود الخدمة بمعالجة البيانات حصراً للأغراض التشغيلية المتفق عليها مسبقاً",
+            "reason": "Does not concern breach notifications."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يلتزم مزود الخدمة بمعالجة البيانات حصراً للأغراض التشغيلية المتفق عليها مسبقاً",
+            "reason": "Defines processor processing limits appropriately."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يلتزم مزود الخدمة بمعالجة البيانات حصراً للأغراض التشغيلية المتفق عليها مسبقاً",
+            "reason": "Does not involve sensitive or health data."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يلتزم مزود الخدمة بمعالجة البيانات حصراً للأغراض التشغيلية",
+            "reason": "Does not involve direct marketing."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تستمر هذه الاتفاقية لمدة عام كامل تبدأ من تاريخ توقيعها، وتجدد تلقائياً",
+            "reason": "The clause deals with contract duration and renewal, not privacy policies."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تستمر هذه الاتفاقية لمدة عام كامل تبدأ من تاريخ توقيعها، وتجدد تلقائياً",
+            "reason": "Contract duration is distinct from personal data retention rules."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تستمر هذه الاتفاقية لمدة عام كامل تبدأ من تاريخ توقيعها، وتجدد تلقائياً",
+            "reason": "Does not affect data processing consent."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تستمر هذه الاتفاقية لمدة عام كامل",
+            "reason": "Does not concern processing purposes."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تستمر هذه الاتفاقية لمدة عام كامل",
+            "reason": "Does not relate to data minimisation."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تستمر هذه الاتفاقية لمدة عام كامل",
+            "reason": "Does not restrict data subject rights."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تستمر هذه الاتفاقية لمدة عام كامل",
+            "reason": "Does not concern breach notification."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تستمر هذه الاتفاقية لمدة عام كامل",
+            "reason": "Does not concern processor guarantees."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تستمر هذه الاتفاقية لمدة عام كامل",
+            "reason": "Does not involve sensitive data."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تستمر هذه الاتفاقية لمدة عام كامل",
+            "reason": "Does not involve direct marketing."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تُقاضى الأتعاب المالية نظير تقديم الخدمات المذكورة وفقاً للجداول الزمنية والفواتير",
+            "reason": "The clause governs financial fees and invoices, not data subject rights."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تُقاضى الأتعاب المالية نظير تقديم الخدمات المذكورة وفقاً للجداول الزمنية والفواتير",
+            "reason": "The clause does not regulate data processing consent."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تُقاضى الأتعاب المالية نظير تقديم الخدمات المذكورة وفقاً للجداول الزمنية والفواتير",
+            "reason": "The clause is about financial payments, not data purposes."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تُقاضى الأتعاب المالية نظير تقديم الخدمات المذكورة وفقاً للجداول الزمنية والفواتير",
+            "reason": "Does not involve data collection volumes."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تُقاضى الأتعاب المالية نظير تقديم الخدمات المذكورة وفقاً للجداول الزمنية والفواتير",
+            "reason": "Does not concern privacy policy contents."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تُقاضى الأتعاب المالية نظير تقديم الخدمات المذكورة وفقاً للجداول الزمنية والفواتير",
+            "reason": "Financial invoicing is separate from personal data retention."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تُقاضى الأتعاب المالية نظير تقديم الخدمات المذكورة وفقاً للجداول الزمنية والفواتير",
+            "reason": "Does not involve security breach notifications."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تُقاضى الأتعاب المالية نظير تقديم الخدمات المذكورة وفقاً للجداول الزمنية والفواتير",
+            "reason": "Does not involve processor guarantees."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تُقاضى الأتعاب المالية نظير تقديم الخدمات المذكورة وفقاً للجداول الزمنية والفواتير",
+            "reason": "Does not involve sensitive data."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تُقاضى الأتعاب المالية نظير تقديم الخدمات المذكورة وفقاً للجداول الزمنية والفواتير",
+            "reason": "Does not involve direct marketing."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "تخضع هذه الاتفاقية وتفسر وفقاً لأنظمة المملكة العربية السعودية",
+            "reason": "The clause governs applicable law and jurisdiction, not sensitive data processing."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "تخضع هذه الاتفاقية وتفسر وفقاً لأنظمة المملكة العربية السعودية",
+            "reason": "The clause deals with jurisdiction and applicable law rather than personal data consent."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "تخضع هذه الاتفاقية وتفسر وفقاً لأنظمة المملكة العربية السعودية",
+            "reason": "The clause concerns governing law and does not affect purpose limitation."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "تخضع هذه الاتفاقية وتفسر وفقاً لأنظمة المملكة العربية السعودية",
+            "reason": "The clause specifies jurisdiction and governing law, unrelated to data minimisation."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "تخضع هذه الاتفاقية وتفسر وفقاً لأنظمة المملكة العربية السعودية",
+            "reason": "The clause addresses legal jurisdiction rather than privacy policy disclosures."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "تخضع هذه الاتفاقية وتفسر وفقاً لأنظمة المملكة العربية السعودية",
+            "reason": "The clause relates to judicial jurisdiction and does not restrict data subject rights."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "تخضع هذه الاتفاقية وتفسر وفقاً لأنظمة المملكة العربية السعودية",
+            "reason": "The clause establishes jurisdiction and has no impact on data retention or destruction."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "تخضع هذه الاتفاقية وتفسر وفقاً لأنظمة المملكة العربية السعودية",
+            "reason": "The clause is about governing law and dispute resolution, not data breach notifications."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "تخضع هذه الاتفاقية وتفسر وفقاً لأنظمة المملكة العربية السعودية",
+            "reason": "The clause specifies the governing law and courts, not processor guarantees."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "تخضع هذه الاتفاقية وتفسر وفقاً لأنظمة المملكة العربية السعودية",
+            "reason": "The clause pertains to legal jurisdiction rather than direct marketing rules."
+          }
+        ],
+        "clauses": [
+          {
+            "id": "k1",
+            "text": "تعتبر كافة الإشعارات والمراسلات المتبادلة بين الطرفين صحيحة ونافذة إذا تم إرسالها عبر البريد الإلكتروني الرسمي المعتمد لكل منهما في ديباجة هذه الاتفاقية.",
+            "rules": [
+              "R04",
+              "R01",
+              "R02",
+              "R03",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k2",
+            "text": "يحق لمزود الخدمة تخزين ومعالجة ونقل البيانات المتعلقة بهذه الاتفاقية إلى أي ولاية قضائية أو خوادم عالمية يختارها تشغيلياً دون الحاجة إلى إشعار مسبق للعميل ودون توفير أي ضمانات أو تقييمات إضافية لمستوى الحماية في تلك الوجهات.",
+            "rules": [
+              "R04",
+              "R05",
+              "R01",
+              "R02",
+              "R03",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k3",
+            "text": "تظل كافة حقوق الملكية الفكرية والعلامات التجارية وبرمجيات النظم والتصميمات الخاصة بمزود الخدمة ملكاً خالصاً له، ولا تمنح هذه الاتفاقية العميل أي حق سوى استخدام الخدمات محل التعاقد.",
+            "rules": [
+              "R05",
+              "R02",
+              "R01",
+              "R03",
+              "R04",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k4",
+            "text": "يلتزم مزود الخدمة بمعالجة البيانات حصراً للأغراض التشغيلية المتفق عليها مسبقاً، ويحق له حصراً استخدام البيانات الإحصائية المجمعة بعد إخفاء كافة العناصر المعرفة بالهوية لأغراض تطوير النظام وتحسين جودة الخدمة.",
+            "rules": [
+              "R02",
+              "R05",
+              "R01",
+              "R03",
+              "R04",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k5",
+            "text": "تستمر هذه الاتفاقية لمدة عام كامل تبدأ من تاريخ توقيعها، وتجدد تلقائياً لفترات مماثلة ما لم يقم أحد الطرفين بإشعار الطرف الآخر خطياً برغبته في عدم التجديد قبل ثلاثين يوماً على الأقل من تاريختهي.",
+            "rules": [
+              "R04",
+              "R06",
+              "R01",
+              "R02",
+              "R03",
+              "R05",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k6",
+            "text": "تُقاضى الأتعاب المالية نظير تقديم الخدمات المذكورة وفقاً للجداول الزمنية والفواتير الصادرة عن مزود الخدمة، وتلتزم الشركة بسداد المبالغ المستحقة خلال ثلاثين يوماً من تاريخ استلام الفطرة النظامية.",
+            "rules": [
+              "R05",
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k7",
+            "text": "تخضع هذه الاتفاقية وتفسر وفقاً لأنظمة المملكة العربية السعودية، وفي حال النزاع تختص الجهات القضائية المختصة بمدينة الرياض بالفصل فيه.",
+            "rules": [
+              "R10",
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R11"
+            ]
+          },
+          {
+            "id": "k8",
+            "text": "لا يتحمل أي من الطرفين المسؤولية تجاه الطرف الآخر عن أي أضرار غير مباشرة أو تبعية أو خسارة في الأرباح أو الإيرادات الناشئة عن تنفيذ هذه الاتفاقية.",
+            "rules": []
+          },
+          {
+            "id": "k9",
+            "text": "يقصد بالكلمات والعبارات الواردة في هذه الاتفاقية المعاني المعتادة لها في السياق التجاري والمهني، ما لم يقتضِ السياق خلاف ذلك أو تتطلب المعاني القانونية تفسيراً مختلفاً.",
+            "rules": []
+          }
+        ],
+        "cost_usd": 0.019499,
+        "latency_s": 16.38,
+        "llm_calls": 2
+      }
+    },
+    {
+      "doc_id": "robust_newrule_002",
+      "score": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "per_rule": {
+          "R08": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          }
+        },
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 3,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 3,
+        "cost_usd": 0.021941,
+        "latency_s": 101.76,
+        "llm_calls": 8
+      },
+      "output": {
+        "doc_id": "robust_newrule_002",
+        "doc_type_guess": "vendor_contract",
+        "findings": [
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.85,
+            "evidence": "يحق لمزود الخدمة تخزين ومعالجة ونقل البيانات إلى أي خوادم أو فروع تابعة له أو لشركائه في أي دولة حول العالم بحسب ما يراه مناسباً لعمله، وذلك دون الحاجة إلى إشعار الشركة",
+            "reason": "Granting the service provider unconditional rights to process and transfer data globally without notice or specific safeguards bypasses necessary consent and legal frameworks.",
+            "source": "PDPL Art. 5",
+            "clause": "يحق لمزود الخدمة تخزين ومعالجة ونقل البيانات إلى أي خوادم أو فروع تابعة له أو لشركائه في أي دولة حول العالم بحسب ما يراه مناسباً لعمله، وذلك دون الحاجة إلى إشعار الشركة ودون الالتزام بأي شروط أو ضمانات جغرافية أو تنظيمية محددة.",
+            "fix": "مع مراعاة أحكام النظام والحصول على موافقة العميل المسبقة، يحق لمزود الخدمة تخزين ومعالجة ونقل البيانات إلى خوادمه أو فروعه أو شركائه في أي دولة حول العالم بحسب ما يراه مناسباً لعمله، مع أحقية العميل في سحب موافقته في أي وقت.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.85,
+            "evidence": "يحق لمزود الخدمة تخزين ومعالجة ونقل البيانات إلى أي خوادم أو فروع تابعة له أو لشركائه في أي دولة حول العالم بحسب ما يراه مناسباً لعمله",
+            "reason": "Allowing processing in any location 'as deemed appropriate' without defined boundaries violates purpose limitation principles.",
+            "source": "PDPL Art. 10",
+            "clause": "يحق لمزود الخدمة تخزين ومعالجة ونقل البيانات إلى أي خوادم أو فروع تابعة له أو لشركائه في أي دولة حول العالم بحسب ما يراه مناسباً لعمله، وذلك دون الحاجة إلى إشعار الشركة ودون الالتزام بأي شروط أو ضمانات جغرافية أو تنظيمية محددة.",
+            "fix": "يحق لمزود الخدمة تخزين ومعالجة ونقل البيانات الشخصية إلى أي خوادم أو فروع تابعة له أو لشركائه في أي دولة حول العالم للأغراض التي جمعت من أجلها فحسب، وفقاً لما تسمح به الأنظمة والتشريعات السارية.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R09",
+            "verdict": "violation",
+            "confidence": 0.9,
+            "evidence": "ودون الالتزام بأي شروط أو ضمانات جغرافية أو تنظيمية محددة.",
+            "reason": "Explicitly waiving organizational and geographic guarantees for data processing directly violates processor and transfer obligations.",
+            "source": "PDPL Art. 8",
+            "clause": "يحق لمزود الخدمة تخزين ومعالجة ونقل البيانات إلى أي خوادم أو فروع تابعة له أو لشركائه في أي دولة حول العالم بحسب ما يراه مناسباً لعمله، وذلك دون الحاجة إلى إشعار الشركة ودون الالتزام بأي شروط أو ضمانات جغرافية أو تنظيمية محددة.",
+            "fix": "يحق لمزود الخدمة تخزين ومعالجة ونقل البيانات إلى خوادم أو فروع تابعة له أو لشركائه بحسب ما يراه مناسباً لعمله، وذلك بما يتوافق مع الأنظمة والقوانين المعمول بها والضمانات التنظيمية والجغرافية اللازمة.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [
+          {
+            "rule_id": "R04",
+            "evidence": "يحق لمزود الخدمة تخزين ومعالجة ونقل البيانات إلى أي خوادم أو فروع تابعة له أو لشركائه في أي دولة حول العالم بحسب ما يراه مناسباً لعمله، وذلك دون الحاجة إلى إشعار الشركة ودون الالتزام بأي شروط أو ضمانات جغرافية أو تنظيمية محددة.",
+            "reason": "judged unclear"
+          },
+          {
+            "rule_id": "R05",
+            "evidence": "يحق لمزود الخدمة تخزين ومعالجة ونقل البيانات إلى أي خوادم أو فروع تابعة له أو لشركائه في أي دولة حول العالم بحسب ما يراه مناسباً لعمله، وذلك دون الحاجة إلى إشعار الشركة ودون الالتزام بأي شروط أو ضمانات جغرافية أو تنظيمية محددة.",
+            "reason": "judged unclear"
+          },
+          {
+            "rule_id": "R07",
+            "evidence": "وذلك دون الحاجة إلى إشعار الشركة ودون الالتزام بأي شروط أو ضمانات جغرافية أو تنظيمية محددة.",
+            "reason": "judged unclear"
+          }
+        ],
+        "trace": [
+          "doc_type=vendor_contract clauses=11 with_candidates=7"
+        ],
+        "assessments": [
+          {
+            "clause_id": "k1",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تتقاضى الشركة نظير الخدمات المقدمة المبالغ المالية المحددة في جدول الرسوم الملحق بهذا العقد",
+            "reason": "The clause pertains to service fees and invoicing and does not restrict data subject rights."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "وتلتزم الجهة المستفيدة بسداد الفواتير خلال ثلاثين روزنامة من تاريخ إصدارها الرسمي.",
+            "reason": "This clause deals with payment terms and does not involve personal data processing or consent."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تتقاضى الشركة نظير الخدمات المقدمة المبالغ المالية المحددة في جدول الرسوم الملحق بهذا العقد",
+            "reason": "The clause governs financial terms and is irrelevant to purpose limitation rules."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "وتلتزم الجهة المستفيدة بسداد الفواتير خلال ثلاثين روزنامة من تاريخ إصدارها الرسمي.",
+            "reason": "The provision only addresses payment timelines and does not concern data minimization."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تتقاضى الشركة نظير الخدمات المقدمة المبالغ المالية المحددة في جدول الرسوم الملحق بهذا العقد",
+            "reason": "Financial terms do not conflict with privacy policy disclosure requirements."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "وتلتزم الجهة المستفيدة بسداد الفواتير خلال ثلاثين روزنامة من تاريخ إصدارها الرسمي.",
+            "reason": "Invoicing deadlines do not violate data retention or destruction rules."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تتقاضى الشركة نظير الخدمات المقدمة المبالغ المالية المحددة في جدول الرسوم الملحق بهذا العقد",
+            "reason": "The text relates purely to service payments and not data breach notifications."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "وتلتزم الجهة المستفيدة بسداد الفواتير خلال ثلاثين روزنامة من تاريخ إصدارها الرسمي.",
+            "reason": "The clause sets commercial payment terms and does not regulate processor guarantees."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تتقاضى الشركة نظير الخدمات المقدمة المبالغ المالية المحددة في جدول الرسوم الملحق بهذا العقد",
+            "reason": "Pricing and billing clauses do not involve sensitive or health data processing."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "وتلتزم الجهة المستفيدة بسداد الفواتير خلال ثلاثين روزنامة من تاريخ إصدارها الرسمي.",
+            "reason": "Invoice payment terms are unrelated to direct marketing rules."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تقتصر الشركة في تعاقداتها على اختيار معالجي بيانات ممن يقدمون الضمانات الكافية لتنفيذ المتطلبات التشغيلية",
+            "reason": "The clause establishes processor selection standards and does not restrict data subject rights."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "مع قيام الشركة بمتابعة وتفتيش أداء أولئك المعالجين بانتظام للتحقق من التزامهم المستمر بالمعايير المتفق عليها.",
+            "reason": "Monitoring processors complies with governance standards and does not breach consent rules."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تقتصر الشركة في تعاقداتها على اختيار معالجي بيانات ممن يقدمون الضمانات الكافية لتنفيذ المتطلبات التشغيلية",
+            "reason": "Focuses on processor due diligence rather than expanding data processing purposes."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تقتصر الشركة في تعاقداتها على اختيار معالجي بيانات ممن يقدمون الضمانات الكافية لتنفيذ المتطلبات التشغيلية",
+            "reason": "Processor vetting does not conflict with data minimization obligations."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "مع قيام الشركة بمتابعة وتفتيش أداء أولئك المعالجين بانتظام للتحقق من التزامهم المستمر بالمعايير المتفق عليها.",
+            "reason": "Inspecting processors is an administrative control and does not affect privacy policy publication rules."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تقتصر الشركة في تعاقداتها على اختيار معالجي بيانات ممن يقدمون الضمانات الكافية لتنفيذ المتطلبات التشغيلية",
+            "reason": "The clause sets vendor management rules without addressing data retention periods."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "مع قيام الشركة بمتابعة وتفتيش أداء أولئك المعالجين بانتظام للتحقق من التزامهم المستمر بالمعايير المتفق عليها.",
+            "reason": "Monitoring compliance supports operational oversight without violating breach notification duties."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "تقتصر الشركة في تعاقداتها على اختيار معالجي بيانات ممن يقدمون الضمانات الكافية لتنفيذ المتطلبات التشغيلية، مع قيام الشركة بمتابعة وتفتيش أداء أولئك المعالجين بانتظام",
+            "reason": "Directly aligns with the requirement to select processors providing guarantees and monitor their compliance."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تقتصر الشركة في تعاقداتها على اختيار معالجي بيانات ممن يقدمون الضمانات الكافية لتنفيذ المتطلبات التشغيلية",
+            "reason": "Processor standards do not specifically address or violate sensitive data rules."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تقتصر الشركة في تعاقداتها على اختيار معالجي بيانات ممن يقدمون الضمانات الكافية لتنفيذ المتطلبات التشغيلية",
+            "reason": "The clause does not govern direct marketing communications."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R04",
+            "verdict": "unclear",
+            "confidence": 0.7,
+            "evidence": "يحق لمزود الخدمة تخزين ومعالجة ونقل البيانات إلى أي خوادم أو فروع تابعة له أو لشركائه في أي دولة حول العالم بحسب ما يراه مناسباً لعمله، وذلك دون الحاجة إلى إشعار الشركة ودون الالتزام بأي شروط أو ضمانات جغرافية أو تنظيمية محددة.",
+            "reason": "Allowing cross-border transfer and storage globally without regulatory safeguards or notice creates ambiguity regarding compliance with data transfer and transparency requirements."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R05",
+            "verdict": "unclear",
+            "confidence": 0.7,
+            "evidence": "يحق لمزود الخدمة تخزين ومعالجة ونقل البيانات إلى أي خوادم أو فروع تابعة له أو لشركائه في أي دولة حول العالم بحسب ما يراه مناسباً لعمله، وذلك دون الحاجة إلى إشعار الشركة ودون الالتزام بأي شروط أو ضمانات جغرافية أو تنظيمية محددة.",
+            "reason": "Transferring data globally without specific constraints may obscure how data subjects can exercise their rights across jurisdictions."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.85,
+            "evidence": "يحق لمزود الخدمة تخزين ومعالجة ونقل البيانات إلى أي خوادم أو فروع تابعة له أو لشركائه في أي دولة حول العالم بحسب ما يراه مناسباً لعمله، وذلك دون الحاجة إلى إشعار الشركة",
+            "reason": "Granting the service provider unconditional rights to process and transfer data globally without notice or specific safeguards bypasses necessary consent and legal frameworks."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.85,
+            "evidence": "يحق لمزود الخدمة تخزين ومعالجة ونقل البيانات إلى أي خوادم أو فروع تابعة له أو لشركائه في أي دولة حول العالم بحسب ما يراه مناسباً لعمله",
+            "reason": "Allowing processing in any location 'as deemed appropriate' without defined boundaries violates purpose limitation principles."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "يحق لمزود الخدمة تخزين ومعالجة ونقل البيانات إلى أي خوادم أو فروع تابعة له أو لشركائه في أي دولة حول العالم",
+            "reason": "The clause addresses storage and transfer locations rather than excessive data collection amounts."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "يحق لمزود الخدمة تخزين ومعالجة ونقل البيانات إلى أي خوادم أو فروع تابعة له أو لشركائه في أي دولة حول العالم",
+            "reason": "The provision focuses on transfer and storage locations rather than establishing indefinite retention periods."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R07",
+            "verdict": "unclear",
+            "confidence": 0.7,
+            "evidence": "وذلك دون الحاجة إلى إشعار الشركة ودون الالتزام بأي شروط أو ضمانات جغرافية أو تنظيمية محددة.",
+            "reason": "Waiving notice and regulatory commitments could complicate breach reporting obligations down the chain."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R09",
+            "verdict": "violation",
+            "confidence": 0.9,
+            "evidence": "ودون الالتزام بأي شروط أو ضمانات جغرافية أو تنظيمية محددة.",
+            "reason": "Explicitly waiving organizational and geographic guarantees for data processing directly violates processor and transfer obligations."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "يحق لمزود الخدمة تخزين ومعالجة ونقل البيانات إلى أي خوادم أو فروع تابعة له أو لشركائه في أي دولة حول العالم",
+            "reason": "The clause does not specifically target or improperly process sensitive or health data."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يحق لمزود الخدمة تخزين ومعالجة ونقل البيانات إلى أي خوادم أو فروع تابعة له",
+            "reason": "The clause deals with data storage and infrastructure, not direct marketing."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يحتفظ كل طرف بكافة حقوق الملكية الفكرية الخاصة به والمطورة قبل أو خارج نطاق هذه الاتفاقية",
+            "reason": "Intellectual property reservation clauses do not affect data subject rights."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "ولا تمنح هذه الاتفاقية أي حق لأي طرف في استخدام العلامات التجارية للطرف الآخر دون إذن كتابي مسبق.",
+            "reason": "Restrictions on trademark usage are unrelated to personal data purpose limitations."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يحتفظ كل طرف بكافة حقوق الملكية الفكرية الخاصة به والمطورة قبل أو خارج نطاق هذه الاتفاقية",
+            "reason": "IP provisions do not impact personal data processing consent."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يحتفظ كل طرف بكافة حقوق الملكية الفكرية الخاصة به والمطورة قبل أو خارج نطاق هذه الاتفاقية",
+            "reason": "Intellectual property terms do not concern data minimization."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "ولا تمنح هذه الاتفاقية أي حق لأي طرف في استخدام العلامات التجارية للطرف الآخر دون إذن كتابي مسبق.",
+            "reason": "Trademark clauses do not conflict with privacy policy requirements."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يحتفظ كل طرف بكافة حقوق الملكية الفكرية الخاصة به والمطورة قبل أو خارج نطاق هذه الاتفاقية",
+            "reason": "IP rights reservation is unrelated to personal data retention and destruction."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "ولا تمنح هذه الاتفاقية أي حق لأي طرف في استخدام العلامات التجارية للطرف الآخر دون إذن كتابي مسبق.",
+            "reason": "Trademark usage rules are completely separate from data breach notification rules."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يحتفظ كل طرف بكافة حقوق الملكية الفكرية الخاصة به والمطورة قبل أو خارج نطاق هذه الاتفاقية",
+            "reason": "The clause covers intellectual property and does not pertain to processor guarantees."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يحتفظ كل طرف بكافة حقوق الملكية الفكرية الخاصة به والمطورة قبل أو خارج نطاق هذه الاتفاقية",
+            "reason": "IP clauses do not touch upon sensitive or health data processing."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "ولا تمنح هذه الاتفاقية أي حق لأي طرف في استخدام العلامات التجارية للطرف الآخر دون إذن كتابي مسبق.",
+            "reason": "Trademark rules are separate from direct marketing regulations."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تدخل هذه الاتفاقية حيز النفاذ اعتباراً من تاريخ التوقيع عليها من الطرفين وتستمر لمدة سنة ميلادية واحدة، وتجدد تلقائياً لمثلها ما لم يُشعِر أحد الطرفين الآخر برغبته في عدم التجدد قبل موعد الانتهاء بشهرين على الأقل.",
+            "reason": "Contract duration terms do not mandate indefinite personal data retention."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تدخل هذه الاتفاقية حيز النفاذ اعتباراً من تاريخ التوقيع عليها من الطرفين وتستمر لمدة سنة ميلادية واحدة",
+            "reason": "Contract validity terms do not violate data consent rules."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "وتجدد تلقائياً لمثلها ما لم يُشعِر أحد الطرفين الآخر برغبته في عدم التجدد قبل موعد الانتهاء بشهرين على الأقل.",
+            "reason": "Automatic contract renewal does not imply purpose limitation violations."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تدخل هذه الاتفاقية حيز النفاذ اعتباراً من تاريخ التوقيع عليها من الطرفين وتستمر لمدة سنة ميلادية واحدة",
+            "reason": "Contract duration is unrelated to data minimization."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "وتجدد تلقائياً لمثلها ما لم يُشعِر أحد الطرفين الآخر برغبته في عدم التجدد قبل موعد الانتهاء بشهرين على الأقل.",
+            "reason": "Renewal terms do not conflict with privacy policy disclosure requirements."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تدخل هذه الاتفاقية حيز النفاذ اعتباراً من تاريخ التوقيع عليها من الطرفين وتستمر لمدة سنة ميلادية واحدة",
+            "reason": "Duration clauses do not restrict data subject rights."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "ما لم يُشعِر أحد الطرفين الآخر برغبته في عدم التجدد قبل موعد الانتهاء بشهرين على الأقل.",
+            "reason": "Notice of non-renewal is a commercial contract term, not a breach notification rule."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تدخل هذه الاتفاقية حيز النفاذ اعتباراً من تاريخ التوقيع عليها من الطرفين وتستمر لمدة سنة ميلادية واحدة",
+            "reason": "Contract term provisions do not govern processor guarantees."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تدخل هذه الاتفاقية حيز النفاذ اعتباراً من تاريخ التوقيع عليها من الطرفين وتستمر لمدة سنة ميلادية واحدة",
+            "reason": "Contract duration is unrelated to sensitive data processing."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "وتجدد تلقائياً لمثلها ما لم يُشعِر أحد الطرفين الآخر برغبته في عدم التجدد قبل موعد الانتهاء بشهرين على الأقل.",
+            "reason": "Renewal notice terms do not involve direct marketing."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "توجّه كافة الإشعارات والمراسلات الرسمية المتعلقة بهذه الاتفاقية كتابةً إلى العناوين البريدية أو الإلكترونية المعتمدة والمذكورة في ديباجة هذا العقد.",
+            "reason": "Specifying notice channels for official correspondence does not violate privacy policy requirements."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "توجّه كافة الإشعارات والمراسلات الرسمية المتعلقة بهذه الاتفاقية كتابةً إلى العناوين البريدية أو الإلكترونية المعتمدة",
+            "reason": "Formal communication channels are unrelated to data retention or destruction."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "توجّه كافة الإشعارات والمراسلات الرسمية المتعلقة بهذه الاتفاقية كتابةً إلى العناوين البريدية أو الإلكترونية المعتمدة والمذكورة في ديباجة هذا العقد.",
+            "reason": "Notice provisions do not impact consent for personal data processing."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "توجّه كافة الإشعارات والمراسلات الرسمية المتعلقة بهذه الاتفاقية كتابةً إلى العناوين البريدية أو الإلكترونية المعتمدة والمذكورة في ديباجة هذا العقد.",
+            "reason": "Communication channels do not alter data processing purposes."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "توجّه كافة الإشعارات والمراسلات الرسمية المتعلقة بهذه الاتفاقية كتابةً إلى العناوين البريدية أو الإلكترونية المعتمدة والمذكورة في ديباجة هذا العقد.",
+            "reason": "Notice delivery addresses do not involve data minimization."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "توجّه كافة الإشعارات والمراسلات الرسمية المتعلقة بهذه الاتفاقية كتابةً إلى العناوين البريدية أو الإلكترونية المعتمدة والمذكورة في ديباجة هذا العقد.",
+            "reason": "Communication clauses do not restrict data subject rights."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "توجّه كافة الإشعارات والمراسلات الرسمية المتعلقة بهذه الاتفاقية كتابةً إلى العناوين البريدية أو الإلكترونية المعتمدة والمذكورة في ديباجة هذا العقد.",
+            "reason": "Stating official notice channels does not conflict with data breach notification duties."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "توجّه كافة الإشعارات والمراسلات الرسمية المتعلقة بهذه الاتفاقية كتابةً إلى العناوين البريدية أو الإلكترونية المعتمدة والمذكورة في ديباجة هذا العقد.",
+            "reason": "Notice methods are unrelated to processor guarantees."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "توجّه كافة الإشعارات والمراسلات الرسمية المتعلقة بهذه الاتفاقية كتابةً إلى العناوين البريدية أو الإلكترونية المعتمدة والمذكورة في ديباجة هذا العقد.",
+            "reason": "Formal notices do not involve sensitive or health data processing."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "توجّه كافة الإشعارات والمراسلات الرسمية المتعلقة بهذه الاتفاقية كتابةً إلى العناوين البريدية أو الإلكترونية المعتمدة والمذكورة في ديباجة هذا العقد.",
+            "reason": "Official business correspondence addresses are not direct marketing communications."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "تلتزم الشركة بإتلاف كافة البيانات الشخصية نهائياً ودون تأخير فور انتفاء الغرض الأساسي من جمعها، باستثناء الحالات التي توجب الأنظمة السارية أو القضايا القضائية القائمة الاحتفاظ بها لمدة إضافية محددة.",
+            "reason": "The clause explicitly requires data destruction without undue delay once the purpose is fulfilled, while appropriately excepting legal and judicial requirements."
+          }
+        ],
+        "clauses": [
+          {
+            "id": "k1",
+            "text": "تتقاضى الشركة نظير الخدمات المقدمة المبالغ المالية المحددة في جدول الرسوم الملحق بهذا العقد، وتلتزم الجهة المستفيدة بسداد الفواتير خلال ثلاثين روزنامة من تاريخ إصدارها الرسمي.",
+            "rules": [
+              "R05",
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k2",
+            "text": "تقتصر الشركة في تعاقداتها على اختيار معالجي بيانات ممن يقدمون الضمانات الكافية لتنفيذ المتطلبات التشغيلية، مع قيام الشركة بمتابعة وتفتيش أداء أولئك المعالجين بانتظام للتحقق من التزامهم المستمر بالمعايير المتفق عليها.",
+            "rules": [
+              "R05",
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k3",
+            "text": "يحق لمزود الخدمة تخزين ومعالجة ونقل البيانات إلى أي خوادم أو فروع تابعة له أو لشركائه في أي دولة حول العالم بحسب ما يراه مناسباً لعمله، وذلك دون الحاجة إلى إشعار الشركة ودون الالتزام بأي شروط أو ضمانات جغرافية أو تنظيمية محددة.",
+            "rules": [
+              "R04",
+              "R05",
+              "R01",
+              "R02",
+              "R03",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k4",
+            "text": "يحتفظ كل طرف بكافة حقوق الملكية الفكرية الخاصة به والمطورة قبل أو خارج نطاق هذه الاتفاقية، ولا تمنح هذه الاتفاقية أي حق لأي طرف في استخدام العلامات التجارية للطرف الآخر دون إذن كتابي مسبق.",
+            "rules": [
+              "R05",
+              "R02",
+              "R01",
+              "R03",
+              "R04",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k5",
+            "text": "تدخل هذه الاتفاقية حيز النفاذ اعتباراً من تاريخ التوقيع عليها من الطرفين وتستمر لمدة سنة ميلادية واحدة، وتجدد تلقائياً لمثلها ما لم يُشعِر أحد الطرفين الآخر برغبته في عدم التجدد قبل موعد الانتهاء بشهرين على الأقل.",
+            "rules": [
+              "R06",
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R05",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k6",
+            "text": "يقصد بالتعاريف الواردة في هذه الاتفاقية المعاني المخصصة لها نظاماً، ما لم يقتضِ السياق خلاف ذلك.",
+            "rules": []
+          },
+          {
+            "id": "k7",
+            "text": "توجّه كافة الإشعارات والمراسلات الرسمية المتعلقة بهذه الاتفاقية كتابةً إلى العناوين البريدية أو الإلكترونية المعتمدة والمذكورة في ديباجة هذا العقد.",
+            "rules": [
+              "R04",
+              "R06",
+              "R01",
+              "R02",
+              "R03",
+              "R05",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k8",
+            "text": "تلتزم الشركة بإتلاف كافة البيانات الشخصية نهائياً ودون تأخير فور انتفاء الغرض الأساسي من جمعها، باستثناء الحالات التي توجب الأنظمة السارية أو القضايا القضائية القائمة الاحتفاظ بها لمدة إضافية محددة.",
+            "rules": [
+              "R06",
+              "R02",
+              "R05",
+              "R01",
+              "R03",
+              "R04",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k9",
+            "text": "تلتزم الشركة بتسليم المخرجات والخدمات المتفق عليها في الجداول الزمنية المحددة بدقة، ويتحمل مزود الخدمة مسؤولية مراجعتها قبل الاعتماد النهائي.",
+            "rules": []
+          },
+          {
+            "id": "k10",
+            "text": "تخضع هذه الاتفاقية وتفسر وفقاً لأنظمة المملكة العربية السعودية، وفي حال نشوء أي نزاع بين الطرفين، يتم تسويته ودياً، وإذا تعذر ذلك، فيتم إحالته للجهات القضائية المختصة.",
+            "rules": []
+          },
+          {
+            "id": "k11",
+            "text": "تكون مسؤولية أي من الطرفين عن الأضرار المباشرة الناشئة عن تنفيذ هذا العقد محددة بقيمة الرسوم المدفوعة فعلياً خلال السنة التعاقدية التي وقع فيها الضرر.",
+            "rules": []
+          }
+        ],
+        "cost_usd": 0.021941,
+        "latency_s": 101.76,
+        "llm_calls": 8
+      }
+    },
+    {
+      "doc_id": "robust_newrule_003",
+      "score": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "per_rule": {
+          "R08": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 0,
+        "grounded": 0,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 1,
+        "cost_usd": 0.011421,
+        "latency_s": 12.03,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "robust_newrule_003",
+        "doc_type_guess": "vendor_contract",
+        "findings": [],
+        "escalations": [
+          {
+            "rule_id": "R01",
+            "evidence": "دون الحاجة للتحقق من مستوى حماية الدولة الوجهة أو تقديم إشعار مسبق للمستخدم",
+            "reason": "judged unclear"
+          }
+        ],
+        "trace": [
+          "doc_type=vendor_contract clauses=7 with_candidates=4"
+        ],
+        "assessments": [
+          {
+            "clause_id": "k1",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "تبدأ مدة الاتفاقية فور إتمام التسجيل وتستمر لمدة سنة ميلادية كاملة",
+            "reason": "The clause sets contract terms and does not violate the requirements of privacy policy disclosures."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "تبدأ مدة الاتفاقية فور إتمام التسجيل وتستمر لمدة سنة ميلادية كاملة",
+            "reason": "The clause deals with agreement duration rather than data retention or indefinite storage."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "تجدد تلقائياً ما لم يقم أحد الطرفين بإرسال إشعار خطي",
+            "reason": "This is a standard contract renewal clause and does not concern personal data processing consent."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تبدأ مدة الاتفاقية فور إتمام التسجيل وتستمر لمدة سنة ميلادية كاملة",
+            "reason": "The clause relates to service duration rather than expanding data processing purposes."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تبدأ مدة الاتفاقية فور إتمام التسجيل وتستمر لمدة سنة ميلادية كاملة",
+            "reason": "The clause does not mandate the collection of excessive personal data."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تبدأ مدة الاتفاقية فور إتمام التسجيل وتستمر لمدة سنة ميلادية كاملة",
+            "reason": "The clause does not restrict data subject rights such as access or correction."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تبدأ مدة الاتفاقية فور إتمام التسجيل وتستمر لمدة سنة ميلادية كاملة",
+            "reason": "The clause does not address data breach notifications."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تبدأ مدة الاتفاقية فور إتمام التسجيل وتستمر لمدة سنة ميلادية كاملة",
+            "reason": "The clause governs general agreement terms rather than processor guarantees."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تبدأ مدة الاتفاقية فور إتمام التسجيل وتستمر لمدة سنة ميلادية كاملة",
+            "reason": "The clause does not involve the processing of sensitive or health data."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تبدأ مدة الاتفاقية فور إتمام التسجيل وتستمر لمدة سنة ميلادية كاملة",
+            "reason": "The clause has no relation to direct marketing communications."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "يحق لمزود الخدمة نقل وتخزين البيانات الشخصية في أي خادم عالمي",
+            "reason": "The clause specifies data storage practices, which aligns with disclosure requirements."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "وددون الحاجة للتحقق من مستوى حماية الدولة الوجهة أو تقديم إشعار مسبق للمستخدم",
+            "reason": "While it removes prior notice for international transfers, it does not directly deny data subject rights under Article 4."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R01",
+            "verdict": "unclear",
+            "confidence": 0.7,
+            "evidence": "دون الحاجة للتحقق من مستوى حماية الدولة الوجهة أو تقديم إشعار مسبق للمستخدم",
+            "reason": "Transferring data internationally without checking destination protection or giving notice may infringe upon proper consent mechanisms and transfer safeguards under the PDPL."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "نقل وتخزين البيانات الشخصية في أي خادم عالمي",
+            "reason": "The clause regulates storage location rather than changing the purpose of data collection."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "نقل وتخزين البيانات الشخصية في أي خادم عالمي",
+            "reason": "The clause does not require the collection of unnecessary data fields."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "نقل وتخزين البيانات الشخصية في أي خادم عالمي",
+            "reason": "The clause addresses storage location and transfer rather than retention periods or indefinite storage."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "نقل وتخزين البيانات الشخصية في أي خادم عالمي",
+            "reason": "The clause does not pertain to data breach notification obligations."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "نقل وتخزين البيانات الشخصية في أي خادم عالمي تختاره الشركة وفقاً لتقديرها التشغيلي",
+            "reason": "The clause discusses server selection and operational discretion rather than processor guarantee waivers."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "نقل وتخزين البيانات الشخصية في أي خادم عالمي",
+            "reason": "The clause does not specifically govern sensitive or health data processing."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "نقل وتخزين البيانات الشخصية في أي خادم عالمي",
+            "reason": "The clause is unrelated to direct marketing."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "يتم جمع البيانات الصحية والحيوية حصراً لغايات تقييم أهلية الاستفادة من البرامج الرياضية المخصصة",
+            "reason": "The clause strictly limits the processing of health data to its specific collection purpose."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "ولا يتم استخدامها في أغراض التسويق المباشر أو معالجتها بناءً على المصالح المشروعة للشركة.",
+            "reason": "It explicitly complies with restrictions on sensitive data by avoiding legitimate interest processing and marketing use."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "ولا يتم استخدامها في أغراض التسويق المباشر",
+            "reason": "The clause ensures sensitive data is not used for direct marketing."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يتم جمع البيانات الصحية والحيوية حصراً لغايات تقييم أهلية الاستفادة من البرامج الرياضية المخصصة",
+            "reason": "Collection is bounded to a specific legitimate purpose and respects data subject safeguards."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يتم جمع البيانات الصحية والحيوية حصراً لغايات تقييم أهلية الاستفادة من البرامج الرياضية المخصصة",
+            "reason": "Limiting collection to the specific purpose aligns with data minimisation principles."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يتم جمع البيانات الصحية والحيوية حصراً لغايات تقييم أهلية الاستفادة من البرامج الرياضية المخصصة",
+            "reason": "The clause specifies the exact purpose for collecting health data."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يتم جمع البيانات الصحية والحيوية حصراً لغايات تقييم أهلية الاستفادة من البرامج الرياضية المخصصة",
+            "reason": "The clause does not restrict data subject rights."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يتم جمع البيانات الصحية والحيوية حصراً لغايات تقييم أهلية الاستفادة من البرامج الرياضية المخصصة",
+            "reason": "The clause does not address data retention or indefinite storage."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يتم جمع البيانات الصحية والحيوية حصراً لغايات تقييم أهلية الاستفادة من البرامج الرياضية المخصصة",
+            "reason": "The clause does not involve breach notifications."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يتم جمع البيانات الصحية والحيوية حصراً لغايات تقييم أهلية الاستفادة من البرامج الرياضية المخصصة",
+            "reason": "The clause does not concern processor guarantees."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تتّم عمليات سداد المستحقات المالية عبر قنوات الدفع الإلكترونية المعتمدة حصراً",
+            "reason": "The clause specifies payment methods and does not restrict user rights."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تتّم عمليات سداد المستحقات المالية عبر قنوات الدفع الإلكترونية المعتمدة حصراً",
+            "reason": "The clause does not address data retention timelines."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تتّم عمليات سداد المستحقات المالية عبر قنوات الدفع الإلكترونية المعتمدة حصراً",
+            "reason": "The clause relates to payment processing rather than consent to personal data collection."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تتّم عمليات سداد المستحقات المالية عبر قنوات الدفع الإلكترونية المعتمدة حصراً",
+            "reason": "The clause governs financial transactions rather than expanding data processing purposes."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تتّم عمليات سداد المستحقات المالية عبر قنوات الدفع الإلكترونية المعتمدة حصراً",
+            "reason": "The clause does not require excessive or unrelated personal data."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تتّم عمليات سداد المستحقات المالية عبر قنوات الدفع الإلكترونية المعتمدة حصراً",
+            "reason": "The clause is a payment term rather than a privacy policy disclosure."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تتّم عمليات سداد المستحقات المالية عبر قنوات الدفع الإلكترونية المعتمدة حصراً",
+            "reason": "The clause does not relate to data breach reporting."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تتّم عمليات سداد المستحقات المالية عبر قنوات الدفع الإلكترونية المعتمدة حصراً",
+            "reason": "The clause discusses payment channels rather than processor compliance or guarantees."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تتّم عمليات سداد المستحقات المالية عبر قنوات الدفع الإلكترونية المعتمدة حصراً",
+            "reason": "The clause does not involve sensitive or health data processing."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تتّم عمليات سداد المستحقات المالية عبر قنوات الدفع الإلكترونية المعتمدة حصراً",
+            "reason": "The clause has no connection to direct marketing."
+          }
+        ],
+        "clauses": [
+          {
+            "id": "k1",
+            "text": "تبدأ مدة الاتفاقية فور إتمام التسجيل وتستمر لمدة سنة ميلادية كاملة، وتجدد تلقائياً ما لم يقم أحد الطرفين بإرسال إشعار خطي بالرغبة في عدم التجديد قبل موعدها بشهرين.",
+            "rules": [
+              "R04",
+              "R06",
+              "R01",
+              "R02",
+              "R03",
+              "R05",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k2",
+            "text": "يحق لمزود الخدمة نقل وتخزين البيانات الشخصية في أي خادم عالمي تختاره الشركة وفقاً لتقديرها التشغيلي وددون الحاجة للتحقق من مستوى حماية الدولة الوجهة أو تقديم إشعار مسبق للمستخدم.",
+            "rules": [
+              "R04",
+              "R05",
+              "R01",
+              "R02",
+              "R03",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k3",
+            "text": "تخضع كافة الأسعار والرسوم الموضحة في المنصة للتغيير بناءً على متطلبات السوق، ويتم احتسابها بالعملة المحلية مع إضافة ضريبة القيمة المضافة المقررة نظاماً.",
+            "rules": []
+          },
+          {
+            "id": "k4",
+            "text": "يتم جمع البيانات الصحية والحيوية حصراً لغايات تقييم أهلية الاستفادة من البرامج الرياضية المخصصة، ولا يتم استخدامها في أغراض التسويق المباشر أو معالجتها بناءً على المصالح المشروعة للشركة.",
+            "rules": [
+              "R02",
+              "R10",
+              "R11",
+              "R01",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09"
+            ]
+          },
+          {
+            "id": "k5",
+            "text": "لا تتحمل الشركة أي مسؤولية قانونية عن الأضرار غير المباشرة أو الخسائر المالية الناشئة عن انقطاع الخدمة أو الأعطال التقنية الخارجة عن نطاق السيطرة والقدرة الاستيعابية لأنظمة التشغيل.",
+            "rules": []
+          },
+          {
+            "id": "k6",
+            "text": "تخضع هذه الشروط وتفسر وفقاً للأنظمة المعمول بها في المملكة العربية السعودية، وتختص الجهات القضائية بالفصل في أي نزاع ينشأ عنها.",
+            "rules": []
+          },
+          {
+            "id": "k7",
+            "text": "تتم عمليات سداد المستحقات المالية عبر قنوات الدفع الإلكترونية المعتمدة حصراً، ولا تعتبر الخدمة مفعلة إلا بعد التأكيد الكامل لتحويل المبلغ من قبل البنك المتعاقد.",
+            "rules": [
+              "R05",
+              "R06",
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          }
+        ],
+        "cost_usd": 0.011421,
+        "latency_s": 12.03,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "robust_newrule_004",
+      "score": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "per_rule": {
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R08": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 0,
+        "unverified": 1,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 1,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.018115,
+        "latency_s": 106.31,
+        "llm_calls": 8
+      },
+      "output": {
+        "doc_id": "robust_newrule_004",
+        "doc_type_guess": "vendor_contract",
+        "findings": [
+          {
+            "rule_id": "R07",
+            "verdict": "violation",
+            "confidence": 0.85,
+            "evidence": "يلتزم مزود الخدمة بإبلاغ الجهات المعنية والعميل خلال مدة معقولة",
+            "reason": "The vague timeframe 'reasonable period' fails to ensure compliance with the strict 72-hour breach notification requirement under the regulations.",
+            "source": "PDPL Art. 20; Implementing Regulations (72-hour notification, verify article)",
+            "clause": "في حال وقوع أي حادث أمني أو وصول غير مصرح به إلى النظام، يلتزم مزود الخدمة بإبلاغ الجهات المعنية والعميل خلال مدة معقولة، وتحديد الإجراءات التصحيحية اللازمة.",
+            "fix": "في حال وقوع أي حادث أمني أو وصول غير مصرح به إلى النظام، يلتزم مزود الخدمة بإبلاغ الجهات المعنية خلال 72 ساعة والعميل في حال ترتب على ذلك ضرر ببياناته أو حقوقه، وتحديد الإجراءات التصحيحية اللازمة.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "ولا تلتزم الشركة بإتلافها في أي وقت",
+            "reason": "The clause explicitly denies the data subject's right to request data destruction when no longer needed.",
+            "source": "PDPL Art. 4",
+            "clause": "يحتفظ مزود الخدمة بجميع البيانات والمعلومات المسجلة على النظام بشكل دائم ودون حدود زمنية، وله الحق في حفظها إلى الأبد لأغراض الأرشفة واستمرارية السجلات ولا تلتزم الشركة بإتلافها في أي وقت.",
+            "fix": "يحتفظ مزود الخدمة بالبيانات والمعلومات للأغراض المشروعة، ويحق لصاحب البيانات طلب إتلافها في حال لم تعد مسوّجات الاحتفاظ بها قائمة، مع الالتزام بالمتطلبات النظامية.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 0.99,
+            "evidence": "يحتفظ مزود الخدمة بجميع البيانات والمعلومات المسجلة على النظام بشكل دائم ودون حدود زمنية، وله الحق في حفظها إلى الأبد",
+            "reason": "The clause mandates indefinite and permanent data retention without limitation, violating the destruction requirement once purposes are fulfilled.",
+            "source": "PDPL Art. 18",
+            "clause": "يحتفظ مزود الخدمة بجميع البيانات والمعلومات المسجلة على النظام بشكل دائم ودون حدود زمنية، وله الحق في حفظها إلى الأبد لأغراض الأرشفة واستمرارية السجلات ولا تلتزم الشركة بإتلافها في أي وقت.",
+            "fix": "يحتفظ مزود الخدمة بالبيانات والمعلومات المسجلة على النظام طالما كانت ضرورية لأغراض الأرشفة واستمرارية السجلات، ويلتزم بإتلافها دون undue delay (دون تأخير مبرر) متى انتفت الحاجة إليها، ما لم يوجد متطلب قانوني للاحتفاظ بها أو قضية قضائية قائمة.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=vendor_contract clauses=12 with_candidates=10"
+        ],
+        "assessments": [
+          {
+            "clause_id": "k1",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "تخضع هذه الاتفاقية وتفسر وفقاً لأنظمة المملكة العربية السعودية",
+            "reason": "The clause establishes jurisdiction and governs the agreement under Saudi law without addressing sensitive data processing."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تلتزم الشركة بسداد جميع الرسوم المالية المستحقة",
+            "reason": "This financial clause does not restrict or affect data subject rights."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.98,
+            "evidence": "تقتصر أغراض معالجة البيانات على الأغراض التشغيلية المحددة صراحة عند جمعها",
+            "reason": "The clause strictly limits data processing to the original collection purposes, aligning fully with purpose limitation rules."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تنتقل حقوق الملكية الفكرية الخاصة بالبرمجيات",
+            "reason": "Intellectual property provisions do not interfere with or impact data subject rights."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تبدأ هذه الاتفاقية من تاريخ توقيعها من قبل الطرفين وتستمر لمدة سنة ميلادية كاملة",
+            "reason": "Contract duration and renewal terms do not relate to privacy policy disclosure requirements."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R07",
+            "verdict": "violation",
+            "confidence": 0.85,
+            "evidence": "يلتزم مزود الخدمة بإبلاغ الجهات المعنية والعميل خلال مدة معقولة",
+            "reason": "The vague timeframe 'reasonable period' fails to ensure compliance with the strict 72-hour breach notification requirement under the regulations."
+          },
+          {
+            "clause_id": "k9",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "يتم تسليم الخدمات والأنظمة المتعاقد عليها عبر الوسائل الإلكترونية",
+            "reason": "The clause deals with service delivery timelines and does not address data retention or destruction."
+          },
+          {
+            "clause_id": "k9",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "يتم تسليم الخدمات والأنظمة المتعاقد عليها عبر الوسائل الإلكترونية",
+            "reason": "The clause addresses service delivery timelines and is unrelated to consent for data processing."
+          },
+          {
+            "clause_id": "k9",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "يتم تسليم الخدمات والأنظمة المتعاقد عليها عبر الوسائل الإلكترونية",
+            "reason": "The clause pertains solely to service delivery schedules and does not govern processing purposes."
+          },
+          {
+            "clause_id": "k9",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "يتم تسليم الخدمات والأنظمة المتعاقد عليها عبر الوسائل الإلكترونية",
+            "reason": "The clause is about electronic service delivery and does not concern data minimization."
+          },
+          {
+            "clause_id": "k9",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "يتم تسليم الخدمات والأنظمة المتعاقد عليها عبر الوسائل الإلكترونية",
+            "reason": "The clause outlines project delivery timelines rather than privacy policy disclosures."
+          },
+          {
+            "clause_id": "k9",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "يتم تسليم الخدمات والأنظمة المتعاقد عليها عبر الوسائل الإلكترونية",
+            "reason": "The clause concerns operational service delivery and does not affect data subject rights."
+          },
+          {
+            "clause_id": "k9",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "يتم تسليم الخدمات والأنظمة المتعاقد عليها عبر الوسائل الإلكترونية",
+            "reason": "The clause is unrelated to security breach notifications."
+          },
+          {
+            "clause_id": "k9",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "يتم تسليم الخدمات والأنظمة المتعاقد عليها عبر الوسائل الإلكترونية",
+            "reason": "The clause focuses on service delivery timelines rather than processor guarantees."
+          },
+          {
+            "clause_id": "k9",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "يتم تسليم الخدمات والأنظمة المتعاقد عليها عبر الوسائل الإلكترونية",
+            "reason": "The clause does not involve the processing of sensitive or health data."
+          },
+          {
+            "clause_id": "k9",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "يتم تسليم الخدمات والأنظمة المتعاقد عليها عبر الوسائل الإلكترونية",
+            "reason": "The clause discusses project deliverables and does not relate to direct marketing."
+          },
+          {
+            "clause_id": "k10",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يحق لمزود الخدمة تخزين ومعالجة ونقل البيانات المتعلقة بهذه الاتفاقية إلى أي دولة يختارها",
+            "reason": "The clause permits data transfers and processing locations without explicitly restricting privacy policy disclosures."
+          },
+          {
+            "clause_id": "k10",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "ودون الحاجة لتقديم أي إشعار مسبق للعميل أو الالتزام بتوفير ضمانات إضافية لنقل البيانات",
+            "reason": "Although lacking notice requirements for cross-border transfers, it does not explicitly deny data subject rights under Article 4."
+          },
+          {
+            "clause_id": "k10",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تخزين ومعالجة ونقل البيانات المتعلقة بهذه الاتفاقية إلى أي دولة يختارها",
+            "reason": "The clause governs cross-border transfer capabilities rather than bypassing initial consent requirements."
+          },
+          {
+            "clause_id": "k10",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "المعالجة ونقل البيانات المتعلقة بهذه الاتفاقية",
+            "reason": "Data processing and transfer are tied to the agreement's purpose, avoiding open-ended secondary uses."
+          },
+          {
+            "clause_id": "k10",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "تخزين ومعالجة ونقل البيانات المتعلقة بهذه الاتفاقية",
+            "reason": "The clause addresses storage and transfer locations rather than the volume of collected data."
+          },
+          {
+            "clause_id": "k10",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "تخزين ومعالجة ونقل البيانات المتعلقة بهذه الاتفاقية إلى أي دولة يختارها",
+            "reason": "The clause specifies processing and transfer locations rather than setting permanent retention rules."
+          },
+          {
+            "clause_id": "k10",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "تخزين ومعالجة ونقل البيانات المتعلقة بهذه الاتفاقية",
+            "reason": "The clause does not touch upon security incident reporting obligations."
+          },
+          {
+            "clause_id": "k10",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "ودون الحاجة لتقديم أي إشعار مسبق للعميل أو الالتزام بتوفير ضمانات إضافية لنقل البيانات",
+            "reason": "While it waives additional transfer safeguards, it outlines cross-border operational terms rather than processor auditing rights."
+          },
+          {
+            "clause_id": "k10",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "تخزين ومعالجة ونقل البيانات المتعلقة بهذه الاتفاقية",
+            "reason": "The clause does not specifically target or process sensitive or health data categories."
+          },
+          {
+            "clause_id": "k10",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "تخزين ومعالجة ونقل البيانات المتعلقة بهذه الاتفاقية",
+            "reason": "The clause relates to operational data storage and transfers, not direct marketing activities."
+          },
+          {
+            "clause_id": "k11",
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "ولا تلتزم الشركة بإتلافها في أي وقت",
+            "reason": "The clause explicitly denies the data subject's right to request data destruction when no longer needed."
+          },
+          {
+            "clause_id": "k11",
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 0.99,
+            "evidence": "يحتفظ مزود الخدمة بجميع البيانات والمعلومات المسجلة على النظام بشكل دائم ودون حدود زمنية، وله الحق في حفظها إلى الأبد",
+            "reason": "The clause mandates indefinite and permanent data retention without limitation, violating the destruction requirement once purposes are fulfilled."
+          },
+          {
+            "clause_id": "k11",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.85,
+            "evidence": "لأغراض الأرشفة واستمرارية السجلات",
+            "reason": "The indefinite retention is tied to archiving and record continuity purposes, limiting the scope of retention use."
+          },
+          {
+            "clause_id": "k11",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يحتفظ مزود الخدمة بجميع البيانات والمعلومات المسجلة على النظام بشكل دائم",
+            "reason": "The clause addresses retention periods rather than the initial collection consent."
+          },
+          {
+            "clause_id": "k11",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يحتفظ مزود الخدمة بجميع البيانات والمعلومات المسجلة على النظام",
+            "reason": "The text deals with storing existing records rather than expanding the scope of collected data types."
+          },
+          {
+            "clause_id": "k11",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يحتفظ مزود الخدمة بجميع البيانات والمعلومات المسجلة على النظام بشكل دائم",
+            "reason": "The clause dictates retention terms rather than governing privacy policy disclosures."
+          },
+          {
+            "clause_id": "k11",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "يحتفظ مزود الخدمة بجميع البيانات والمعلومات المسجلة على النظام",
+            "reason": "The clause is unrelated to data breach reporting obligations."
+          },
+          {
+            "clause_id": "k11",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "يحتفظ مزود الخدمة بجميع البيانات والمعلومات المسجلة على النظام",
+            "reason": "The clause does not govern processor selection criteria or monitoring guarantees."
+          },
+          {
+            "clause_id": "k11",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "يحتفظ مزود الخدمة بجميع البيانات والمعلومات المسجلة على النظام",
+            "reason": "The clause does not specifically mention or handle sensitive or health data categories."
+          },
+          {
+            "clause_id": "k11",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "يحتفظ مزود الخدمة بجميع البيانات والمعلومات المسجلة على النظام",
+            "reason": "The clause concerns record retention rather than direct marketing communications."
+          },
+          {
+            "clause_id": "k12",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.99,
+            "evidence": "تعني كلمة 'الشركة' في هذه الاتفاقية شركة سحاب التقنية المسجلة في المملكة العربية السعودية، وتعني كلمة 'مزود الخدمة' شركة الأفق الرقمي للحلول التقنية.",
+            "reason": "Definitions clauses do not impact or violate data consent rules."
+          },
+          {
+            "clause_id": "k12",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.99,
+            "evidence": "تعني كلمة 'الشركة' في هذه الاتفاقية شركة سحاب التقنية المسجلة في المملكة العربية السعودية، وتعني كلمة 'مزود الخدمة' شركة الأفق الرقمي للحلول التقنية.",
+            "reason": "Definitions clauses do not govern processing purposes."
+          },
+          {
+            "clause_id": "k12",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.99,
+            "evidence": "تعني كلمة 'الشركة' في هذه الاتفاقية شركة سحاب التقنية المسجلة في المملكة العربية السعودية، وتعني كلمة 'مزود الخدمة' شركة الأفق الرقمي للحلول التقنية.",
+            "reason": "Definitions clauses are unrelated to data minimization principles."
+          },
+          {
+            "clause_id": "k12",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.99,
+            "evidence": "تعني كلمة 'الشركة' في هذه الاتفاقية شركة سحاب التقنية المسجلة في المملكة العربية السعودية، وتعني كلمة 'مزود الخدمة' شركة الأفق الرقمي للحلول التقنية.",
+            "reason": "Definitions clauses do not dictate privacy policy disclosures."
+          },
+          {
+            "clause_id": "k12",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.99,
+            "evidence": "تعني كلمة 'الشركة' في هذه الاتفاقية شركة سحاب التقنية المسجلة في المملكة العربية السعودية، وتعني كلمة 'مزود الخدمة' شركة الأفق الرقمي للحلول التقنية.",
+            "reason": "Definitions clauses do not restrict data subject rights."
+          },
+          {
+            "clause_id": "k12",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.99,
+            "evidence": "تعني كلمة 'الشركة' في هذه الاتفاقية شركة سحاب التقنية المسجلة في المملكة العربية السعودية، وتعني كلمة 'مزود الخدمة' شركة الأفق الرقمي للحلول التقنية.",
+            "reason": "Definitions clauses do not deal with retention or destruction."
+          },
+          {
+            "clause_id": "k12",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.99,
+            "evidence": "تعني كلمة 'الشركة' في هذه الاتفاقية شركة سحاب التقنية المسجلة في المملكة العربية السعودية، وتعني كلمة 'مزود الخدمة' شركة الأفق الرقمي للحلول التقنية.",
+            "reason": "Definitions clauses are unrelated to breach notification rules."
+          },
+          {
+            "clause_id": "k12",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.99,
+            "evidence": "تعني كلمة 'الشركة' في هذه الاتفاقية شركة سحاب التقنية المسجلة في المملكة العربية السعودية، وتعني كلمة 'مزود الخدمة' شركة الأفق الرقمي للحلول التقنية.",
+            "reason": "Definitions clauses do not establish processor guarantees."
+          },
+          {
+            "clause_id": "k12",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.99,
+            "evidence": "تعني كلمة 'الشركة' في هذه الاتفاقية شركة سحاب التقنية المسجلة في المملكة العربية السعودية، وتعني كلمة 'مزود الخدمة' شركة الأفق الرقمي للحلول التقنية.",
+            "reason": "Definitions clauses do not involve sensitive data handling."
+          },
+          {
+            "clause_id": "k12",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.99,
+            "evidence": "تعني كلمة 'الشركة' في هذه الاتفاقية شركة سحاب التقنية المسجلة في المملكة العربية السعودية، وتعني كلمة 'مزود الخدمة' شركة الأفق الرقمي للحلول التقنية.",
+            "reason": "Definitions clauses are unrelated to direct marketing."
+          }
+        ],
+        "clauses": [
+          {
+            "id": "k1",
+            "text": "تخضع هذه الاتفاقية وتفسر وفقاً لأنظمة المملكة العربية السعودية، وتختص الجهات القضائية في مدينة الرياض بالفصل في أي نزاع ينشأ عن تفسير أو تنفيذ هذه الاتفاقية.",
+            "rules": [
+              "R10",
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R11"
+            ]
+          },
+          {
+            "id": "k2",
+            "text": "تلتزم الشركة بسداد جميع الرسوم المالية المستحقة لمزود الخدمة والمذكورة في جدول الأسعار المرفق خلال ثلاثين روزنامة من تاريخ استلام الفطرة النظامية.",
+            "rules": [
+              "R05",
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k3",
+            "text": "تغطي هذه الاتفاقية تقديم خدمات الحوسبة السحابية والدعم الفني وصيانة الأنظمة وفقاً للمواصفات الفنية المتفق عليها بين الطرفين.",
+            "rules": []
+          },
+          {
+            "id": "k4",
+            "text": "تقتصر أغراض معالجة البيانات على الأغراض التشغيلية المحددة صراحة عند جمعها وفقاً لمتطلبات تقديم الخدمة المتعاقد عليها، دون استخدامها لأي غرض آخر غير مرتبط بذلك.",
+            "rules": [
+              "R02",
+              "R01",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k5",
+            "text": "تنتقل حقوق الملكية الفكرية الخاصة بالبرمجيات والأكواد المصممة خصيصاً للعميل بمجرد سداد كامل الرسوم، بينما تبقى حقوق الملكية للأنظمة الأساسية مملوكة بالكامل لمزود الخدمة.",
+            "rules": [
+              "R05",
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k6",
+            "text": "تحدد المسؤولية القانونية القصوى لمزود الخدمة عن أي أضرار مباشرة بمبلغ لا يتجاوز إجمالي الرسوم المدفوعة فعلياً خلال السنة التعاقدية السابقة للحدث المنشئ للمسؤولية.",
+            "rules": []
+          },
+          {
+            "id": "k7",
+            "text": "تبدأ هذه الاتفاقية من تاريخ توقيعها من قبل الطرفين وتستمر لمدة سنة ميلادية كاملة، وتتجدد تلقائياً لمدة أو مدد مماثلة ما لم يقم أحد الطرفين بإشعار الطرف الآخر برغبته في عدم التجديد قبل ثلاثين يوماً على الأقل من تاريخ الإنهاء.",
+            "rules": [
+              "R04",
+              "R06",
+              "R01",
+              "R02",
+              "R03",
+              "R05",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k8",
+            "text": "في حال وقوع أي حادث أمني أو وصول غير مصرح به إلى النظام، يلتزم مزود الخدمة بإبلاغ الجهات المعنية والعميل خلال مدة معقولة، وتحديد الإجراءات التصحيحية اللازمة.",
+            "rules": [
+              "R05",
+              "R06",
+              "R07",
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k9",
+            "text": "يتم تسليم الخدمات والأنظمة المتعاقد عليها عبر الوسائل الإلكترونية خلال المدة الزمنية المحددة في جدول الجداول الزمنية للبرنامج.",
+            "rules": [
+              "R06",
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R05",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k10",
+            "text": "يحق لمزود الخدمة تخزين ومعالجة ونقل البيانات المتعلقة بهذه الاتفاقية إلى أي دولة يختارها وبحسب ما تقتضيه مصلحة العمل التشغيلية، ودون الحاجة لتقديم أي إشعار مسبق للعميل أو الالتزام بتوفير ضمانات إضافية لنقل البيانات.",
+            "rules": [
+              "R04",
+              "R05",
+              "R01",
+              "R02",
+              "R03",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k11",
+            "text": "يحتفظ مزود الخدمة بجميع البيانات والمعلومات المسجلة على النظام بشكل دائم ودون حدود زمنية، وله الحق في حفظها إلى الأبد لأغراض الأرشفة واستمرارية السجلات ولا تلتزم الشركة بإتلافها في أي وقت.",
+            "rules": [
+              "R05",
+              "R06",
+              "R02",
+              "R01",
+              "R03",
+              "R04",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k12",
+            "text": "تعني كلمة 'الشركة' في هذه الاتفاقية شركة سحاب التقنية المسجلة في المملكة العربية السعودية، وتعني كلمة 'مزود الخدمة' شركة الأفق الرقمي للحلول التقنية.",
+            "rules": [
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          }
+        ],
+        "cost_usd": 0.018115,
+        "latency_s": 106.31,
+        "llm_calls": 8
+      }
+    },
+    {
+      "doc_id": "robust_newrule_005",
+      "score": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "per_rule": {
+          "R08": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          }
+        },
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 1,
+        "findings": 1,
+        "grounded": 1,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.007712,
+        "latency_s": 46.21,
+        "llm_calls": 4
+      },
+      "output": {
+        "doc_id": "robust_newrule_005",
+        "doc_type_guess": "privacy_policy",
+        "findings": [
+          {
+            "rule_id": "R09",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "Personal data may be stored or transferred to any foreign jurisdiction selected by our cloud infrastructure vendor, without prior notice to the user and without conducting any preliminary adequacy assessments",
+            "reason": "Failing to conduct adequacy assessments, provide notice, or implement cross-border safeguards violates controller and processor compliance obligations under the PDPL.",
+            "source": "PDPL Art. 8",
+            "clause": "Personal data may be stored or transferred to any foreign jurisdiction selected by our cloud infrastructure vendor, without prior notice to the user and without conducting any preliminary adequacy assessments or implementing additional cross-border safeguards.",
+            "fix": "Personal data may be stored in or transferred to foreign jurisdictions selected by our cloud infrastructure vendor, provided that the vendor provides the necessary guarantees to implement the Law, appropriate cross-border safeguards and adequacy assessments are conducted as required, and prior notice is provided to the user where applicable.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=privacy_policy clauses=8 with_candidates=7"
+        ],
+        "assessments": [
+          {
+            "clause_id": "k1",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "We collect only the specific data fields strictly necessary for the fulfillment of the requested digital service",
+            "reason": "The clause explicitly limits data collection to what is strictly necessary for the requested service."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "The total aggregate liability of the company for any direct claims arising out of or related to the platform shall not exceed",
+            "reason": "This clause relates to liability limits and does not govern personal data processing purposes."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "All software, user interfaces, trademarks, and proprietary documentation made available through the service remain the exclusive intellectual property",
+            "reason": "This clause deals with intellectual property rights and does not impact personal data processing purposes."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "This agreement shall commence upon successful account activation and shall remain in full force until terminated",
+            "reason": "This is a standard contract duration clause and does not violate consent or data withdrawal rules."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R09",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "Personal data may be stored or transferred to any foreign jurisdiction selected by our cloud infrastructure vendor, without prior notice to the user and without conducting any preliminary adequacy assessments",
+            "reason": "Failing to conduct adequacy assessments, provide notice, or implement cross-border safeguards violates controller and processor compliance obligations under the PDPL."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "Collected personal data shall be utilized exclusively for the specific operational objectives for which it was originally gathered",
+            "reason": "The clause properly restricts data processing to the original collection purposes, aligning with purpose limitation principles."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "This agreement shall be governed by and construed in accordance with the substantive laws applicable within the Kingdom of Saudi Arabia",
+            "reason": "The clause specifies the governing law and does not restrict consent or data processing rights."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "This agreement shall be governed by and construed in accordance with the substantive laws applicable within the Kingdom of Saudi Arabia",
+            "reason": "The clause deals with governing law and does not concern data processing purposes."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "This agreement shall be governed by and construed in accordance with the substantive laws applicable within the Kingdom of Saudi Arabia",
+            "reason": "The clause deals with governing law and does not concern data collection scope."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "This agreement shall be governed by and construed in accordance with the substantive laws applicable within the Kingdom of Saudi Arabia",
+            "reason": "The clause relates to governing law and is unrelated to privacy policy disclosures."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "This agreement shall be governed by and construed in accordance with the substantive laws applicable within the Kingdom of Saudi Arabia",
+            "reason": "The clause does not deny or limit data subject rights."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "This agreement shall be governed by and construed in accordance with the substantive laws applicable within the Kingdom of Saudi Arabia",
+            "reason": "The clause pertains to applicable law rather than data retention or destruction."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "This agreement shall be governed by and construed in accordance with the substantive laws applicable within the Kingdom of Saudi Arabia",
+            "reason": "The clause is a choice of law provision and does not touch upon data breach notifications."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "This agreement shall be governed by and construed in accordance with the substantive laws applicable within the Kingdom of Saudi Arabia",
+            "reason": "The clause governs the legal framework of the agreement and does not concern processor guarantees."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "This agreement shall be governed by and construed in accordance with the substantive laws applicable within the Kingdom of Saudi Arabia",
+            "reason": "The clause concerns governing law and is unrelated to sensitive or health data processing."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "This agreement shall be governed by and construed in accordance with the substantive laws applicable within the Kingdom of Saudi Arabia",
+            "reason": "The clause addresses governing law and does not involve direct marketing practices."
+          }
+        ],
+        "clauses": [
+          {
+            "id": "k1",
+            "text": "We collect only the specific data fields strictly necessary for the fulfillment of the requested digital service, which comprise your full legal name, active email address, and verified telephone number.",
+            "rules": [
+              "R03",
+              "R01",
+              "R02",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k2",
+            "text": "All service fees are billed in Saudi Riyals on a recurring monthly basis and must be settled within fifteen days of the invoice date.",
+            "rules": []
+          },
+          {
+            "id": "k3",
+            "text": "The total aggregate liability of the company for any direct claims arising out of or related to the platform shall not exceed the total fees paid by the user during the preceding three months.",
+            "rules": [
+              "R02",
+              "R01",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k4",
+            "text": "All software, user interfaces, trademarks, and proprietary documentation made available through the service remain the exclusive intellectual property of the company and its licensors.",
+            "rules": [
+              "R02",
+              "R01",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k5",
+            "text": "This agreement shall commence upon successful account activation and shall remain in full force until terminated by either party with thirty days written notice.",
+            "rules": [
+              "R01",
+              "R04",
+              "R02",
+              "R03",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k6",
+            "text": "Personal data may be stored or transferred to any foreign jurisdiction selected by our cloud infrastructure vendor, without prior notice to the user and without conducting any preliminary adequacy assessments or implementing additional cross-border safeguards.",
+            "rules": [
+              "R02",
+              "R04",
+              "R09",
+              "R01",
+              "R03",
+              "R05",
+              "R06",
+              "R07",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k7",
+            "text": "Collected personal data shall be utilized exclusively for the specific operational objectives for which it was originally gathered, except in those limited circumstances where prior written authorization has been obtained from the user.",
+            "rules": [
+              "R02",
+              "R03",
+              "R01",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k8",
+            "text": "This agreement shall be governed by and construed in accordance with the substantive laws applicable within the Kingdom of Saudi Arabia, excluding its conflict of laws principles.",
+            "rules": [
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          }
+        ],
+        "cost_usd": 0.007712,
+        "latency_s": 46.21,
+        "llm_calls": 4
+      }
+    }
+  ]
+}
