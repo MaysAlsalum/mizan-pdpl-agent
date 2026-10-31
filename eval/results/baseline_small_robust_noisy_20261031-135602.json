@@ -1,0 +1,311 @@
+{
+  "system": "baseline_small",
+  "split": "robust_noisy",
+  "include_hidden": false,
+  "limit": null,
+  "models": {
+    "small": "gemini/gemini-3.5-flash-lite",
+    "large": "gemini/gemini-3.5-flash-lite",
+    "generator": "gemini/gemini-3.5-flash-lite",
+    "judge_eval": "gemini/gemini-3.5-flash-lite"
+  },
+  "metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "tp": 7,
+    "fp": 0,
+    "fn": 0,
+    "subtle_recall": 1.0,
+    "trap_fp_rate": 0.0,
+    "grounding_rate": 1.0,
+    "ambiguous_escalation_rate": 0.0,
+    "escalations_per_doc": 0.0,
+    "cost_per_doc_usd": 0.00303,
+    "latency_per_doc_s": 13.92,
+    "llm_calls_per_doc": 1.0,
+    "docs": 5,
+    "per_rule_f1": {
+      "R02": 1.0,
+      "R03": 1.0,
+      "R06": 1.0,
+      "R07": 1.0,
+      "R09": 1.0,
+      "R10": 1.0
+    }
+  },
+  "errors": 0,
+  "wall_time_s": 42.2,
+  "llm_totals": {
+    "calls": 5,
+    "cache_hits": 0,
+    "prompt_tokens": 9983,
+    "completion_tokens": 4860,
+    "cost_usd": 0.015145
+  },
+  "per_doc": [
+    {
+      "doc_id": "robust_noisy_001",
+      "score": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {},
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 0,
+        "grounded": 0,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.00030199999999999997,
+        "latency_s": 1.65,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "robust_noisy_001",
+        "findings": [],
+        "escalations": [],
+        "cost_usd": 0.00030199999999999997,
+        "latency_s": 1.65,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "robust_noisy_002",
+      "score": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R03": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 1,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0007486000000000001,
+        "latency_s": 8.1,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "robust_noisy_002",
+        "findings": [
+          {
+            "rule_id": "R03",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "applicants are strictly required to submit their full national identification card copy, religious affiliation, marital status, exact number of family dependents, and current employer details alongside the standard resume.",
+            "fix": null
+          },
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "The company retains all submitted candidate records and application files indefinitely in our archival database following the conclusion of the recruitment cycle, and reserves the right to store this information permanently for future operational reference.",
+            "fix": null
+          },
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "applicants are strictly required to submit their full national identification card copy, religious affiliation, marital status, exact number of family dependents, and current employer details alongside the standard resume.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0007486000000000001,
+        "latency_s": 8.1,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "robust_noisy_003",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R02": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R07": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R09": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 3,
+        "subtle_found": 3,
+        "unverified": 1,
+        "findings": 4,
+        "grounded": 4,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0128092,
+        "latency_s": 40.52,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "robust_noisy_003",
+        "findings": [
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "المادة (٤): تحتفظ الشركة بصفتها جهة التحكم بحق استخدام البيانات المجمعة لأي غرض تشغيلي تراه مناسباً حالياً أو مستقبلاً، بما في ذلك تطوير المنتجات وأغراض التحليل الداخلي غير المذكورة صراحة في هذه الاتفاقية ودون الحاجة للحصول على إذن إضافي.",
+            "fix": null
+          },
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "المادة (٤): تحتفظ الشركة بصفتها جهة التحكم بحق استخدام البيانات المجمعة لأي غرض تشغيلي تراه مناسباً حالياً أو مستقبلاً، بما في ذلك تطوير المنتجات وأغراض التحليل الداخلي غير المذكورة صراحة في هذه الاتفاقية ودون الحاجة للحصول على إذن إضافي.",
+            "fix": null
+          },
+          {
+            "rule_id": "R07",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "المادة (٧): في حال وقوع أي حادث أمني أو وصول غير مصرح به إلى البيانات، يقوم المورد بتقييم الموقف وفقاّ لتقديره المطلق لتحديد ما إذا كان إشعار الشركة ملائماً، ودون الارتباط بأي جداول زمنية محددة مسبقاً.",
+            "fix": null
+          },
+          {
+            "rule_id": "R09",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "المادة (١): يحق للمورد التعاقد من الباطن مع أي أطراف ثالثة لتقديم الخدمات أو معالجة البيانات المرتبطة بها وفقاّ لتقديره التجاري، وتُعفى أنظمه المورد الداخليه من أي التزامات تخص التدقيق المباشر من قبل الشركة.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0128092,
+        "latency_s": 40.52,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "robust_noisy_004",
+      "score": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R09": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 0,
+        "findings": 1,
+        "grounded": 1,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0006917,
+        "latency_s": 13.48,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "robust_noisy_004",
+        "findings": [
+          {
+            "rule_id": "R09",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "يقر الطرف الثاني بحريته الكامله في الاستعانة بأي مقاولين - 2 - من الباطن لتقديم الخدمات المتعلقه بالبيانات وفقاً لتقديره التجارى البحت ودون الحاجة لتقديم إشعار مسبق للطرف الأول، على أن ىقتصر دور الطرف الأول على تلقي الخدمات النهائية المتفق عليها دون حق في إجراء عمليات تفتيش أو مراجعة ميدانية لأنظمة الطرف الثاني.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0006917,
+        "latency_s": 13.48,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "robust_noisy_005",
+      "score": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R10": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 2,
+        "grounded": 2,
+        "ambiguous": 1,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0005934,
+        "latency_s": 5.87,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "robust_noisy_005",
+        "findings": [
+          {
+            "rule_id": "R03",
+            "verdict": "violation",
+            "confidence": 0.9,
+            "evidence": "We gather personal information to an extent deemed appropriate for the general operation of our digital portal and the delivery of requested functionalities.",
+            "fix": null
+          },
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "To enhance our commercial outreach, sensitive categories including health records, religious affiliations, and biometric identifiers are processed under our legitimate business interests to tailor promotional campaigns and are made accessible across all operational departments.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0005934,
+        "latency_s": 5.87,
+        "llm_calls": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,319 @@
+{
+  "system": "baseline_small",
+  "split": "robust_newtype",
+  "include_hidden": false,
+  "limit": null,
+  "models": {
+    "small": "gemini/gemini-3.5-flash-lite",
+    "large": "gemini/gemini-3.5-flash-lite",
+    "generator": "gemini/gemini-3.5-flash-lite",
+    "judge_eval": "gemini/gemini-3.5-flash-lite"
+  },
+  "metrics": {
+    "precision": 1.0,
+    "recall": 0.667,
+    "f1": 0.8,
+    "tp": 8,
+    "fp": 0,
+    "fn": 4,
+    "subtle_recall": 0.714,
+    "trap_fp_rate": 0.0,
+    "grounding_rate": 1.0,
+    "ambiguous_escalation_rate": null,
+    "escalations_per_doc": 0.0,
+    "cost_per_doc_usd": 0.00196,
+    "latency_per_doc_s": 10.26,
+    "llm_calls_per_doc": 0.6,
+    "docs": 5,
+    "per_rule_f1": {
+      "R01": 1.0,
+      "R02": 0.667,
+      "R03": 0.0,
+      "R04": 1.0,
+      "R05": 0.0,
+      "R10": 1.0,
+      "R11": 1.0
+    }
+  },
+  "errors": 2,
+  "wall_time_s": 56.3,
+  "llm_totals": {
+    "calls": 3,
+    "cache_hits": 0,
+    "prompt_tokens": 4769,
+    "completion_tokens": 3350,
+    "cost_usd": 0.009806
+  },
+  "per_doc": [
+    {
+      "doc_id": "robust_newtype_001",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R01": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R04": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R11": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 3,
+        "subtle_found": 3,
+        "unverified": 0,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0083361,
+        "latency_s": 26.14,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "robust_newtype_001",
+        "findings": [
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "يُعد الاستخدام للتطبيق وتصفح صفحاته بمثابة موافقة ضمنية ومستمرة على كافة عمليات معالجة البيانات واستخدامها في أغراض التطبيق التشغيلية، ولا يسري أي طلب لاحق بسحب هذه الموافقة إلا بعد انقضاء الالتزامات التعاقدية الحالية.",
+            "fix": null
+          },
+          {
+            "rule_id": "R04",
+            "verdict": "violation",
+            "confidence": 0.9,
+            "evidence": "تحتفظ الشركة بخصوصية تفاصيل عمليات جمع البيانات الفنية وهيكلة التخزين وتصنيفات المعلومات، ولا يتم الإفصاح عن تفاصيل أساليب المعالجة إلا بناءً على طلب خطي يتقدم به المستخدم لاحقًا.",
+            "fix": null
+          },
+          {
+            "rule_id": "R11",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "يوافق المستخدم عند إنشاء الحساب على تفعيل تلقي العروض الترويجية والرسائل الإعلانية عبر كافة ققوانين التواصل المتاحة، ودون الحاجة لتوفير خيار إضافي لإلغاء الاشتراك في هذه الرسائل.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0083361,
+        "latency_s": 26.14,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "robust_newtype_002",
+      "score": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "per_rule": {
+          "R03": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 0,
+        "grounded": 0,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.0,
+        "llm_calls": 0
+      },
+      "output": {
+        "doc_id": "robust_newtype_002",
+        "findings": [],
+        "escalations": [],
+        "error": "ValueError: Model did not return valid JSON: '{\"findings\": [{\"rule_id\": \"R03\", \"confidence\": 0.95, \"evidence\": \"\\\\u0644\\\\u0625\\\\u062a\\\\u0645\\\\u0627\\\\u0645 \\\\u0627\\\\u0644\\\\u062a\\\\u0633\\\\u062c\\\\u064a\\\\u0644 \\\\u0641"
+      }
+    },
+    {
+      "doc_id": "robust_newtype_003",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R01": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R02": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R10": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 0,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0008034000000000001,
+        "latency_s": 11.52,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "robust_newtype_003",
+        "findings": [
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "the user grants irrevocable consent to all data processing activities, and consent withdrawal is disabled for the entire duration of the active subscription period.",
+            "fix": null
+          },
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "The platform reserves the right to utilize all collected user information for any business purpose deemed necessary, now or in the future, including unstated commercial initiatives that may emerge during ongoing operational development.",
+            "fix": null
+          },
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "The company processes users' health records and religious preferences under legitimate commercial interest to tailor targeted marketing campaigns and enhance cross-departmental service delivery across all internal business units.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0008034000000000001,
+        "latency_s": 11.52,
+        "llm_calls": 1
+      }
+    },
+    {
+      "doc_id": "robust_newtype_004",
+      "score": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "per_rule": {
+          "R02": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "R03": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "R05": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 0,
+        "grounded": 0,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0,
+        "latency_s": 0.0,
+        "llm_calls": 0
+      },
+      "output": {
+        "doc_id": "robust_newtype_004",
+        "findings": [],
+        "escalations": [],
+        "error": "ValueError: Model did not return valid JSON: '{\"findings\": [{\"rule_id\": \"R01\", \"confidence\": 1.0, \"evidence\": \"\\\\u06 \\\\u062\\\\u0645\\\\u0646\\\\u062d \\\\u0647\\\\u0630\\\\u0647 \\\\u0627\\\\u0644\\\\u0634\\\\u0631\\\\u0648\\\\u0637 \\\\"
+      }
+    },
+    {
+      "doc_id": "robust_newtype_005",
+      "score": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R01": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R11": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 0,
+        "findings": 2,
+        "grounded": 2,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.0006662,
+        "latency_s": 13.65,
+        "llm_calls": 1
+      },
+      "output": {
+        "doc_id": "robust_newtype_005",
+        "findings": [
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "Given the continuous nature of the digital services provided, recorded preferences and permissions remain binding for the active duration of the registered account profile and cannot be rescinded retrospectively.",
+            "fix": null
+          },
+          {
+            "rule_id": "R11",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "Upon successful account registration and profile creation, the user is automatically enrolled to receive commercial communications, promotional offers, and updates originating from the application administration as well as our designated corporate partners. Communication preferences are pre-configured by default to maintain continuous outreach, and direct opt-out functionalities are intentionally omitted from user notification settings.",
+            "fix": null
+          }
+        ],
+        "escalations": [],
+        "cost_usd": 0.0006662,
+        "latency_s": 13.65,
+        "llm_calls": 1
+      }
+    }
+  ]
+}

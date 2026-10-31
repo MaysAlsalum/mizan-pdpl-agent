@@ -1,0 +1,1 @@
+{"text": "{\"fixed_clause\": \"To subscribe to our newsletter, you must provide your email address.\"}", "data": {"fixed_clause": "To subscribe to our newsletter, you must provide your email address."}, "model": "gemini/gemini-3.5-flash", "prompt_tokens": 113, "completion_tokens": 256, "cost_usd": 0.00104475, "latency_s": 3.172, "cached": false}

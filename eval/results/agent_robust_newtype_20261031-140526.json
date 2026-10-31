@@ -1,0 +1,2976 @@
+{
+  "system": "agent",
+  "split": "robust_newtype",
+  "include_hidden": false,
+  "limit": null,
+  "models": {
+    "small": "gemini/gemini-3.5-flash-lite",
+    "large": "gemini/gemini-3.5-flash-lite",
+    "generator": "gemini/gemini-3.5-flash-lite",
+    "judge_eval": "gemini/gemini-3.5-flash-lite"
+  },
+  "metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "tp": 12,
+    "fp": 0,
+    "fn": 0,
+    "subtle_recall": 1.0,
+    "trap_fp_rate": 0.0,
+    "grounding_rate": 1.0,
+    "ambiguous_escalation_rate": null,
+    "escalations_per_doc": 0.0,
+    "cost_per_doc_usd": 0.01621,
+    "latency_per_doc_s": 112.44,
+    "llm_calls_per_doc": 9.4,
+    "docs": 5,
+    "per_rule_f1": {
+      "R01": 1.0,
+      "R02": 1.0,
+      "R03": 1.0,
+      "R04": 1.0,
+      "R05": 1.0,
+      "R10": 1.0,
+      "R11": 1.0
+    }
+  },
+  "errors": 0,
+  "wall_time_s": 307.8,
+  "llm_totals": {
+    "calls": 47,
+    "cache_hits": 0,
+    "prompt_tokens": 70916,
+    "completion_tokens": 23911,
+    "cost_usd": 0.081052
+  },
+  "per_doc": [
+    {
+      "doc_id": "robust_newtype_001",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R04": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R11": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R01": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 3,
+        "subtle_found": 3,
+        "unverified": 0,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.009224,
+        "latency_s": 81.18,
+        "llm_calls": 8
+      },
+      "output": {
+        "doc_id": "robust_newtype_001",
+        "doc_type_guess": "mobile_app_terms",
+        "findings": [
+          {
+            "rule_id": "R04",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "تحتفظ الشركة بخصوصية تفاصيل عمليات جمع البيانات الفنية وهيكلة التخزين وتصنيفات المعلومات، ولا يتم الإفصاح عن تفاصيل أساليب المعالجة إلا بناءً على طلب خطي",
+            "reason": "The policy withholds processing and storage details rather than making them available transparently prior to collection as required by Art. 12 and 13.",
+            "source": "PDPL Art. 12; Art. 13",
+            "clause": "تحتفظ الشركة بخصوصية تفاصيل عمليات جمع البيانات الفنية وهيكلة التخزين وتصنيفات المعلومات، ولا يتم الإفصاح عن تفاصيل أساليب المعالجة إلا بناءً على طلب خطي يتقدم به المستخدم لاحقاً.",
+            "fix": "تقوم الشركة بإتاحة سياسة خصوصية توضح تفاصيل عمليات جمع البيانات، وأنواع البيانات المجمعة، وطريقة معالجتها وتخزينها وإتلافها، بالإضافة إلى حقوق صاحب البيانات وكيفية ممارستها، وذلك قبل البدء في جمع البيانات الشخصية.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R11",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "يوافق المستخدم عند إنشاء الحساب على تفعيل تلقي العروض الترويجية والرسائل الإعلانية عبر كافة قنوات التواصل المتاحة، ودون الحاجة لتوفير خيار إضافي لإلغاء الاشتراك",
+            "reason": "Direct marketing is bundled by default upon account creation without offering a clear and easy way to opt out or stop receiving messages.",
+            "source": "PDPL Art. 25",
+            "clause": "يوافق المستخدم عند إنشاء الحساب على تفعيل تلقي العروض الترويجية والرسائل الإعلانية عبر كافة قنوات التواصل المتاحة، ودون الحاجة لتوفير خيار إضافي لإلغاء الاشتراك في هذه الرسائل.",
+            "fix": "يوافق المستخدم على تلقي المواد الإعلانية أو الترويجية عبر قنوات الاتصال الشخصية بموافقته المسبقة، مع توفير وسيلة واضحة وسهلة لإيقاف تلقيها.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "موافقة ضمنية ومستمرة على كافة عمليات معالجة البيانات واستخدامها في أغراض التطبيق التشغيلية، ولا يسري أي طلب لاحق بسحب هذه الموافقة إلا بعد انقضاء الالتزامات التعاقدية الحالية.",
+            "reason": "Consent is presumed implicitly and its withdrawal is restricted during contractual obligations, violating the right to withdraw consent at any time.",
+            "source": "PDPL Art. 5",
+            "clause": "يُعد استخدام التطبيق وتصفح صفحاته بمثابة موافقة ضمنية ومستمرة على كافة عمليات معالجة البيانات واستخدامها في أغراض التطبيق التشغيلية، ولا يسري أي طلب لاحق بسحب هذه الموافقة إلا بعد انقضاء الالتزامات التعاقدية الحالية.",
+            "fix": "يُعد استخدام التطبيق وتصفح صفحاته بمثابة موافقة صريحة على معالجة البيانات لأغراض التطبيق التشغيلية، ويحق لصاحب البيانات سحب موافقته في أي وقت.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=mobile_app_terms clauses=11 with_candidates=10"
+        ],
+        "assessments": [
+          {
+            "clause_id": "k1",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تخضع كافة المعاملات المالية وعمليات الدفع عبر التطبيق لرسوم الخدمة",
+            "reason": "The clause deals with financial transaction fees and payment methods and does not violate retention or destruction rules."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "لا تتحمل الشركة أي مسؤولية قانونية عن الأضرار غير المباشرة",
+            "reason": "The clause limits legal liability for indirect damages and does not expand personal data processing purposes."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تبدأ المدة التعاقدية لهذه الشروط من تاريخ تفعيل الحساب",
+            "reason": "The clause outlines the contract term duration and does not establish an indefinite data retention period."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R04",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "تحتفظ الشركة بخصوصية تفاصيل عمليات جمع البيانات الفنية وهيكلة التخزين وتصنيفات المعلومات، ولا يتم الإفصاح عن تفاصيل أساليب المعالجة إلا بناءً على طلب خطي",
+            "reason": "The policy withholds processing and storage details rather than making them available transparently prior to collection as required by Art. 12 and 13."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "جميع حقوق الملكية الفكرية والعلامات التجارية والتصميمات الخاصة بالتطبيق هي ملكية حصرية للشركة",
+            "reason": "The clause pertains to intellectual property rights and does not restrict data subject rights under the PDPL."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R11",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "يوافق المستخدم عند إنشاء الحساب على تفعيل تلقي العروض الترويجية والرسائل الإعلانية عبر كافة قنوات التواصل المتاحة، ودون الحاجة لتوفير خيار إضافي لإلغاء الاشتراك",
+            "reason": "Direct marketing is bundled by default upon account creation without offering a clear and easy way to opt out or stop receiving messages."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "موافقة ضمنية ومستمرة على كافة عمليات معالجة البيانات واستخدامها في أغراض التطبيق التشغيلية، ولا يسري أي طلب لاحق بسحب هذه الموافقة إلا بعد انقضاء الالتزامات التعاقدية الحالية.",
+            "reason": "Consent is presumed implicitly and its withdrawal is restricted during contractual obligations, violating the right to withdraw consent at any time."
+          },
+          {
+            "clause_id": "k9",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "يقصد بالشركة في هذا السياق شركة رائد التقنية لخدمات الاتصالات",
+            "reason": "This is a definitional clause that does not involve personal data processing or consent."
+          },
+          {
+            "clause_id": "k10",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "توجه كافة الإشعارات والمخاطبات الرسمية المتبادلة بين الطرفين عبر البريد الإلكتروني المعتمد للمستخدم",
+            "reason": "This clause relates to communication channels and does not contradict privacy policy content requirements."
+          },
+          {
+            "clause_id": "k11",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "تقتصر أغراض معالجة البيانات التي يقوم بها التطبيق على الأغراض التشغيلية المحددة وقت جمعها",
+            "reason": "The clause explicitly limits data processing to the specific purposes for which it was collected, aligning with purpose limitation principles."
+          }
+        ],
+        "clauses": [
+          {
+            "id": "k1",
+            "text": "تخضع كافة المعاملات المالية وعمليات الدفع عبر التطبيق لرسوم الخدمة المقررة والمعلنة مسبقاً، والتي تسدد حصرياً عبر وسائل الدفع المعتمدة لدى الشركة.",
+            "rules": [
+              "R06",
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R05",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k2",
+            "text": "لا تتحمل الشركة أي مسؤولية قانونية عن الأضرار غير المباشرة أو الخسائر التبعية الناشئة عن استخدام الخدمة أو تعذر استخدامه.",
+            "rules": [
+              "R02",
+              "R01",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k3",
+            "text": "تخضع هذه الشروط والأحكام وتفسر وفقاً للأنظمة المعمول بها في المملكة العربية السعودية، وتختص الجهات القضائية بالفصل في أي نزاع.",
+            "rules": []
+          },
+          {
+            "id": "k4",
+            "text": "تبدأ المدة التعاقدية لهذه الشروط من تاريخ تفعيل الحساب وتستمر حتى قيام أي من الطرفين بإنهاء الخدمة وفقاً للإجراءات التنظيمية المتبعة.",
+            "rules": [
+              "R06",
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R05",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k5",
+            "text": "تحتفظ الشركة بخصوصية تفاصيل عمليات جمع البيانات الفنية وهيكلة التخزين وتصنيفات المعلومات، ولا يتم الإفصاح عن تفاصيل أساليب المعالجة إلا بناءً على طلب خطي يتقدم به المستخدم لاحقاً.",
+            "rules": [
+              "R04",
+              "R05",
+              "R01",
+              "R02",
+              "R03",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k6",
+            "text": "جميع حقوق الملكية الفكرية والعلامات التجارية والتصميمات الخاصة بالتطبيق هي ملكية حصرية للشركة، ولا يحق لأي طرف استنساخها أو استخدامها دون إذن خطي.",
+            "rules": [
+              "R05",
+              "R02",
+              "R01",
+              "R03",
+              "R04",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k7",
+            "text": "يوافق المستخدم عند إنشاء الحساب على تفعيل تلقي العروض الترويجية والرسائل الإعلانية عبر كافة قنوات التواصل المتاحة، ودون الحاجة لتوفير خيار إضافي لإلغاء الاشتراك في هذه الرسائل.",
+            "rules": [
+              "R11",
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10"
+            ]
+          },
+          {
+            "id": "k8",
+            "text": "يُعد استخدام التطبيق وتصفح صفحاته بمثابة موافقة ضمنية ومستمرة على كافة عمليات معالجة البيانات واستخدامها في أغراض التطبيق التشغيلية، ولا يسري أي طلب لاحق بسحب هذه الموافقة إلا بعد انقضاء الالتزامات التعاقدية الحالية.",
+            "rules": [
+              "R01",
+              "R02",
+              "R05",
+              "R03",
+              "R04",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k9",
+            "text": "يقصد بالشركة في هذا السياق شركة رائد التقنية لخدمات الاتصالات، ويقصد بالمستخدم كل شخص يرتاد التطبيق أو يستفيد من خدماته.",
+            "rules": [
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k10",
+            "text": "توجه كافة الإشعارات والمخاطبات الرسمية المتبادلة بين الطرفين عبر البريد الإلكتروني المعتمد للمستخدم أو من خلال الإشعارات الداخلية للتطبيق.",
+            "rules": [
+              "R04",
+              "R01",
+              "R02",
+              "R03",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k11",
+            "text": "تقتصر أغراض معالجة البيانات التي يقوم بها التطبيق على الأغراض التشغيلية المحددة وقت جمعها، ولا يتم استخدامها في أي نطاق آخر سوى ما يتطلبه تقديم الخدمة الأساسية.",
+            "rules": [
+              "R02",
+              "R01",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          }
+        ],
+        "cost_usd": 0.009224,
+        "latency_s": 81.18,
+        "llm_calls": 8
+      }
+    },
+    {
+      "doc_id": "robust_newtype_002",
+      "score": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R03": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 0,
+        "findings": 1,
+        "grounded": 1,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.018449,
+        "latency_s": 41.16,
+        "llm_calls": 3
+      },
+      "output": {
+        "doc_id": "robust_newtype_002",
+        "doc_type_guess": "vendor_contract",
+        "findings": [
+          {
+            "rule_id": "R03",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "يتوجب على المستخدم تزويدنا بصورة كاملة عن بطاقة الهوية الوطنية، وتحديد الحالة الاجتماعية، وعدد أفراد الأسرة، إضافة إلى تفاصيل جهة العمل الحالية",
+            "reason": "Demanding a full national ID copy, marital status, family member count, and employer details for a simple email newsletter violates the data minimisation principle.",
+            "source": "PDPL Art. 11(3)",
+            "clause": "لإتمام التسجيل في خدمة التنبيهات البريدية والإخبارية، يتوجب على المستخدم تزويدنا بصورة كاملة عن بطاقة الهوية الوطنية، وتحديد الحالة الاجتماعية، وعدد أفراد الأسرة، إضافة إلى تفاصيل جهة العمل الحالية لضمان تخصيص المحتوى بدقة.",
+            "fix": "لإتمام التسجيل في خدمة التنبيهات البريدية والإخبارية، يتوجب على المستخدم تزويدنا بريده الإلكتروني لضمان تخصيص المحتوى بدقة.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=vendor_contract clauses=8 with_candidates=6"
+        ],
+        "assessments": [
+          {
+            "clause_id": "k1",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تخضع كافة المعاملات المالية وقيمة الاشتراكات للرسوم الموضحة داخل واجهة التطبيق",
+            "reason": "The clause discusses payment processing and fees without addressing indefinite data retention."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تتم عملية السداد عبر قنوات الدفع الإلكترونية المعتمدة لدينا حصراً.",
+            "reason": "The clause relates to payment methods and does not involve processing sensitive or health data."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تخضع كافة المعاملات المالية وقيمة الاشتراكات للرسوم الموضحة داخل واجهة التطبيق",
+            "reason": "The clause specifies financial terms rather than unconsented personal data processing."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تتم عملية السداد عبر قنوات الدفع الإلكترونية المعتمدة لدينا حصراً.",
+            "reason": "The clause focuses on payment channels without violating purpose limitation rules."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تخضع كافة المعاملات المالية وقيمة الاشتراكات للرسوم الموضحة داخل واجهة التطبيق",
+            "reason": "The clause governs financial transactions and does not demand excessive personal data."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تتم عملية السداد عبر قنوات الدفع الإلكترونية المعتمدة لدينا حصراً.",
+            "reason": "The clause concerns payment processing rather than privacy policy disclosures."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تخضع كافة المعاملات المالية وقيمة الاشتراكات للرسوم الموضحة داخل واجهة التطبيق",
+            "reason": "The clause does not restrict data subject access, correction, or deletion rights."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تتم عملية السداد عبر قنوات الدفع الإلكترونية المعتمدة لدينا حصراً.",
+            "reason": "The clause addresses payment channels and does not touch upon data breach reporting requirements."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تتم عملية السداد عبر قنوات الدفع الإلكترونية المعتمدة لدينا حصراً.",
+            "reason": "The clause refers to payment channels rather than vendor or processor guarantees."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تخضع كافة المعاملات المالية وقيمة الاشتراكات للرسوم الموضحة داخل واجهة التطبيق",
+            "reason": "The clause pertains to financial fees and transactions, not direct marketing communications."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يحق لأي من الطرفين إنهاء اتفاقية الاستخدام في أي وقت دون إبداء أسباب",
+            "reason": "The clause governs contract termination rights rather than data processing purposes."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "وذلك بموجب إشعار كتابي يُرسل عبر البريد الإلكتروني قبل تاريخ الإنهاء بثلاثين يوماً.",
+            "reason": "The clause outlines termination notification procedures rather than privacy policy contents."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يحق لأي من الطرفين إنهاء اتفاقية الاستخدام في أي وقت دون إبداء أسباب",
+            "reason": "The clause does not restrict data subject rights such as access or correction."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يحق لأي من الطرفين إنهاء اتفاقية الاستخدام في أي وقت دون إبداء أسباب",
+            "reason": "The clause deals with agreement termination rather than personal data consent."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "وذلك بموجب إشعار كتابي يُرسل عبر البريد الإلكتروني قبل تاريخ الإنهاء بثلاثين يوماً.",
+            "reason": "The clause does not mandate the collection of unnecessary personal data."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يحق لأي من الطرفين إنهاء اتفاقية الاستخدام في أي وقت دون إبداء أسباب",
+            "reason": "The clause focuses on contract termination rules, not data retention or destruction periods."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "وذلك بموجب إشعار كتابي يُرسل عبر البريد الإلكتروني قبل تاريخ الإنهاء بثلاثين يوماً.",
+            "reason": "The clause does not concern data security breach notifications."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يحق لأي من الطرفين إنهاء اتفاقية الاستخدام في أي وقت دون إبداء أسباب",
+            "reason": "The clause addresses contractual termination rather than processor obligations."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يحق لأي من الطرفين إنهاء اتفاقية الاستخدام في أي وقت دون إبداء أسباب",
+            "reason": "The clause has no relation to sensitive or health data processing."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "وذلك بموجب إشعار كتابي يُرسل عبر البريد الإلكتروني قبل تاريخ الإنهاء بثلاثين يوماً.",
+            "reason": "The clause regulates termination notices via email, not direct marketing advertisements."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "حصرياً للأغراض التشغيلية المرتبطة بتقديم الخدمات وتحسينها، دون استخدامها في أي مسارات أخرى غير معلنة.",
+            "reason": "The clause explicitly limits data usage to stated operational and service improvement purposes."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "نحتفظ بحق الاستفادة من البيانات التي تم جمعها وتحليلها",
+            "reason": "The clause does not deny or interfere with data subject rights."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "حصرياً للأغراض التشغيلية المرتبطة بتقديم الخدمات وتحسينها",
+            "reason": "The clause restricts data usage to service purposes without authorizing indefinite illegal retention."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "نحتفظ بحق الاستفادة من البيانات التي تم جمعها وتحليلها حصرياً للأغراض التشغيلية المرتبطة بتقديم الخدمات وتحسينها",
+            "reason": "The processing remains tied to operational service provision agreed upon by the user."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "حصرياً للأغراض التشغيلية المرتبطة بتقديم الخدمات وتحسينها",
+            "reason": "The clause deals with analysis for operational purposes and does not mandate excessive data collection."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "نحتفظ بحق الاستفادة من البيانات التي تم جمعها وتحليلها حصرياً للأغراض التشغيلية",
+            "reason": "The clause specifies the scope of data use rather than governing privacy policy disclosure contents."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "نحتفظ بحق الاستفادة من البيانات التي تم جمعها وتحليلها حصرياً للأغراض التشغيلية والمرتبطة بتقديم الخدمات وتحسينها",
+            "reason": "The clause does not address breach reporting obligations."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "نحتفظ بحق الاستفادة من البيانات التي تم جمعها وتحليلها حصرياً للأغراض التشغيلية المرتبطة بتقديم الخدمات وتحسينها",
+            "reason": "The clause does not discuss data processor guarantees or third-party vendors."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "حصرياً للأغراض التشغيلية المرتبطة بتقديم الخدمات وتحسينها",
+            "reason": "The clause does not mention processing sensitive or health data."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "حصرياً للأغراض التشغيلية المرتبطة بتقديم الخدمات وتحسينها، دون استخدامها في أي مسارات أخرى غير معلنة.",
+            "reason": "The clause restricts usage to operational service improvements rather than direct marketing campaigns."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "لإتمام التسجيل في خدمة التنبيهات البريدية والإخبارية، يتوجب على المستخدم تزويدنا...",
+            "reason": "Data collection is tied to a user registration process where consent is implicitly given by signing up."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "لضمان تخصيص المحتوى بدقة.",
+            "reason": "The clause states a specific collection purpose (content personalization for newsletters)."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R03",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "يتوجب على المستخدم تزويدنا بصورة كاملة عن بطاقة الهوية الوطنية، وتحديد الحالة الاجتماعية، وعدد أفراد الأسرة، إضافة إلى تفاصيل جهة العمل الحالية",
+            "reason": "Demanding a full national ID copy, marital status, family member count, and employer details for a simple email newsletter violates the data minimisation principle."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "لإتمام التسجيل في خدمة التنبيهات البريدية والإخبارية",
+            "reason": "The clause identifies the service and requirements, though privacy policy contents are generally governed elsewhere."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "لإتمام التسجيل في خدمة التنبيهات البريدية والإخبارية",
+            "reason": "The clause does not restrict or deny data subject rights under PDPL."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "لإتمام التسجيل في خدمة التنبيهات البريدية والإخبارية",
+            "reason": "The clause outlines registration inputs rather than retention or destruction periods."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "لإتمام التسجيل في خدمة التنبيهات البريدية والإخبارية",
+            "reason": "The clause is unrelated to breach notification requirements."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يتوجب على المستخدم تزويدنا بصورة كاملة عن بطاقة الهوية الوطنية",
+            "reason": "The clause outlines user requirements rather than processor arrangements or vendor guarantees."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يتوجب على المستخدم تزويدنا بصورة كاملة عن بطاقة الهوية الوطنية، وتحديد الحالة الاجتماعية، وعدد أفراد الأسرة",
+            "reason": "Collected fields (ID copy, marital status, family count) do not constitute sensitive or health data categories under PDPL Art. 1(11)."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "التسجيل في خدمة التنبيهات البريدية والإخبارية",
+            "reason": "The clause relates to informational/newsletter alerts requested by the user rather than unsolicited direct marketing."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تُعرّف «الشركة» في هذه الشروط بشركة نخبة الصحراء لتقنية المعلومات، ويُقصد بـ«المستخدم» كل شخص يقوم بتحميل التطبيق أو استخدام منصاته الرقمية.",
+            "reason": "This is a definitions clause and does not involve data processing purposes."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تُعرّف «الشركة» في هذه الشروط بشركة نخبة الصحراء لتقنية المعلومات، ويُقصد بـ«المستخدم» كل شخص يقوم بتحميل التطبيق أو استخدام منصاته الرقمية.",
+            "reason": "Definitions clause does not affect user consent rights."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تُعرّف «الشركة» في هذه الشروط بشركة نخبة الصحراء لتقنية المعلومات، ويُقصد بـ«المستخدم» كل شخص يقوم بتحميل التطبيق أو استخدام منصاته الرقمية.",
+            "reason": "Definitions clause does not mandate data collection."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تُعرّف «الشركة» في هذه الشروط بشركة نخبة الصحراء لتقنية المعلومات، ويُقصد بـ«المستخدم» كل شخص يقوم بتحميل التطبيق أو استخدام منصاته الرقمية.",
+            "reason": "Definitions clause does not concern privacy policy contents."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تُعرّف «الشركة» في هذه الشروط بشركة نخبة الصحراء لتقنية المعلومات، ويُقصد بـ«المستخدم» كل شخص يقوم بتحميل التطبيق أو استخدام منصاته الرقمية.",
+            "reason": "Definitions clause does not restrict data subject rights."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تُعرّف «الشركة» في هذه الشروط بشركة نخبة الصحراء لتقنية المعلومات، ويُقصد بـ«المستخدم» كل شخص يقوم بتحميل التطبيق أو استخدام منصاته الرقمية.",
+            "reason": "Definitions clause has no bearing on retention or destruction."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تُعرّف «الشركة» في هذه الشروط بشركة نخبة الصحراء لتقنية المعلومات، ويُقصد بـ«المستخدم» كل شخص يقوم بتحميل التطبيق أو استخدام منصاته الرقمية.",
+            "reason": "Definitions clause does not address breach notifications."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تُعرّف «الشركة» في هذه الشروط بشركة نخبة الصحراء لتقنية المعلومات، ويُقصد بـ«المستخدم» كل شخص يقوم بتحميل التطبيق أو استخدام منصاته الرقمية.",
+            "reason": "Definitions clause does not involve processor guarantees."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تُعرّف «الشركة» في هذه الشروط بشركة نخبة الصحراء لتقنية المعلومات، ويُقصد بـ«المستخدم» كل شخص يقوم بتحميل التطبيق أو استخدام منصاته الرقمية.",
+            "reason": "Definitions clause does not touch upon sensitive data."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تُعرّف «الشركة» في هذه الشروط بشركة نخبة الصحراء لتقنية المعلومات، ويُقصد بـ«المستخدم» كل شخص يقوم بتحميل التطبيق أو استخدام منصاته الرقمية.",
+            "reason": "Definitions clause is unrelated to direct marketing."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تظل كافة حقوق الملكية الفكرية والعلامات التجارية والتصميمات الخاصة والتطبيق ملكاً خالصاً للشركة",
+            "reason": "This clause deals with intellectual property rights and does not restrict data subject rights."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تظل كافة حقوق الملكية الفكرية والعلامات التجارية والتصميمات الخاصة والتطبيق ملكاً خالصاً للشركة",
+            "reason": "Intellectual property clauses do not govern personal data consent."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تظل كافة حقوق الملكية الفكرية والعلامات التجارية والتصميمات الخاصة والتطبيق ملكاً خالصاً للشركة",
+            "reason": "Intellectual property clauses do not pertain to personal data processing purposes."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تظل كافة حقوق الملكية الفكرية والعلامات التجارية والتصميمات الخاصة والتطبيق ملكاً خالصاً للشركة",
+            "reason": "The clause does not mandate data collection."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تظل كافة حقوق الملكية الفكرية والعلامات التجارية والتصميمات الخاصة والتطبيق ملكاً خالصاً للشركة",
+            "reason": "The clause is about software ownership, not privacy policy contents."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تظل كافة حقوق الملكية الفكرية والعلامات التجارية والتصميمات الخاصة والتطبيق ملكاً خالصاً للشركة",
+            "reason": "Intellectual property provisions are unrelated to personal data retention."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تظل كافة حقوق الملكية الفكرية والعلامات التجارية والتصميمات الخاصة والتطبيق ملكاً خالصاً للشركة",
+            "reason": "The clause does not involve data breach notification."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تظل كافة حقوق الملكية الفكرية والعلامات التجارية والتصميمات الخاصة والتطبيق ملكاً خالصاً للشركة",
+            "reason": "The clause does not concern processor contracts or guarantees."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تظل كافة حقوق الملكية الفكرية والعلامات التجارية والتصميمات الخاصة والتطبيق ملكاً خالصاً للشركة",
+            "reason": "The clause is unrelated to sensitive or health data."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تظل كافة حقوق الملكية الفكرية والعلامات التجارية والتصميمات الخاصة والتطبيق ملكاً خالصاً للشركة",
+            "reason": "Intellectual property protection has nothing to do with direct marketing communications."
+          }
+        ],
+        "clauses": [
+          {
+            "id": "k1",
+            "text": "تخضع كافة المعاملات المالية وقيمة الاشتراكات للرسوم الموضحة داخل واجهة التطبيق، وتتم عملية السداد عبر قنوات الدفع الإلكترونية المعتمدة لدينا حصراً.",
+            "rules": [
+              "R06",
+              "R10",
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R05",
+              "R07",
+              "R09",
+              "R11"
+            ]
+          },
+          {
+            "id": "k2",
+            "text": "يحق لأي من الطرفين إنهاء اتفاقية الاستخدام في أي وقت دون إبداء أسباب، وذلك بموجب إشعار كتابي يُرسل عبر البريد الإلكتروني قبل تاريخ الإنهاء بثلاثين يوماً.",
+            "rules": [
+              "R02",
+              "R04",
+              "R05",
+              "R01",
+              "R03",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k3",
+            "text": "نحتفظ بحق الاستفادة من البيانات التي تم جمعها وتحليلها حصرياً للأغراض التشغيلية المرتبطة بتقديم الخدمات وتحسينها، دون استخدامها في أي مسارات أخرى غير معلنة.",
+            "rules": [
+              "R02",
+              "R05",
+              "R06",
+              "R01",
+              "R03",
+              "R04",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k4",
+            "text": "لإتمام التسجيل في خدمة التنبيهات البريدية والإخبارية، يتوجب على المستخدم تزويدنا بصورة كاملة عن بطاقة الهوية الوطنية، وتحديد الحالة الاجتماعية، وعدد أفراد الأسرة، إضافة إلى تفاصيل جهة العمل الحالية لضمان تخصيص المحتوى بدقة.",
+            "rules": [
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k5",
+            "text": "لا تتحمل الشركة أي مسؤولية قانونية عن أي أضرار غير مباشرة أو تبعية قد تنتج عن تعطل الخدمات أو انقطاع الاتصال بشبكة الإنترنت.",
+            "rules": []
+          },
+          {
+            "id": "k6",
+            "text": "تُعرّف «الشركة» في هذه الشروط بشركة نخبة الصحراء لتقنية المعلومات، ويُقصد بـ«المستخدم» كل شخص يقوم بتحميل التطبيق أو استخدام منصاته الرقمية.",
+            "rules": [
+              "R02",
+              "R01",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k7",
+            "text": "تظل كافة حقوق الملكية الفكرية والعلامات التجارية والتصميمات الخاصة بالتطبيق ملكاً خالصاً للشركة، ولا يُسمح بنسخها أو استغلالها دون إذن خطي مسبق.",
+            "rules": [
+              "R05",
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k8",
+            "text": "تخضع هذه الشروط والأحكام وتفسر وفقاً للأنظمة المعمول بها في المملكة العربية السعودية، وتختص المحاكم المختصة بالفصل في أي نزاع قد ينشأ عنها.",
+            "rules": []
+          }
+        ],
+        "cost_usd": 0.018449,
+        "latency_s": 41.16,
+        "llm_calls": 3
+      }
+    },
+    {
+      "doc_id": "robust_newtype_003",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R01": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R10": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R02": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 4,
+        "findings": 7,
+        "grounded": 7,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.021557,
+        "latency_s": 213.25,
+        "llm_calls": 16
+      },
+      "output": {
+        "doc_id": "robust_newtype_003",
+        "doc_type_guess": "mobile_app_terms",
+        "findings": [
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "the user grants irrevocable consent to all data processing activities, and consent withdrawal is disabled",
+            "reason": "PDPL Art. 5 states that data subjects may withdraw their consent at any time, making a restriction on withdrawal a direct violation.",
+            "source": "PDPL Art. 5",
+            "clause": "By continuing to access and navigate the application after the publication of these terms, the user grants irrevocable consent to all data processing activities, and consent withdrawal is disabled for the entire duration of the active subscription period.",
+            "fix": "By continuing to access and navigate the application after the publication of these terms, the user grants consent to all data processing activities, and the user may withdraw consent at any time (except in cases the Law allows).",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "irrevocable consent to all data processing activities",
+            "reason": "Demanding blanket, irrevocable consent to 'all data processing activities' violates purpose limitation principles.",
+            "source": "PDPL Art. 10",
+            "clause": "By continuing to access and navigate the application after the publication of these terms, the user grants irrevocable consent to all data processing activities, and consent withdrawal is disabled for the entire duration of the active subscription period.",
+            "fix": "By continuing to access and navigate the application after the publication of these terms, the user grants consent to data processing activities for the purposes for which they were collected, except in specific cases set out in the law.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "processes users' health records and religious preferences under legitimate commercial interest to tailor targeted marketing campaigns",
+            "reason": "Using health and religious data for purposes beyond their original collection and under illegitimate legal bases violates purpose limitation.",
+            "source": "PDPL Art. 10",
+            "clause": "The company processes users' health records and religious preferences under legitimate commercial interest to tailor targeted marketing campaigns and enhance cross-departmental service delivery across all internal business units.",
+            "fix": "The company processes users' health records and religious preferences only for the specific purposes for which they were collected, except in specific cases set out in the Law.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "The company processes users' health records and religious preferences under legitimate commercial interest to tailor targeted marketing campaigns",
+            "reason": "PDPL Art. 6(4) and Art. 23 explicitly prohibit processing sensitive data (including health and religious data) on the basis of legitimate interest or using them for marketing.",
+            "source": "PDPL Art. 1(11), 1(13), 6(4), 23, 26",
+            "clause": "The company processes users' health records and religious preferences under legitimate commercial interest to tailor targeted marketing campaigns and enhance cross-departmental service delivery across all internal business units.",
+            "fix": "The company processes users' health records and religious preferences with strictly limited access based on explicit consent or other lawful grounds, excluding legitimate interest and marketing purposes, to enhance cross-departmental service delivery across authorized internal business units.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R11",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "tailor targeted marketing campaigns",
+            "reason": "Using sensitive data like health and religion for marketing without valid, explicit conditions violates direct marketing and sensitive data rules.",
+            "source": "PDPL Art. 25",
+            "clause": "The company processes users' health records and religious preferences under legitimate commercial interest to tailor targeted marketing campaigns and enhance cross-departmental service delivery across all internal business units.",
+            "fix": "The company processes users' health records and religious preferences with the recipient's prior consent to tailor targeted marketing campaigns and enhance cross-departmental service delivery across all internal business units, and provides a clear way to stop receiving them.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.9,
+            "evidence": "processes users' health records and religious preferences under legitimate commercial interest",
+            "reason": "Relying on legitimate commercial interest instead of explicit consent for sensitive data processing violates PDPL consent rules.",
+            "source": "PDPL Art. 5",
+            "clause": "The company processes users' health records and religious preferences under legitimate commercial interest to tailor targeted marketing campaigns and enhance cross-departmental service delivery across all internal business units.",
+            "fix": "The company processes users' health records and religious preferences with the data subject's consent to tailor targeted marketing campaigns and enhance cross-departmental service delivery across all internal business units.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "utilize all collected user information for any business purpose deemed necessary, now or in the future, including unstated commercial initiatives",
+            "reason": "The clause allows the use of collected data for unspecified, future business purposes without the data subject's consent, violating purpose limitation.",
+            "source": "PDPL Art. 10",
+            "clause": "The platform reserves the right to utilize all collected user information for any business purpose deemed necessary, now or in the future, including unstated commercial initiatives that may emerge during ongoing operational development.",
+            "fix": "The platform may utilize all collected user information for the purposes for which it was collected, except in specific cases set out in the Law.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=mobile_app_terms clauses=10 with_candidates=8"
+        ],
+        "assessments": [
+          {
+            "clause_id": "k1",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "service interruptions caused by third-party telecommunications network failures",
+            "reason": "This clause deals with liability for technical service interruptions, not data processing purposes."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "service interruptions caused by third-party telecommunications network failures",
+            "reason": "The clause does not govern data breach notifications or security incidents."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "service interruptions caused by third-party telecommunications network failures",
+            "reason": "The clause concerns telecommunications network failures and liability, unrelated to user consent."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "service interruptions caused by third-party telecommunications network failures",
+            "reason": "The text relates to network liability and does not address personal data collection limits."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "service interruptions caused by third-party telecommunications network failures",
+            "reason": "This provision is about service liability rather than privacy policy disclosures."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "service interruptions caused by third-party telecommunications network failures",
+            "reason": "The clause does not affect data subjects' rights to access or correct information."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "service interruptions caused by third-party telecommunications network failures",
+            "reason": "Retention and destruction of personal data are not mentioned in this liability clause."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "service interruptions caused by third-party telecommunications network failures",
+            "reason": "The clause does not address processor guarantees or appointments."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "service interruptions caused by third-party telecommunications network failures",
+            "reason": "Sensitive or health data processing is unrelated to the subject matter of network liability."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "service interruptions caused by third-party telecommunications network failures",
+            "reason": "The clause has no connection to direct marketing communications."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "the user grants irrevocable consent to all data processing activities, and consent withdrawal is disabled",
+            "reason": "PDPL Art. 5 states that data subjects may withdraw their consent at any time, making a restriction on withdrawal a direct violation."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "irrevocable consent to all data processing activities",
+            "reason": "Demanding blanket, irrevocable consent to 'all data processing activities' violates purpose limitation principles."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "irrevocable consent to all data processing activities, and consent withdrawal is disabled",
+            "reason": "While it violates consent withdrawal rules, it does not explicitly deny access, correction, or deletion rights."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "irrevocable consent to all data processing activities, and consent withdrawal is disabled",
+            "reason": "The clause does not specify data retention periods or retention indefinitely."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.85,
+            "evidence": "irrevocable consent to all data processing activities, and consent withdrawal is disabled",
+            "reason": "The clause addresses broad consent rather than excessive data collection categories."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.85,
+            "evidence": "irrevocable consent to all data processing activities, and consent withdrawal is disabled",
+            "reason": "Privacy policy contents are not directly addressed by this consent provision."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "irrevocable consent to all data processing activities, and consent withdrawal is disabled",
+            "reason": "Breach notification obligations are not covered in this clause."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "irrevocable consent to all data processing activities, and consent withdrawal is disabled",
+            "reason": "Processor guarantees are not mentioned here."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "irrevocable consent to all data processing activities, and consent withdrawal is disabled",
+            "reason": "Sensitive or health data is not specifically targeted by this general consent clause."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "irrevocable consent to all data processing activities, and consent withdrawal is disabled",
+            "reason": "Direct marketing is not referenced in this clause."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "All software, user interfaces, trademarks, and proprietary graphics integrated within the application remain the exclusive intellectual property of Zahran Technologies.",
+            "reason": "This clause deals solely with intellectual property rights, not personal data processing purposes."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "All software, user interfaces, trademarks, and proprietary graphics integrated within the application remain the exclusive intellectual property of Zahran Technologies.",
+            "reason": "IP ownership provisions do not impact user consent for personal data."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "All software, user interfaces, trademarks, and proprietary graphics integrated within the application remain the exclusive intellectual property of Zahran Technologies.",
+            "reason": "The clause does not govern data minimization."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "All software, user interfaces, trademarks, and proprietary graphics integrated within the application remain the exclusive intellectual property of Zahran Technologies.",
+            "reason": "The clause specifies intellectual property rather than privacy policy disclosures."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "All software, user interfaces, trademarks, and proprietary graphics integrated within the application remain the exclusive intellectual property of Zahran Technologies.",
+            "reason": "Data subject rights are unaffected by intellectual property clauses."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "All software, user interfaces, trademarks, and proprietary graphics integrated within the application remain the exclusive intellectual property of Zahran Technologies.",
+            "reason": "Data retention and destruction are not discussed here."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "All software, user interfaces, trademarks, and proprietary graphics integrated within the application remain the exclusive intellectual property of Zahran Technologies.",
+            "reason": "Breach notification is irrelevant to this IP clause."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "All software, user interfaces, trademarks, and proprietary graphics integrated within the application remain the exclusive intellectual property of Zahran Technologies.",
+            "reason": "Processor guarantees are not covered."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "All software, user interfaces, trademarks, and proprietary graphics integrated within the application remain the exclusive intellectual property of Zahran Technologies.",
+            "reason": "Sensitive data is not mentioned."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "All software, user interfaces, trademarks, and proprietary graphics integrated within the application remain the exclusive intellectual property of Zahran Technologies.",
+            "reason": "Direct marketing rules do not apply here."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "users are provided with a comprehensive privacy policy detailing the exact categories of collected data, processing methods, storage durations, destruction protocols, and user rights.",
+            "reason": "Provision of a privacy policy detailing collection aligns with proper transparency and purpose specification."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "users are provided with a comprehensive privacy policy detailing the exact categories of collected data",
+            "reason": "Detailing collected data categories supports transparency and data minimisation practices."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "Prior to final account creation and data submission, users are provided with a comprehensive privacy policy detailing the exact categories of collected data, processing methods, storage durations, destruction protocols, and user rights.",
+            "reason": "The clause fully satisfies PDPL Art. 12 and 13 by making the privacy policy available prior to data collection."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "detailing the exact categories of collected data, processing methods, storage durations, destruction protocols, and user rights.",
+            "reason": "Explicitly detailing user rights in the policy supports data subject rights compliance."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "Prior to final account creation and data submission, users are provided with a comprehensive privacy policy",
+            "reason": "Informing users prior to account creation facilitates valid consent."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "storage durations, destruction protocols",
+            "reason": "Providing storage durations and destruction protocols complies with retention transparency requirements."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.85,
+            "evidence": "Prior to final account creation and data submission, users are provided with a comprehensive privacy policy",
+            "reason": "Breach notification is not contradicted by this transparency clause."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.85,
+            "evidence": "Prior to final account creation and data submission, users are provided with a comprehensive privacy policy",
+            "reason": "Processor guarantees are unaffected by this privacy notice clause."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.85,
+            "evidence": "Prior to final account creation and data submission, users are provided with a comprehensive privacy policy",
+            "reason": "Sensitive data processing is not improperly justified here."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.85,
+            "evidence": "Prior to final account creation and data submission, users are provided with a comprehensive privacy policy",
+            "reason": "Direct marketing is not addressed in this clause."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "processes users' health records and religious preferences under legitimate commercial interest to tailor targeted marketing campaigns",
+            "reason": "Using health and religious data for purposes beyond their original collection and under illegitimate legal bases violates purpose limitation."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "The company processes users' health records and religious preferences under legitimate commercial interest to tailor targeted marketing campaigns",
+            "reason": "PDPL Art. 6(4) and Art. 23 explicitly prohibit processing sensitive data (including health and religious data) on the basis of legitimate interest or using them for marketing."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R11",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "tailor targeted marketing campaigns",
+            "reason": "Using sensitive data like health and religion for marketing without valid, explicit conditions violates direct marketing and sensitive data rules."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.9,
+            "evidence": "processes users' health records and religious preferences under legitimate commercial interest",
+            "reason": "Relying on legitimate commercial interest instead of explicit consent for sensitive data processing violates PDPL consent rules."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.75,
+            "evidence": "processes users' health records and religious preferences under legitimate commercial interest to tailor targeted marketing campaigns",
+            "reason": "The issue here is the legal basis and marketing use rather than data minimisation, though sensitive data collection is inherently restricted."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "processes users' health records and religious preferences under legitimate commercial interest",
+            "reason": "This is a substantive processing rule violation rather than a privacy policy disclosure failure."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "processes users' health records and religious preferences under legitimate commercial interest",
+            "reason": "Data subject rights are not directly denied in this clause."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "processes users' health records and religious preferences under legitimate commercial interest",
+            "reason": "Retention periods are not mentioned in this clause."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "processes users' health records and religious preferences under legitimate commercial interest",
+            "reason": "Breach notification is not addressed."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "processes users' health records and religious preferences under legitimate commercial interest",
+            "reason": "Processor guarantees are not covered here."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "Users maintain the right to request access to their stored information, demand corrections or updates to inaccurate records, and petition for the destruction of data that is no longer required for the original purpose.",
+            "reason": "The clause fully respects data subject rights under PDPL Art. 4 to access, correct, and request destruction of data."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "destruction of data that is no longer required for the original purpose",
+            "reason": "Aligns with purpose limitation by tying data necessity to the original collection purpose."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.85,
+            "evidence": "Users maintain the right to request access to their stored information",
+            "reason": "Does not violate data minimisation."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.85,
+            "evidence": "Users maintain the right to request access to their stored information",
+            "reason": "Supports transparency regarding user rights."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.85,
+            "evidence": "Users maintain the right to request access to their stored information",
+            "reason": "Does not contradict consent principles."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "petition for the destruction of data that is no longer required for the original purpose",
+            "reason": "Directly supports the retention and destruction principles under PDPL Art. 18."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "Users maintain the right to request access to their stored information",
+            "reason": "Breach notification is not relevant to this rights clause."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "Users maintain the right to request access to their stored information",
+            "reason": "Processor guarantees are not mentioned."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "Users maintain the right to request access to their stored information",
+            "reason": "Sensitive data processing is not addressed."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "Users maintain the right to request access to their stored information",
+            "reason": "Direct marketing rules are not impacted."
+          },
+          {
+            "clause_id": "k9",
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "utilize all collected user information for any business purpose deemed necessary, now or in the future, including unstated commercial initiatives",
+            "reason": "The clause allows the use of collected data for unspecified, future business purposes without the data subject's consent, violating purpose limitation."
+          },
+          {
+            "clause_id": "k10",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "Users may terminate their account at any time through the application settings menu",
+            "reason": "Allowing users to terminate their accounts at any time supports their right to withdraw consent and does not violate personal data protection rules."
+          }
+        ],
+        "clauses": [
+          {
+            "id": "k1",
+            "text": "The company shall not be held liable for any indirect, incidental, or consequential damages arising from service interruptions caused by third-party telecommunications network failures.",
+            "rules": [
+              "R02",
+              "R07",
+              "R01",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k2",
+            "text": "By continuing to access and navigate the application after the publication of these terms, the user grants irrevocable consent to all data processing activities, and consent withdrawal is disabled for the entire duration of the active subscription period.",
+            "rules": [
+              "R01",
+              "R02",
+              "R05",
+              "R06",
+              "R03",
+              "R04",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k3",
+            "text": "These terms and any related disputes shall be governed by and construed in accordance with the commercial regulations applicable in the jurisdiction where the company is registered.",
+            "rules": []
+          },
+          {
+            "id": "k4",
+            "text": "All software, user interfaces, trademarks, and proprietary graphics integrated within the application remain the exclusive intellectual property of Zahran Technologies.",
+            "rules": [
+              "R02",
+              "R01",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k5",
+            "text": "All subscription fees for premium features are billed in advance on a monthly or annual basis and are strictly non-refundable once the billing cycle has commenced.",
+            "rules": []
+          },
+          {
+            "id": "k6",
+            "text": "Prior to final account creation and data submission, users are provided with a comprehensive privacy policy detailing the exact categories of collected data, processing methods, storage durations, destruction protocols, and user rights.",
+            "rules": [
+              "R02",
+              "R03",
+              "R04",
+              "R05",
+              "R01",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k7",
+            "text": "The company processes users' health records and religious preferences under legitimate commercial interest to tailor targeted marketing campaigns and enhance cross-departmental service delivery across all internal business units.",
+            "rules": [
+              "R02",
+              "R10",
+              "R11",
+              "R01",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09"
+            ]
+          },
+          {
+            "id": "k8",
+            "text": "Users maintain the right to request access to their stored information, demand corrections or updates to inaccurate records, and petition for the destruction of data that is no longer required for the original purpose.",
+            "rules": [
+              "R05",
+              "R02",
+              "R03",
+              "R04",
+              "R01",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k9",
+            "text": "The platform reserves the right to utilize all collected user information for any business purpose deemed necessary, now or in the future, including unstated commercial initiatives that may emerge during ongoing operational development.",
+            "rules": [
+              "R02",
+              "R03",
+              "R04",
+              "R05",
+              "R01",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k10",
+            "text": "Users may terminate their account at any time through the application settings menu, which will take effect immediately upon confirmation of the cancellation request.",
+            "rules": [
+              "R02",
+              "R01",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          }
+        ],
+        "cost_usd": 0.021557,
+        "latency_s": 213.25,
+        "llm_calls": 16
+      }
+    },
+    {
+      "doc_id": "robust_newtype_004",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R02": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R03": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R05": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 2,
+        "findings": 5,
+        "grounded": 5,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.02055,
+        "latency_s": 166.49,
+        "llm_calls": 12
+      },
+      "output": {
+        "doc_id": "robust_newtype_004",
+        "doc_type_guess": "unknown",
+        "findings": [
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "الاستفادة من كافة المعلومات والبيانات المدخلة عبر التطبيق لمختلف الأغراض التشغيلية الحالية والمستقبلية التي تقدرها الشركة",
+            "reason": "Allows using collected data for vague, future purposes decided unilaterally by the company, violating purpose limitation.",
+            "source": "PDPL Art. 10",
+            "clause": "تمنح هذه الشروط الشركة صلاحية الاستفادة من كافة المعلومات والبيانات المدخلة عبر التطبيق لمختلف الأغراض التشغيلية الحالية والمستقبلية التي تقدرها الشركة، بما في ذلك تطوير خدمات جديدة أو مشاركتها مع أطراف أخرى لتحسين جودة الأداء.",
+            "fix": "تمنح هذه الشروط الشركة صلاحية الاستفادة من كافة المعلومات والبيانات المدخلة عبر التطبيق للأغراض التي جمعت من أجلها والضرورية لتشغيل الخدمات، إلا في الحالات المحددة بموجب النظام.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.8,
+            "evidence": "تمنح هذه الشروط الشركة صلاحية الاستفادة من كافة المعلومات والبيانات المدخلة عبر التطبيق لمختلف الأغراض التشغيلية الحالية والمستقبلية التي تقدرها الشركة، بما في ذلك تطوير خدمات جديدة أو مشاركتها مع أطراف أخرى لتحسين جودة الأداء.",
+            "reason": "Presumes broad consent to change processing purposes without explicit subsequent consent.",
+            "source": "PDPL Art. 5",
+            "clause": "تمنح هذه الشروط الشركة صلاحية الاستفادة من كافة المعلومات والبيانات المدخلة عبر التطبيق لمختلف الأغراض التشغيلية الحالية والمستقبلية التي تقدرها الشركة، بما في ذلك تطوير خدمات جديدة أو مشاركتها مع أطراف أخرى لتحسين جودة الأداء.",
+            "fix": "تمنح هذه الشروط الشركة صلاحية الاستفادة من كافة المعلومات والبيانات المدخلة عبر التطبيق للأغراض التي تم جمع البيانات من أجلها وبناءً على موافقة صاحب البيانات (أو في الأحوال التي يجيزها القانون)، مع أحقية صاحب البيانات في سحب موافقته في أي وقت.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R03",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "يلتزم المستخدم بتقديم بيانات تفصيلية تشمل صورة الهوية الوطنية، الحالة الاجتماعية، عدد أفراد الأسرة، وتفاصيل الدخل الشهري، وذلك لضمان تقديم تجربة استخدام مخصصة.",
+            "reason": "Requires excessive and unnecessary personal data (family details, marital status, monthly income, full ID copy) for a standard app account and personalized experience, violating data minimisation.",
+            "source": "PDPL Art. 11(3)",
+            "clause": "للاستفادة من خدمات تطبيق \"نماء للخدمات الرقمية\" وإتمام إنشاء الحساب، يلتزم المستخدم بتقديم بيانات تفصيلية تشمل صورة الهوية الوطنية، الحالة الاجتماعية، عدد أفراد الأسرة، وتفاصيل الدخل الشهري، وذلك لضمان تقديم تجربة استخدام مخصصة.",
+            "fix": "للاستفادة من خدمات تطبيق \"نماء للخدمات الرقمية\" وإتمام إنشاء الحساب، يلتزم المستخدم بتقديم البيانات اللازمة لضمان تقديم تجربة استخدام مخصصة.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "لا يحق للمستخدم بأي حال من الأحوال طلب الاطلاع على سجلاته الرقمية المحفوظة لدى الشركة، أو المطالبة بتصحيحها أو تعديلها، كما تظل كافة البيانات محفوظة نهائياً لدى الشركة دون إمكانية التقدم بطلب لحذفها.",
+            "reason": "The clause explicitly denies the data subject's statutory rights to access, correct, and request the deletion of their personal data.",
+            "source": "PDPL Art. 4",
+            "clause": "لا يحق للمستخدم بأي حال من الأحوال طلب الاطلاع على سجلاته الرقمية المحفوظة لدى الشركة، أو المطالبة بتصحيحها أو تعديلها، كما تظل كافة البيانات محفوظة نهائياً لدى الشركة دون إمكانية التقدم بطلب لحذفها.",
+            "fix": "يحق للمستخدم الاطلاع على سجلاته الرقمية المحفوظة لدى الشركة، والمطالبة بتصحيحها أو تعديلها أو إكمالها، كما يحق له طلب حذف البيانات التي لم تعد هناك حاجة إليها، وذلك وفقاً للأساس النظامي والغرض من جمعها.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "كما تظل كافة البيانات محفوظة نهائياً لدى الشركة دون إمكانية التقدم بطلب لحذفها.",
+            "reason": "The clause mandates that all data is kept permanently and indefinitely without allowing deletion when no longer necessary.",
+            "source": "PDPL Art. 18",
+            "clause": "لا يحق للمستخدم بأي حال من الأحوال طلب الاطلاع على سجلاته الرقمية المحفوظة لدى الشركة، أو المطالبة بتصحيحها أو تعديلها، كما تظل كافة البيانات محفوظة نهائياً لدى الشركة دون إمكانية التقدم بطلب لحذفها.",
+            "fix": "لا يحق للمستخدم بأي حال من الأحوال طلب الاطلاع على سجلاته الرقمية المحفوظة لدى الشركة، أو المطالبة بتصحيحها أو تعديلها، كما تظل كافة البيانات محفوظة لدى الشركة ما لم تعد ضرورية للغرض الذي جمعت من أجله أو وُجد متطلب احتفاظ قانوني أو نزاع قضائي قائم.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=unknown clauses=12 with_candidates=8"
+        ],
+        "assessments": [
+          {
+            "clause_id": "k2",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "لا تتحمل شركة \"نماء للخدمات الرقمية\" أي مسؤولية قانونية عن الأضرار غير المباشرة",
+            "reason": "This clause relates to liability limitations for service interruptions rather than expanding the processing purposes of personal data."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "سوء الاستخدام من قبل المستخدم",
+            "reason": "The text deals with user misuse and liability, not processing personal data without consent."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "انقطاع الخدمة أو سوء الاستخدام",
+            "reason": "Does not involve collecting or requesting excessive personal data."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "لا تتحمل شركة \"نماء للخدمات الرقمية\" أي مسؤولية قانونية",
+            "reason": "This is a general liability disclaimer, not a privacy policy disclosure statement."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "الأضرار غير المباشرة أو الخسائر المالية الناجمة عن انقطاع الخدمة",
+            "reason": "Does not affect or restrict data subject rights such as access or correction."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "لا تتحمل شركة \"نماء للخدمات الرقمية\"",
+            "reason": "Does not address data retention periods or data destruction procedures."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "انقطاع الخدمة",
+            "reason": "Relates to service interruptions rather than personal data security breach notifications."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "لا تتحمل شركة \"نماء للخدمات الرقمية\" أي مسؤولية قانونية",
+            "reason": "Does not concern processor selection or processor guarantees."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "سوء الاستخدام من قبل المستخدم",
+            "reason": "Does not involve the processing or collection of sensitive or health data."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "لا تتحمل شركة \"نماء للخدمات الرقمية\" أي مسؤولية قانونية",
+            "reason": "Does not pertain to direct marketing communications."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تعتبر كافة الإشعارات والمراسلات الموجهة للمستخدم صحيحة وم منتجة لآثارها القانونية",
+            "reason": "Deals with the legal validity of notifications rather than privacy policy disclosures."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "إذا تم إرسالها عبر البريد الإلكتروني المسجل",
+            "reason": "Addresses communication channels for legal notices, not processing without consent."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "أو من خلال الإشعارات الداخلية للتطبيق",
+            "reason": "Does not change or expand personal data processing purposes."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "البريد الإلكتروني المسجل",
+            "reason": "Does not require excessive or unnecessary data collection."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "صحيحة وم منتجة لآثارها القانونية",
+            "reason": "Does not restrict data subject rights."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "الإشعارات والمراسلات الموجهة للمستخدم",
+            "reason": "Does not address data retention or deletion timelines."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "عبر البريد الإلكتروني المسجل",
+            "reason": "Relates to general correspondence rather than security breach notifications."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تعتبر كافة الإشعارات والمراسلات",
+            "reason": "Does not concern processor guarantees."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "البريد الإلكتروني المسجل",
+            "reason": "Does not involve sensitive or health data."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "الإشعارات الداخلية للتطبيق",
+            "reason": "Deals with administrative notices rather than direct marketing."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "الاستفادة من كافة المعلومات والبيانات المدخلة عبر التطبيق لمختلف الأغراض التشغيلية الحالية والمستقبلية التي تقدرها الشركة",
+            "reason": "Allows using collected data for vague, future purposes decided unilaterally by the company, violating purpose limitation."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.9,
+            "evidence": "تمنح هذه الشروط الشركة صلاحية الاستفادة من كافة المعلومات... لمختلف الأغراض... التي تقدرها الشركة",
+            "reason": "Presumes broad consent to change processing purposes without explicit subsequent consent."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تمنح هذه الشروط الشركة صلاحية الاستفادة من كافة المعلومات والبيانات المدخلة",
+            "reason": "Does not mandate the collection of excessive data, but rather governs the reuse of already entered data."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.85,
+            "evidence": "تمنح هذه الشروط الشركة صلاحية الاستفادة",
+            "reason": "Not a violation of privacy policy availability rules, though it expands usage purposes."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تطوير خدمات جديدة أو مشاركتها مع أطراف أخرى",
+            "reason": "Does not explicitly deny data subject access, correction, or deletion rights."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "للأغراض التشغيلية الحالية والمستقبلية",
+            "reason": "Does not explicitly mandate indefinite retention contrary to law, though broad."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "الاستفادة من كافة المعلومات والبيانات",
+            "reason": "Does not relate to data breach notification obligations."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "مشاركتها مع أطراف أخرى لتحسين جودة الأداء",
+            "reason": "Mentions sharing with third parties but does not constitute a processor agreement violation per se."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "كافة المعلومات والبيانات المدخلة",
+            "reason": "Does not specifically target or misuse sensitive or health data."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تطوير خدمات جديدة",
+            "reason": "Does not involve sending direct marketing communications."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "تظل كافة حقوق الملكية الفكرية والعلامات التجارية والتصميمات الخاصة التطبيق ملكية حصرية",
+            "reason": "Pertains to intellectual property rights and does not affect data subject rights."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "الملكية الفكرية والعلامات التجارية",
+            "reason": "Does not involve processing personal data purposes."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "شركة \"نماء للخدمات الرقمية\"",
+            "reason": "Does not concern consent to processing personal data."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "التصميمات الخاصة التطبيق ملكية حصرية",
+            "reason": "Does not deal with data minimisation."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "ولا يجوز استخدامها دون إذن خطي مسبق",
+            "reason": "Relates to IP usage rather than privacy policy disclosures."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "حقوق الملكية الفكرية",
+            "reason": "Does not involve data retention or destruction."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "علامات التجارية",
+            "reason": "Does not concern breach notifications."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "ملكية حصرية لشركة",
+            "reason": "Does not concern processor guarantees."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "الملكية الفكرية",
+            "reason": "Does not involve sensitive or health data."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "إذن خطي مسبق",
+            "reason": "Does not relate to direct marketing."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "يمكن للمستخدمين مراجعة تفاصيل سياسة الخصوصية الشاملة التي توضح نوعية المعلومات التي يتم جمعها، وآليات المعالجة والتخزين، ومدد الاحتفاظ",
+            "reason": "Fulfills privacy policy transparency and disclosure requirements prior to registration."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "ومدد الاحتفاظ",
+            "reason": "Directly mentions the inclusion of retention periods in the privacy policy."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "قبل استكمال عملية التسجيل",
+            "reason": "Supports transparent consent mechanisms by making policies available prior to registration."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "نوعية المعلومات التي يتم جمعها",
+            "reason": "Aligns with purpose limitation by disclosing collection details."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "نوعية المعلومات التي يتم جمعها",
+            "reason": "Discloses collected data categories appropriately."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "وطرق التواصل مع فريق الدعم",
+            "reason": "Facilitates exercising rights through support contact channels."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "سياسة الخصوصية الشاملة",
+            "reason": "Does not violate breach notification rules."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "آليات المعالجة والتخزين",
+            "reason": "Does not conflict with processor guarantee requirements."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "نوعية المعلومات التي يتم جمعها",
+            "reason": "Does not improperly process sensitive or health data."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "طرق التواصل مع فريق الدعم",
+            "reason": "Does not involve direct marketing."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R03",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "يلتزم المستخدم بتقديم بيانات تفصيلية تشمل صورة الهوية الوطنية، الحالة الاجتماعية، عدد أفراد الأسرة، وتفاصيل الدخل الشهري، وذلك لضمان تقديم تجربة استخدام مخصصة.",
+            "reason": "Requires excessive and unnecessary personal data (family details, marital status, monthly income, full ID copy) for a standard app account and personalized experience, violating data minimisation."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "وذلك لضمان تقديم تجربة استخدام مخصصة",
+            "reason": "States a specific purpose for collection, even though it violates minimisation."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يلتزم المستخدم بتقديم بيانات تفصيلية",
+            "reason": "Obtains data via user submission upon registration rather than processing without consent."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "إتمام إنشاء الحساب",
+            "reason": "Does not violate privacy policy contents rules directly here."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "صورة الهوية الوطنية، الحالة الاجتماعية",
+            "reason": "Does not deny data subject rights to access or correct."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "بيانات تفصيلية تشمل",
+            "reason": "Does not address retention or destruction periods."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تقديم تجربة استخدام مخصصة",
+            "reason": "Does not concern security breach notification."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "بيانات تفصيلية تشمل صورة الهوية الوطنية",
+            "reason": "Does not concern processor guarantees."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.85,
+            "evidence": "صورة الهوية الوطنية، الحالة الاجتماعية",
+            "reason": "Collects personal and financial identifiers, but not strictly sensitive data categories under Article 1(11) (such as ethnic origin, biometric, or health data)."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تقديم تجربة استخدام مخصصة",
+            "reason": "Relates to app customization rather than direct marketing."
+          },
+          {
+            "clause_id": "k9",
+            "rule_id": "R05",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "لا يحق للمستخدم بأي حال من الأحوال طلب الاطلاع على سجلاته الرقمية المحفوظة لدى الشركة، أو المطالبة بتصحيحها أو تعديلها، كما تظل كافة البيانات محفوظة نهائياً لدى الشركة دون إمكانية التقدم بطلب لحذفها.",
+            "reason": "The clause explicitly denies the data subject's statutory rights to access, correct, and request the deletion of their personal data."
+          },
+          {
+            "clause_id": "k9",
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "كما تظل كافة البيانات محفوظة نهائياً لدى الشركة دون إمكانية التقدم بطلب لحذفها.",
+            "reason": "The clause mandates that all data is kept permanently and indefinitely without allowing deletion when no longer necessary."
+          },
+          {
+            "clause_id": "k10",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "يحق لأي من الطرفين إنهاء اتفاقية الاستخدام الحالية في أي وقت شريطة تقديم إشعار خطي مسبق للطرف الآخر قبل مدة لا تقل عن ثلاثين يوماً.",
+            "reason": "This clause deals with the termination of the general terms of service and usage agreement rather than data processing purposes."
+          }
+        ],
+        "clauses": [
+          {
+            "id": "k1",
+            "text": "تخضع هذه الشروط والأحكام وتفسر وفقاً للأنظمة المعمول بها في المملكة العربية السعودية، وتختص المحاكم المختصة بالنظر في أي نزاع ينشأ عنها.",
+            "rules": []
+          },
+          {
+            "id": "k2",
+            "text": "لا تتحمل شركة \"نماء للخدمات الرقمية\" أي مسؤولية قانونية عن الأضرار غير المباشرة أو الخسائر المالية الناجمة عن انقطاع الخدمة أو سوء الاستخدام من قبل المستخدم.",
+            "rules": [
+              "R02",
+              "R01",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k3",
+            "text": "تعتبر كافة الإشعارات والمراسلات الموجهة للمستخدم صحيحة وم منتجة لآثارها القانونية إذا تم إرسالها عبر البريد الإلكتروني المسجل أو من خلال الإشعارات الداخلية للتطبيق.",
+            "rules": [
+              "R04",
+              "R01",
+              "R02",
+              "R03",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k4",
+            "text": "تمنح هذه الشروط الشركة صلاحية الاستفادة من كافة المعلومات والبيانات المدخلة عبر التطبيق لمختلف الأغراض التشغيلية الحالية والمستقبلية التي تقدرها الشركة، بما في ذلك تطوير خدمات جديدة أو مشاركتها مع أطراف أخرى لتحسين جودة الأداء.",
+            "rules": [
+              "R02",
+              "R01",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k5",
+            "text": "تظل كافة حقوق الملكية الفكرية والعلامات التجارية والتصميمات الخاصة بالتطبيق ملكية حصرية لشركة \"نماء للخدمات الرقمية\"، ولا يجوز استخدامها دون إذن خطي مسبق.",
+            "rules": [
+              "R05",
+              "R02",
+              "R01",
+              "R03",
+              "R04",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k6",
+            "text": "قبل استكمال عملية التسجيل، يمكن للمستخدمين مراجعة تفاصيل سياسة الخصوصية الشاملة التي توضح نوعية المعلومات التي يتم جمعها، وآليات المعالجة والتخزين، ومدد الاحتفاظ، وطرق التواصل مع فريق الدعم.",
+            "rules": [
+              "R04",
+              "R06",
+              "R01",
+              "R02",
+              "R03",
+              "R05",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k7",
+            "text": "يقصد بالتعاريف الواردة في هذه الاتفاقية المعاني المتعارف عليها تجارياً، وتعتبر العناوين الواردة فيها لغايات التسهيل فقط ولا تؤثر على تفسير بنودها.",
+            "rules": []
+          },
+          {
+            "id": "k8",
+            "text": "للاستفادة من خدمات تطبيق \"نماء للخدمات الرقمية\" وإتمام إنشاء الحساب، يلتزم المستخدم بتقديم بيانات تفصيلية تشمل صورة الهوية الوطنية، الحالة الاجتماعية، عدد أفراد الأسرة، وتفاصيل الدخل الشهري، وذلك لضمان تقديم تجربة استخدام مخصصة.",
+            "rules": [
+              "R02",
+              "R01",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k9",
+            "text": "لا يحق للمستخدم بأي حال من الأحوال طلب الاطلاع على سجلاته الرقمية المحفوظة لدى الشركة، أو المطالبة بتصحيحها أو تعديلها، كما تظل كافة البيانات محفوظة نهائياً لدى الشركة دون إمكانية التقدم بطلب لحذفها.",
+            "rules": [
+              "R05",
+              "R06",
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k10",
+            "text": "يحق لأي من الطرفين إنهاء اتفاقية الاستخدام الحالية في أي وقت شريطة تقديم إشعار خطي مسبق للطرف الآخر قبل مدة لا تقل عن ثلاثين يوماً.",
+            "rules": [
+              "R02",
+              "R04",
+              "R05",
+              "R06",
+              "R01",
+              "R03",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k11",
+            "text": "تتم عملية تسليم المنتجات الرقمية أو الخدمات المتعاقد عليها فور اكتمال عملية الدفع الإلكتروني وتأكيد الطلب عبر الواجهة المخصصة في التطبيق.",
+            "rules": []
+          },
+          {
+            "id": "k12",
+            "text": "تخضع كافة المعاملات المالية وعمليات الدفع عبر التطبيق لرسوم الخدمة المقررة والمعلنة مسبقاً، والتي يتم خصمها تلقائياً عند إتمام كل عملية.",
+            "rules": []
+          }
+        ],
+        "cost_usd": 0.02055,
+        "latency_s": 166.49,
+        "llm_calls": 12
+      }
+    },
+    {
+      "doc_id": "robust_newtype_005",
+      "score": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R11": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R01": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 1,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.011273,
+        "latency_s": 60.1,
+        "llm_calls": 8
+      },
+      "output": {
+        "doc_id": "robust_newtype_005",
+        "doc_type_guess": "mobile_app_terms",
+        "findings": [
+          {
+            "rule_id": "R11",
+            "verdict": "violation",
+            "confidence": 0.88,
+            "evidence": "Upon successful account registration and profile creation, the user is automatically enrolled to receive commercial communications, promotional offers, and updates originating from the application administration as well as our designated corporate partners. Communication preferences are pre-configured by default to maintain continuous outreach, and direct opt-out functionalities are intentionally omitted from user notification settings.",
+            "reason": "Automatic enrollment in marketing communications without prior consent and omitting opt-out functionality violates PDPL Article 25.",
+            "source": "PDPL Art. 25",
+            "clause": "Upon successful account registration and profile creation, the user is automatically enrolled to receive commercial communications, promotional offers, and updates originating from the application administration as well as our designated corporate partners. Communication preferences are pre-configured by default to maintain continuous outreach, and direct opt-out functionalities are intentionally omitted from user notification settings.",
+            "fix": "Upon successful account registration and profile creation, the user may opt in to receive commercial communications, promotional offers, and updates originating from the application administration as well as our designated corporate partners. Communication preferences require prior consent to maintain outreach, and direct opt-out functionalities are provided in user notification settings.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "all current and future operational processing methodologies applied to their information",
+            "reason": "Assent to all future unspecified processing methodologies violates purpose limitation.",
+            "source": "PDPL Art. 10",
+            "clause": "By accessing, browsing, or continuing to utilize the application and its associated features, the user acknowledges and provides definitive assent to all current and future operational processing methodologies applied to their information. Given the continuous nature of the digital services provided, recorded preferences and permissions remain binding for the active duration of the registered account profile and cannot be rescinded retrospectively.",
+            "fix": "By accessing, browsing, or continuing to utilize the application and its associated features, the user acknowledges and provides definitive assent to the operational processing methodologies applied to their information for the purposes for which it was collected, except in specific cases set out in the Law. Given the continuous nature of the digital services provided, recorded preferences and permissions remain binding for the active duration of the registered account profile and cannot be rescinded retrospectively.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "permissions remain binding for the active duration of the registered account profile and cannot be rescinded retrospectively",
+            "reason": "Restricting the data subject's right to withdraw consent at any time violates PDPL Art. 5.",
+            "source": "PDPL Art. 5",
+            "clause": "By accessing, browsing, or continuing to utilize the application and its associated features, the user acknowledges and provides definitive assent to all current and future operational processing methodologies applied to their information. Given the continuous nature of the digital services provided, recorded preferences and permissions remain binding for the active duration of the registered account profile and cannot be rescinded retrospectively.",
+            "fix": "By accessing, browsing, or continuing to utilize the application and its associated features, the user acknowledges and provides definitive assent to all current and future operational processing methodologies applied to their information (except in cases the Law allows). The user may withdraw consent at any time.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=mobile_app_terms clauses=9 with_candidates=8"
+        ],
+        "assessments": [
+          {
+            "clause_id": "k1",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "The company shall not be held liable for any direct, indirect, incidental, or consequential damages arising from service interruptions",
+            "reason": "This clause addresses liability for service interruptions rather than breach notification obligations."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R11",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "the user is automatically enrolled to receive commercial communications... and direct opt-out functionalities are intentionally omitted",
+            "reason": "Automatic enrollment in marketing communications without prior consent and omitting opt-out functionality violates PDPL Article 25."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "All intellectual property rights, trademarks, source code, graphical designs, and associated software assets",
+            "reason": "This clause deals strictly with intellectual property rights and does not restrict data subject rights."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "the term 'Application' refers exclusively to the Nafith mobile software interface, while 'User' denotes any individual",
+            "reason": "This clause only provides definitions for terms used in the agreement and does not govern personal data processing purposes."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "These terms of use and any operational disputes arising from the utilization of the application shall be governed by and construed in accordance with the substantive laws applicable in the Kingdom of Saudi Arabia.",
+            "reason": "This clause establishes the governing law for the agreement and does not alter data processing purposes."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "Either party may terminate this agreement at any time by providing written notice of termination through the designated account settings interface",
+            "reason": "Allowing account termination through designated settings supports the data subject's control and ability to withdraw consent."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "permanent erasure of records that are no longer necessary for fulfilling the primary operational purpose",
+            "reason": "The clause respects purpose limitation by ensuring data is tied to operational purposes."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "no longer necessary for fulfilling the primary operational purpose",
+            "reason": "It aligns with data minimisation by limiting retention to what is necessary."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "request full transparency regarding the operational justifications and specific objectives governing information collection",
+            "reason": "It provides transparency regarding collection objectives in line with privacy policy requirements."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "review, amend, rectify, or complete stored details. Furthermore, individuals may submit formal requests for the permanent erasure",
+            "reason": "Data subject rights to access, correction, and deletion are explicitly upheld."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.85,
+            "evidence": "request full transparency regarding the operational justifications",
+            "reason": "It does not violate consent principles."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "permanent erasure of records that are no longer necessary",
+            "reason": "It ensures destruction of data when no longer necessary."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "Users maintain the prerogative to request full transparency",
+            "reason": "The clause does not concern breach notification."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "Users maintain the prerogative to request full transparency",
+            "reason": "The clause does not concern processor guarantees."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "Users maintain the prerogative to request full transparency",
+            "reason": "The clause does not address sensitive data."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "Users maintain the prerogative to request full transparency",
+            "reason": "The clause does not address direct marketing."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "all current and future operational processing methodologies applied to their information",
+            "reason": "Assent to all future unspecified processing methodologies violates purpose limitation."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "assent to all current and future operational processing methodologies",
+            "reason": "It does not directly violate privacy policy disclosure requirements."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "assent to all current and future operational processing methodologies",
+            "reason": "It does not explicitly deny data subject rights."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R01",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "permissions remain binding for the active duration of the registered account profile and cannot be rescinded retrospectively",
+            "reason": "Restricting the data subject's right to withdraw consent at any time violates PDPL Art. 5."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "assent to all current and future operational processing methodologies",
+            "reason": "The clause does not address data minimisation."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "active duration of the registered account profile",
+            "reason": "It ties retention to the account duration rather than keeping data indefinitely without bounds."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "assent to all current and future operational processing methodologies",
+            "reason": "The clause does not concern breach notification."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "assent to all current and future operational processing methodologies",
+            "reason": "The clause does not concern processor guarantees."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "assent to all current and future operational processing methodologies",
+            "reason": "The clause does not address sensitive data."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "assent to all current and future operational processing methodologies",
+            "reason": "The clause does not address direct marketing."
+          }
+        ],
+        "clauses": [
+          {
+            "id": "k1",
+            "text": "The company shall not be held liable for any direct, indirect, incidental, or consequential damages arising from service interruptions, technical malfunctions, or unauthorized access to user devices caused by external factors beyond our reasonable control.",
+            "rules": [
+              "R07",
+              "R02",
+              "R05",
+              "R01",
+              "R03",
+              "R04",
+              "R06",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k2",
+            "text": "Upon successful account registration and profile creation, the user is automatically enrolled to receive commercial communications, promotional offers, and updates originating from the application administration as well as our designated corporate partners. Communication preferences are pre-configured by default to maintain continuous outreach, and direct opt-out functionalities are intentionally omitted from user notification settings.",
+            "rules": [
+              "R11",
+              "R02",
+              "R05",
+              "R01",
+              "R03",
+              "R04",
+              "R06",
+              "R07",
+              "R09",
+              "R10"
+            ]
+          },
+          {
+            "id": "k3",
+            "text": "All intellectual property rights, trademarks, source code, graphical designs, and associated software assets within the application remain the exclusive property of the operating company and are protected under applicable property rights.",
+            "rules": [
+              "R05",
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k4",
+            "text": "For the purposes of this agreement, the term \"Application\" refers exclusively to the Nafith mobile software interface, while \"User\" denotes any individual who downloads, installs, or accesses the platform.",
+            "rules": [
+              "R02",
+              "R01",
+              "R05",
+              "R03",
+              "R04",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k5",
+            "text": "These terms of use and any operational disputes arising from the utilization of the application shall be governed by and construed in accordance with the substantive laws applicable in the Kingdom of Saudi Arabia.",
+            "rules": [
+              "R02",
+              "R01",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k6",
+            "text": "Either party may terminate this agreement at any time by providing written notice of termination through the designated account settings interface or via official support communication channels.",
+            "rules": [
+              "R01",
+              "R04",
+              "R02",
+              "R03",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k7",
+            "text": "Users maintain the prerogative to request full transparency regarding the operational justifications and specific objectives governing information collection, alongside the ability to review, amend, rectify, or complete stored details. Furthermore, individuals may submit formal requests for the permanent erasure of records that are no longer necessary for fulfilling the primary operational purpose of the application.",
+            "rules": [
+              "R02",
+              "R03",
+              "R04",
+              "R05",
+              "R01",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k8",
+            "text": "By accessing, browsing, or continuing to utilize the application and its associated features, the user acknowledges and provides definitive assent to all current and future operational processing methodologies applied to their information. Given the continuous nature of the digital services provided, recorded preferences and permissions remain binding for the active duration of the registered account profile and cannot be rescinded retrospectively.",
+            "rules": [
+              "R02",
+              "R04",
+              "R05",
+              "R01",
+              "R03",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k9",
+            "text": "Certain premium features and enhanced functionalities may require the payment of specific subscription fees, which are billed in advance on a recurring monthly or annual basis through authorized payment gateways.",
+            "rules": []
+          }
+        ],
+        "cost_usd": 0.011273,
+        "latency_s": 60.1,
+        "llm_calls": 8
+      }
+    }
+  ]
+}

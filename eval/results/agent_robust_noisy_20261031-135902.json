@@ -1,0 +1,2395 @@
+{
+  "system": "agent",
+  "split": "robust_noisy",
+  "include_hidden": false,
+  "limit": null,
+  "models": {
+    "small": "gemini/gemini-3.5-flash-lite",
+    "large": "gemini/gemini-3.5-flash-lite",
+    "generator": "gemini/gemini-3.5-flash-lite",
+    "judge_eval": "gemini/gemini-3.5-flash-lite"
+  },
+  "metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "tp": 7,
+    "fp": 0,
+    "fn": 0,
+    "subtle_recall": 1.0,
+    "trap_fp_rate": 0.0,
+    "grounding_rate": 1.0,
+    "ambiguous_escalation_rate": 0.0,
+    "escalations_per_doc": 0.0,
+    "cost_per_doc_usd": 0.01255,
+    "latency_per_doc_s": 60.37,
+    "llm_calls_per_doc": 5.0,
+    "docs": 5,
+    "per_rule_f1": {
+      "R02": 1.0,
+      "R03": 1.0,
+      "R06": 1.0,
+      "R07": 1.0,
+      "R09": 1.0,
+      "R10": 1.0
+    }
+  },
+  "errors": 0,
+  "wall_time_s": 161.1,
+  "llm_totals": {
+    "calls": 25,
+    "cache_hits": 0,
+    "prompt_tokens": 60224,
+    "completion_tokens": 17864,
+    "cost_usd": 0.062727
+  },
+  "per_doc": [
+    {
+      "doc_id": "robust_noisy_001",
+      "score": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {},
+        "traps": 2,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 0,
+        "grounded": 0,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.018047,
+        "latency_s": 21.37,
+        "llm_calls": 2
+      },
+      "output": {
+        "doc_id": "robust_noisy_001",
+        "doc_type_guess": "mobile_app_terms",
+        "findings": [],
+        "escalations": [],
+        "trace": [
+          "doc_type=mobile_app_terms clauses=9 with_candidates=8"
+        ],
+        "assessments": [
+          {
+            "clause_id": "k1",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "This application agreement and any ensuing professional engagement shall be governed by and construed in accordance with the laws applicable within the jurisdiction of the corporate headquarters.",
+            "reason": "The clause establishes general governing law for the agreement without violating consent requirements."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "This application agreement and any ensuing professional engagement shall be governed by and construed in accordance with the laws applicable within the jurisdiction of the corporate headquarters.",
+            "reason": "It does not expand data processing beyond the scope of the agreement."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "This application agreement and any ensuing professional engagement shall be governed by and construed in accordance with the laws applicable within the jurisdiction of the corporate headquarters.",
+            "reason": "The clause does not mandate excessive data collection."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "This application agreement and any ensuing professional engagement shall be governed by and construed in accordance with the laws applicable within the jurisdiction of the corporate headquarters.",
+            "reason": "It is a choice of law clause and does not concern privacy policy contents."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "This application agreement and any ensuing professional engagement shall be governed by and construed in accordance with the laws applicable within the jurisdiction of the corporate headquarters.",
+            "reason": "It does not restrict data subject rights."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "This application agreement and any ensuing professional engagement shall be governed by and construed in accordance with the laws applicable within the jurisdiction of the corporate headquarters.",
+            "reason": "It does not mention data retention or destruction terms."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "This application agreement and any ensuing professional engagement shall be governed by and construed in accordance with the laws applicable within the jurisdiction of the corporate headquarters.",
+            "reason": "It does not relate to breach notifications."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "This application agreement and any ensuing professional engagement shall be governed by and construed in accordance with the laws applicable within the jurisdiction of the corporate headquarters.",
+            "reason": "It does not address processor guarantees."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "This application agreement and any ensuing professional engagement shall be governed by and construed in accordance with the laws applicable within the jurisdiction of the corporate headquarters.",
+            "reason": "It does not involve sensitive or health data processing."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "This application agreement and any ensuing professional engagement shall be governed by and construed in accordance with the laws applicable within the jurisdiction of the corporate headquarters.",
+            "reason": "It has no connection to direct marketing."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "we collect only the applicant's national identification card copy, highest academic degree certificate, and banking account coordinates required strictly for monthly payroll disbursement.",
+            "reason": "The clause explicitly limits data collection to the minimum necessary for employment and payroll purposes."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "we collect only the applicant's national identification card copy, highest academic degree certificate, and banking account coordinates required strictly for monthly payroll disbursement.",
+            "reason": "It describes necessary collection for employment processing without violating consent rules."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "required strictly for monthly payroll disbursement",
+            "reason": "It specifies that the data is collected for a clear, limited purpose."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "we collect only the applicant's national identification card copy, highest academic degree certificate, and banking account coordinates",
+            "reason": "It identifies specific data categories being collected."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "we collect only the applicant's national identification card copy, highest academic degree certificate, and banking account coordinates required strictly for monthly payroll disbursement.",
+            "reason": "Does not restrict data subject rights."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "we collect only the applicant's national identification card copy, highest academic degree certificate, and banking account coordinates required strictly for monthly payroll disbursement.",
+            "reason": "Does not address retention periods."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "we collect only the applicant's national identification card copy, highest academic degree certificate, and banking account coordinates required strictly for monthly payroll disbursement.",
+            "reason": "Does not concern breach notifications."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "we collect only the applicant's national identification card copy, highest academic degree certificate, and banking account coordinates required strictly for monthly payroll disbursement.",
+            "reason": "Does not mention processors."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "we collect only the applicant's national identification card copy, highest academic degree certificate, and banking account coordinates",
+            "reason": "Does not involve sensitive or health data."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "we collect only the applicant's national identification card copy, highest academic degree certificate, and banking account coordinates required strictly for monthly payroll disbursement.",
+            "reason": "No direct marketing is mentioned."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "For the purposes of this document, the term Employer shall designate Al-Yamamah Enterprise, and the term Candidate shall designate the individual submitting this employment application form.",
+            "reason": "This is a definitional clause that does not expand or violate purpose limitations."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "For the purposes of this document, the term Employer shall designate Al-Yamamah Enterprise, and the term Candidate shall designate the individual submitting this employment application form.",
+            "reason": "Definitional clause; no impact on consent."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "For the purposes of this document, the term Employer shall designate Al-Yamamah Enterprise, and the term Candidate shall designate the individual submitting this employment application form.",
+            "reason": "Definitional clause; no impact on data minimization."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "For the purposes of this document, the term Employer shall designate Al-Yamamah Enterprise, and the term Candidate shall designate the individual submitting this employment application form.",
+            "reason": "Definitional clause."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "For the purposes of this document, the term Employer shall designate Al-Yamamah Enterprise, and the term Candidate shall designate the individual submitting this employment application form.",
+            "reason": "Definitional clause."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "For the purposes of this document, the term Employer shall designate Al-Yamamah Enterprise, and the term Candidate shall designate the individual submitting this employment application form.",
+            "reason": "Definitional clause."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "For the purposes of this document, the term Employer shall designate Al-Yamamah Enterprise, and the term Candidate shall designate the individual submitting this employment application form.",
+            "reason": "Definitional clause."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "For the purposes of this document, the term Employer shall designate Al-Yamamah Enterprise, and the term Candidate shall designate the individual submitting this employment application form.",
+            "reason": "Definitional clause."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "For the purposes of this document, the term Employer shall designate Al-Yamamah Enterprise, and the term Candidate shall designate the individual submitting this employment application form.",
+            "reason": "Definitional clause."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "For the purposes of this document, the term Employer shall designate Al-Yamamah Enterprise, and the term Candidate shall designate the individual submitting this employment application form.",
+            "reason": "Definitional clause."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "The employer assumes no liability for any indirect, incidental, or consequential damages arising from the candidate's use of third-party interview preparation materials.",
+            "reason": "Liability disclaimer regarding third-party materials does not impact data purpose limitations."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "The employer assumes no liability for any indirect, incidental, or consequential damages arising from the candidate's use of third-party interview preparation materials.",
+            "reason": "General liability clause, not a data breach reporting clause."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "The employer assumes no liability for any indirect, incidental, or consequential damages arising from the candidate's use of third-party interview preparation materials.",
+            "reason": "Does not concern consent."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "The employer assumes no liability for any indirect, incidental, or consequential damages arising from the candidate's use of third-party interview preparation materials.",
+            "reason": "Does not concern data minimisation."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "The employer assumes no liability for any indirect, incidental, or consequential damages arising from the candidate's use of third-party interview preparation materials.",
+            "reason": "Does not concern privacy policy contents."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "The employer assumes no liability for any indirect, incidental, or consequential damages arising from the candidate's use of third-party interview preparation materials.",
+            "reason": "Does not affect data subject rights."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "The employer assumes no liability for any indirect, incidental, or consequential damages arising from the candidate's use of third-party interview preparation materials.",
+            "reason": "Does not concern retention."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "The employer assumes no liability for any indirect, incidental, or consequential damages arising from the candidate's use of third-party interview preparation materials.",
+            "reason": "Does not concern processor guarantees."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "The employer assumes no liability for any indirect, incidental, or consequential damages arising from the candidate's use of third-party interview preparation materials.",
+            "reason": "Does not involve sensitive data."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "The employer assumes no liability for any indirect, incidental, or consequential damages arising from the candidate's use of third-party interview preparation materials.",
+            "reason": "Does not involve marketing."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "Applicants maintain the right to be informed regarding the legal basis and purpose of collection, to access their personal records, to request correction or updates, and to request destruction of data no longer needed, except where we may refuse such destruction requests if the information remains necessary for ongoing litigation before a judicial authority.",
+            "reason": "Correctly upholds data subject rights and includes a legally permitted exception for ongoing litigation."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "Applicants maintain the right to be informed regarding the legal basis and purpose of collection",
+            "reason": "Respects purpose transparency."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "Applicants maintain the right to be informed regarding the legal basis and purpose of collection",
+            "reason": "Does not violate data minimisation."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "Applicants maintain the right to be informed regarding the legal basis and purpose of collection",
+            "reason": "Aligns with transparency obligations."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "Applicants maintain the right to be informed regarding the legal basis and purpose of collection",
+            "reason": "Does not violate consent rules."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "except where we may refuse such destruction requests if the information remains necessary for ongoing litigation before a judicial authority.",
+            "reason": "Conforms with the legal exception for data retention during pending judicial cases."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "Applicants maintain the right to be informed regarding the legal basis and purpose of collection",
+            "reason": "Does not address breach notifications."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "Applicants maintain the right to be informed regarding the legal basis and purpose of collection",
+            "reason": "Does not involve processors."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "Applicants maintain the right to be informed regarding the legal basis and purpose of collection",
+            "reason": "Does not mention sensitive data."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "Applicants maintain the right to be informed regarding the legal basis and purpose of collection",
+            "reason": "Does not involve marketing."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "All application review fees submitted by candidates during specialized technical assessments are strictly non-refundable.",
+            "reason": "A financial/fee clause does not restrict consent or data withdrawal rights under PDPL."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "All application review fees submitted by candidates during specialized technical assessments are strictly non-refundable.",
+            "reason": "Does not violate purpose limitation rules."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "All application review fees submitted by candidates during specialized technical assessments are strictly non-refundable.",
+            "reason": "Does not mandate excessive data collection."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "All application review fees submitted by candidates during specialized technical assessments are strictly non-refundable.",
+            "reason": "Does not concern privacy policy contents."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "All application review fees submitted by candidates during specialized technical assessments are strictly non-refundable.",
+            "reason": "Does not impact data subject rights."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "All application review fees submitted by candidates during specialized technical assessments are strictly non-refundable.",
+            "reason": "Does not concern data retention."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "All application review fees submitted by candidates during specialized technical assessments are strictly non-refundable.",
+            "reason": "Does not involve breach notification."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "All application review fees submitted by candidates during specialized technical assessments are strictly non-refundable.",
+            "reason": "Does not involve processors."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "All application review fees submitted by candidates during specialized technical assessments are strictly non-refundable.",
+            "reason": "Does not involve sensitive data."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "All application review fees submitted by candidates during specialized technical assessments are strictly non-refundable.",
+            "reason": "Does not involve direct marketing."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "This agreement shall remain in effect for an initial term of twelve months",
+            "reason": "This clause deals with employment agreement duration and termination, not personal data processing."
+          },
+          {
+            "clause_id": "k9",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "All intellectual property rights, proprietary designs, and operational methodologies",
+            "reason": "This clause governs intellectual property rights rather than personal data rights."
+          }
+        ],
+        "clauses": [
+          {
+            "id": "k1",
+            "text": "This application agreement and any ensuing professional engagement shall be governed by and construed in accordance with the laws applicable within the jurisdiction of the corporate headquarters.",
+            "rules": [
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k2",
+            "text": "Financial remuneration for the position shall be disbursed via electronic bank transfer on the final business day of each Gregorian month.",
+            "rules": []
+          },
+          {
+            "id": "k3",
+            "text": "To process your employment candidacy effectively, we collect only the applicant's national identification card copy, highest academic degree certificate, and banking account coordinates required strictly for monthly payroll disbursement.",
+            "rules": [
+              "R03",
+              "R01",
+              "R02",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k4",
+            "text": "For the purposes of this document, the term Employer shall designate Al-Yamamah Enterprise, and the term Candidate shall designate the individual submitting this employment application form.",
+            "rules": [
+              "R02",
+              "R01",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k5",
+            "text": "The employer assumes no liability for any indirect, incidental, or consequential damages arising from the candidate's use of third-party interview preparation materials.",
+            "rules": [
+              "R02",
+              "R07",
+              "R01",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k6",
+            "text": "Applicants maintain the right to be informed regarding the legal basis and purpose of collection, to access their personal records, to request correction or updates, and to request destruction of data no longer needed, except where we may refuse such destruction requests if the information remains necessary for ongoing litigation before a judicial authority.",
+            "rules": [
+              "R05",
+              "R02",
+              "R03",
+              "R04",
+              "R01",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k7",
+            "text": "All application review fees submitted by candidates during specialized technical assessments are strictly non-refundable.",
+            "rules": [
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k8",
+            "text": "This agreement shall remain in effect for an initial term of twelve months and may be terminated by either party upon providing thirty days prior written notice.",
+            "rules": [
+              "R01",
+              "R04",
+              "R02",
+              "R03",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k9",
+            "text": "All intellectual property rights, proprietary designs, and operational methodologies developed by the candidate during the interview presentation phase remain the exclusive property of the company.",
+            "rules": [
+              "R05",
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          }
+        ],
+        "cost_usd": 0.018047,
+        "latency_s": 21.37,
+        "llm_calls": 2
+      }
+    },
+    {
+      "doc_id": "robust_noisy_002",
+      "score": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R06": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R03": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 1,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.007391,
+        "latency_s": 94.37,
+        "llm_calls": 8
+      },
+      "output": {
+        "doc_id": "robust_noisy_002",
+        "doc_type_guess": "mobile_app_terms",
+        "findings": [
+          {
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "retains all submitted candidate records and application files indefinitely in our archival database",
+            "reason": "Data is retained indefinitely without limitation, violating the destruction requirement once no longer necessary.",
+            "source": "PDPL Art. 18",
+            "clause": "The company retains all submitted candidate records and application files indefinitely in our archival database following the conclusion of the recruitment cycle, and reserves the right to store this information permanently for future operational reference.",
+            "fix": "The company retains submitted candidate records and application files in our archival database following the conclusion of the recruitment cycle, and must destroy this personal data without undue delay once it is no longer necessary for the purpose of collection, unless a legal retention requirement or pending judicial case applies.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R03",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "religious affiliation, marital status, exact number of family dependents",
+            "reason": "The clause requires sensitive and unnecessary personal data that exceeds the minimum required for employment evaluation.",
+            "source": "PDPL Art. 11(3)",
+            "clause": "To evaluate candidacy for the applied position, applicants are strictly required to submit their full national identification card copy, religious affiliation, marital status, exact number of family dependents, and current employer details alongside the standard resume.",
+            "fix": "To evaluate candidacy for the applied position, applicants are required to submit their standard resume alongside necessary contact and employment history details.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "religious affiliation",
+            "reason": "Collection of religious affiliation constitutes sensitive personal data without a lawful, justified necessity.",
+            "source": "PDPL Art. 1(11), 1(13), 6(4), 23, 26",
+            "clause": "To evaluate candidacy for the applied position, applicants are strictly required to submit their full national identification card copy, religious affiliation, marital status, exact number of family dependents, and current employer details alongside the standard resume.",
+            "fix": "To evaluate candidacy for the applied position, applicants are strictly required to submit their full national identification card copy, marital status, exact number of family dependents, and current employer details alongside the standard resume.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=mobile_app_terms clauses=10 with_candidates=8"
+        ],
+        "assessments": [
+          {
+            "clause_id": "k1",
+            "rule_id": "R06",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "retains all submitted candidate records and application files indefinitely in our archival database",
+            "reason": "Data is retained indefinitely without limitation, violating the destruction requirement once no longer necessary."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R03",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "religious affiliation, marital status, exact number of family dependents",
+            "reason": "The clause requires sensitive and unnecessary personal data that exceeds the minimum required for employment evaluation."
+          },
+          {
+            "clause_id": "k2",
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "religious affiliation",
+            "reason": "Collection of religious affiliation constitutes sensitive personal data without a lawful, justified necessity."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "All formal notices, interview schedules, and official communications related to this application shall be delivered electronically",
+            "reason": "This clause deals with communication channels rather than violating privacy policy contents disclosure requirements."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "Company refers to Al-Yamamah Enterprise, and Applicant refers to the individual submitting their credentials",
+            "reason": "This is a standard definition clause that does not violate purpose limitation rules."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "assumes no financial or operational liability for any technical disruptions, transmission delays, or data interception",
+            "reason": "This is a liability limitation clause for technical transmission issues, not a breach of consent rules."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.8,
+            "evidence": "All application review fees are strictly non-refundable and must be settled prior to the initial candidate assessment phase",
+            "reason": "This clause addresses payment terms rather than compromising data subject consent."
+          },
+          {
+            "clause_id": "k9",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "This application agreement shall commence upon electronic submission by the candidate",
+            "reason": "The agreement establishes that processing begins upon electronic submission, reflecting affirmative consent."
+          },
+          {
+            "clause_id": "k10",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "Applicants maintain the right to be informed of the specific operational purpose for data collection, to access their stored records upon written request, to petition for the correction or update of inaccurate information, and to request the destruction of files that are no longer required for evaluation.",
+            "reason": "The clause explicitly upholds the data subjects' rights to information, access, correction, and destruction of data."
+          }
+        ],
+        "clauses": [
+          {
+            "id": "k1",
+            "text": "The company retains all submitted candidate records and application files indefinitely in our archival database following the conclusion of the recruitment cycle, and reserves the right to store this information permanently for future operational reference.",
+            "rules": [
+              "R06",
+              "R02",
+              "R04",
+              "R05",
+              "R01",
+              "R03",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k2",
+            "text": "To evaluate candidacy for the applied position, applicants are strictly required to submit their full national identification card copy, religious affiliation, marital status, exact number of family dependents, and current employer details alongside the standard resume.",
+            "rules": [
+              "R03",
+              "R01",
+              "R02",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k3",
+            "text": "This application procedure and all associated evaluation terms shall be governed by and construed in accordance with the commercial laws applicable within the Kingdom of Saudi Arabia.",
+            "rules": []
+          },
+          {
+            "id": "k4",
+            "text": "All formal notices, interview schedules, and official communications related to this application shall be delivered electronically to the primary email address provided by the candidate.",
+            "rules": [
+              "R04",
+              "R01",
+              "R02",
+              "R03",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k5",
+            "text": "All proprietary assessment materials, employer tests, and proprietary evaluation frameworks provided during the application process remain the exclusive intellectual property of the company.",
+            "rules": []
+          },
+          {
+            "id": "k6",
+            "text": "For the purposes of this document, Company refers to Al-Yamamah Enterprise, and Applicant refers to the individual submitting their credentials for employment consideration.",
+            "rules": [
+              "R02",
+              "R01",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k7",
+            "text": "The company assumes no financial or operational liability for any technical disruptions, transmission delays, or data interception occurrences during the online submission process.",
+            "rules": [
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k8",
+            "text": "All application review fees are strictly non-refundable and must be settled prior to the initial candidate assessment phase through our designated corporate payment gateway.",
+            "rules": [
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k9",
+            "text": "This application agreement shall commence upon electronic submission by the candidate and shall remain in effect for the duration of the active recruitment window unless terminated earlier by the company.",
+            "rules": [
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k10",
+            "text": "Applicants maintain the right to be informed of the specific operational purpose for data collection, to access their stored records upon written request, to petition for the correction or update of inaccurate information, and to request the destruction of files that are no longer required for evaluation.",
+            "rules": [
+              "R05",
+              "R03",
+              "R02",
+              "R04",
+              "R01",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          }
+        ],
+        "cost_usd": 0.007391,
+        "latency_s": 94.37,
+        "llm_calls": 8
+      }
+    },
+    {
+      "doc_id": "robust_noisy_003",
+      "score": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R09": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R02": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "R07": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 3,
+        "subtle_found": 3,
+        "unverified": 0,
+        "findings": 3,
+        "grounded": 3,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.009427,
+        "latency_s": 99.4,
+        "llm_calls": 8
+      },
+      "output": {
+        "doc_id": "robust_noisy_003",
+        "doc_type_guess": "vendor_contract",
+        "findings": [
+          {
+            "rule_id": "R09",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "وتُعفى أنظمه المورد الداخليه من أي التزامات تخص التدقيق المباشر من قبل الشركة.",
+            "reason": "The clause explicitly exempts the processor from direct auditing by the controller, violating processor monitoring requirements under Article 8.",
+            "source": "PDPL Art. 8",
+            "clause": "يحق للمورد التعاقد من الباطن مع أي أطراف ثالثة لتقديم الخدمات أو معالجة البىانات المرتبطه بها وفقاً لتقدىره التجاري، وتُعفى أنظمه المورد الداخليه من أي التزامات تخص التدقيق المباشر من قبل الشركة.",
+            "fix": "يحق للمورد التعاقد من الباطن مع أي أطراف ثالثة لتقديم الخدمات أو معالجة البيانات المرتبطة بها وفقاً لتقديره التجاري، شريطة تقديم الضمانات اللازمة لتطبيق القانون، مع الالتزام بتمكين الشركة من مراقبة الامتثال.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "بحق استخدام البيانات المجمعة لأي غرض تشغىلي تراه مناسباً حالياً أو مستقبلاً",
+            "reason": "The clause allows processing for any operational purpose currently or in the future without limitation, violating purpose limitation rules.",
+            "source": "PDPL Art. 10",
+            "clause": "تحتفظ الشركة بصفتها جهة التحكم بحق استخدام البيانات المجمعة لأي غرض تشغىلي تراه مناسباً حالياً أو مستقبلاً، بما في ذلك تطوير المنتجات وأغراض التحليل الداخلي غىر المذكورة صراحة في هذه الاتفاقية ودون الحاجة للحصول على إذن إضافي.",
+            "fix": "تحتفظ الشركة بصفتها جهة التحكم بحق استخدام البيانات المجمعة للأغراض التي جمعت من أجلها، بما في ذلك تطوير المنتجات وأغراض التحليل الداخلي ذات الصلة، باستثناء الحالات المحددة المنصوص عليها في النظام.",
+            "fix_verified": true
+          },
+          {
+            "rule_id": "R07",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "يقوم المورد بتقيىم الموقف وفقاً لتقديره المطلق لتحديد ما إذا كان إشعار الشركة ملائماً، ودون الارتباط بأي جداول زمنية محدودة مسبقاً.",
+            "reason": "The clause leaves breach notification to the processor's absolute discretion without defined timelines, failing to ensure prompt breach reporting.",
+            "source": "PDPL Art. 20; Implementing Regulations (72-hour notification, verify article)",
+            "clause": "في حال وقوع أي حادث أمني أو وصول غير مصرح به إلى البيانات، يقوم المورد بتقيىم الموقف وفقاً لتقديره المطلق لتحديد ما إذا كان إشعار الشركة ملائماً، ودون الارتباط بأي جداول زمنية محددة مسبقاً.",
+            "fix": "في حال وقوع أي خرق أو ضرر أو وصول غير مصرح به للبيانات الشخصية، يلتزم المورد بإخطار الشركة فوراً ودون إبطاء، وبما لا يتجاوز 72 ساعة، لتمكين الشركة من إشعار الجهة المختصة وصاحب البيانات وفقاً للمتطلبات النظامية.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=vendor_contract clauses=9 with_candidates=7"
+        ],
+        "assessments": [
+          {
+            "clause_id": "k1",
+            "rule_id": "R09",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "وتُعفى أنظمه المورد الداخليه من أي التزامات تخص التدقيق المباشر من قبل الشركة.",
+            "reason": "The clause explicitly exempts the processor from direct auditing by the controller, violating processor monitoring requirements under Article 8."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تبدأ هذه الاتفاقيه من تاريخ توقيع الطرفين وتظل سارية لمدة عام كامل",
+            "reason": "The clause specifies a contract term rather than indefinite personal data retention."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R02",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "بحق استخدام البيانات المجمعة لأي غرض تشغىلي تراه مناسباً حالياً أو مستقبلاً",
+            "reason": "The clause allows processing for any operational purpose currently or in the future without limitation, violating purpose limitation rules."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "تُتخذ الإجراءات اللازمه لإتلافها فور انتفاء الحاجة التشغيلية لها",
+            "reason": "The clause ensures data is destroyed promptly once no longer necessary, complying with retention and destruction rules."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تلتزم الشركة بسداد الرسوم المتفق علىها لصالح المورد خلال ثلاثىن روزنامة",
+            "reason": "The clause deals purely with financial payment terms and does not concern data protection compliance."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R07",
+            "verdict": "violation",
+            "confidence": 0.98,
+            "evidence": "يقوم المورد بتقيىم الموقف وفقاً لتقديره المطلق لتحديد ما إذا كان إشعار الشركة ملائماً، ودون الارتباط بأي جداول زمنية محدودة مسبقاً.",
+            "reason": "The clause leaves breach notification to the processor's absolute discretion without defined timelines, failing to ensure prompt breach reporting."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "تظل حقوق الملكية الفكرية للبرمجيات والأدوات التقنية المقدمة مملوكه حصرياً للمورد",
+            "reason": "The clause deals exclusively with intellectual property rights of software and technical tools and does not concern data subject rights."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "تظل حقوق الملكية الفكرية للبرمجيات والأدوات التقنية المقدمة مملوكه حصرياً للمورد",
+            "reason": "The clause governs software ownership and licensing rather than personal data processing purposes."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "تظل حقوق الملكية الفكرية للبرمجيات والأدوات التقنية المقدمة مملوكه حصرياً للمورد",
+            "reason": "The clause relates to intellectual property and licensing, not personal data consent."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "تظل حقوق الملكية الفكرية للبرمجيات والأدوات التقنية المقدمة مملوكه حصرياً للمورد",
+            "reason": "The clause does not involve the collection or minimization of personal data."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "تظل حقوق الملكية الفكرية للبرمجيات والأدوات التقنية المقدمة مملوكه حصرياً للمورد",
+            "reason": "The clause is about software property rights and does not touch upon privacy policy disclosures."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "تظل حقوق الملكية الفكرية للبرمجيات والأدوات التقنية المقدمة مملوكه حصرياً للمورد",
+            "reason": "The clause concerns software ownership and usage licenses, not personal data retention or destruction."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "تظل حقوق الملكية الفكرية للبرمجيات والأدوات التقنية المقدمة مملوكه حصرياً للمورد",
+            "reason": "The clause does not address security breach notifications."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "تظل حقوق الملكية الفكرية للبرمجيات والأدوات التقنية المقدمة مملوكه حصرياً للمورد",
+            "reason": "The clause addresses intellectual property rather than processor guarantees or data protection compliance obligations."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "تظل حقوق الملكية الفكرية للبرمجيات والأدوات التقنية المقدمة مملوكه حصرياً للمورد",
+            "reason": "The clause does not involve the processing of sensitive or health personal data."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "تظل حقوق الملكية الفكرية للبرمجيات والأدوات التقنية المقدمة مملوكه حصرياً للمورد",
+            "reason": "The clause deals with software licensing and intellectual property, not direct marketing."
+          }
+        ],
+        "clauses": [
+          {
+            "id": "k1",
+            "text": "يحق للمورد التعاقد من الباطن مع أي أطراف ثالثة لتقديم الخدمات أو معالجة البىانات المرتبطه بها وفقاً لتقدىره التجاري، وتُعفى أنظمه المورد الداخليه من أي التزامات تخص التدقيق المباشر من قبل الشركة.",
+            "rules": [
+              "R09",
+              "R05",
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R06",
+              "R07",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k2",
+            "text": "تقتصر المسؤولية القانونيه لأى من الطرفين في مواجهة الطرف الآخر عن الأضرار المباشرة الناجمة عن الإهمال الجسيم على إجمالي الأتعاب المدفوعة خلال الأشهر الستة السابقة لوقوع الضرر.",
+            "rules": []
+          },
+          {
+            "id": "k3",
+            "text": "تبدأ هذه الاتفاقيه من تاريخ توقيع الطرفين وتظل سارية لمدة عام كامل، وتجدد تلقائياً ما لم يقم أحد الطرفين بإشعار الطرف الآخر برغبته في عدم التجديد قبل ثلاثين ىوماً على الأقل.",
+            "rules": [
+              "R04",
+              "R06",
+              "R01",
+              "R02",
+              "R03",
+              "R05",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k4",
+            "text": "تحتفظ الشركة بصفتها جهة التحكم بحق استخدام البيانات المجمعة لأي غرض تشغىلي تراه مناسباً حالياً أو مستقبلاً، بما في ذلك تطوير المنتجات وأغراض التحليل الداخلي غىر المذكورة صراحة في هذه الاتفاقية ودون الحاجة للحصول على إذن إضافي.",
+            "rules": [
+              "R02",
+              "R05",
+              "R01",
+              "R03",
+              "R04",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k5",
+            "text": "يتم الاحتفاظ بملفات السجلات والبيانات التشغيلية للمده الزمنية اللازمة حصراً لإتمام الأغراض المتعاقد عليها، على أن تُتخذ الإجراءات اللازمه لإتلافها فور انتفاء الحاجة التشغيلية لها ما لم تقتضِ متطلبات التدقيق المالي استمرار الاحتفاظ بها.",
+            "rules": [
+              "R06",
+              "R02",
+              "R05",
+              "R09",
+              "R01",
+              "R03",
+              "R04",
+              "R07",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k6",
+            "text": "تلتزم الشركة بسداد الرسوم المتفق علىها لصالح المورد خلال ثلاثىن روزنامة من تاريخ استلام الفطوره الضريبية المطابقه للمواصفات.",
+            "rules": [
+              "R09",
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k7",
+            "text": "في حال وقوع أي حادث أمني أو وصول غير مصرح به إلى البيانات، يقوم المورد بتقيىم الموقف وفقاً لتقديره المطلق لتحديد ما إذا كان إشعار الشركة ملائماً، ودون الارتباط بأي جداول زمنية محددة مسبقاً.",
+            "rules": [
+              "R04",
+              "R09",
+              "R01",
+              "R02",
+              "R03",
+              "R05",
+              "R06",
+              "R07",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k8",
+            "text": "تظل حقوق الملكية الفكرية للبرمجيات والأدوات التقنية المقدمة مملوكه حصرياً للمورد، وتمنح الشركة ترخيصاً غير حصري لاستخدامها طوال مده سريان الاتفاقيه.",
+            "rules": [
+              "R05",
+              "R02",
+              "R01",
+              "R03",
+              "R04",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k9",
+            "text": "تخضع هذه الاتفاقية وتفسر وفقاً لأنظمة المملكه العربية السعوديه، وتختص الجهات القضائية بالفصل في أي نزاع قد ينشأ عنها.",
+            "rules": []
+          }
+        ],
+        "cost_usd": 0.009427,
+        "latency_s": 99.4,
+        "llm_calls": 8
+      }
+    },
+    {
+      "doc_id": "robust_noisy_004",
+      "score": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R09": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 1,
+        "subtle_found": 1,
+        "unverified": 0,
+        "findings": 1,
+        "grounded": 1,
+        "ambiguous": 0,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.016641,
+        "latency_s": 46.43,
+        "llm_calls": 3
+      },
+      "output": {
+        "doc_id": "robust_noisy_004",
+        "doc_type_guess": "vendor_contract",
+        "findings": [
+          {
+            "rule_id": "R09",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "ودون الحاجة لتقديم إشعار مسبق للطرف الأول، على أن ىقتصر دور الطرف الأول على تلقي الخدمات النهائية المتفق عليها دون حق في إجراء عمليات تفتيش أو مراجعة ميدانية لأنظمة الطرف الثاني.",
+            "reason": "Allows unrestricted subcontracting without notice and explicitly forbids the controller from auditing or monitoring the processor, violating processor guarantee and oversight requirements.",
+            "source": "PDPL Art. 8",
+            "clause": "يقر الطرف الثاني بحريته الكامله في الاستعانة بأي مقاولين من الباطن لتقديم الخدمات المتعلقه بالبيانات وفقاً لتقديره التجارى البحت ودون الحاجة لتقديم إشعار مسبق للطرف الأول، على أن ىقتصر دور الطرف الأول على تلقي الخدمات النهائية المتفق عليها دون حق في إجراء عمليات تفتيش أو مراجعة ميدانية لأنظمة الطرف الثاني.",
+            "fix": "يقر الطرف الثاني بضرورة الاستعانة بمقاولين من الباطن ممن يقدمون الضمانات الكافية لتنفيذ أحكام القانون، مع التزامه بتقديم إشعار مسبق للطرف الأول، ويحق للطرف الأول مراجعة ومراقبة امتثال الطرف الثاني ومقاوليه للبتمثل بمتطلبات النظام.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=vendor_contract clauses=8 with_candidates=6"
+        ],
+        "assessments": [
+          {
+            "clause_id": "k1",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تبدأ هذه الاتفاقية اعتباراً من تاريخ توقيعها من الطرفىن",
+            "reason": "The clause deals with agreement duration and renewal terms, not privacy policy contents."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "وتجدد تلقائياً لمثلها ما لم يقم أحد الطرفين بإشعار الطرف الآخر",
+            "reason": "The clause does not govern data retention or destruction periods."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تبدأ هذه الاتفاقية اعتباراً من تاريخ توقيعها",
+            "reason": "The clause addresses contractual validity rather than personal data consent."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تظل سارىه المفعول لمدة سنة ميلادىة كاملة",
+            "reason": "This clause specifies contract duration rather than data processing purposes."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "ما لم يقم أحد الطرفين بإشعار الطرف الآخر برغبته في عدم التجديد",
+            "reason": "The clause is unrelated to data minimisation requirements."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "خطياً قبل موعد الانتهاء بشهرين على الأقل",
+            "reason": "The clause concerns contract termination notice rather than data subject rights."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تبدأ هذه الاتفاقية اعتباراً من تاريخ توقيعها من الطرفىن",
+            "reason": "There is no mention of data security breaches in this clause."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "وتجدد تلقائياً لمثلها ما لم يقم أحد الطرفين",
+            "reason": "The clause does not address processor guarantees or appointments."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "لمدة سنة ميلادىة كاملة",
+            "reason": "Sensitive or health data processing is not referenced in this clause."
+          },
+          {
+            "clause_id": "k1",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "إشعار الطرف الآخر برغبته في عدم التجديد خطياً",
+            "reason": "The text relates to contract notices, not direct marketing materials."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يقر الطرف الثاني بحريته الكامله في الاستعانة بأي مقاولين من الباطن",
+            "reason": "The clause governs subcontracting rather than privacy policy disclosures."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "دون الحاجة لتقديم إشعار مسبق للطرف الأول",
+            "reason": "The clause does not affect data subjects' rights to access or correct their data."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "لتقديم الخدمات المتعلقه بالبيانات وفقاً لتقديره التجارى البحت",
+            "reason": "The clause addresses service delivery and contracting rather than personal data consent."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "على أن ىقتصر دور الطرف الأول على تلقي الخدمات النهائية",
+            "reason": "Purpose limitation rules are not violated by defining the roles of the contracting parties."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "وفقاً لتقديره التجارى البحت",
+            "reason": "Data minimisation is not addressed in this clause regarding subcontractors."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تلقي الخدمات النهائية المتفق عليها",
+            "reason": "The clause does not govern data retention or destruction timelines."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "ودون الحاجة لتقديم إشعار مسبق",
+            "reason": "The notice referred to is for subcontracting, not data breaches."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R09",
+            "verdict": "violation",
+            "confidence": 0.95,
+            "evidence": "ودون الحاجة لتقديم إشعار مسبق للطرف الأول، على أن ىقتصر دور الطرف الأول على تلقي الخدمات النهائية المتفق عليها دون حق في إجراء عمليات تفتيش أو مراجعة ميدانية لأنظمة الطرف الثاني.",
+            "reason": "Allows unrestricted subcontracting without notice and explicitly forbids the controller from auditing or monitoring the processor, violating processor guarantee and oversight requirements."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "لتقديم الخدمات المتعلقه بالبيانات",
+            "reason": "Sensitive data categories are not specifically mentioned or mishandled here."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "المتعلقه بالبيانات وفقاً لتقديره التجارى",
+            "reason": "The clause has no relation to direct marketing communications."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يتقاضى الطرف الثاني نظير تقديم الخدمات محل هذه الاتفاقيه أتعاباً مالية",
+            "reason": "The clause is about financial remuneration and invoicing, not data subject rights."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يتم سدادها على دفعات مرحليه وفقاً للجدول الزمني المتفق عليه",
+            "reason": "Financial terms do not concern personal data destruction."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "على أن يقوم الطرف الأول بتحويل المستحقات خلال ثلاثين يوماً",
+            "reason": "The clause deals purely with payment obligations."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "من تارىخ استلام الفواتير الضريبىة المعتمدة",
+            "reason": "Purpose limitation rules do not apply to commercial payment terms."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "أتعاباً مالية إجمالية يتم سدادها على دفعات",
+            "reason": "Data minimisation is unrelated to financial clauses."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "يتقاضى الطرف الثاني نظير تقديم الخدمات",
+            "reason": "The clause does not outline privacy policy disclosures."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "من تارىخ استلام الفواتير الضريبىة المعتمدة",
+            "reason": "Data breach notifications are not addressed in payment clauses."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "وفقاً للجدول الزمني المتفق عليه",
+            "reason": "Processor guarantees are unrelated to service fee payments."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "أتعاباً مالية إجمالية",
+            "reason": "Sensitive data rules do not apply to billing terms."
+          },
+          {
+            "clause_id": "k4",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "خلال ثلاثين يوماً من تارىخ استلام الفواتير",
+            "reason": "The clause contains no direct marketing elements."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تُعتبر كافة الإشعارات والمراسلات المتبادله بين الطرفىن صحيحه",
+            "reason": "The clause establishes communication methods rather than privacy policies."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "إذا تم إرسالها عبر البريد الإلكتروني الرسمي المعتمد",
+            "reason": "Administrative communication channels do not violate consent rules."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "ومننتجة لآثارها القانونىة",
+            "reason": "The clause defines legal notices between parties, not data processing purposes."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "أو تسليمها بالىد للعناوين المثبته هنا",
+            "reason": "Data minimisation does not apply to physical or email addresses for notices."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "في ديباجة هذه الاتفاقىة",
+            "reason": "The clause concerns contractual correspondence, not data subject access rights."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تُعتبر كافة الإشعارات والمراسلات المتبادله بين الطرفىن صحيحه",
+            "reason": "Data retention is not mentioned here."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "إذا تم إرسالها عبر البريد الإلكتروني الرسمي",
+            "reason": "General notice channels are distinct from statutory data breach notifications."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "ومننتجة لآثارها القانونىة",
+            "reason": "Processor compliance monitoring is not covered by communication clauses."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "أو تسليمها بالىد للعناوين المثبته هنا",
+            "reason": "Sensitive data is not referenced in notice provisions."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "البريد الإلكتروني الرسمي المعتمد",
+            "reason": "Official business emails for notices are not direct marketing channels."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "تقتصر عمليات معالجة البيانات التي يقوم بها الطرف الثاني على تنفيذ المهام التشغىلية المحددة صراحة في هذه الاتفاقيه والطلبات اللاحقة الصادره رسمياً من الطرف الأول",
+            "reason": "The clause appropriately limits data processing to specified operational tasks and official requests."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "باستثناء الحالات التي يُطلب فيها معالجة أجزاء محدده لأغراض تحسىن الأداء التقني العام بعد تجريدها من أي ارتباطات تعريفىه شخصية",
+            "reason": "Uses anonymised data for technical performance improvements without violating rights."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تنفيذ المهام التشغىلية المحددة صراحة في هذه الاتفاقيه",
+            "reason": "Processing is bound to the agreement terms and lawful instructions."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "معالجة أجزاء محدده",
+            "reason": "Processing is scoped to specific elements necessary for operations."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تقتصر عمليات معالجة البيانات",
+            "reason": "The clause restricts processing scope rather than detailing policy contents."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "الطلبات اللاحقة الصادره رسمياً من الطرف الأول",
+            "reason": "Retention periods are not addressed by this specific processing limitation clause."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تقتصر عمليات معالجة البيانات التي يقوم بها الطرف الثاني",
+            "reason": "Security breach notifications are not covered in this processing scope clause."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "على تنفيذ المهام التشغىلية المحددة صراحة",
+            "reason": "Processor processing limits are clearly defined."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "بعد تجريدها من أي ارتباطات تعريفىه شخصية",
+            "reason": "Anonymisation ensures sensitive data is not improperly processed."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "لأغراض تحسىن الأداء التقني العام",
+            "reason": "Technical performance improvement is distinct from direct marketing."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تظل كافة حقوق الملكيه الفكرية، وبرمجيات التشغيل، والتصاميم، والنماذج الهندسية المطورة ملكاً خالصاً للطرف الثانى",
+            "reason": "The clause concerns intellectual property rights, not personal data processing purposes."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "ولا ينتقل أي حق من حقوق الملكيه للطرف الأول",
+            "reason": "IP ownership clauses do not restrict data subject rights."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "إلا بترخيص استخدام حصرى ومقيد بغرض الاستفادة من الخدمات فقط",
+            "reason": "Software licensing terms are unrelated to personal data consent."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "وبرمجيات التشغيل، والتصاميم، والنماذج الهندسية",
+            "reason": "Data minimisation does not apply to intellectual property and software assets."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "تظل كافة حقوق الملكيه الفكرية",
+            "reason": "The clause has no connection to privacy policy disclosures."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "ملكاً خالصاً للطرف الثانى",
+            "reason": "Data retention and destruction are not addressed in IP clauses."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "بغرض الاستفادة من الخدمات فقط",
+            "reason": "Breach notification is unrelated to software licensing rights."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "ولا ينتقل أي حق من حقوق الملكيه للطرف الأول إلا بترخيص استخدام",
+            "reason": "Processor guarantees are not covered by intellectual property clauses."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "التصاميم، والنماذج الهندسية المطورة",
+            "reason": "Sensitive data rules do not apply to technical designs and software."
+          },
+          {
+            "clause_id": "k8",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "ترخيص استخدام حصرى ومقيد بغرض الاستفادة من الخدمات فقط",
+            "reason": "The clause does not involve direct marketing communications."
+          }
+        ],
+        "clauses": [
+          {
+            "id": "k1",
+            "text": "تبدأ هذه الاتفاقية اعتباراً من تاريخ توقيعها من الطرفىن وتظل سارىه المفعول لمدة سنة ميلادىة كاملة، وتجدد تلقائياً لمثلها ما لم يقم أحد الطرفين بإشعار الطرف الآخر برغبته في عدم التجديد خطياً قبل موعد الانتهاء بشهرين على الأقل.",
+            "rules": [
+              "R04",
+              "R06",
+              "R01",
+              "R02",
+              "R03",
+              "R05",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k2",
+            "text": "تخضع هذه الاتفاقية وتفسر وفقاً للأنظمة المعمول بها في المملكه العربيه السعوديه، وفي حال نشوء أي نزاع حول تفسير أو تنفيذ بنوده، يتم تسويته ودياً خلال ثلاثين ىوماً، فإن لم يُحل فيُحال للجهات القضائية المختصة.",
+            "rules": []
+          },
+          {
+            "id": "k3",
+            "text": "يقر الطرف الثاني بحريته الكامله في الاستعانة بأي مقاولين من الباطن لتقديم الخدمات المتعلقه بالبيانات وفقاً لتقديره التجارى البحت ودون الحاجة لتقديم إشعار مسبق للطرف الأول، على أن ىقتصر دور الطرف الأول على تلقي الخدمات النهائية المتفق عليها دون حق في إجراء عمليات تفتيش أو مراجعة ميدانية لأنظمة الطرف الثاني.",
+            "rules": [
+              "R04",
+              "R05",
+              "R01",
+              "R02",
+              "R03",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k4",
+            "text": "يتقاضى الطرف الثاني نظير تقديم الخدمات محل هذه الاتفاقيه أتعاباً مالية إجمالية يتم سدادها على دفعات مرحليه وفقاً للجدول الزمني المتفق عليه، على أن يقوم الطرف الأول بتحويل المستحقات خلال ثلاثين يوماً من تارىخ استلام الفواتير الضريبىة المعتمدة.",
+            "rules": [
+              "R05",
+              "R06",
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k5",
+            "text": "تُعتبر كافة الإشعارات والمراسلات المتبادله بين الطرفىن صحيحه ومنتجة لآثارها القانونىة إذا تم إرسالها عبر البريد الإلكتروني الرسمي المعتمد في ديباجة هذه الاتفاقىة أو تسليمها بالىد للعناوين المثبته هنا.",
+            "rules": [
+              "R04",
+              "R01",
+              "R02",
+              "R03",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k6",
+            "text": "لا يتحمل أي من الطرفين مسؤوليه الأضرار غير المباشرة أو الخسائر المالية التبعية أو فوات الأرباح الناتجة عن تعطل الأنظمة المفاجئ، وتحدد المسؤولية المالية القصوى للطرف الثاني بإجمالي المبلغ المدفوع فعلياً خلال الأشهر الستة السابقة لوقوع الضرر.",
+            "rules": []
+          },
+          {
+            "id": "k7",
+            "text": "تقتصر عمليات معالجة البيانات التي يقوم بها الطرف الثاني على تنفيذ المهام التشغىلية المحددة صراحة في هذه الاتفاقيه والطلبات اللاحقة الصادره رسمياً من الطرف الأول، باستثناء الحالات التي يُطلب فيها معالجة أجزاء محدده لأغراض تحسىن الأداء التقني العام بعد تجريدها من أي ارتباطات تعريفىه شخصية.",
+            "rules": [
+              "R02",
+              "R05",
+              "R01",
+              "R03",
+              "R04",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k8",
+            "text": "تظل كافة حقوق الملكيه الفكرية، وبرمجيات التشغيل، والتصاميم، والنماذج الهندسية المطورة ملكاً خالصاً للطرف الثانى، ولا ينتقل أي حق من حقوق الملكيه للطرف الأول إلا بترخيص استخدام حصرى ومقيد بغرض الاستفادة من الخدمات فقط.",
+            "rules": [
+              "R02",
+              "R05",
+              "R01",
+              "R03",
+              "R04",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          }
+        ],
+        "cost_usd": 0.016641,
+        "latency_s": 46.43,
+        "llm_calls": 3
+      }
+    },
+    {
+      "doc_id": "robust_noisy_005",
+      "score": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "per_rule": {
+          "R10": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "traps": 1,
+        "trap_hits": 0,
+        "subtle": 0,
+        "subtle_found": 0,
+        "unverified": 0,
+        "findings": 1,
+        "grounded": 1,
+        "ambiguous": 1,
+        "ambiguous_escalated": 0,
+        "escalations": 0,
+        "cost_usd": 0.011222,
+        "latency_s": 40.29,
+        "llm_calls": 4
+      },
+      "output": {
+        "doc_id": "robust_noisy_005",
+        "doc_type_guess": "unknown",
+        "findings": [
+          {
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "sensitive categories including health records, religious affiliations, and biometric identifiers are processed under our legitimate business interests to tailor promotional campaigns",
+            "reason": "Sensitive data cannot be processed on the basis of legitimate interest or used for marketing or promotional campaigns under the PDPL.",
+            "source": "PDPL Art. 1(11), 1(13), 6(4), 23, 26",
+            "clause": "To enhance our commercial outreach, sensitive categories including health records, religious affiliations, and biometric identifiers are processed under our legitimate business interests to tailor promotional campaigns and are made accessible across all operational departments.",
+            "fix": "To enhance our commercial outreach, non-sensitive categories are processed under our legitimate business interests to tailor promotional campaigns and are made accessible across all operational departments, while sensitive categories including health records, religious affiliations, and biometric identifiers are strictly excluded from such processing and marketing, with health data access limited only to those who need it.",
+            "fix_verified": true
+          }
+        ],
+        "escalations": [],
+        "trace": [
+          "doc_type=unknown clauses=11 with_candidates=8"
+        ],
+        "assessments": [
+          {
+            "clause_id": "k1",
+            "rule_id": "R10",
+            "verdict": "violation",
+            "confidence": 1.0,
+            "evidence": "sensitive categories including health records, religious affiliations, and biometric identifiers are processed under our legitimate business interests to tailor promotional campaigns",
+            "reason": "Sensitive data cannot be processed on the basis of legitimate interest or used for marketing or promotional campaigns under the PDPL."
+          },
+          {
+            "clause_id": "k3",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "Digital deliverables and service activations shall be rendered electronically to the designated user account immediately following the successful verification of payment authorization.",
+            "reason": "The clause pertains to service delivery following payment and does not violate purpose limitation rules."
+          },
+          {
+            "clause_id": "k5",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 0.9,
+            "evidence": "This agreement shall remain in effect for an initial term of twelve months and will automatically renew",
+            "reason": "The clause establishes general contract terms and subscription renewal without violating data consent rules."
+          },
+          {
+            "clause_id": "k6",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 0.95,
+            "evidence": "All software, interface designs, trademarks, text graphics, and proprietary code featured on the platform remain the exclusive intellectual property",
+            "reason": "The clause addresses intellectual property rights and does not impact data subject rights."
+          },
+          {
+            "clause_id": "k7",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 0.85,
+            "evidence": "We gather personal information to an extent deemed appropriate for the general operation of our digital portal",
+            "reason": "The clause describes general data collection for portal operation, complying with baseline transparency expectations."
+          },
+          {
+            "clause_id": "k9",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "the provider shall notify the central administration within twenty-four hours of discovery, whereupon management shall proceed to notify the competent regulatory authority within the mandated seventy-two hour window",
+            "reason": "The clause correctly aligns with breach notification requirements and the 72-hour statutory window for regulatory reporting."
+          },
+          {
+            "clause_id": "k10",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "For the purposes of this document, the term user refers to any individual or corporate entity accessing the digital platform, and provider refers exclusively to Nafith Solutions Corporation.",
+            "reason": "This clause merely defines the parties involved and does not govern personal data processing or purpose limitation."
+          },
+          {
+            "clause_id": "k10",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "For the purposes of this document, the term user refers to any individual or corporate entity accessing the digital platform, and provider refers exclusively to Nafith Solutions Corporation.",
+            "reason": "This clause defines terminology and does not restrict or affect data subject rights."
+          },
+          {
+            "clause_id": "k10",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "For the purposes of this document, the term user refers to any individual or corporate entity accessing the digital platform, and provider refers exclusively to Nafith Solutions Corporation.",
+            "reason": "This clause provides definitions and does not address consent mechanisms or processing activities."
+          },
+          {
+            "clause_id": "k10",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "For the purposes of this document, the term user refers to any individual or corporate entity accessing the digital platform, and provider refers exclusively to Nafith Solutions Corporation.",
+            "reason": "This clause is purely definitional and does not mandate the collection of personal data."
+          },
+          {
+            "clause_id": "k10",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "For the purposes of this document, the term user refers to any individual or corporate entity accessing the digital platform, and provider refers exclusively to Nafith Solutions Corporation.",
+            "reason": "This clause defines terms and is unrelated to the contents of a privacy policy."
+          },
+          {
+            "clause_id": "k10",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "For the purposes of this document, the term user refers to any individual or corporate entity accessing the digital platform, and provider refers exclusively to Nafith Solutions Corporation.",
+            "reason": "This is a definition clause and does not concern data retention or destruction periods."
+          },
+          {
+            "clause_id": "k10",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "For the purposes of this document, the term user refers to any individual or corporate entity accessing the digital platform, and provider refers exclusively to Nafith Solutions Corporation.",
+            "reason": "This clause defines terms and does not relate to data breach notifications."
+          },
+          {
+            "clause_id": "k10",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "For the purposes of this document, the term user refers to any individual or corporate entity accessing the digital platform, and provider refers exclusively to Nafith Solutions Corporation.",
+            "reason": "This clause establishes definitions and does not involve processor guarantees or vendor management."
+          },
+          {
+            "clause_id": "k10",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "For the purposes of this document, the term user refers to any individual or corporate entity accessing the digital platform, and provider refers exclusively to Nafith Solutions Corporation.",
+            "reason": "This clause only defines terms and does not involve sensitive or health data processing."
+          },
+          {
+            "clause_id": "k10",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "For the purposes of this document, the term user refers to any individual or corporate entity accessing the digital platform, and provider refers exclusively to Nafith Solutions Corporation.",
+            "reason": "This clause contains definitions and has no relation to direct marketing communications."
+          },
+          {
+            "clause_id": "k11",
+            "rule_id": "R02",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "The maximum aggregate liability of the company for any direct losses arising from system interruptions shall under no circumstances exceed the total fees paid by the user during the preceding three months.",
+            "reason": "This clause limits financial liability for system interruptions and does not address data processing purposes."
+          },
+          {
+            "clause_id": "k11",
+            "rule_id": "R01",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "The maximum aggregate liability of the company for any direct losses arising from system interruptions shall under no circumstances exceed the total fees paid by the user during the preceding three months.",
+            "reason": "This clause relates strictly to liability limitation and not to user consent for data processing."
+          },
+          {
+            "clause_id": "k11",
+            "rule_id": "R03",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "The maximum aggregate liability of the company for any direct losses arising from system interruptions shall under no circumstances exceed the total fees paid by the user during the preceding three months.",
+            "reason": "This clause addresses financial liability and does not concern the minimization of collected personal data."
+          },
+          {
+            "clause_id": "k11",
+            "rule_id": "R04",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "The maximum aggregate liability of the company for any direct losses arising from system interruptions shall under no circumstances exceed the total fees paid by the user during the preceding three months.",
+            "reason": "This clause limits company liability and is separate from privacy policy disclosure contents."
+          },
+          {
+            "clause_id": "k11",
+            "rule_id": "R05",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "The maximum aggregate liability of the company for any direct losses arising from system interruptions shall under no circumstances exceed the total fees paid by the user during the preceding three months.",
+            "reason": "This clause pertains to financial liability limits rather than data subject rights."
+          },
+          {
+            "clause_id": "k11",
+            "rule_id": "R06",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "The maximum aggregate liability of the company for any direct losses arising from system interruptions shall under no circumstances exceed the total fees paid by the user during the preceding three months.",
+            "reason": "This clause addresses financial compensation limits and does not involve data retention or destruction."
+          },
+          {
+            "clause_id": "k11",
+            "rule_id": "R07",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "The maximum aggregate liability of the company for any direct losses arising from system interruptions shall under no circumstances exceed the total fees paid by the user during the preceding three months.",
+            "reason": "This clause is about liability for service interruptions and does not govern security breach notifications."
+          },
+          {
+            "clause_id": "k11",
+            "rule_id": "R09",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "The maximum aggregate liability of the company for any direct losses arising from system interruptions shall under no circumstances exceed the total fees paid by the user during the preceding three months.",
+            "reason": "This clause concerns financial liability and does not regulate processor guarantees or vendor selection."
+          },
+          {
+            "clause_id": "k11",
+            "rule_id": "R10",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "The maximum aggregate liability of the company for any direct losses arising from system interruptions shall under no circumstances exceed the total fees paid by the user during the preceding three months.",
+            "reason": "This clause deals with liability limits and does not involve sensitive or health data processing."
+          },
+          {
+            "clause_id": "k11",
+            "rule_id": "R11",
+            "verdict": "compliant",
+            "confidence": 1.0,
+            "evidence": "The maximum aggregate liability of the company for any direct losses arising from system interruptions shall under no circumstances exceed the total fees paid by the user during the preceding three months.",
+            "reason": "This clause concerns commercial liability and has no connection to direct marketing practices."
+          }
+        ],
+        "clauses": [
+          {
+            "id": "k1",
+            "text": "To enhance our commercial outreach, sensitive categories including health records, religious affiliations, and biometric identifiers are processed under our legitimate business interests to tailor promotional campaigns and are made accessible across all operational departments.",
+            "rules": [
+              "R10",
+              "R05",
+              "R11",
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R06",
+              "R07",
+              "R09"
+            ]
+          },
+          {
+            "id": "k2",
+            "text": "All service fees are billed in accordance with the pricing schedule in effect at the time of purchase and are strictly non-refundable once the transaction is completed.",
+            "rules": []
+          },
+          {
+            "id": "k3",
+            "text": "Digital deliverables and service activations shall be rendered electronically to the designated user account immediately following the successful verification of payment authorization.",
+            "rules": [
+              "R02",
+              "R01",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k4",
+            "text": "These terms and conditions shall be governed by and construed in accordance with the laws applicable in the jurisdiction where the corporate headquarters of the service provider are located.",
+            "rules": []
+          },
+          {
+            "id": "k5",
+            "text": "This agreement shall remain in effect for an initial term of twelve months and will automatically renew for successive periods unless written notice of termination is provided thirty days prior to the expiration date.",
+            "rules": [
+              "R01",
+              "R04",
+              "R06",
+              "R02",
+              "R03",
+              "R05",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k6",
+            "text": "All software, interface designs, trademarks, text graphics, and proprietary code featured on the platform remain the exclusive intellectual property of the provider and are protected by applicable copyright laws.",
+            "rules": [
+              "R05",
+              "R01",
+              "R02",
+              "R03",
+              "R04",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k7",
+            "text": "We gather personal information to an extent deemed appropriate for the general operation of our digital portal and the delivery of requested functionalities.",
+            "rules": [
+              "R04",
+              "R01",
+              "R02",
+              "R03",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k8",
+            "text": "Accepted payment methods include major credit cards, bank wire transfers, and approved digital wallets, with charges processed immediately upon the submission of an order.",
+            "rules": []
+          },
+          {
+            "id": "k9",
+            "text": "In the event of any security incident involving unauthorized access to system records, the provider shall notify the central administration within twenty-four hours of discovery, whereupon management shall proceed to notify the competent regulatory authority within the mandated seventy-two hour window and inform affected users if their rights are impacted.",
+            "rules": [
+              "R07",
+              "R05",
+              "R02",
+              "R04",
+              "R01",
+              "R03",
+              "R06",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k10",
+            "text": "For the purposes of this document, the term user refers to any individual or corporate entity accessing the digital platform, and provider refers exclusively to Nafith Solutions Corporation.",
+            "rules": [
+              "R02",
+              "R05",
+              "R01",
+              "R03",
+              "R04",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          },
+          {
+            "id": "k11",
+            "text": "The maximum aggregate liability of the company for any direct losses arising from system interruptions shall under no circumstances exceed the total fees paid by the user during the preceding three months.",
+            "rules": [
+              "R02",
+              "R01",
+              "R03",
+              "R04",
+              "R05",
+              "R06",
+              "R07",
+              "R09",
+              "R10",
+              "R11"
+            ]
+          }
+        ],
+        "cost_usd": 0.011222,
+        "latency_s": 40.29,
+        "llm_calls": 4
+      }
+    }
+  ]
+}

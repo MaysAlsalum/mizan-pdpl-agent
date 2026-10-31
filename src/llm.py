@@ -31,6 +31,15 @@ _RETRYABLE = tuple(
 )
 
 
+_EXHAUSTED: set[str] = set()  # models whose daily quota ran out during this process
+
+
+def _is_quota(e: Exception) -> bool:
+    """A per-day quota error (not a short per-minute limit)."""
+    msg = str(e)
+    return "RESOURCE_EXHAUSTED" in msg or "per day" in msg.lower() or "PerDay" in msg
+
+
 def model_for(role: str) -> str:
     """Model name for a role in config.yaml (small, large, generator, judge_eval)."""
     return CONFIG["models"][role]
@@ -136,6 +145,12 @@ def call(messages: str | list[dict], *, role: str | None = None, model: str | No
         TOTALS.add(result)
         return result
 
+    fallback = CONFIG.get("fallback_on_quota", {}).get(model)
+    if model in _EXHAUSTED and fallback:
+        # Known to be out of quota: go straight to the fallback instead of waiting for a rate-limit slot.
+        return call(messages, model=fallback, temperature=temperature, json_mode=json_mode,
+                    use_cache=use_cache, max_retries=max_retries)
+
     provider = model.split("/", 1)[0]
     kwargs: dict[str, Any] = {"model": model, "messages": messages}
     if provider != "gemini":  # Gemini 3+ deprecates sampling params; it warns on every call
@@ -152,6 +167,14 @@ def call(messages: str | list[dict], *, role: str | None = None, model: str | No
             resp = litellm.completion(**kwargs)
         except _RETRYABLE as e:
             last_error = e
+            if _is_quota(e):
+                # Daily quota used up: waiting will not help. Switch model if one is configured.
+                _EXHAUSTED.add(model)
+                if fallback:
+                    print(f"[llm] daily quota used up on {model}, switching to {fallback}")
+                    return call(messages, model=fallback, temperature=temperature, json_mode=json_mode,
+                                use_cache=use_cache, max_retries=max_retries)
+                raise RuntimeError(f"daily quota used up on {model}: {e}") from e
             wait = min(60, 5 * 2 ** attempt)
             print(f"[llm] {type(e).__name__} on {model}, retrying in {wait}s")
             time.sleep(wait)
