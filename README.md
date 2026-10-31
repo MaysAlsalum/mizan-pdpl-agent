@@ -1,4 +1,4 @@
-<p align="center"><img src="app/assets/mizan-banner.png" width="96" alt="Mizan"></p>
+<p align="center"><img src="app/assets/mizan-mark.png" width="96" alt="Mizan"></p>
 
 # Mizan | ميزان: PDPL Compliance Agent
 
@@ -151,4 +151,3 @@ tests/                  unit tests for scoring and the agent's non-model steps
 
 - [Personal Data Protection Law, official Arabic text (Bureau of Experts)](https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/b7cfae89-828e-4994-b167-adaa00e37188/1)
 - [Personal Data Protection Law, English translation](https://misa.gov.sa/app/uploads/2025/08/PersonalDataProtectionLaw.pdf)
-
